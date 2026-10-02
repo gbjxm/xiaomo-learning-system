@@ -1,0 +1,958 @@
+[
+  {
+    "id": "libtv",
+    "name": "LibTV 官方活动清单",
+    "platform": "LibTV",
+    "url": "https://www.liblib.tv/activity",
+    "allowed_hosts": [
+      "www.liblib.tv",
+      "liblib.tv"
+    ],
+    "adapter": "libtv",
+    "scope": "公开活动清单及嵌入规则；不是平台全部福利",
+    "note": "图片、正文引用或字段缺失会报告部分提取，不能用标题代替完整规则。",
+    "respect_robots": true,
+    "capability": "automatic_discovery"
+  },
+  {
+    "id": "aishorts",
+    "name": "HiShorts! × updream AI 短片大赛",
+    "platform": "updream / B站",
+    "url": "https://www.bilibili.com/blackboard/era/DjrNk7LG6agRh9Lu.html",
+    "allowed_hosts": [
+      "www.bilibili.com"
+    ],
+    "adapter": "article",
+    "scope": "指定官方活动页",
+    "note": "规则主要为图片，需要人工阅读；截止日期不采用冲突的第三方说法。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "updream",
+    "name": "updream 官方主页 / 特约导演线索",
+    "platform": "updream",
+    "url": "https://www.updream.cn/",
+    "allowed_hosts": [
+      "www.updream.cn",
+      "updream.cn"
+    ],
+    "adapter": "homepage",
+    "scope": "主页可用性；长期计划规则待核",
+    "note": "不使用登录态，不调用未公开接口。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "jimeng",
+    "name": "即梦 官方主页",
+    "platform": "即梦",
+    "url": "https://jimeng.jianying.com/",
+    "allowed_hosts": [
+      "jimeng.jianying.com"
+    ],
+    "adapter": "homepage",
+    "scope": "官方福利入口待适配",
+    "note": "主页可访问不代表福利已收全。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "xyq",
+    "name": "小云雀 官方主页",
+    "platform": "小云雀",
+    "url": "https://xyq.jianying.com/",
+    "allowed_hosts": [
+      "xyq.jianying.com"
+    ],
+    "adapter": "homepage",
+    "scope": "官方福利入口待适配",
+    "note": "公开正文不足时保留待核验。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "oiioii",
+    "name": "OiiOii 官方主页（候选）",
+    "platform": "OiiOii",
+    "url": "https://www.oiioii.tv/",
+    "allowed_hosts": [
+      "www.oiioii.tv",
+      "oiioii.tv"
+    ],
+    "adapter": "homepage",
+    "scope": "候选平台，机制与入口待核",
+    "note": "不根据产品首页推断创作者激励。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "bili_white",
+    "name": "B站 白模赛官方动态（历史）",
+    "platform": "B站 / updream",
+    "url": "https://www.bilibili.com/opus/1237442539704811557",
+    "allowed_hosts": [
+      "www.bilibili.com"
+    ],
+    "adapter": "article",
+    "scope": "指定历史公告",
+    "note": "历史样本：积分与投流不是现金。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "bili_remix",
+    "name": "B站 二创赛官方动态（历史）",
+    "platform": "B站",
+    "url": "https://www.bilibili.com/opus/1175154222470004785",
+    "allowed_hosts": [
+      "www.bilibili.com"
+    ],
+    "adapter": "article",
+    "scope": "指定历史公告",
+    "note": "历史样本：奖金池与结算媒介分开记录。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "douyin_programs",
+    "name": "抖音 登录态创作者中心",
+    "platform": "抖音",
+    "url": "https://creator.douyin.com/",
+    "allowed_hosts": [
+      "creator.douyin.com",
+      "www.douyin.com"
+    ],
+    "adapter": "unadapted",
+    "scope": "本账号定向激励与加入状态",
+    "note": "精选 / 伙伴计划的公开官方页已另行登记；登录态本账号页面未接通。",
+    "respect_robots": true,
+    "capability": "manual"
+  },
+  {
+    "id": "bili_programs",
+    "name": "B站 创作激励与伙伴机制",
+    "platform": "B站",
+    "url": "https://member.bilibili.com/",
+    "allowed_hosts": [
+      "member.bilibili.com",
+      "www.bilibili.com"
+    ],
+    "adapter": "unadapted",
+    "scope": "长期创作激励与规则更新",
+    "note": "未连接登录态创作者中心，不能宣称覆盖全部机制。",
+    "respect_robots": true,
+    "capability": "manual"
+  },
+  {
+    "id": "xiaohongshu",
+    "name": "小红书 创作者服务平台",
+    "platform": "小红书",
+    "url": "https://creator.xiaohongshu.com/",
+    "allowed_hosts": [
+      "creator.xiaohongshu.com",
+      "www.xiaohongshu.com"
+    ],
+    "adapter": "unadapted",
+    "scope": "长期机制、活动、流量扶持与规则",
+    "note": "登录限制；公开官方规则页待登记。",
+    "respect_robots": true,
+    "capability": "manual"
+  },
+  {
+    "id": "wechat",
+    "name": "微信公众号 官方规则与激励",
+    "platform": "公众号",
+    "url": "https://mp.weixin.qq.com/",
+    "allowed_hosts": [
+      "mp.weixin.qq.com"
+    ],
+    "adapter": "unadapted",
+    "scope": "创作者机制、平台政策与补贴",
+    "note": "未提供可核验的公众号列表或全量接口；未适配，不做全平台覆盖承诺。",
+    "respect_robots": true,
+    "capability": "manual"
+  },
+  {
+    "id": "douyin_selected",
+    "name": "抖音精选计划 官方说明",
+    "platform": "抖音",
+    "url": "https://www.xingtu.cn/help-center/demander/114908",
+    "allowed_hosts": [
+      "www.xingtu.cn"
+    ],
+    "adapter": "article",
+    "scope": "长期精选倡议与限时子活动说明",
+    "note": "长期内容扶持不等于现金分成。加入条件与AI资格未核。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "douyin_partner_intro",
+    "name": "创作者伙伴计划 官方升级说明",
+    "platform": "抖音 / 西瓜",
+    "url": "https://www.xingtu.cn/help-center/author/141762",
+    "allowed_hosts": [
+      "www.xingtu.cn"
+    ],
+    "adapter": "article",
+    "scope": "中视频升级说明",
+    "note": "加入机会以作者页面、公告或站内信为准。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "douyin_partner_rules",
+    "name": "创作者伙伴计划 官方规则长图",
+    "platform": "抖音 / 西瓜",
+    "url": "https://i.snssdk.com/magic/eco/runtime/release/661ceef7d4f467070808af60?appType=ixigua&magic_page_no=1&magic_source=mu_jhgz_v3a1",
+    "allowed_hosts": [
+      "i.snssdk.com"
+    ],
+    "adapter": "image_article",
+    "scope": "六张官方规则长图；需OCR或人工",
+    "note": "官方不定期开放，账号定向 / 分批；不能当作常年开放。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "bili_incentive",
+    "name": "B站 视频创作激励 官方客服说明",
+    "platform": "B站",
+    "url": "https://www.bilibili.com/opus/1198858284376784900",
+    "allowed_hosts": [
+      "www.bilibili.com"
+    ],
+    "adapter": "article",
+    "scope": "2026-05-05官方客服条件与权益",
+    "note": "不沿用2023旧门槛；AI作品资格待核。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "bili_huahuo",
+    "name": "B站 花火官方平台定义",
+    "platform": "B站",
+    "url": "https://e.bilibili.com/observe/observe_1.html",
+    "allowed_hosts": [
+      "e.bilibili.com"
+    ],
+    "adapter": "article",
+    "scope": "商业合作撮合机制",
+    "note": "不是保底补贴或播放分成。当前准入门槛未核。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "bili_huahuo_rules",
+    "name": "B站 花火贝壳结算规则",
+    "platform": "B站",
+    "url": "https://www.bilibili.com/blackboard/activity-EHM5wokgqh.html",
+    "allowed_hosts": [
+      "www.bilibili.com"
+    ],
+    "adapter": "article",
+    "scope": "2025-10-01结算改动官方页",
+    "note": "选择贝壳自提的个人订单，完成T+1转贝壳；其余模式不据此推断。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "xhs_pgy",
+    "name": "小红书 蒲公英（候选）",
+    "platform": "小红书",
+    "url": "https://pgy.xiaohongshu.com/microapp/distribution/home",
+    "allowed_hosts": [
+      "pgy.xiaohongshu.com"
+    ],
+    "adapter": "homepage",
+    "scope": "官方候选入口，规则与门槛待核",
+    "note": "登录态未接通，不能据首页判断AI内容准入或收益。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "jingrui_2026",
+    "name": "鲸锐AI创作大赛官方规则",
+    "platform": "优酷 / 虎鲸文娱",
+    "url": "https://jingrui-ai-competition.youku.com/?view=rules",
+    "allowed_hosts": [
+      "jingrui-ai-competition.youku.com"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "JS外壳不等于规则全文；未登录投稿端，人工证据保留。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "jinji_ai_2026",
+    "name": "2026金鸡AI影展官方公告（文联发布）",
+    "platform": "金鸡百花电影节",
+    "url": "https://www.xmwenlian.com/home/article/detail/id/7928.html",
+    "allowed_hosts": [
+      "www.xmwenlian.com"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "公告来源中国金鸡百花电影节；可抓取正文，二维码与报名表未核；原文未注明时区。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "cuc_aigc_2026",
+    "name": "中传2026 AIGC与可视化大赛官方通知",
+    "platform": "中国传媒大学",
+    "url": "https://www.cuc.edu.cn/2026/0811/c10001a273225/page.htm",
+    "allowed_hosts": [
+      "www.cuc.edu.cn"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "完整章程DOCX未读；学校通知不是教育部竞赛目录证明。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "smg_seko_2026",
+    "name": "SMG创所未见年度AI短片计划",
+    "platform": "SMG / Seko",
+    "url": "https://seko.sensetime.com/activity/2079017609580478466",
+    "allowed_hosts": [
+      "seko.sensetime.com"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "页面截止与正文暂定并存；暂定日期不触发自动归档。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "vacat_2026",
+    "name": "瓦卡奖VACAT2026政府通知",
+    "platform": "抖音 / 上影",
+    "url": "https://www.lg.gov.cn/gkmlpt/content/12/12890/post_12890803.html",
+    "allowed_hosts": [
+      "www.lg.gov.cn"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "10月20日只适用穹顶巨幕特别赛道；详细格式及版权未核。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "bjiff_aigc_2026",
+    "name": "北影节2026 AIGC单元官方公告",
+    "platform": "北京国际电影节",
+    "url": "https://www.bjiff.com/bannergdtp/202602/t20260203_188677.html",
+    "allowed_hosts": [
+      "www.bjiff.com"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "2026已截止，2027未有已核公告；通义万相奖金仅属于专属子赛道。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "student_tv_2026",
+    "name": "上海大学生电视节2026 AI视频大赛通知",
+    "platform": "上海大学生电视节",
+    "url": "https://comm.ecnu.edu.cn/c3/c5/c51744a771013/page.htm",
+    "allowed_hosts": [
+      "comm.ecnu.edu.cn"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "人工核验条款独立保存；自动正文、规则字段与账号资格分别报告。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "aniwow_2026",
+    "name": "Aniwow2026白杨奖官方通知",
+    "platform": "Aniwow / 中国传媒大学",
+    "url": "https://www.cuc.edu.cn/2026/0825/c10001a273403/page.htm",
+    "allowed_hosts": [
+      "www.cuc.edu.cn"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "人工核验条款独立保存；自动正文、规则字段与账号资格分别报告。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "aaiff_2026",
+    "name": "Astana AAIFF2026现行条款",
+    "platform": "Astana AI Film Festival",
+    "url": "https://aaiff.ai/terms",
+    "allowed_hosts": [
+      "aaiff.ai"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "条款9月15日更新，截止9月7日；投资与奖金分开，跨境上传/收款资格未核。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "first_2026",
+    "name": "FIRST2026超短片官方章程PDF",
+    "platform": "FIRST青年电影展",
+    "url": "https://www.firstfilm.org.cn/wp-content/uploads/2026/03/%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%B1%8AFIRST%E9%9D%92%E5%B9%B4%E7%94%B5%E5%B1%95%E8%B6%85%E7%9F%AD%E7%89%87%E5%8D%95%E5%85%83%E7%AB%A0%E7%A8%8B.pdf",
+    "allowed_hosts": [
+      "www.firstfilm.org.cn"
+    ],
+    "adapter": "unadapted",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "官方PDF人工核验移交；本地自动正文解析尚未适配，未猜截止。",
+    "respect_robots": true,
+    "capability": "manual"
+  },
+  {
+    "id": "hkaiiff_2027",
+    "name": "HKAIIFF2027官方指南（尽调候选）",
+    "platform": "HKAIIFF",
+    "url": "https://www.hkaiiff.org/zh-hans/festival/2027/documents/entry-guide",
+    "allowed_hosts": [
+      "www.hkaiiff.org"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "费用99美元；2027奖金和主体未完成尽调，不能将往届算力宣传当现金。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "runway_aif_2026",
+    "name": "Runway AIF2026电影组官方条款",
+    "platform": "Runway",
+    "url": "https://aif.runwayml.com/terms-film",
+    "allowed_hosts": [
+      "aif.runwayml.com"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "列项现金与总ARV口径冲突；2026已截止，2027未知。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "jimeng_growth",
+    "name": "即梦AI创作者成长计划官方飞书",
+    "platform": "即梦 / 抖音",
+    "url": "https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg",
+    "allowed_hosts": [
+      "bytedance.larkoffice.com"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "父线程读到9月29日修改；飞书虚拟滚动，HTTP空壳不算无变化；全文与资源位/IP条款需复核。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "jimeng_canvas",
+    "name": "即梦优质开源画布细则（待完整核验）",
+    "platform": "即梦",
+    "url": "https://bytedance.larkoffice.com/docx/X84WdYVa0oQXD3xb0ATcIaOjnUe?from=from_copylink",
+    "allowed_hosts": [
+      "bytedance.larkoffice.com"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "独立画布细则未核全文；不可据现金宣传视为画布合格。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "jimeng_new_image",
+    "name": "即梦2026-004新影像活动（历史）",
+    "platform": "即梦",
+    "url": "https://jimeng.jianying.com/ai-tool/activity-detail/2026-004-dreamina-weekly-challenge",
+    "allowed_hosts": [
+      "jimeng.jianying.com"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "官方已颁奖至6/30；不是现行成长计划或常年开放。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "kling_artist",
+    "name": "可灵官方认证账号：创作者计划3.0",
+    "platform": "可灵",
+    "url": "https://www.sina.cn/news/detail/5292411603651728.html",
+    "allowed_hosts": [
+      "www.sina.cn"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "新浪载体上的认证可灵AI微博公告；官网国内robots限制未绕过；现行申请规则未核。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "kling_partner",
+    "name": "快手CSR：可灵未来合伙人计划",
+    "platform": "可灵 / 快手",
+    "url": "https://ir.kuaishou.com/static-files/1561a9ec-6131-4d2d-81a7-b220c8520c25",
+    "allowed_hosts": [
+      "ir.kuaishou.com"
+    ],
+    "adapter": "unadapted",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "官方CSR文件佐证机制存在；当前加入、分成、版权和申请期未知，未自动解析文件。",
+    "respect_robots": true,
+    "capability": "manual"
+  },
+  {
+    "id": "minimax_design",
+    "name": "MiniMax Design执导者入驻计划",
+    "platform": "MiniMax Design",
+    "url": "https://design.minimax.cn/",
+    "allowed_hosts": [
+      "design.minimax.cn"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "官网现有入驻说明；具体分成、版权、结算和期限未知，与海螺国内超创分开。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "hailuo_affiliate",
+    "name": "Hailuo海外Affiliate官方计划",
+    "platform": "海螺 / Hailuo",
+    "url": "https://hailuoai.video/affiliate",
+    "allowed_hosts": [
+      "hailuoai.video"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "海外推广成交佣金，不是短片投稿奖金；中国大陆支付税务资格未核。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "vidu_artist",
+    "name": "Vidu官方创作者计划",
+    "platform": "Vidu",
+    "url": "https://www.vidu.com/zh/artist-program",
+    "allowed_hosts": [
+      "www.vidu.com"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "长期成长机制与付费创作者套餐分开；公开申请审核不等于永久无条件开放。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "vidu_earn",
+    "name": "ViduEarn星火官方活动详情",
+    "platform": "Vidu",
+    "url": "https://www.vidu.com/activity/3337027127191000",
+    "allowed_hosts": [
+      "www.vidu.com"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "中文宣传与详情Not Started冲突，按钮禁用；不能按页面日期标开放。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "hailuo_life_2025",
+    "name": "海螺我的人生电影官方获奖公告",
+    "platform": "海螺 / MiniMax",
+    "url": "https://www.minimax.cn/news/海影节minimax登岛海螺ai我的人生电影完整获奖名单公布",
+    "allowed_hosts": [
+      "www.minimax.cn"
+    ],
+    "adapter": "article",
+    "scope": "指定官方公告或规则；仅核对已知URL，不是全平台发现",
+    "note": "2025已颁奖；非2026开放活动，国内超创/先锋导演现行官规仍缺。",
+    "respect_robots": true,
+    "capability": "known_page"
+  },
+  {
+    "id": "kling_public_entry",
+    "name": "可灵国内官方入口（访问受限）",
+    "platform": "可灵",
+    "url": "https://kling.ai/cn",
+    "allowed_hosts": [
+      "kling.ai"
+    ],
+    "adapter": "unadapted",
+    "scope": "入口受限，无自动活动发现",
+    "note": "国内官方robots/访问限制，不绕过；官方账号公告与CSR另存人工证据。",
+    "respect_robots": true,
+    "capability": "manual"
+  },
+  {
+    "id": "hailuo_domestic_gap",
+    "name": "海螺国内超创/先锋导演（现行规则缺口）",
+    "platform": "海螺",
+    "url": "https://hailuoai.com/",
+    "allowed_hosts": [
+      "hailuoai.com"
+    ],
+    "adapter": "unadapted",
+    "scope": "现行国内创作者激励规则未接通",
+    "note": "仅有2024–25转载线索，当前官方规则未核；不制造现行计划记录。",
+    "respect_robots": true,
+    "capability": "manual"
+  },
+  {
+    "id": "wanxiang_gap",
+    "name": "通义万相魔搭活动入口（壳页缺口）",
+    "platform": "通义万相",
+    "url": "https://modelscope.cn/events/114/%E6%AF%94%E8%B5%9B%E8%AF%A6%E6%83%85",
+    "allowed_hosts": [
+      "modelscope.cn"
+    ],
+    "adapter": "unadapted",
+    "scope": "具体活动规则待核",
+    "note": "当前只见壳页，没有当前活动实证；不生成开放活动。",
+    "respect_robots": true,
+    "capability": "manual"
+  },
+  {
+    "id": "bjiff_ai_list",
+    "name": "北影节AIGC单元公开公告",
+    "platform": "北影节",
+    "url": "https://www.bjiff.com/xghd/jjdlllt_18698/",
+    "allowed_hosts": [
+      "www.bjiff.com"
+    ],
+    "adapter": "official_list",
+    "scope": "AIGC专栏公开分页，单次最多3页，按官方页数终止；不等于北影节全部单元或下一届已开放",
+    "note": "本机公开列表发现；正文、开放状态及个人资格另核，访问限制即停止。",
+    "respect_robots": true,
+    "capability": "automatic_discovery",
+    "discovery": {
+      "path_prefixes": [
+        "/xghd/jjdlllt_18698/"
+      ],
+      "path_suffix": ".html",
+      "minimum_entries": 1,
+      "max_candidates": 8,
+      "opportunity_words": [
+        "征集",
+        "征片",
+        "征案",
+        "征稿",
+        "报名",
+        "招募",
+        "创作计划",
+        "扶持",
+        "激励",
+        "补贴",
+        "入驻",
+        "创投",
+        "规则",
+        "结算",
+        "奖励",
+        "福利",
+        "比赛",
+        "大赛"
+      ],
+      "creative_words": [
+        "AI",
+        "AIGC",
+        "影视",
+        "电影",
+        "影展",
+        "影像",
+        "视频",
+        "短片",
+        "动画",
+        "数字艺术",
+        "创作者",
+        "创作扶持"
+      ],
+      "exclude_title": [
+        "获奖名单",
+        "入围名单",
+        "颁奖",
+        "成功举办",
+        "论坛",
+        "讲座",
+        "招聘"
+      ],
+      "pagination": {
+        "mode": "bjiff_static",
+        "max_pages": 3,
+        "path_prefixes": [
+          "/xghd/jjdlllt_18698/"
+        ]
+      }
+    }
+  },
+  {
+    "id": "xm_calls_list",
+    "name": "厦门市文联征集启事",
+    "platform": "厦门文联 / 金鸡影展",
+    "url": "https://www.xmwenlian.com/home/article/index/category/55.html",
+    "allowed_hosts": [
+      "www.xmwenlian.com"
+    ],
+    "adapter": "official_list",
+    "scope": "征集栏目真实下一页，单次最多3页；筛选影视/AI/短片及创作扶持，不覆盖所有文联栏目",
+    "note": "本机公开列表发现；正文、开放状态及个人资格另核，访问限制即停止。",
+    "respect_robots": true,
+    "capability": "automatic_discovery",
+    "discovery": {
+      "path_prefixes": [
+        "/home/article/detail/id/"
+      ],
+      "path_suffix": ".html",
+      "minimum_entries": 1,
+      "max_candidates": 12,
+      "opportunity_words": [
+        "征集",
+        "征片",
+        "征案",
+        "征稿",
+        "报名",
+        "招募",
+        "创作计划",
+        "扶持",
+        "激励",
+        "补贴",
+        "入驻",
+        "创投",
+        "规则",
+        "结算",
+        "奖励",
+        "福利",
+        "比赛",
+        "大赛"
+      ],
+      "creative_words": [
+        "AI",
+        "AIGC",
+        "影视",
+        "电影",
+        "影展",
+        "影像",
+        "视频",
+        "短片",
+        "动画",
+        "数字艺术",
+        "创作者",
+        "创作扶持"
+      ],
+      "exclude_title": [
+        "获奖名单",
+        "入围名单",
+        "颁奖",
+        "成功举办",
+        "论坛",
+        "讲座",
+        "招聘"
+      ],
+      "pagination": {
+        "mode": "next_link",
+        "max_pages": 3,
+        "path_prefixes": [
+          "/home/article/index/category/55/"
+        ]
+      }
+    }
+  },
+  {
+    "id": "cuc_news_list",
+    "name": "中国传媒大学公开新闻公告",
+    "platform": "中国传媒大学",
+    "url": "https://www.cuc.edu.cn/10001/list.htm",
+    "allowed_hosts": [
+      "www.cuc.edu.cn"
+    ],
+    "adapter": "official_list",
+    "scope": "学校新闻真实下一页，单次最多3页；仅标题匹配创作机会，不覆盖全部历史或学院公告",
+    "note": "本机公开列表发现；正文、开放状态及个人资格另核，访问限制即停止。",
+    "respect_robots": true,
+    "capability": "automatic_discovery",
+    "discovery": {
+      "path_prefixes": [
+        "/cucnews/20",
+        "/20"
+      ],
+      "path_suffix": "/page.htm",
+      "minimum_entries": 1,
+      "max_candidates": 8,
+      "opportunity_words": [
+        "征集",
+        "征片",
+        "征案",
+        "征稿",
+        "报名",
+        "招募",
+        "创作计划",
+        "扶持",
+        "激励",
+        "补贴",
+        "入驻",
+        "创投",
+        "规则",
+        "结算",
+        "奖励",
+        "福利",
+        "比赛",
+        "大赛"
+      ],
+      "creative_words": [
+        "AI",
+        "AIGC",
+        "影视",
+        "电影",
+        "影展",
+        "影像",
+        "视频",
+        "短片",
+        "动画",
+        "数字艺术",
+        "创作者",
+        "创作扶持"
+      ],
+      "exclude_title": [
+        "获奖名单",
+        "入围名单",
+        "颁奖",
+        "成功举办",
+        "论坛",
+        "讲座",
+        "招聘"
+      ],
+      "pagination": {
+        "mode": "next_link",
+        "max_pages": 3,
+        "path_prefixes": [
+          "/10001/list"
+        ]
+      }
+    }
+  },
+  {
+    "id": "first_featured_list",
+    "name": "FIRST官网精选公告",
+    "platform": "FIRST青年电影展",
+    "url": "https://www.firstfilm.org.cn/",
+    "allowed_hosts": [
+      "www.firstfilm.org.cn"
+    ],
+    "adapter": "official_list",
+    "scope": "首页精选公告6条左右；可发现征案计划，不覆盖全部历史或全部投稿单元",
+    "note": "本机公开列表发现；正文、开放状态及个人资格另核，访问限制即停止。",
+    "respect_robots": true,
+    "capability": "automatic_discovery",
+    "discovery": {
+      "path_prefixes": [
+        "/"
+      ],
+      "path_suffix": "/",
+      "minimum_entries": 1,
+      "max_candidates": 6,
+      "opportunity_words": [
+        "征集",
+        "征片",
+        "征案",
+        "征稿",
+        "报名",
+        "招募",
+        "创作计划",
+        "扶持",
+        "激励",
+        "补贴",
+        "入驻",
+        "创投",
+        "规则",
+        "结算",
+        "奖励",
+        "福利",
+        "比赛",
+        "大赛"
+      ],
+      "creative_words": [],
+      "exclude_title": [
+        "获奖名单",
+        "入围名单",
+        "颁奖",
+        "成功举办",
+        "论坛",
+        "讲座",
+        "招聘"
+      ]
+    }
+  },
+  {
+    "id": "minimax_blog_list",
+    "name": "MiniMax官方博客公告",
+    "platform": "MiniMax",
+    "url": "https://www.minimax.cn/blog",
+    "allowed_hosts": [
+      "www.minimax.cn"
+    ],
+    "adapter": "official_list",
+    "scope": "官方博客首屏；仅创作计划/扶持等机会，不把模型发布当比赛或补贴",
+    "note": "本机公开列表发现；正文、开放状态及个人资格另核，访问限制即停止。",
+    "respect_robots": true,
+    "capability": "automatic_discovery",
+    "discovery": {
+      "path_prefixes": [
+        "/blog/"
+      ],
+      "path_suffix": "",
+      "minimum_entries": 1,
+      "max_candidates": 8,
+      "opportunity_words": [
+        "征集",
+        "征片",
+        "征案",
+        "征稿",
+        "报名",
+        "招募",
+        "创作计划",
+        "扶持",
+        "激励",
+        "补贴",
+        "入驻",
+        "创投",
+        "规则",
+        "结算",
+        "奖励",
+        "福利",
+        "比赛",
+        "大赛"
+      ],
+      "creative_words": [
+        "AI",
+        "AIGC",
+        "影视",
+        "电影",
+        "影展",
+        "影像",
+        "视频",
+        "短片",
+        "动画",
+        "数字艺术",
+        "创作者",
+        "创作扶持"
+      ],
+      "exclude_title": [
+        "获奖名单",
+        "入围名单",
+        "颁奖",
+        "成功举办",
+        "论坛",
+        "讲座",
+        "招聘"
+      ]
+    }
+  }
+]

@@ -1,0 +1,24 @@
+# Environment-specific credentials and generated runtime state
+**/.env*
+!**/.env.example
+**/node_modules/
+**/__pycache__/
+**/*.pyc
+**/npm-cache/
+**/.playwright-cli/
+**/backups/
+**/exports/
+**/*.lock
+**/*.pid
+**/*.log
+**/profile/
+**/Default/
+/备份/
+/信息收集/output/
+/素材观察室/data/*.sqlite3*
+/信息收集/data/*.sqlite3*
+/学习小岛/data/ui-state.json
+# The immutable upload snapshots and derived reading exports are intentional.
+!/cloud-data/
+!/cloud-data/exports/
+!/cloud-data/exports/**

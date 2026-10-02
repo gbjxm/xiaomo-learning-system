@@ -1,0 +1,11 @@
+{
+  "profile_label": "个人 AI 影视创作者",
+  "keywords": ["AI", "人工智能", "影视", "短片", "动画", "导演", "创作者", "视频", "算力", "补贴", "激励"],
+  "preferred_platforms": ["LibTV", "B站", "抖音", "updream", "即梦", "小云雀", "小红书", "公众号", "OiiOii"],
+  "new_publication_days": 7,
+  "stale_verification_days": 30,
+  "request_timeout_seconds": 15,
+  "max_response_bytes": 4000000,
+  "max_items_per_source": 30,
+  "update_click_cooldown_seconds": 20
+}

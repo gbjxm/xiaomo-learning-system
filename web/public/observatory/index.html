@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="小陌的素材观察室：收藏原素材，保留感受，需要时继续研究。">
+  <title>小陌 · 素材观察室</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/observatory/app.css">
+  <script src="/observatory/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到内容</a>
+  <div class="dataset-banner" id="datasetBanner" role="status">正在核对数据入口…</div>
+  <header class="shell-header">
+    <a class="brand" href="#collection"><span class="brand-mark" aria-hidden="true">◧</span><span><small>小陌的学习系统</small><strong>素材观察室</strong></span></a>
+    <nav aria-label="观察室导航"><a href="#collection" id="navCollection">收藏</a><a href="#topics" id="navTopics">研究专题</a><a href="/learning/">学习小岛</a><a href="/information/">信息收集</a></nav>
+    <button class="quiet-button" id="reloadRecords" type="button">重新加载</button>
+  </header>
+  <section id="draftRecovery" class="shell-footer" aria-label="本机未提交草稿与重试" hidden></section>
+  <main id="main" tabindex="-1"><p>正在读取收藏…</p></main>
+  <footer class="shell-footer"><details><summary>数据位置与备份</summary><div id="dataLocation"></div><button class="secondary-button" type="button" id="backupButton">创建完整备份</button><p id="backupStatus" role="status"></p></details><p>收藏和复制交接不会启动研究。研究在 Codex 中按你的明确请求进行；网页手动重新加载可查看已保存的新版本。</p></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <dialog id="addDialog" aria-labelledby="addTitle">
+    <form id="addForm" class="dialog-inner">
+      <div class="dialog-heading"><div><small class="eyebrow">随手留下一条素材</small><h2 id="addTitle">先收藏，问题可以以后再想。</h2></div><button class="icon-button" type="button" data-close="addDialog" aria-label="关闭收藏窗口">×</button></div>
+      <p class="subtle">链接、文字或文件有一种就够。标题、标签和感受可以后补。</p>
+      <label for="addKind">素材形式</label><select id="addKind"><option value="link">链接</option><option value="text">文字片段</option><option value="recollection">凭记忆描述</option><option value="attachment">图片 / 视频 / 文件</option><option value="mixed">链接、文字与文件组合</option></select>
+      <label for="addUrl" id="addUrlLabel">原始链接 <span class="optional">链接形式需要填写</span></label><input id="addUrl" type="url" maxlength="8000" placeholder="https://…">
+      <label for="addContent" id="addContentLabel">原始文字 / 说明 <span class="optional">可选</span></label><textarea id="addContent" rows="3" maxlength="2000000" placeholder="完整留下原文，或注明你记得的画面。"></textarea>
+      <label for="addFiles">原始文件 <span class="optional">可选，可多选</span></label><input id="addFiles" type="file" multiple>
+      <p class="subtle small" id="uploadLimits"></p><div id="addUploadStatus" class="upload-status" role="status" aria-live="polite"></div>
+      <label for="addFeeling">为什么吸引我 <span class="optional">可选，保存原话</span></label><textarea id="addFeeling" rows="2" maxlength="2000000" placeholder="比如：最后那一下停顿让我想再看一遍。"></textarea>
+      <details class="optional-fields"><summary>补充标题和标签（可以以后再填）</summary><label for="addTitleInput">标题</label><input id="addTitleInput" maxlength="1000"><label for="addTags">标签</label><input id="addTags" maxlength="2000" placeholder="内容、氛围、创作用途，用逗号分开"></details>
+      <p id="duplicateNotice" class="warning-note" hidden></p><p id="addError" class="form-error" role="alert" hidden></p>
+      <div class="dialog-actions"><span class="subtle">保存到当前数据集，不创建专题</span><button type="submit" class="primary-button" id="saveMaterial">收藏素材</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="feelingDialog" aria-labelledby="feelingTitle">
+    <form id="feelingForm" class="dialog-inner"><div class="dialog-heading"><h2 id="feelingTitle">修正我的感受</h2><button class="icon-button" type="button" data-close="feelingDialog" aria-label="关闭感受修正窗口">×</button></div><p class="subtle">初始原话保留，修正另存历史；后续观察请追加备注。</p><label for="feelingInput">现在想表达的原话</label><textarea id="feelingInput" rows="5" maxlength="2000000"></textarea><p id="feelingError" class="form-error" hidden role="alert"></p><div class="dialog-actions"><button class="primary-button" type="submit">保存修正</button></div></form>
+  </dialog>
+
+  <dialog id="researchDialog" aria-labelledby="researchTitle">
+    <form id="researchForm" class="dialog-inner"><div class="dialog-heading"><div><small class="eyebrow">由你决定何时研究</small><h2 id="researchTitle">从这个素材接着想</h2></div><button class="icon-button" type="button" data-close="researchDialog" aria-label="关闭研究窗口">×</button></div><p class="subtle">引用同一条素材，不复制原文。建立专题关系后，你可将问题交给 Codex。</p><label for="researchChoice">组织方式</label><select id="researchChoice"><option value="new">新建研究专题</option></select><div id="newQuestionFields"><label for="researchQuestion">当前想研究的问题</label><textarea id="researchQuestion" rows="3" maxlength="2000000" placeholder="例如：这个片段的停顿为什么吸引我？"></textarea><label for="researchScope">范围 <span class="optional">可选</span></label><textarea id="researchScope" rows="2" maxlength="2000000"></textarea></div><p id="researchError" class="form-error" hidden role="alert"></p><div class="dialog-actions"><button class="primary-button" type="submit" id="openResearch">进入专题</button></div></form>
+  </dialog>
+
+  <dialog id="editDialog" aria-labelledby="editTitle"><form id="editForm" class="dialog-inner"><div class="dialog-heading"><h2 id="editTitle">编辑素材信息</h2><button class="icon-button" type="button" data-close="editDialog" aria-label="关闭编辑窗口">×</button></div><div id="editFields"></div><p id="editError" class="form-error" hidden role="alert"></p><div class="dialog-actions"><button class="primary-button" type="submit">保存修改</button></div></form></dialog>
+
+  <dialog id="markDialog" aria-labelledby="markTitle"><form id="markForm" class="dialog-inner"><div class="dialog-heading"><h2 id="markTitle">标记关注片段</h2><button class="icon-button" type="button" data-close="markDialog" aria-label="关闭标记窗口">×</button></div><label for="markKind">标记方式</label><select id="markKind"><option value="text">文字选段</option><option value="time">视频时间</option><option value="image">图片局部说明</option><option value="general">其他关注点</option></select><label for="markAttachment">对应附件 <span class="optional">可选</span></label><select id="markAttachment"></select><div id="markTimeFields" class="field-pair" hidden><div><label for="markStart">起始秒数</label><input id="markStart" type="number" min="0" step="0.01"></div><div><label for="markEnd">结束秒数</label><input id="markEnd" type="number" min="0" step="0.01"></div></div><label for="markText">选段原文 / 局部说明</label><textarea id="markText" rows="3" maxlength="2000000"></textarea><label for="markNote">为什么关注这里</label><textarea id="markNote" rows="2" maxlength="2000000"></textarea><p id="markError" class="form-error" hidden role="alert"></p><div class="dialog-actions"><button type="submit" class="primary-button">保存标记</button></div></form></dialog>
+
+  <dialog id="handoffDialog" aria-labelledby="handoffTitle"><div class="dialog-inner wide-dialog"><div class="dialog-heading"><div><small class="eyebrow">把问题与停止处一起带过去</small><h2 id="handoffTitle">交给 Codex 继续研究</h2></div><button class="icon-button" type="button" data-close="handoffDialog" aria-label="关闭交接窗口">×</button></div><p class="subtle">从当前持久化记录生成。复制后由你粘贴到 Codex；不会自动发送或启动研究。</p><label for="handoffText">交接文本（可手动全选复制）</label><textarea id="handoffText" rows="17" readonly spellcheck="false"></textarea><div class="dialog-actions"><span id="copyStatus" class="subtle" role="status" aria-live="polite">尚未复制。</span><button class="secondary-button" id="downloadHandoff" type="button">下载文本</button><button class="primary-button" id="copyHandoff" type="button">复制交接文本</button></div></div></dialog>
+</body>
+</html>

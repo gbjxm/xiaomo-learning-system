@@ -1,0 +1,4 @@
+interface:
+  display_name: "声画与镜头深拆"
+  short_description: "按时间码细看画面、细听声音并核对声画关系，保存专业拆解与证据"
+  default_prompt: "使用 $analyze-audiovisual-material，围绕这段视频中的具体细节分别看画面、听声音并核对节奏，保存带时间码的深拆成果。"

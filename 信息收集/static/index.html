@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light"><title>小陌的信息库 · 创作机会</title>
+  <link rel="icon" href="./favicon.svg"><link rel="stylesheet" href="./style.css">
+  <script src="./visuals.js" defer></script>
+  <script src="./app.js" defer></script>
+  <script src="./profile.js" defer></script>
+  <script src="./enhancement-views.js" defer></script>
+  <script src="./backup-ui.js" defer></script>
+  <script src="./review-ui.js" defer></script>
+  <script src="./search-ui.js" defer></script>
+  <script src="./works-ui.js" defer></script>
+  <script src="./merge-ui.js" defer></script>
+  <script src="./library-tools.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到内容</a>
+  <aside class="sidebar">
+    <a class="brand" href="./" aria-label="小陌的信息库首页"><span class="brand-mark">✳</span><span>小陌的信息库<small>CREATIVE OPPORTUNITIES</small></span></a>
+    <div class="nav-caption">我的工作台</div>
+    <nav aria-label="主导航">
+      <button class="nav-item active" data-view="opportunities"><span class="nav-symbol">◫</span>创作机会<span id="nav-count" class="nav-count">—</span></button>
+      <button class="nav-item" data-view="starred"><span class="nav-symbol">☆</span>我的关注</button>
+      <button class="nav-item" data-view="works"><span class="nav-symbol">▥</span>作品与投稿</button>
+      <button class="nav-item" data-view="discoveries"><span class="nav-symbol">◇</span>新发现待核<span id="candidate-count" class="nav-count">—</span></button>
+      <button class="nav-item" data-view="batches"><span class="nav-symbol">↻</span>更新批次</button>
+      <button class="nav-item" data-view="sources"><span class="nav-symbol">◎</span>官方信源</button>
+      <button class="nav-item" data-view="changes"><span class="nav-symbol">↻</span>规则与变更<span id="change-count" class="nav-count">—</span></button>
+      <button class="nav-item" data-view="archive"><span class="nav-symbol">▤</span>历史归档</button>
+      <button class="nav-item" data-view="duplicates"><span class="nav-symbol">⇄</span>重复条目核对</button>
+      <button class="nav-item" data-view="backups"><span class="nav-symbol">▧</span>备份与恢复</button>
+    </nav>
+    <div class="sidebar-note"><span class="tiny-dot"></span> 只在你需要时更新<p>比赛、长期计划与平台扶持，<br>保存在自己的电脑里。</p><a href="./api/export" download>导出我的资料 ↗</a></div>
+    <div class="sidebar-bottom"><span class="avatar">陌</span><div>个人创作工作台<small>本机使用 · 无需登录</small></div></div>
+  </aside>
+  <main id="main">
+    <nav class="topbar" aria-label="系统模块"><a data-module-route="/learning/" href="http://127.0.0.1:8787/learning/">学习小岛</a><a data-module-route="/observatory/" href="http://127.0.0.1:8787/observatory/">素材观察室</a><a data-module-route="/information/" href="./" aria-current="page">信息收集</a></nav>
+    <header class="topbar"><div><span class="live-dot"></span> 本地资料库 <span class="separator">/</span> <span id="breadcrumb">创作机会</span></div><div class="top-actions"><span id="today"></span><button id="stop" class="text-button">停止服务</button></div></header>
+    <div class="workspace">
+      <section class="page-heading"><div><p class="eyebrow" id="eyebrow">为下一部作品做准备</p><h1 id="page-title">把创作机会，留在手边。</h1><p id="page-subtitle">从比赛征集到长期创作者计划，先看资格，再看奖励与规则。</p></div><button id="update" class="primary-button" disabled><span id="update-icon">↻</span><span id="update-label">检查更新</span></button></section>
+      <div id="update-notice" class="notice" role="status" aria-live="polite">正在读取已保存的资料…</div>
+      <details class="library-meta"><summary>本次更新与资料概况</summary><div class="library-meta-content">
+        <section id="digest-summary" aria-label="本次更新摘要" hidden></section>
+        <section id="stats" class="stats" aria-label="信息库概览"></section>
+      </div></details>
+      <section id="opportunity-tools" class="tools">
+        <div id="profile-editor"></div>
+        <div class="type-tabs" role="group" aria-label="信息类型"><button class="selected" data-kind="all">全部机会</button><button data-kind="competition">比赛征集</button><button data-kind="creator_program">长期计划</button><button data-kind="limited_benefit">限时福利</button><button data-kind="rule_update">规则更新</button></div>
+        <div class="filters"><div class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索平台、机会、资格或规则…" aria-label="搜索已保存内容"><button id="clear-search" type="button" aria-label="清空搜索" hidden>×</button><kbd>/</kbd></div><label class="sr-only" for="platform">平台</label><select id="platform"><option value="all">全部平台</option></select><label class="sr-only" for="status">开放状态</label><select id="status"><option value="all">全部状态</option><option value="open">已核时间 / 机制开放</option><option value="window">公告窗口内 · 开放待核</option><option value="upcoming">尚未开始</option><option value="unknown">开放待核验</option><option value="effective">规则已生效</option><option value="uncertain">状态冲突 / 时间待核</option><option value="closed">已截止</option><option value="history">全部历史参考</option></select><label class="sr-only" for="reward">奖励类别</label><select id="reward"><option value="all">全部奖励</option><option value="cash">现金</option><option value="credits">积分</option><option value="compute">算力</option><option value="traffic">流量</option><option value="promotion">推广</option><option value="screening">展映</option><option value="other">商业合作 / 其他</option></select></div>
+        <div id="active-filters" class="active-filters" aria-label="已选筛选条件" hidden></div>
+        <label class="fit-filter-label">对照我的作品 <select id="fit-filter"><option value="all">全部 · 待确认也保留</option><option value="matched">符合已核作品条件</option><option value="mismatched">不符合已核作品条件</option><option value="unknown">条件待确认</option></select></label>
+      </section>
+      <div id="list-heading" class="list-heading"><div><strong id="result-title" tabindex="-1">已保存的机会</strong><span id="result-count" role="status" aria-live="polite"></span></div><label>排序 <select id="sort"><option value="validity">有效与已核优先</option><option value="deadline">同组：临近截止</option><option value="publication">同组：近期发布</option><option value="match">同组：相关度</option></select></label></div>
+      <p id="sort-explanation" class="sort-explanation">已核开放 → 公告窗口内（开放待核）→ 尚未开始 → 待核 → 限制与尽调参考 → 历史。默认同组按临近截止、近期核验排列；金额不参与排序，个人资格另核。</p>
+      <section id="content" aria-label="已保存的内容"></section>
+      <footer class="page-footer"><span>新发布与开放状态分别判断 · 未注明截止不代表永久有效</span><span id="footer-count">数据保存在本机</span></footer>
+    </div>
+  </main>
+  <dialog id="detail" aria-labelledby="detail-title"><div id="detail-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

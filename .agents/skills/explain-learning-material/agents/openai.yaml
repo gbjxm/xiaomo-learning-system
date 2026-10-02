@@ -1,0 +1,4 @@
+interface:
+  display_name: "学习讲解与理解支持"
+  short_description: "讲解选定材料与真实困惑，按需举例辨析，明确请求后才检验理解"
+  default_prompt: "请用 $explain-learning-material 帮我理解当前选定的材料和困惑，结合例子说明适用条件。"

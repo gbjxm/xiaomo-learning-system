@@ -1,0 +1,4 @@
+interface:
+  display_name: "练习与作品学习"
+  short_description: "把课程和作品学习转成低成本练习，明确目的、产物与观察依据"
+  default_prompt: "请用 $design-learning-practice 为我正在学的内容设计一个适量的练习，说明目的和观察标准。"

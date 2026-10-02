@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#08161d" />
+    <meta name="description" content="小陌的个人学习终端：从一块真实学习开始，随时接续。" />
+    <title>小陌 · 学习终端</title>
+    <link rel="stylesheet" href="/app.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="学习终端导航">
+        <a class="brand" href="#workspace" aria-label="返回学习工作台">
+          <span class="brand-glyph" aria-hidden="true"><span></span></span>
+          <span><strong>小陌</strong><small>LEARNING TERMINAL</small></span>
+        </a>
+
+        <div class="sidebar-label">你的学习空间</div>
+        <nav class="nav-list">
+          <a class="nav-link active" href="#workspace"><span class="nav-icon">◈</span> 今日工作台</a>
+          <a class="nav-link" href="#conversation"><span class="nav-icon">◇</span> 学习对话</a>
+          <a class="nav-link" href="#continuation"><span class="nav-icon">↗</span> 接续点</a>
+          <a class="nav-link" href="/observatory/"><span class="nav-icon">◧</span> 素材观察室</a>
+          <a class="nav-link" href="http://127.0.0.1:8765" target="_blank" rel="noopener noreferrer"><span class="nav-icon">↗</span> 信息收集</a>
+        </nav>
+
+        <div class="sidebar-divider"></div>
+        <div class="sidebar-label">正在积累</div>
+        <div class="sidebar-status">
+          <span class="sidebar-status-label">阶段方向</span>
+          <p id="focusSidebar">正在读取…</p>
+          <span class="sidebar-status-label">最近记录</span>
+          <p id="lastSidebar">正在读取…</p>
+        </div>
+
+        <div class="sidebar-bottom">
+          <div class="system-mark"><span class="status-dot"></span> 本地学习空间 <span>V1</span></div>
+          <button class="help-link" id="helpButton" type="button">这个终端怎么用 <span aria-hidden="true">↗</span></button>
+        </div>
+      </aside>
+
+      <main class="main" id="workspace">
+        <header class="topbar">
+          <div class="breadcrumbs"><span>学习空间</span><span class="slash">/</span><strong>今日工作台</strong></div>
+          <div class="topbar-right"><span id="todayLabel"></span><span class="top-divider"></span><span class="api-badge" id="apiBadge"><span class="status-dot"></span> 检查接口…</span></div>
+        </header>
+
+        <div class="main-inner">
+          <section class="hero" aria-labelledby="heroTitle">
+            <div class="hero-copy">
+              <span class="eyebrow"><span class="tiny-diamond">◆</span> 你的学习，从眼前这一小块开始</span>
+              <h1 id="heroTitle">把今天，<em>收束成下一步。</em></h1>
+              <p>告诉我你有多少时间、想推进什么。我们先定一个能完成的动作，学完再从真实结果调整。</p>
+              <div class="hero-tags"><span>有方向就继续</span><span>没方向也能开始</span><span>随时暂停</span></div>
+            </div>
+            <div class="orbit" aria-hidden="true">
+              <span class="orbit-ring orbit-ring-one"></span><span class="orbit-ring orbit-ring-two"></span><span class="orbit-ring orbit-ring-three"></span>
+              <span class="orbit-core"><span>下一步</span><strong>从这里<br />开始</strong></span>
+              <span class="orbit-node orbit-node-one"></span><span class="orbit-node orbit-node-two"></span><span class="orbit-node orbit-node-three"></span>
+              <span class="orbit-caption orbit-caption-one">学习</span><span class="orbit-caption orbit-caption-two">实践</span><span class="orbit-caption orbit-caption-three">回看</span>
+            </div>
+          </section>
+
+          <section class="launch-card" id="launchCard" aria-labelledby="launchTitle">
+            <div class="section-kicker">01 / 开始一块学习</div>
+            <div class="launch-heading"><div><h2 id="launchTitle">今天，从哪里开始？</h2><p>一句话就够。课程、片子、项目里的问题，或“我不知道学什么”都可以。</p></div><span class="launch-flower" aria-hidden="true">✳</span></div>
+            <div class="time-row"><span>我现在大约有</span><div class="time-chips" role="group" aria-label="今天可用时间">
+              <button type="button" class="time-chip" data-time="20 分钟" aria-pressed="false">20 分钟</button>
+              <button type="button" class="time-chip" data-time="1 小时" aria-pressed="false">1 小时</button>
+              <button type="button" class="time-chip" data-time="半天" aria-pressed="false">半天</button>
+              <button type="button" class="time-chip" data-time="还不确定" aria-pressed="false">还不确定</button>
+            </div></div>
+            <label class="visually-hidden" for="startInput">今天想学习或解决什么</label>
+            <div class="launch-input-wrap"><textarea id="startInput" rows="2" maxlength="4000" placeholder="例如：我想继续看编剧课；或者今天只有一点时间，不知道先学什么…"></textarea><button type="button" class="primary-button" id="startButton">帮我开始 <span aria-hidden="true">↗</span></button></div>
+            <p class="input-hint">留出休息和余量。安排会跟着你的实际时间变化。</p>
+          </section>
+
+          <section class="conversation-card" id="conversation" aria-labelledby="conversationTitle">
+            <div class="conversation-head"><div><div class="section-kicker">02 / 学习进行中</div><h2 id="conversationTitle">随时回来聊一会儿</h2></div><span class="live-pill"><i></i> 自主学习中</span></div>
+            <div class="conversation-empty" id="conversationEmpty"><span class="empty-glyph">✦</span><p>你的课程和创作仍由你自己推进。遇到困惑、做完一块、时间变了，再回来继续。</p></div>
+            <div class="message-list" id="messageList" role="log" aria-live="polite" aria-relevant="additions text"></div>
+            <div class="action-row" role="group" aria-label="本次交流类型">
+              <button type="button" class="action-chip" data-mode="question" aria-pressed="false">有个问题</button>
+              <button type="button" class="action-chip" data-mode="progress" aria-pressed="false">做了一部分</button>
+              <button type="button" class="action-chip" data-mode="plan" aria-pressed="false">时间变了</button>
+              <button type="button" class="action-chip" data-mode="wrap" aria-pressed="false">今天先到这</button>
+            </div>
+            <div class="composer">
+              <div class="composer-mode" id="composerMode"><span class="mode-dot"></span> 自由交流</div>
+              <label class="visually-hidden" for="chatInput">与学习助手交流</label>
+              <textarea id="chatInput" rows="3" maxlength="6000" placeholder="说说你现在的想法、困惑或进展…"></textarea>
+              <div class="composer-bottom"><label class="no-save"><input type="checkbox" id="skipSave" /> <span>这次只聊，不保存</span></label><span class="composer-tip">Enter 发送 · Shift + Enter 换行</span><button type="button" class="send-button" id="sendButton" aria-label="发送消息">↗</button></div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <aside class="insight-panel" id="continuation" aria-label="学习接续和状态">
+        <div class="insight-top"><span class="section-kicker">YOUR MOMENTUM</span><span class="sparkle" aria-hidden="true">✧</span></div>
+        <h2>继续的线索</h2><p class="insight-intro">下一次打开时，从这里接上。</p>
+        <div class="next-card"><span class="next-symbol">↗</span><span class="next-label">下一步</span><p id="nextStep">正在读取当前状态…</p></div>
+        <div class="process"><span class="section-kicker">一个自然的循环</span><div class="process-item"><span class="process-index">01</span><div><strong>定下一步</strong><small>根据今天的时间和意图</small></div></div><div class="process-item"><span class="process-index">02</span><div><strong>自主去学习</strong><small>看课、看片、练习或创作</small></div></div><div class="process-item"><span class="process-index">03</span><div><strong>回来谈结果</strong><small>留下收获与接续点</small></div></div></div>
+        <div class="quiet-note"><span aria-hidden="true">☾</span><p>休息也是学习的一部分。这里不会催你打卡。</p></div>
+        <div class="connection-card" id="connectionCard" hidden><strong>聊天入口待配置</strong><p>可用本机 Codex 登录，或在服务端填写兼容接口地址与密钥。</p></div>
+      </aside>
+    </div>
+
+    <dialog id="helpDialog" class="help-dialog"><div class="dialog-inner"><button type="button" class="dialog-close" id="closeHelp" aria-label="关闭说明">×</button><span class="section-kicker">HOW IT WORKS</span><h2>用自己的节奏学习</h2><p>从一块内容开始，去看课、看片或创作。回来时说出进展或困惑，终端会按需要调整安排。</p><p>明确安排、完成一块交流或暂停时，系统会把有用的内容写入现有学习记录；只有保存成功才会显示确认。自由交流可勾选“这次只聊，不保存”。</p><p>计划、你的自述和实际完成的作品会分别记录。网页里的对话暂存在当前浏览器标签页，正式进展以学习系统文件为准。</p></div></dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

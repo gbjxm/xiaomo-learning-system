@@ -1,0 +1,25 @@
+.island-scenes{width:100%;height:100%;min-height:0;position:relative;isolation:isolate;overflow:hidden;border-radius:24px;color:#35584b}
+.island-scenes svg{display:block;width:100%;height:100%;overflow:visible;font-family:"Microsoft YaHei","Segoe UI",sans-serif}
+.island-scenes .scene-place{cursor:pointer;outline:none}
+.island-scenes .scene-hit{fill:transparent;stroke:transparent;stroke-width:2;pointer-events:none}
+.island-scenes .scene-prop{transition:transform .22s ease,opacity .22s ease;transform-box:fill-box;transform-origin:50% 90%}
+.island-scenes .scene-label-bg{fill:#fffdf4;stroke:#c5cbb6;stroke-width:1;transition:fill .18s ease,stroke .18s ease}
+.island-scenes .scene-label{font-size:15px;font-weight:500;fill:#355346;letter-spacing:.3px;pointer-events:none}
+.island-scenes .scene-label-dot{fill:#9cae83;transition:fill .18s ease}
+.island-scenes .scene-place:hover .scene-prop,.island-scenes .scene-place:focus-visible .scene-prop{transform:translateY(-4px)}
+.island-scenes .scene-place:hover .scene-label-bg,.island-scenes .scene-place:focus-visible .scene-label-bg{fill:#fffef9;stroke:#6e8870;stroke-width:2}
+.island-scenes .scene-place:focus-visible .scene-hit{stroke:#a67639;stroke-dasharray:5 4;fill:#fffdf413}
+.island-scenes .scene-place:hover .scene-label-dot,.island-scenes .scene-place:focus-visible .scene-label-dot{fill:#5a795d}
+.island-scenes .scene-caption{fill:#718777;font-size:11px;letter-spacing:2px;pointer-events:none}
+.island-scenes .scene-wave{animation:island-water 8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.island-scenes .scene-wave:nth-child(2n){animation-delay:-4s}
+.island-scenes .scene-leaf{animation:island-leaf 6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+.island-scenes .scene-leaf:nth-child(2n){animation-delay:-2.5s}
+.island-scenes .scene-cat-tail{animation:island-tail 5s ease-in-out infinite;transform-box:fill-box;transform-origin:15% 90%}
+.island-scenes .scene-lamp{animation:island-light 7s ease-in-out infinite}
+.is-still .island-scenes *{animation-play-state:paused!important;transition:none!important}
+@keyframes island-water{0%,100%{transform:translateX(-4px);opacity:.45}50%{transform:translateX(4px);opacity:.8}}
+@keyframes island-leaf{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
+@keyframes island-tail{0%,75%,100%{transform:rotate(0deg)}85%{transform:rotate(-7deg)}}
+@keyframes island-light{0%,100%{opacity:.45}50%{opacity:.75}}
+@media(prefers-reduced-motion:reduce){.island-scenes *{animation:none!important;transition:none!important}}

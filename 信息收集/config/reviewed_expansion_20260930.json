@@ -1,0 +1,2240 @@
+{
+  "as_of": "2026-09-30",
+  "method": "官方公开规则人工研究移交；自动抓取能力独立报告",
+  "documents": [
+    {
+      "source_id": "jingrui_2026",
+      "title": "鲸锐AI创作大赛",
+      "platform": "优酷 / 虎鲸文娱",
+      "organizer": "虎鲸文娱集团；优酷独家视频展映，大麦娱乐线下支持",
+      "official_url": "https://jingrui-ai-competition.youku.com/?view=rules",
+      "entry_url": "https://jingrui-ai-competition.youku.com/",
+      "edition": "2026",
+      "kind": "competition",
+      "summary": "影视集团主办；税前1000万元现金总池，单奖最高200万元。完整原创故事至少10分钟，作品首发与独家传播限制须先核对。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": "2026-09-17",
+      "time": {
+        "mechanism": "fixed",
+        "start": "2026-09-17T10:00:00+08:00",
+        "deadline": "2026-11-22T23:59:00+08:00",
+        "timezone": "+08:00",
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": true,
+        "evidence": "规则明确2026-09-17 10:00至11-22 23:59，北京时间。",
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "deadline_raw": "2026-11-22T23:59:00+08:00",
+        "deadline_tentative": false
+      },
+      "rewards": [
+        {
+          "type": "cash",
+          "label": "税前现金总奖池",
+          "amount": 10000000,
+          "scope": "全部265名获奖者总池，非个人收益",
+          "validity": null,
+          "currency": "CNY",
+          "unit": "元"
+        },
+        {
+          "type": "cash",
+          "label": "单项最高奖",
+          "amount": 2000000,
+          "scope": "总池内最高奖1名；不与总池相加",
+          "validity": null,
+          "currency": "CNY",
+          "unit": "元"
+        }
+      ],
+      "eligibility": [
+        "个人或团队，不限专业；本人或团队代表须有效中国居民身份证及+86手机号。"
+      ],
+      "work_requirements": [
+        "不限AI工具和画面占比；完整原创故事≥10分钟，不得直接采用现有IP。",
+        "16:9、≥1080p、MP4/MOV，无AI工具水印；故事阐述≥1000字，简介≤200字。"
+      ],
+      "steps": [
+        "在赛事官网准备身份及作品材料后投稿；本库不执行报名。",
+        "提交后不能修改或撤回；奖金发放另需合规税票与收款材料。"
+      ],
+      "risks": [
+        {
+          "type": "first_release",
+          "level": "high",
+          "detail": "作品须赛事首发，不能提前或同步在他处公开。"
+        },
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "投稿即授永久、不可撤销、全球、无偿、非独家赛事宣传及成果用途许可；不是无条件保留所有传播自由。"
+        },
+        {
+          "type": "exclusive",
+          "level": "high",
+          "detail": "所有获奖作品授独家信息网络传播权，获奖公示起至赛事结束后6个月；期间本人也不得自行或授权在公开平台发布。"
+        },
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "最高与专业单奖另有三年优先洽谈合作权；具体合作另签协议。"
+        }
+      ],
+      "program": {
+        "join": null,
+        "revenue": null,
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://jingrui-ai-competition.youku.com/?view=rules",
+          "observed_at": "2026-09-30",
+          "excerpt": "影视集团主办；税前1000万元现金总池，单奖最高200万元。完整原创故事至少10分钟，作品首发与独家传播限制须先核对。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "allowed",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "personal_eligibility": "not_checked"
+      },
+      "importance": {
+        "basis": "主办影视集团与优酷官方站；明确高额现金奖，但规则与作品匹配同样重要。"
+      },
+      "id": "673357c2eced5f0fab289a8d"
+    },
+    {
+      "source_id": "jinji_ai_2026",
+      "title": "2026金鸡AI影展（暨AIGC未来影像）",
+      "platform": "金鸡百花电影节",
+      "organizer": "2026金鸡AI影展组委会；中国金鸡百花电影节官方平台",
+      "official_url": "https://www.xmwenlian.com/home/article/detail/id/7928.html",
+      "entry_url": null,
+      "edition": "2026",
+      "kind": "competition",
+      "summary": "国家级电影节平台的AI影展征集；10月5日24时截止，免费。七项荣誉、证书与展映，未承诺现金。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": "2026-09-14T09:58:00",
+      "time": {
+        "mechanism": "fixed",
+        "start": "2026-09-14",
+        "deadline": "2026-10-06T00:00:00",
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": true,
+        "evidence": "公告发布日起开放；原文截止2026年10月5日24时（等于次日零时）；时区未注明。",
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "deadline_raw": "2026-10-05 24:00",
+        "deadline_tentative": false
+      },
+      "rewards": [
+        {
+          "type": "other",
+          "label": "七项年度荣誉与入围证书",
+          "amount": null,
+          "scope": "非金鸡奖主竞赛奖；没有已公布现金",
+          "validity": null
+        },
+        {
+          "type": "screening",
+          "label": "入围展映、论坛及宣传",
+          "amount": null,
+          "scope": "按主办方入围安排",
+          "validity": null
+        }
+      ],
+      "eligibility": [
+        "全球个人、团队、高校、影视机构、游戏企业、科研及文旅单位。"
+      ],
+      "work_requirements": [
+        "科影融合或影游联动两单元；短片≤20分钟、长片≥60分钟；2026-10-05前成片。",
+        "AI生成画面≥50%；片头标注含AI生成画面，保留工程、提示词与素材。",
+        "16:9、≥1080p、MP4/MOV、无水印；横竖海报、3–5剧照、≤300字梗概、AI说明及第三方授权包。"
+      ],
+      "steps": [
+        "公告二维码申报入口及表格须人工核验；不要使用页面导航中的一般会员注册入口。",
+        "电子材料按单元+作品+主创命名；科影融合发zgkpzx@kpcswa.org.cn，影游联动发AI@bigscreen1950.com。本库仅记录，不发信。"
+      ],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "完整版权归创作方；入围作允许主办方非商业公益展映、线上宣传及行业论坛放映。"
+        },
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "第三方IP、配乐、人声和实拍素材须完整合法授权。"
+        }
+      ],
+      "program": {
+        "join": null,
+        "revenue": null,
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://www.xmwenlian.com/home/article/detail/id/7928.html",
+          "observed_at": "2026-09-30",
+          "excerpt": "国家级电影节平台的AI影展征集；10月5日24时截止，免费。七项荣誉、证书与展映，未承诺现金。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "allowed",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "personal_eligibility": "not_checked"
+      },
+      "fees": [
+        {
+          "type": "报名费",
+          "amount": 0,
+          "currency": "CNY",
+          "scope": "公告明示免费；其他制作与出行成本不据此免除"
+        }
+      ],
+      "importance": {
+        "basis": "电影节来源由厦门市文联发布；主流展映价值和临近截止，不能只按奖金排序。"
+      },
+      "id": "13f7c62d86d7da63fca3057b"
+    },
+    {
+      "source_id": "cuc_aigc_2026",
+      "title": "首届（2026）AIGC与可视化创作大赛",
+      "platform": "中国传媒大学",
+      "organizer": "中国传媒大学、中国新闻技术工作者联合会",
+      "official_url": "https://www.cuc.edu.cn/2026/0811/c10001a273225/page.htm",
+      "entry_url": "https://aigc.capt.cn/",
+      "edition": "2026",
+      "kind": "competition",
+      "summary": "个人含大学生/成人组及机构组，六赛道包括AIGC视频。免费，证书及纪念品，未承诺现金。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": "2026-08-01",
+      "time": {
+        "mechanism": "fixed",
+        "start": "2026-08-01",
+        "deadline": "2026-10-11",
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": true,
+        "evidence": "官方本届公告披露窗口；时区仅在原文明示时填写。",
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "deadline_raw": "2026-10-11",
+        "deadline_tentative": false
+      },
+      "rewards": [
+        {
+          "type": "other",
+          "label": "证书与纪念品",
+          "amount": null,
+          "scope": "公告没有现金金额",
+          "validity": null
+        }
+      ],
+      "eligibility": [
+        "机构组；个人组含大学生组、成人组。具体个人资格需报名端复核。"
+      ],
+      "work_requirements": [
+        "六赛道：视频、音频、文图、沉浸交互、互动可视化、数据新闻。",
+        "AIGC视频含短视频、微短剧、动漫剧、微电影、网剧与网大；内容不限，完整规格须查章程。"
+      ],
+      "steps": [
+        "通过学校公告确认赛事官网，阅读完整DOCX章程后准备作品；11月答辩终评。"
+      ],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "完整授权条款在尚未读出的DOCX章程中，不能按“未提版权”推定无约束。"
+        }
+      ],
+      "program": {
+        "join": null,
+        "revenue": null,
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://www.cuc.edu.cn/2026/0811/c10001a273225/page.htm",
+          "observed_at": "2026-09-30",
+          "excerpt": "个人含大学生/成人组及机构组，六赛道包括AIGC视频。免费，证书及纪念品，未承诺现金。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        },
+        {
+          "origin": "manual_handoff",
+          "url": "https://ccs.cuc.edu.cn/2026/0801/c5526a273086/page.htm",
+          "observed_at": "2026-09-30",
+          "excerpt": "学院官方通知与章程附件入口。",
+          "note": "附件本次未核全文。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "allowed",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "personal_eligibility": "not_checked"
+      },
+      "fees": [
+        {
+          "type": "报名费",
+          "amount": 0,
+          "currency": "CNY",
+          "scope": "公告明示免费；其他制作与出行成本不据此免除"
+        }
+      ],
+      "importance": {
+        "basis": "主办高校及行业联合会正式通知；含大学生组与影视创作方向，身份仍须用户自行核实。"
+      },
+      "id": "a9fc87f318602759f8f83ba1"
+    },
+    {
+      "source_id": "smg_seko_2026",
+      "title": "创所未见·2026年度AI短片计划",
+      "platform": "SMG / Seko",
+      "organizer": "上海广播电视台、上海市静安区人民政府；东方娱乐承办；商汤冠名",
+      "official_url": "https://seko.sensetime.com/activity/2079017609580478466",
+      "entry_url": "https://seko.sensetime.com/activity/2079017609580478466",
+      "edition": "2026",
+      "kind": "competition",
+      "summary": "上海广播电视台与静安区主办；30秒–8分钟，Seko及命题AI比例有要求；奖金金额未公布，截止暂定。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": "2026-07-24",
+      "time": {
+        "mechanism": "fixed",
+        "start": "2026-07-24",
+        "deadline": "2026-10-31T23:59:59",
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": false,
+        "evidence": "页面10月31日23:59:59；正文称10月31日暂定，原文未明确时区。",
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "deadline_raw": "2026-10-31T23:59:59",
+        "deadline_tentative": true
+      },
+      "rewards": [
+        {
+          "type": "cash",
+          "label": "16个综合奖的奖金",
+          "amount": null,
+          "scope": "承诺奖金但金额尚未公布，不能估算总池或个人收益",
+          "validity": null
+        },
+        {
+          "type": "screening",
+          "label": "展映、证书及合作机会",
+          "amount": null,
+          "scope": "数量、领取条件或结算细则未公开，不视为保底收益",
+          "validity": null
+        }
+      ],
+      "eligibility": [
+        "全球个人或团队，不限国籍、年龄、职业，每人/队≤3件。"
+      ],
+      "work_requirements": [
+        "30秒–8分钟，≥1080p，MP4/MOV。",
+        "开放赛道Seko须为核心工具；静安命题AI参与≥70%；片头AI标注，片尾注明Seko及环节。",
+        "作品不得参加过其他同类赛事；是否属于同类须按赛事当前规则复核。"
+      ],
+      "steps": [
+        "邮箱与Seko活动页双投；邮箱地址与全部表单须查看官方页。",
+        "提交后不可修改；2026年11月评审、2027年3月颁奖。"
+      ],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "版权归作者；主办方获无偿非商业展播、宣传和汇编权。"
+        },
+        {
+          "type": "submission",
+          "level": "review",
+          "detail": "此前参加同类赛事的作品可能不合格；提交不可修改。"
+        }
+      ],
+      "program": {
+        "join": null,
+        "revenue": null,
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://seko.sensetime.com/activity/2079017609580478466",
+          "observed_at": "2026-09-30",
+          "excerpt": "上海广播电视台与静安区主办；30秒–8分钟，Seko及命题AI比例有要求；奖金金额未公布，截止暂定。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "allowed",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "personal_eligibility": "not_checked"
+      },
+      "id": "6ea09526c3f7ee86e7981e88"
+    },
+    {
+      "source_id": "vacat_2026",
+      "title": "第三届瓦卡奖VACAT—AI穹顶巨幕特别赛道",
+      "platform": "抖音 / 上影",
+      "organizer": "抖音、深圳市龙岗区人民政府、上海电影股份有限公司",
+      "official_url": "https://www.lg.gov.cn/gkmlpt/content/12/12890/post_12890803.html",
+      "entry_url": null,
+      "edition": "2026 / 穹顶巨幕特别赛道",
+      "kind": "competition",
+      "summary": "当前仅穹顶巨幕特别赛道仍有窗口，最高奖励8万元。常规叙事短片、微短剧及其他专项已8月31日截止。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": "2026-07-10",
+      "time": {
+        "mechanism": "fixed",
+        "start": "2026-07-10T00:00:00",
+        "deadline": "2026-10-21T00:00:00",
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": true,
+        "evidence": "官方本届公告披露窗口；时区仅在原文明示时填写。",
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "deadline_raw": "2026-10-20 24:00",
+        "deadline_tentative": false
+      },
+      "rewards": [
+        {
+          "type": "cash",
+          "label": "穹顶巨幕赛道最高奖励",
+          "amount": 80000,
+          "scope": "特别赛道单奖最高，不是常规赛道仍开放的证明",
+          "validity": null,
+          "currency": "CNY",
+          "unit": "元"
+        },
+        {
+          "type": "traffic",
+          "label": "dou+等流量支持",
+          "amount": null,
+          "scope": "非现金",
+          "validity": null
+        },
+        {
+          "type": "other",
+          "label": "孵化及投资机会",
+          "amount": null,
+          "scope": "投资机会不是保底奖金",
+          "validity": null
+        }
+      ],
+      "eligibility": [
+        "全球专业创作者、学生与爱好者。"
+      ],
+      "work_requirements": [
+        "AI穹顶巨幕特别赛道；普通横版叙事短片不能据此视为符合，具体投递规格待核。"
+      ],
+      "steps": [
+        "查抖音官方投稿专区的穹顶巨幕完整规则和入口。"
+      ],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "政府通知未披露完整授权、独家或版权条款，正式投递前须复核。"
+        }
+      ],
+      "program": {
+        "join": null,
+        "revenue": null,
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://www.lg.gov.cn/gkmlpt/content/12/12890/post_12890803.html",
+          "observed_at": "2026-09-30",
+          "excerpt": "当前仅穹顶巨幕特别赛道仍有窗口，最高奖励8万元。常规叙事短片、微短剧及其他专项已8月31日截止。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "allowed",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "personal_eligibility": "not_checked"
+      },
+      "relations": [
+        {
+          "type": "special_track",
+          "target_id": "969f262b17644b658ed0d23a",
+          "note": "特别赛道独立窗口；不改变母赛事常规赛道截止。"
+        }
+      ],
+      "id": "57eb71171b59492e80edb94b"
+    },
+    {
+      "source_id": "vacat_2026",
+      "title": "第三届AI视觉创意大赛（瓦卡奖VACAT）常规赛道",
+      "platform": "抖音 / 上影",
+      "organizer": "抖音、深圳市龙岗区人民政府、上海电影股份有限公司",
+      "official_url": "https://www.lg.gov.cn/gkmlpt/content/12/12890/post_12890803.html",
+      "entry_url": null,
+      "edition": "2026 / 常规及原专项赛道",
+      "kind": "competition",
+      "summary": "常规叙事/微短剧与原专项8月31日已截止；不要套用穹顶赛道10月20日的截止。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": "2026-07-10",
+      "time": {
+        "mechanism": "fixed",
+        "start": "2026-07-10T00:00:00",
+        "deadline": "2026-08-31",
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": true,
+        "evidence": "官方本届公告披露窗口；时区仅在原文明示时填写。",
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "deadline_raw": "2026-08-31",
+        "deadline_tentative": false
+      },
+      "rewards": [
+        {
+          "type": "cash",
+          "label": "常规视频金奖最高",
+          "amount": 20000,
+          "scope": "已截止常规视频单奖",
+          "validity": null,
+          "currency": "CNY",
+          "unit": "元"
+        },
+        {
+          "type": "cash",
+          "label": "常规图像金奖最高",
+          "amount": 10000,
+          "scope": "已截止图像单奖",
+          "validity": null,
+          "currency": "CNY",
+          "unit": "元"
+        }
+      ],
+      "eligibility": [
+        "全球专业创作者、学生与爱好者。"
+      ],
+      "work_requirements": [
+        "常规视频、图像与专项各有规格，原文细则须另核。"
+      ],
+      "steps": [],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "完整授权条款未核。"
+        }
+      ],
+      "program": {
+        "join": null,
+        "revenue": null,
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://www.lg.gov.cn/gkmlpt/content/12/12890/post_12890803.html",
+          "observed_at": "2026-09-30",
+          "excerpt": "常规叙事/微短剧与原专项8月31日已截止；不要套用穹顶赛道10月20日的截止。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "allowed",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "personal_eligibility": "not_checked"
+      },
+      "id": "969f262b17644b658ed0d23a"
+    },
+    {
+      "source_id": "bjiff_aigc_2026",
+      "title": "第十六届北京国际电影节AIGC电影单元",
+      "platform": "北京国际电影节",
+      "organizer": "中国传媒大学；北影节组委会办公室指导；动画与数字艺术学院承办",
+      "official_url": "https://www.bjiff.com/bannergdtp/202602/t20260203_188677.html",
+      "entry_url": null,
+      "edition": "2026",
+      "kind": "competition",
+      "summary": "2026已截止；主流电影节连续第三届AIGC单元。作者版权保留，主单元现金未公布。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": "2026-02-03",
+      "time": {
+        "mechanism": "fixed",
+        "start": "2026-02-03",
+        "deadline": "2026-03-30",
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": true,
+        "evidence": "官方本届公告披露窗口；时区仅在原文明示时填写。",
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "deadline_raw": "2026-03-30",
+        "deadline_tentative": false
+      },
+      "rewards": [
+        {
+          "type": "other",
+          "label": "主单元荣誉",
+          "amount": null,
+          "scope": "没有已公开奖金；不是天坛奖主竞赛",
+          "validity": null
+        }
+      ],
+      "eligibility": [
+        "全球个人及高校师生，不限国籍、年龄。"
+      ],
+      "work_requirements": [
+        "短片1–20分钟，AI流程≥70%；长片≥45分钟，AI≥50%。",
+        "剧集每集1–5分钟，全季≥8集，提交≥5集，AI≥50%；≥1080p MP4/MOV，完整AI流程说明。"
+      ],
+      "steps": [
+        "2026已结束，仅追踪下一届正式公告，不生成2027轮次。"
+      ],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "作者保留版权，主办方获非商业展映、宣传、档案权；投递端其他条款待核。"
+        }
+      ],
+      "program": {
+        "join": null,
+        "revenue": null,
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://www.bjiff.com/bannergdtp/202602/t20260203_188677.html",
+          "observed_at": "2026-09-30",
+          "excerpt": "2026已截止；主流电影节连续第三届AIGC单元。作者版权保留，主单元现金未公布。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "allowed",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "personal_eligibility": "not_checked"
+      },
+      "id": "94f2c228f9cda3ce3db9025c"
+    },
+    {
+      "source_id": "bjiff_aigc_2026",
+      "title": "北影节AIGC2026—通义万相妙思+专属赛道",
+      "platform": "北京国际电影节 / 通义万相",
+      "organizer": "中国传媒大学；北影节组委会办公室指导；动画与数字艺术学院承办",
+      "official_url": "https://www.bjiff.com/bannergdtp/202602/t20260203_188677.html",
+      "entry_url": null,
+      "edition": "2026 / 通义万相专属赛道",
+      "kind": "competition",
+      "summary": "官方主单元公告另列通义万相专属赛道10万元奖池，不能当成主单元奖金。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": "2026-02-03",
+      "time": {
+        "mechanism": "fixed",
+        "start": null,
+        "deadline": "2026-03-30",
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": true,
+        "evidence": "官方本届公告披露窗口；时区仅在原文明示时填写。",
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "deadline_raw": "2026-03-30",
+        "deadline_tentative": false
+      },
+      "rewards": [
+        {
+          "type": "cash",
+          "label": "通义万相专属赛道奖金池",
+          "amount": 100000,
+          "scope": "子赛道总池，非主单元或个人收益",
+          "validity": null,
+          "currency": "CNY",
+          "unit": "元"
+        }
+      ],
+      "eligibility": [],
+      "work_requirements": [],
+      "steps": [],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "完整子赛道授权与工具门槛待核。"
+        }
+      ],
+      "program": {
+        "join": null,
+        "revenue": null,
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://www.bjiff.com/bannergdtp/202602/t20260203_188677.html",
+          "observed_at": "2026-09-30",
+          "excerpt": "官方主单元公告另列通义万相专属赛道10万元奖池，不能当成主单元奖金。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "allowed",
+        "reason": "历史子赛道，具体工具与作品资格未完整核验。",
+        "personal_eligibility": "not_checked"
+      },
+      "relations": [
+        {
+          "type": "special_track",
+          "target_id": "94f2c228f9cda3ce3db9025c",
+          "note": "专属奖金与工具资格独立。"
+        }
+      ],
+      "id": "f2531346de21e67a636e3725"
+    },
+    {
+      "source_id": "student_tv_2026",
+      "title": "第十九届上海大学生电视节AI视频大赛",
+      "platform": "上海大学生电视节",
+      "organizer": "华东师范大学、上海外国语大学；上海市教委等指导",
+      "official_url": "https://comm.ecnu.edu.cn/c3/c5/c51744a771013/page.htm",
+      "entry_url": null,
+      "edition": "2026",
+      "kind": "competition",
+      "summary": "大学生影视赛事，2026已截止；奖金、奖杯、奖状有提及但未公开奖金金额。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": "2026-07-21",
+      "time": {
+        "mechanism": "fixed",
+        "start": "2026-07-21",
+        "deadline": "2026-09-21T00:00:00",
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": true,
+        "evidence": "官方本届公告披露窗口；时区仅在原文明示时填写。",
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "deadline_raw": "2026-09-20 24:00",
+        "deadline_tentative": false
+      },
+      "rewards": [
+        {
+          "type": "cash",
+          "label": "紫丁香及赛道奖奖金",
+          "amount": null,
+          "scope": "金额未公布",
+          "validity": null
+        },
+        {
+          "type": "other",
+          "label": "奖杯、奖状",
+          "amount": null,
+          "scope": "数量、领取条件或结算细则未公开，不视为保底收益",
+          "validity": null
+        }
+      ],
+      "eligibility": [
+        "大学生赛事，要求学校及指导教师信息；毕业生和国际资格细则未核。"
+      ],
+      "work_requirements": [
+        "MINI剧情/纪录15–30分钟，AI影像≥20%。",
+        "AI微短剧3集×3分钟，可全AI；AI剧本8000–10000字加≥500字人机方案。"
+      ],
+      "steps": [
+        "2026已截止，保留各单元规格与下一届关注；获奖名单10月18–20日，10月24日颁奖暂定。"
+      ],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "须原创完整合法版权；主承协办方获无偿非营利展播、出版、教学推广与赛事展示权。"
+        }
+      ],
+      "program": {
+        "join": null,
+        "revenue": null,
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://comm.ecnu.edu.cn/c3/c5/c51744a771013/page.htm",
+          "observed_at": "2026-09-30",
+          "excerpt": "大学生影视赛事，2026已截止；奖金、奖杯、奖状有提及但未公开奖金金额。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "allowed",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "personal_eligibility": "not_checked"
+      },
+      "id": "8be090b0a8e1eff0ef6c92f8"
+    },
+    {
+      "source_id": "aniwow_2026",
+      "title": "Aniwow!2026第21届国际大学生动画节白杨奖",
+      "platform": "Aniwow / 中国传媒大学",
+      "organizer": "中国（北京）国际大学生动画节组委会、中国传媒大学动画与数字艺术学院",
+      "official_url": "https://www.cuc.edu.cn/2026/0825/c10001a273403/page.htm",
+      "entry_url": null,
+      "edition": "2026",
+      "kind": "competition",
+      "summary": "高校动画与数字艺术主流赛事，已截止。所有使用AI的作品必须投C数字艺术类，传统动画类不能接收纯AI。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": "2026-08-22",
+      "time": {
+        "mechanism": "fixed",
+        "start": null,
+        "deadline": "2026-09-14",
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": true,
+        "evidence": "官方本届公告披露窗口；时区仅在原文明示时填写。",
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "deadline_raw": "2026-09-14",
+        "deadline_tentative": false
+      },
+      "rewards": [
+        {
+          "type": "cash",
+          "label": "白杨奖奖金",
+          "amount": null,
+          "scope": "金额未知",
+          "validity": null
+        },
+        {
+          "type": "other",
+          "label": "证书与奖杯",
+          "amount": null,
+          "scope": "数量、领取条件或结算细则未公开，不视为保底收益",
+          "validity": null
+        }
+      ],
+      "eligibility": [
+        "高校相关专业在校创作及毕业作品；2026届毕业生可先交未完成版，入围后须完成。"
+      ],
+      "work_requirements": [
+        "任何AI使用均须投C数字艺术类并披露；数字智能影像含剧情、实验、动画。",
+        "英文字幕，初选H.264 MP4；受委托广告宣传片不合格；已发表作品须注明。"
+      ],
+      "steps": [
+        "2026征集已截止；下一届未知，不推算2027日期。"
+      ],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "作者有版权；线下展映授权2026-09-14至12-31；另有无偿媒体宣传、播映、出版许可，发表通常不能撤销删除。"
+        }
+      ],
+      "program": {
+        "join": null,
+        "revenue": null,
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://www.cuc.edu.cn/2026/0825/c10001a273403/page.htm",
+          "observed_at": "2026-09-30",
+          "excerpt": "高校动画与数字艺术主流赛事，已截止。所有使用AI的作品必须投C数字艺术类，传统动画类不能接收纯AI。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "allowed",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "personal_eligibility": "not_checked"
+      },
+      "fees": [
+        {
+          "type": "报名费",
+          "amount": 0,
+          "currency": "CNY",
+          "scope": "公告明示免费；其他制作与出行成本不据此免除"
+        }
+      ],
+      "id": "5b989cd9eebff2c081df9dd7"
+    },
+    {
+      "source_id": "aaiff_2026",
+      "title": "Astana AI Film Festival 2026（AAIFF）",
+      "platform": "Astana AI Film Festival",
+      "organizer": "Astana AI Film Festival Foundation",
+      "official_url": "https://aaiff.ai/terms",
+      "entry_url": "https://www.aaiff.ai/",
+      "edition": "2026",
+      "kind": "competition",
+      "summary": "已截止；现金总池100万美元，最高单奖45万美元。宣传中的另100万美元属于制作投资。电影节10月1–3日。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": null,
+      "time": {
+        "mechanism": "fixed",
+        "start": "2026-05-25",
+        "deadline": "2026-09-07",
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": true,
+        "evidence": "官方本届公告披露窗口；时区仅在原文明示时填写。",
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": "2026-09-15条款更新",
+        "deadline_raw": "2026-09-07",
+        "deadline_tentative": false
+      },
+      "rewards": [
+        {
+          "type": "cash",
+          "label": "现金总奖池",
+          "amount": 1000000,
+          "scope": "主题赛75万+开放赛25万美元，非个人收益",
+          "validity": null,
+          "currency": "USD",
+          "unit": "USD"
+        },
+        {
+          "type": "cash",
+          "label": "最高单项现金",
+          "amount": 450000,
+          "scope": "总池内单奖，不相加",
+          "validity": null,
+          "currency": "USD",
+          "unit": "USD"
+        },
+        {
+          "type": "other",
+          "label": "另行选择的制作投资",
+          "amount": 1000000,
+          "scope": "不是奖金，另行选择/合作",
+          "validity": null,
+          "currency": "USD",
+          "unit": "USD"
+        }
+      ],
+      "eligibility": [
+        "全球，免费；未成年需监护人同意，网站不面向16岁以下；中国大陆支付税务可行性未核。"
+      ],
+      "work_requirements": [
+        "≥3分钟，生成式AI核心参与而非只后期；英文烧录字幕与工具/流程披露。"
+      ],
+      "steps": [
+        "2026已截止；原投递要求YouTube或Google Drive链接，其境内可用性另核，不绕过访问限制。"
+      ],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "作者保留版权，可投其他节展；非独家、全球、免费节展宣传与档案授权；合作平台分发另须书面同意。"
+        }
+      ],
+      "program": {
+        "join": null,
+        "revenue": null,
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://aaiff.ai/terms",
+          "observed_at": "2026-09-30",
+          "excerpt": "已截止；现金总池100万美元，最高单奖45万美元。宣传中的另100万美元属于制作投资。电影节10月1–3日。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "allowed",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "personal_eligibility": "not_checked"
+      },
+      "fees": [
+        {
+          "type": "报名费",
+          "amount": 0,
+          "currency": "CNY",
+          "scope": "公告明示免费；其他制作与出行成本不据此免除"
+        }
+      ],
+      "id": "090a25b695cf9fcd315e7f16"
+    },
+    {
+      "source_id": "first_2026",
+      "title": "FIRST青年电影展2026超短片—AI限制参考",
+      "platform": "FIRST青年电影展",
+      "organizer": "FIRST青年电影展",
+      "official_url": "https://www.firstfilm.org.cn/wp-content/uploads/2026/03/%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%B1%8AFIRST%E9%9D%92%E5%B9%B4%E7%94%B5%E5%B1%95%E8%B6%85%E7%9F%AD%E7%89%87%E5%8D%95%E5%85%83%E7%AB%A0%E7%A8%8B.pdf",
+      "entry_url": null,
+      "edition": "2026",
+      "kind": "competition",
+      "summary": "便携设备实拍须为主体；AIGC/CGI生成影像≤30%，完全或主要AI生成作品不接收。",
+      "tags": [
+        "影视创作"
+      ],
+      "publication_at": null,
+      "time": {
+        "mechanism": "unspecified",
+        "start": null,
+        "deadline": null,
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": false,
+        "evidence": null,
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null
+      },
+      "rewards": [],
+      "eligibility": [],
+      "work_requirements": [
+        "实拍主体，生成影像≤30%；不是纯AI短片征集。"
+      ],
+      "steps": [],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "本次只核AI硬限制，完整首发与授权条款尚未核验。"
+        }
+      ],
+      "program": {
+        "join": null,
+        "revenue": null,
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://www.firstfilm.org.cn/wp-content/uploads/2026/03/%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%B1%8AFIRST%E9%9D%92%E5%B9%B4%E7%94%B5%E5%B1%95%E8%B6%85%E7%9F%AD%E7%89%87%E5%8D%95%E5%85%83%E7%AB%A0%E7%A8%8B.pdf",
+          "observed_at": "2026-09-30",
+          "excerpt": "便携设备实拍须为主体；AIGC/CGI生成影像≤30%，完全或主要AI生成作品不接收。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "restriction",
+        "ai_policy": "limited",
+        "reason": "对主要AI生成作品不建议参加；仅作混合实拍路线限制参考，未核完整当前窗口。",
+        "personal_eligibility": "not_checked"
+      },
+      "record_context": "historical_reference",
+      "id": "88f7c183097d995cdee38eb6"
+    },
+    {
+      "source_id": "hkaiiff_2027",
+      "title": "HKAIIFF2027—付费与奖励待尽调",
+      "platform": "HKAIIFF",
+      "organizer": null,
+      "official_url": "https://www.hkaiiff.org/zh-hans/festival/2027/documents/entry-guide",
+      "entry_url": null,
+      "edition": "2027",
+      "kind": "competition",
+      "summary": "指南列2026年10月1日至2027年3月1日，报名99美元。2027奖励、主体与资格仍待核，百万级宣传不能视为现金奖金。",
+      "tags": [
+        "影视创作"
+      ],
+      "publication_at": null,
+      "time": {
+        "mechanism": "fixed",
+        "start": "2026-10-01",
+        "deadline": "2027-03-01",
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": true,
+        "evidence": "官方本届公告披露窗口；时区仅在原文明示时填写。",
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "deadline_raw": "2027-03-01",
+        "deadline_tentative": false
+      },
+      "rewards": [],
+      "eligibility": [],
+      "work_requirements": [],
+      "steps": [],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "完整主体、2027奖项性质、AI与授权条款未完成核验。"
+        }
+      ],
+      "program": {
+        "join": null,
+        "revenue": null,
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://www.hkaiiff.org/zh-hans/festival/2027/documents/entry-guide",
+          "observed_at": "2026-09-30",
+          "excerpt": "指南列2026年10月1日至2027年3月1日，报名99美元。2027奖励、主体与资格仍待核，百万级宣传不能视为现金奖金。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "due_diligence",
+        "ai_policy": "unspecified",
+        "reason": "仅作尽调候选，不进入正式推荐；未注册或付费。",
+        "personal_eligibility": "not_checked"
+      },
+      "fees": [
+        {
+          "type": "报名费",
+          "amount": 99,
+          "currency": "USD",
+          "scope": "官方2027指南；跨境支付及退款规则未核，本库不支付"
+        }
+      ],
+      "id": "65f3cd66f70120b610ba6723"
+    },
+    {
+      "source_id": "runway_aif_2026",
+      "title": "Runway AI Film Festival 2026电影组",
+      "platform": "Runway",
+      "organizer": "Runway",
+      "official_url": "https://aif.runwayml.com/terms-film",
+      "entry_url": null,
+      "edition": "2026",
+      "kind": "competition",
+      "summary": "已截止；3–15分钟AI电影，免费18+。单奖5万美元；列项现金合计79500美元与条款总ARV61500美元有冲突，未消解。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": null,
+      "time": {
+        "mechanism": "fixed",
+        "start": "2026-01-28T09:00:00-05:00",
+        "deadline": "2026-04-27T16:59:59-04:00",
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": true,
+        "evidence": "官方ET时刻；1月为-05:00、4月为-04:00，保留已含偏移的具体时刻。",
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "deadline_raw": "2026-04-27T16:59:59-04:00",
+        "deadline_tentative": false
+      },
+      "rewards": [
+        {
+          "type": "cash",
+          "label": "电影组最高单奖",
+          "amount": 50000,
+          "scope": "列项单奖；未确认总ARV口径",
+          "validity": null,
+          "currency": "USD",
+          "unit": "USD"
+        },
+        {
+          "type": "credits",
+          "label": "另列平台积分",
+          "amount": null,
+          "scope": "积分不能计入现金总奖池",
+          "validity": null
+        }
+      ],
+      "eligibility": [
+        "18+，地区清单未排除中国；实际参赛及收款资格仍未对照个人。"
+      ],
+      "work_requirements": [
+        "电影组3–15分钟AI生成视频。"
+      ],
+      "steps": [],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "完整授权与跨境结算条款仍待逐项复核。"
+        }
+      ],
+      "program": {
+        "join": null,
+        "revenue": null,
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://aif.runwayml.com/terms-film",
+          "observed_at": "2026-09-30",
+          "excerpt": "已截止；3–15分钟AI电影，免费18+。单奖5万美元；列项现金合计79500美元与条款总ARV61500美元有冲突，未消解。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "due_diligence",
+        "ai_policy": "allowed",
+        "reason": "历史条款存在奖励口径冲突，保留逐项最高奖而不写无争议总池。",
+        "personal_eligibility": "not_checked"
+      },
+      "fees": [
+        {
+          "type": "报名费",
+          "amount": 0,
+          "currency": "CNY",
+          "scope": "公告明示免费；其他制作与出行成本不据此免除"
+        }
+      ],
+      "reward_conflict": "列项50000+15000+10000+2×1000+5×500=79500美元（研究计算）；条款总ARV61500美元，官方口径未消解。",
+      "id": "8b37ba7ad68d0847fb3aca6a"
+    },
+    {
+      "source_id": "jimeng_growth",
+      "title": "即梦AI创作者成长计划·造梦新章",
+      "platform": "即梦 / 抖音",
+      "organizer": "即梦AI",
+      "official_url": "https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg",
+      "entry_url": "https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg",
+      "edition": "2026 / 造梦新章",
+      "kind": "creator_program",
+      "summary": "2026年7–12月的分层创作者扶持；积分、会员与投稿奖励都有条件，现金子活动另列。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": null,
+      "time": {
+        "mechanism": "fixed",
+        "start": null,
+        "deadline": null,
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": true,
+        "evidence": "官方仅公布2026年7–12月总窗口；不补造日、时刻或时区。",
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": "文档2026-09-29修改，生效日未注明",
+        "month_period": {
+          "start": "2026-07",
+          "end": "2026-12"
+        }
+      },
+      "rewards": [
+        {
+          "type": "credits",
+          "label": "分层与投稿积分",
+          "amount": null,
+          "scope": "按审核、层级和稿件条件发放，不能相加为个人保底",
+          "validity": null
+        },
+        {
+          "type": "other",
+          "label": "优质高级会员1月；超创高级会员及剪映SVIP",
+          "amount": null,
+          "scope": "层级权益，不是现金",
+          "validity": null
+        }
+      ],
+      "eligibility": [
+        ">1分钟原创AI叙事短片，审核入选；超创为定向邀请。",
+        "优质层参考半年抖音30万赞、小红书3万赞或B站5万赞；个人层级和资格未核。"
+      ],
+      "work_requirements": [
+        "原创、完整权属、公开保留；商业导流不参与，品牌广告另有例外须看全文。"
+      ],
+      "steps": [
+        "在官方成长计划文档核对层级与提报入口，审核后加入；本库不提报。"
+      ],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "原创完整权属与公开保留要求；商业导流限制及品牌广告例外须全文核验。"
+        },
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "FAQ提及资源位展示授权及爆款角色/剧本IP优先发行采买；具体授权期限、采买价格和权利范围未核。"
+        }
+      ],
+      "program": {
+        "join": "按层级申请/审核，超创定向邀请",
+        "revenue": "新锐首入10000积分；优质月5000积分；超创月10000积分；合格投稿1888/6888积分、精选28888积分，均有条件",
+        "settlement": "积分与会员发放细则待全文核验",
+        "ongoing_requirements": "原创权属、公开保留和审核要求；持续层级考核细则待全文核验",
+        "exit": null,
+        "effective_version": "官方飞书2026-09-29修改记录，生效日期未注明"
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg",
+          "observed_at": "2026-09-30",
+          "excerpt": "2026年7–12月的分层创作者扶持；积分、会员与投稿奖励都有条件，现金子活动另列。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "allowed",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "personal_eligibility": "not_checked"
+      },
+      "id": "e07414bef25cfbfe8263dbe5"
+    },
+    {
+      "source_id": "jimeng_growth",
+      "title": "锋芒回响—即梦9/20升级现金激励",
+      "platform": "即梦 / 抖音",
+      "organizer": "即梦AI",
+      "official_url": "https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg",
+      "entry_url": "https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg",
+      "edition": "2026 / 9-20锋芒回响",
+      "kind": "limited_benefit",
+      "summary": "成长计划内9月20日至10月31日的有条件现金激励；顶档单条7万元并非保底，禁竞品露出。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": null,
+      "time": {
+        "mechanism": "fixed",
+        "start": "2026-09-20",
+        "deadline": "2026-10-31",
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": true,
+        "evidence": "官方本届公告披露窗口；时区仅在原文明示时填写。",
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "deadline_raw": "2026-10-31",
+        "deadline_tentative": false
+      },
+      "rewards": [
+        {
+          "type": "cash",
+          "label": "T+7十万播放基础档",
+          "amount": 600,
+          "scope": "有条件单条档位，不是所有投稿均获奖",
+          "validity": null,
+          "currency": "CNY",
+          "unit": "元"
+        },
+        {
+          "type": "cash",
+          "label": "优质开源画布增量",
+          "amount": 200,
+          "scope": "十万播放档另需合格画布",
+          "validity": null,
+          "currency": "CNY",
+          "unit": "元"
+        },
+        {
+          "type": "cash",
+          "label": "最高档单条上限（含合格画布）",
+          "amount": 70000,
+          "scope": "72小时2000万播放或100万赞；6万+画布1万；每条一次最高档，不与其他档位重复相加",
+          "validity": null,
+          "currency": "CNY",
+          "unit": "元"
+        },
+        {
+          "type": "credits",
+          "label": "合格单条2000积分",
+          "amount": 2000,
+          "scope": "单条有条件奖励；每周最多10000积分",
+          "validity": null
+        }
+      ],
+      "eligibility": [
+        "已入选成长计划层级；个人层级、作品与数据达标均未核。"
+      ],
+      "work_requirements": [
+        "即梦与抖音同步>1分钟原创叙事作品，指定#即梦AI创作者成长计划，提报审核。",
+        "现金禁视频及评论中的竞品模型/工作流工具名称、Logo、口播、话题与界面。"
+      ],
+      "steps": [
+        "达到档位后一次提报最高档；现金每周最多3条，积分每周最多10000。",
+        "次月第一周发放抖音钱包，7工作日到账；180工作日未提现视放弃。"
+      ],
+      "risks": [
+        {
+          "type": "tool_restriction",
+          "level": "high",
+          "detail": "现金资格严格禁竞品露出，范围包含视频、评论、工具名称/Logo/界面等；版权与资源位条款仍以母计划全文为准。"
+        }
+      ],
+      "program": {
+        "join": null,
+        "revenue": "按传播数据与画布条件取单条最高档，现金周最多3条",
+        "settlement": "次月第一周发抖音钱包，7工作日到账；180工作日未提视放弃",
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg",
+          "observed_at": "2026-09-30",
+          "excerpt": "成长计划内9月20日至10月31日的有条件现金激励；顶档单条7万元并非保底，禁竞品露出。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        },
+        {
+          "origin": "manual_handoff",
+          "url": "https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg#VV0VdNGgvoBfWyxcv5ScVON8nDg",
+          "observed_at": "2026-09-30",
+          "excerpt": "9/20升级现金激励独立窗口及档位。",
+          "note": "画布全文另页未完整核验。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "allowed",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "personal_eligibility": "not_checked"
+      },
+      "relations": [
+        {
+          "type": "under_program",
+          "target_id": "e07414bef25cfbfe8263dbe5",
+          "note": "现金子活动独立于7–12月母计划和积分/会员权益；9/10旧版已下线。"
+        }
+      ],
+      "id": "a4dd21da51346371e24f5094"
+    },
+    {
+      "source_id": "jimeng_new_image",
+      "title": "即梦新影像2026-004（已颁奖历史参考）",
+      "platform": "即梦",
+      "organizer": "即梦AI",
+      "official_url": "https://jimeng.jianying.com/ai-tool/activity-detail/2026-004-dreamina-weekly-challenge",
+      "entry_url": null,
+      "edition": "2026 / 004",
+      "kind": "competition",
+      "summary": "旧新影像活动官方已颁奖至6月30日；不视为常年开放。完整原报名期未核。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": null,
+      "time": {
+        "mechanism": "unspecified",
+        "start": null,
+        "deadline": null,
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": false,
+        "evidence": null,
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "provider_phase": "awarded",
+        "source_window": {
+          "end": "2026-06-30",
+          "note": "官方活动页面已颁奖阶段，非推定报名截止。"
+        }
+      },
+      "rewards": [],
+      "eligibility": [],
+      "work_requirements": [],
+      "steps": [],
+      "risks": [],
+      "program": {
+        "join": null,
+        "revenue": null,
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://jimeng.jianying.com/ai-tool/activity-detail/2026-004-dreamina-weekly-challenge",
+          "observed_at": "2026-09-30",
+          "excerpt": "旧新影像活动官方已颁奖至6月30日；不视为常年开放。完整原报名期未核。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "historical",
+        "ai_policy": "allowed",
+        "reason": "已颁奖的独立历史轮次，不能替代当前成长计划。",
+        "personal_eligibility": "not_checked"
+      },
+      "record_context": "historical_reference",
+      "id": "d5a03fd8ee9dcd20dbf447e3"
+    },
+    {
+      "source_id": "kling_artist",
+      "title": "可灵创作者计划3.0 / 灵感聚光计划",
+      "platform": "可灵",
+      "organizer": "可灵AI",
+      "official_url": "https://www.sina.cn/news/detail/5292411603651728.html",
+      "entry_url": null,
+      "edition": "3.0 / 2026-04公告",
+      "kind": "creator_program",
+      "summary": "官方认证账号4月27日披露创作者计划；月百万现金、千万灵感值和亿曝光都是平台资源池。现行门槛、档位与期限未知。",
+      "tags": [
+        "影视创作"
+      ],
+      "publication_at": "2026-04-27",
+      "time": {
+        "mechanism": "unspecified",
+        "start": null,
+        "deadline": null,
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": false,
+        "evidence": null,
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null
+      },
+      "rewards": [
+        {
+          "type": "cash",
+          "label": "月百万现金资源池",
+          "amount": 1000000,
+          "scope": "官方平台月资源池，不是个人收益或当前档位保证",
+          "validity": null,
+          "currency": "CNY",
+          "unit": "元"
+        },
+        {
+          "type": "credits",
+          "label": "月千万灵感值资源池",
+          "amount": 10000000,
+          "scope": "平台资源池，非现金",
+          "validity": null
+        },
+        {
+          "type": "traffic",
+          "label": "月亿级曝光资源池",
+          "amount": 100000000,
+          "scope": "平台曝光资源，非现金",
+          "validity": null
+        }
+      ],
+      "eligibility": [],
+      "work_requirements": [],
+      "steps": [
+        "从官方认证可灵AI账号追踪现行申请与规则；不得按2024/2025转载默认当前门槛。"
+      ],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "当前加入、现金档位、版权/独家与截止未核；不能标常年可报名。"
+        }
+      ],
+      "program": {
+        "join": "现行申请规则尚未核验",
+        "revenue": null,
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://www.sina.cn/news/detail/5292411603651728.html",
+          "observed_at": "2026-09-30",
+          "excerpt": "官方认证账号4月27日披露创作者计划；月百万现金、千万灵感值和亿曝光都是平台资源池。现行门槛、档位与期限未知。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "unspecified",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "personal_eligibility": "not_checked"
+      },
+      "id": "afad2fbc539d43185773a6e4"
+    },
+    {
+      "source_id": "kling_partner",
+      "title": "可灵未来合伙人计划",
+      "platform": "可灵 / 快手",
+      "organizer": "可灵AI / 快手",
+      "official_url": "https://ir.kuaishou.com/static-files/1561a9ec-6131-4d2d-81a7-b220c8520c25",
+      "entry_url": null,
+      "edition": "公开合作机制（轮次未核）",
+      "kind": "creator_program",
+      "summary": "面向商单与品牌制作机构的合作；项目收入和宣发机会，不是定额补贴。",
+      "tags": [
+        "影视创作"
+      ],
+      "publication_at": null,
+      "time": {
+        "mechanism": "unspecified",
+        "start": null,
+        "deadline": null,
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": false,
+        "evidence": null,
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null
+      },
+      "rewards": [
+        {
+          "type": "other",
+          "label": "商单、合作收入与宣发机会",
+          "amount": null,
+          "scope": "不是保底补贴",
+          "validity": null
+        }
+      ],
+      "eligibility": [],
+      "work_requirements": [],
+      "steps": [],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "合作合同中的权利、分成、退出与结算须具体核验。"
+        }
+      ],
+      "program": {
+        "join": "当前加入细则未知",
+        "revenue": "商单/品牌制作项目收入，比例未知",
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://ir.kuaishou.com/static-files/1561a9ec-6131-4d2d-81a7-b220c8520c25",
+          "observed_at": "2026-09-30",
+          "excerpt": "面向商单与品牌制作机构的合作；项目收入和宣发机会，不是定额补贴。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "unspecified",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "personal_eligibility": "not_checked"
+      },
+      "id": "441197e6c9aff981cc3d32a0"
+    },
+    {
+      "source_id": "minimax_design",
+      "title": "MiniMax Design执导者入驻计划",
+      "platform": "MiniMax Design",
+      "organizer": "MiniMax Design",
+      "official_url": "https://design.minimax.cn/",
+      "entry_url": "https://design.minimax.cn/",
+      "edition": "公开入驻计划（轮次未核）",
+      "kind": "creator_program",
+      "summary": "严肃创作者共创Skills、玩法和原创IP；Agent抢先、Skills收益分成、联合营销。不是海螺国内超创规则。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": null,
+      "time": {
+        "mechanism": "unspecified",
+        "start": null,
+        "deadline": null,
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": false,
+        "evidence": null,
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null
+      },
+      "rewards": [
+        {
+          "type": "other",
+          "label": "Agent抢先、Skills分成与联合营销",
+          "amount": null,
+          "scope": "比例和结算未知，非定额补贴",
+          "validity": null
+        }
+      ],
+      "eligibility": [
+        "面向严肃创作者；具体资格门槛未公开核验。"
+      ],
+      "work_requirements": [],
+      "steps": [
+        "查看官网执导者入驻入口并复核合同/分成，再决定是否申请。"
+      ],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "原创IP、Skills权属、收益比例、退出和结算条款未核。"
+        }
+      ],
+      "program": {
+        "join": "官网执导者入驻入口，具体门槛未核",
+        "revenue": "Skills收益分成，比例未核",
+        "settlement": null,
+        "ongoing_requirements": "共创Skills/玩法/原创IP，持续要求未核",
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://design.minimax.cn/",
+          "observed_at": "2026-09-30",
+          "excerpt": "严肃创作者共创Skills、玩法和原创IP；Agent抢先、Skills收益分成、联合营销。不是海螺国内超创规则。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "allowed",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "personal_eligibility": "not_checked"
+      },
+      "id": "8b7d34b49a64b3b8f4bfe493"
+    },
+    {
+      "source_id": "hailuo_affiliate",
+      "title": "Hailuo海外Affiliate推广合作计划",
+      "platform": "海螺 / Hailuo",
+      "organizer": "Hailuo AI",
+      "official_url": "https://hailuoai.video/affiliate",
+      "entry_url": "https://hailuoai.video/affiliate",
+      "edition": "公开推广计划（轮次未核）",
+      "kind": "creator_program",
+      "summary": "审核后的海外推广成交佣金10%–30%，最低支付10美元；活跃伙伴有Pro/内测权益。短片投稿本身不获得这笔收益。",
+      "tags": [
+        "影视创作"
+      ],
+      "publication_at": null,
+      "time": {
+        "mechanism": "unspecified",
+        "start": null,
+        "deadline": null,
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": false,
+        "evidence": null,
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null
+      },
+      "rewards": [
+        {
+          "type": "cash",
+          "label": "推广成交佣金10%–30%",
+          "amount": null,
+          "scope": "按有效推广交易，非短片奖金；资格、退款和结算条件适用",
+          "validity": null
+        },
+        {
+          "type": "other",
+          "label": "活跃伙伴Pro与内测权益",
+          "amount": null,
+          "scope": "须审核及保持活跃",
+          "validity": null
+        }
+      ],
+      "eligibility": [
+        "申请审核；中国大陆支付和税务资格未核。"
+      ],
+      "work_requirements": [],
+      "steps": [
+        "官方Affiliate入口申请审核后按规则推广成交，不在本库生成推广链接或报名。"
+      ],
+      "risks": [
+        {
+          "type": "promotion",
+          "level": "review",
+          "detail": "退款扣佣；付费广告禁止品牌关键词/Logo，中国大陆资格、支付和税务尚未核。"
+        }
+      ],
+      "program": {
+        "join": "公开申请后审核",
+        "revenue": "成交佣金10%–30%；退款扣佣",
+        "settlement": "最低10美元；交易跟踪日结束后27天锁定，锁定月结束后30天支付",
+        "ongoing_requirements": "活跃伙伴Pro及内测权益；付费广告禁用品牌关键词与Logo",
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://hailuoai.video/affiliate",
+          "observed_at": "2026-09-30",
+          "excerpt": "审核后的海外推广成交佣金10%–30%，最低支付10美元；活跃伙伴有Pro/内测权益。短片投稿本身不获得这笔收益。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "secondary",
+        "ai_policy": "unspecified",
+        "reason": "推广合作属于次要创作相关机会，大陆结算资格与税务未核。",
+        "personal_eligibility": "not_checked"
+      },
+      "id": "cc3cf426236d7396b4103de4"
+    },
+    {
+      "source_id": "vidu_artist",
+      "title": "Vidu创作者计划",
+      "platform": "Vidu",
+      "organizer": "Vidu",
+      "official_url": "https://www.vidu.com/zh/artist-program",
+      "entry_url": "https://www.vidu.com/zh/artist-program",
+      "edition": "公开创作者计划（轮次未核）",
+      "kind": "creator_program",
+      "summary": "公开申请审核，无粉丝门槛、不签独家；新锐/艺术家两层，积分、认证、内测、流量与合作，没有固定现金承诺。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": null,
+      "time": {
+        "mechanism": "unspecified",
+        "start": null,
+        "deadline": null,
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": false,
+        "evidence": null,
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "policy_duration": "官方称长期成长机制，未明示常年报名；缺截止不等于永久有效"
+      },
+      "rewards": [
+        {
+          "type": "credits",
+          "label": "平台创作积分",
+          "amount": null,
+          "scope": "额度及发放条件待核",
+          "validity": null
+        },
+        {
+          "type": "traffic",
+          "label": "流量与合作机会",
+          "amount": null,
+          "scope": "数量、领取条件或结算细则未公开，不视为保底收益",
+          "validity": null
+        },
+        {
+          "type": "other",
+          "label": "认证及内测权益",
+          "amount": null,
+          "scope": "数量、领取条件或结算细则未公开，不视为保底收益",
+          "validity": null
+        }
+      ],
+      "eligibility": [
+        "无粉丝门槛，申请须审核；新锐/艺术家两层。"
+      ],
+      "work_requirements": [],
+      "steps": [
+        "官方创作者计划页面申请审核；与付费套餐购买分开。"
+      ],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "官网明示不签独家；具体展示授权、合作合同与退出细则仍须复核。"
+        }
+      ],
+      "program": {
+        "join": "公开申请审核，无粉丝门槛",
+        "revenue": "积分、认证、内测、流量及合作；未公开固定现金",
+        "settlement": null,
+        "ongoing_requirements": "层级与持续要求需按当前审核细则",
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://www.vidu.com/zh/artist-program",
+          "observed_at": "2026-09-30",
+          "excerpt": "公开申请审核，无粉丝门槛、不签独家；新锐/艺术家两层，积分、认证、内测、流量与合作，没有固定现金承诺。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "allowed",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "personal_eligibility": "not_checked"
+      },
+      "id": "eb01230e80d2a963f1363394"
+    },
+    {
+      "source_id": "vidu_earn",
+      "title": "Vidu星火 / ViduEarn（官方状态冲突）",
+      "platform": "Vidu",
+      "organizer": "Vidu",
+      "official_url": "https://www.vidu.com/activity/3337027127191000",
+      "entry_url": null,
+      "edition": "官方活动3337027127191000",
+      "kind": "limited_benefit",
+      "summary": "中文宣传单篇最高3000元税后、月结；详情显示2026-06-14至2028-06-29，但Not Started且禁用，门槛待公布。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": null,
+      "time": {
+        "mechanism": "fixed",
+        "start": null,
+        "deadline": null,
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": false,
+        "evidence": null,
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "conflict": "活动详情日期与Not Started/禁用按钮矛盾；门槛待公布，不能列开放。",
+        "source_window": {
+          "start": "2026-06-14",
+          "end": "2028-06-29",
+          "note": "页面展示周期；不等同已确认报名窗口。"
+        }
+      },
+      "rewards": [
+        {
+          "type": "cash",
+          "label": "中文宣传单篇最高3000元税后",
+          "amount": 3000,
+          "scope": "待复核的官方宣传上限；未证明当前可领",
+          "validity": null,
+          "currency": "CNY",
+          "unit": "元"
+        }
+      ],
+      "eligibility": [],
+      "work_requirements": [],
+      "steps": [],
+      "risks": [
+        {
+          "type": "licence",
+          "level": "review",
+          "detail": "当前报名、内容门槛和版权细则未核，不按宣传奖励推动投稿。"
+        }
+      ],
+      "program": {
+        "join": null,
+        "revenue": null,
+        "settlement": "中文宣传月结；当前活动状态冲突，实际细则未核",
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://www.vidu.com/activity/3337027127191000",
+          "observed_at": "2026-09-30",
+          "excerpt": "中文宣传单篇最高3000元税后、月结；详情显示2026-06-14至2028-06-29，但Not Started且禁用，门槛待公布。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        },
+        {
+          "origin": "manual_handoff",
+          "url": "https://www.vidu.com/zh/earn",
+          "observed_at": "2026-09-30",
+          "excerpt": "中文宣传最高3000元税后、月结；详情未开始与禁用状态单独保留。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "candidate",
+        "ai_policy": "allowed",
+        "reason": "官方日期与未开始/禁用状态冲突，待复核；宣传金额不是已核个人可领取。",
+        "personal_eligibility": "not_checked"
+      },
+      "relations": [
+        {
+          "type": "under_program",
+          "target_id": "eb01230e80d2a963f1363394",
+          "note": "创作者成长与有条件稿件激励分别核验；加入母计划不证明星火开放。"
+        }
+      ],
+      "id": "f5b419d006f340d23210de1c"
+    },
+    {
+      "source_id": "hailuo_life_2025",
+      "title": "海螺AI「我的人生电影」（2025获奖历史参考）",
+      "platform": "海螺 / MiniMax",
+      "organizer": "MiniMax / 海螺AI",
+      "official_url": "https://www.minimax.cn/news/海影节minimax登岛海螺ai我的人生电影完整获奖名单公布",
+      "entry_url": null,
+      "edition": "2025",
+      "kind": "competition",
+      "summary": "官方完整获奖名单公告；2025已颁奖，不是2026开放征集或国内超创现行规则。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "publication_at": null,
+      "time": {
+        "mechanism": "unspecified",
+        "start": null,
+        "deadline": null,
+        "timezone": null,
+        "absolute_start": null,
+        "absolute_deadline": null,
+        "confirmed": false,
+        "evidence": null,
+        "batches": [],
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "provider_phase": "awarded"
+      },
+      "rewards": [],
+      "eligibility": [],
+      "work_requirements": [],
+      "steps": [],
+      "risks": [],
+      "program": {
+        "join": null,
+        "revenue": null,
+        "settlement": null,
+        "ongoing_requirements": null,
+        "exit": null,
+        "effective_version": null
+      },
+      "evidence": [
+        {
+          "origin": "manual_handoff",
+          "url": "https://www.minimax.cn/news/海影节minimax登岛海螺ai我的人生电影完整获奖名单公布",
+          "observed_at": "2026-09-30",
+          "excerpt": "官方完整获奖名单公告；2025已颁奖，不是2026开放征集或国内超创现行规则。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。"
+        }
+      ],
+      "verified_at": "2026-09-30",
+      "verification": "partial",
+      "origin": "manual_review",
+      "assessment": {
+        "role": "historical",
+        "ai_policy": "allowed",
+        "reason": "往届获奖结果，仅保留历史线索。",
+        "personal_eligibility": "not_checked"
+      },
+      "record_context": "historical_reference",
+      "id": "0254476b2666d6b86c004b0a"
+    }
+  ]
+}

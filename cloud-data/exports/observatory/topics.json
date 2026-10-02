@@ -1,0 +1,122 @@
+{
+  "format": "raw-sqlite-table-export",
+  "sourceSnapshot": "cloud-data/snapshots/素材观察室/data/observatory.sqlite3",
+  "table": "topics",
+  "schema": [
+    {
+      "cid": 0,
+      "name": "id",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 1
+    },
+    {
+      "cid": 1,
+      "name": "revision",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 2,
+      "name": "status",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 3,
+      "name": "body_json",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 4,
+      "name": "created_at",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 5,
+      "name": "updated_at",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    }
+  ],
+  "rowCount": 8,
+  "rows": [
+    {
+      "id": "topic_9611264e-1653-46a1-83aa-8e9dcb12c39b",
+      "revision": 4,
+      "status": "stage_complete",
+      "body_json": "{\"title\":\"测试案例研究｜精卫：证据层次与后世读法\",\"question\":\"精卫条有哪些可定位的动作与形象，正文、注释和后世诗歌各怎样加入意义？\",\"scope\":\"六份公开WYG数字转录的目标段与必要上下文；不核影印页、不做神话全史，不补正式剧本\"}",
+      "created_at": "2026-10-01T16:41:35.560Z",
+      "updated_at": "2026-10-02T02:15:49.734Z"
+    },
+    {
+      "id": "topic_45f964ee-7fbb-4734-b1e2-e1fb44659570",
+      "revision": 4,
+      "status": "paused",
+      "body_json": "{\"title\":\"测试案例研究｜Sintel：局部画面（声音待核）\",\"question\":\"局部帧中从面部到动作空间、街巷纵深，如何改变观看任务？声音与合看证据不足时在哪里停？\",\"scope\":\"13.5至22秒局部静帧形式研究；另0至30秒静帧供反证；本地工具处理整52秒，不等于模型听看整片。\"}",
+      "created_at": "2026-10-01T16:41:40.999Z",
+      "updated_at": "2026-10-02T02:15:49.751Z"
+    },
+    {
+      "id": "topic_cf59a04b-6909-4e3e-b683-3035ae49ea8e",
+      "revision": 2,
+      "status": "stage_complete",
+      "body_json": "{\"title\":\"爱丽丝第一章：追逐、小门与够不到的钥匙\",\"question\":\"只据已读第一章，怎样顺畅复述爱丽丝的行动，并理解身体、门与钥匙如何接连构成阻碍？\",\"scope\":\"经授权制作的AI测试示范，非小陌原话或个人兴趣；PG11英文第一章已完整读，必要选段由本执行者自译。只研究此章，不补第二章、全书结局或作者心理，不引用既有中文译本。\"}",
+      "created_at": "2026-10-02T04:59:45.171Z",
+      "updated_at": "2026-10-02T04:59:45.181Z"
+    },
+    {
+      "id": "topic_de84a67c-2fc8-413d-b594-60dadeea6a04",
+      "revision": 2,
+      "status": "stage_complete",
+      "body_json": "{\"title\":\"不来梅乐手：一起上路，两次误认与留居结局\",\"question\":\"只据已完整读的这一英译短篇，怎样复述四动物的行动，并区分实际发生的事和强盗报告中的误认？\",\"scope\":\"经授权制作的AI测试示范，非小陌原话或个人兴趣；PG5314第27篇Margaret Hunt英译已完整读，必要选段由本执行者自译。不是德文原件、全部格林故事、传播史或现代改编研究，不引用既有中文译本。\"}",
+      "created_at": "2026-10-02T04:59:45.236Z",
+      "updated_at": "2026-10-02T04:59:45.244Z"
+    },
+    {
+      "id": "topic_9fa4f47b-5773-455b-8c35-ea99329f9164",
+      "revision": 2,
+      "status": "stage_complete",
+      "body_json": "{\"title\":\"神奈川冲浪里｜从全图读构图与尺度\",\"question\":\"只用已读馆藏说明与所见全图，怎样介绍画面，并区分可见关系、馆方解释与创作候选？\",\"scope\":\"本轮用户授权的AI多类型测试；不是用户兴趣记录。实际读取Met对象45434说明、对象API与Open Access政策，目验DP130155全图；不追认其他印本、德彪西/里尔克影响史或未读音频。\"}",
+      "created_at": "2026-10-02T04:59:45.595Z",
+      "updated_at": "2026-10-02T04:59:45.603Z"
+    },
+    {
+      "id": "topic_812641bc-736c-48d2-806d-b978a5f05a0b",
+      "revision": 2,
+      "status": "stage_complete",
+      "body_json": "{\"title\":\"翠玉白菜｜材料如何成为形象\",\"question\":\"如何从一张照片与官方说明读懂玉器的材料、形制和陈设用途，并保留无法从图像验证的边界？\",\"scope\":\"本轮用户授权的AI多类型测试；不是用户兴趣记录。实际读故宫Open Data条目3的完整Description、尺寸、断代、馆藏号与图像许可，目验一张450×600展示图；不把现木座当原珐琅盆景，未核作者、原配座或嫁妆解释。\"}",
+      "created_at": "2026-10-02T04:59:45.794Z",
+      "updated_at": "2026-10-02T04:59:45.803Z"
+    },
+    {
+      "id": "topic_7210e742-4920-40be-8eda-d094ff712d68",
+      "revision": 2,
+      "status": "stage_complete",
+      "body_json": "{\"title\":\"测试案例｜Big Buck Bunny：故事设定与预告图像\",\"question\":\"已核官方文字讲了怎样的故事？两张预告图分别让人看清哪些内容？\",\"scope\":\"AI多类型测试示范，非小陌原始兴趣；官方简介与两张定位帧，保留其他实际查看候选帧的读取记录，不分析未审看的连续动作或原音。\"}",
+      "created_at": "2026-10-02T04:59:46.203Z",
+      "updated_at": "2026-10-02T04:59:46.210Z"
+    },
+    {
+      "id": "topic_200b024e-2206-458b-b245-150d0b43469e",
+      "revision": 2,
+      "status": "stage_complete",
+      "body_json": "{\"title\":\"测试案例｜日食科普：原理、图例与地表路径\",\"question\":\"这段模拟说明什么现象？球体视图、颜色图例与地表路径如何对应？\",\"scope\":\"AI多类型测试示范，非小陌原始兴趣；完整官方科学说明和49秒无声版三张定位帧，未连续审看；区分模拟与实拍、实际天象时间与影片展示时间。\"}",
+      "created_at": "2026-10-02T04:59:46.965Z",
+      "updated_at": "2026-10-02T04:59:46.974Z"
+    }
+  ]
+}

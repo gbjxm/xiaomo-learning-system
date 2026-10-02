@@ -1,0 +1,4 @@
+interface:
+  display_name: "传统文化与文本溯源"
+  short_description: "依据原文与版本定位深挖文化素材，分清注疏、解释、关联和未知"
+  default_prompt: "使用 $research-traditional-sources，核对这段传统文本的原文、版本与文化语境，保留争议并提出有依据的创作线索。"

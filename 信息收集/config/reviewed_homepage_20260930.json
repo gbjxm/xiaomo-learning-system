@@ -1,0 +1,600 @@
+{
+  "as_of": "2026-09-30",
+  "method": "定向官方公开人工核验移交，四条保留partial",
+  "documents": [
+    {
+      "assessment": {
+        "ai_policy": "allowed",
+        "personal_eligibility": "not_checked",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "role": "candidate"
+      },
+      "edition": "2026 / 造梦新章",
+      "eligibility": [
+        ">1分钟原创AI叙事短片，审核入选；超创为定向邀请。",
+        "优质层参考半年抖音30万赞、小红书3万赞或B站5万赞；个人层级和资格未核。"
+      ],
+      "entry_url": "https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg",
+      "evidence": [
+        {
+          "excerpt": "2026年7–12月的分层创作者扶持；积分、会员与投稿奖励都有条件，现金子活动另列。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。",
+          "observed_at": "2026-09-30",
+          "origin": "manual_handoff",
+          "url": "https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg"
+        },
+        {
+          "origin": "manual_handoff",
+          "observed_at": "2026-09-30",
+          "url": "https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg",
+          "method": "manual_public_review_handoff",
+          "excerpt": "总窗口2026年7–12月仅月精度；全文明确北京时间，有问卷入口但审核加入。现金9/20版和画布细则另列；规则包含永久不可撤销全球非独家传播、转载、改编等授权。",
+          "note": "本轮公开原文复核交接。历史证据保留；自动抓取能力和本账号资格不随人工补核升级。"
+        }
+      ],
+      "id": "e07414bef25cfbfe8263dbe5",
+      "kind": "creator_program",
+      "official_url": "https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg",
+      "organizer": "即梦AI",
+      "origin": "manual_review",
+      "platform": "即梦 / 抖音",
+      "program": {
+        "effective_version": "官方飞书2026-09-29修改记录，生效日期未注明",
+        "exit": null,
+        "join": "按层级申请/审核，超创定向邀请",
+        "ongoing_requirements": "原创权属、公开保留和审核要求；持续层级考核细则待全文核验",
+        "revenue": "新锐首入10000积分；优质月5000积分；超创月10000积分；合格投稿1888/6888积分、精选28888积分，均有条件",
+        "settlement": "积分与会员发放细则待全文核验"
+      },
+      "publication_at": null,
+      "rewards": [
+        {
+          "amount": null,
+          "label": "分层与投稿积分",
+          "scope": "按审核、层级和稿件条件发放，不能相加为个人保底",
+          "type": "credits",
+          "validity": null
+        },
+        {
+          "amount": null,
+          "label": "优质高级会员1月；超创高级会员及剪映SVIP",
+          "scope": "层级权益，不是现金",
+          "type": "other",
+          "validity": null
+        }
+      ],
+      "risks": [
+        {
+          "detail": "原创完整权属与公开保留要求；商业导流限制及品牌广告例外须全文核验。",
+          "level": "review",
+          "type": "licence"
+        },
+        {
+          "detail": "FAQ提及资源位展示授权及爆款角色/剧本IP优先发行采买；具体授权期限、采买价格和权利范围未核。",
+          "level": "review",
+          "type": "licence"
+        },
+        {
+          "type": "licence",
+          "level": "high",
+          "detail": "规则含永久、不可撤销、全球、非独家的传播、转载、改编等授权；参加前需逐项对照全文权利范围。长期授权成本不能只按奖励金额判断。"
+        }
+      ],
+      "source_id": "jimeng_growth",
+      "steps": [
+        "在官方成长计划文档核对层级与提报入口，审核后加入；本库不提报。",
+        "官方文档内问卷入口已确认存在；按层级提报审核。未核验问卷的独立URL，未填写或提交。"
+      ],
+      "summary": "2026年7–12月的分层创作者扶持；积分、会员与投稿奖励都有条件，现金子活动另列。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "time": {
+        "absolute_deadline": null,
+        "absolute_start": null,
+        "batches": [],
+        "confirmed": true,
+        "deadline": null,
+        "evidence": "本轮官方公开全文明确北京时间（UTC+08:00）；总计划仅月份精度，现金子活动仅日期精度，不补造具体时刻。",
+        "mechanism": "fixed",
+        "month_period": {
+          "end": "2026-12",
+          "start": "2026-07"
+        },
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": "文档2026-09-29修改，生效日未注明",
+        "start": null,
+        "timezone": "+08:00"
+      },
+      "title": "即梦AI创作者成长计划·造梦新章",
+      "verification": "partial",
+      "verified_at": "2026-09-30",
+      "work_requirements": [
+        "原创、完整权属、公开保留；商业导流不参与，品牌广告另有例外须看全文。"
+      ],
+      "public_review": {
+        "at": "2026-09-30",
+        "method": "上游官方公开页面人工复核交接；未登录、未提交表单",
+        "overall": "部分字段已核，整体仍有缺口",
+        "fields_verified": [
+          "北京时间",
+          "2026年7–12月总窗口（月精度）",
+          "审核制和文档内问卷入口",
+          "授权的永久/不可撤销/全球/非独家性质"
+        ],
+        "remaining": [
+          "本人层级资格",
+          "完整持续考核和退出条件",
+          "积分/会员发放细则",
+          "未披露的生效日与总计划具体日时"
+        ]
+      }
+    },
+    {
+      "assessment": {
+        "ai_policy": "allowed",
+        "personal_eligibility": "not_checked",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "role": "candidate"
+      },
+      "edition": "2026 / 9-20锋芒回响",
+      "eligibility": [
+        "已入选成长计划层级；个人层级、作品与数据达标均未核。"
+      ],
+      "entry_url": "https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg",
+      "evidence": [
+        {
+          "excerpt": "成长计划内9月20日至10月31日的有条件现金激励；顶档单条7万元并非保底，禁竞品露出。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。",
+          "observed_at": "2026-09-30",
+          "origin": "manual_handoff",
+          "url": "https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg"
+        },
+        {
+          "excerpt": "9/20升级现金激励独立窗口及档位。",
+          "note": "画布全文另页未完整核验。",
+          "observed_at": "2026-09-30",
+          "origin": "manual_handoff",
+          "url": "https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg#VV0VdNGgvoBfWyxcv5ScVON8nDg"
+        },
+        {
+          "origin": "manual_handoff",
+          "observed_at": "2026-09-30",
+          "url": "https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg",
+          "method": "manual_public_review_handoff",
+          "excerpt": "北京时间9/20生效、10/31截止，日期精度；7个基础/画布现金档、周最多3条、长期保留作品和话题、最高档3个月竞品排他、工作流宣传及永久不可撤销全球非独家授权已按公开全文核对。",
+          "note": "本轮公开原文复核交接。历史证据保留；自动抓取能力和本账号资格不随人工补核升级。"
+        },
+        {
+          "origin": "manual_handoff",
+          "observed_at": "2026-09-30",
+          "url": "https://bytedance.larkoffice.com/docx/X84WdYVa0oQXD3xb0ATcIaOjnUe",
+          "method": "manual_public_review_handoff",
+          "excerpt": "画布加奖公开全文人工核对：成长计划入选者、画布直接发布新短片、新规则后制作、一画布一片；4阶段、4概念/2类、10分镜、10动态、1粗剪，AI直接时长目标≥80%且覆盖高潮；参数路径完整、开源可复制，两项通常分别审核1–3工作日。",
+          "note": "页面2026-09-30修改。此前“未完整核验”是旧证据状态；本条补核独立保留，不表示本机自动抓取接通。"
+        }
+      ],
+      "id": "a4dd21da51346371e24f5094",
+      "kind": "limited_benefit",
+      "official_url": "https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg",
+      "organizer": "即梦AI",
+      "origin": "manual_review",
+      "platform": "即梦 / 抖音",
+      "program": {
+        "effective_version": "2026-09-20升级生效，2026-10-31截止（北京时间；仅日期）；画布细则2026-09-30修改",
+        "exit": null,
+        "join": "须已入选成长计划层级；即梦+抖音同步发布并在官方问卷提报审核",
+        "ongoing_requirements": "获奖作品不得删除或隐藏，露出话题长期保留；现金需配合工作流宣传。最高档另有申报后3个月发布内容与个人主页竞品排他要求",
+        "revenue": "每条一次提报最高档；基础和优质画布奖金可叠加但分别审核；现金每周最多3条，不是上传即获奖",
+        "settlement": "次月第一周统一发放上月审核通过的现金至抖音钱包，7个工作日到账；180个工作日未提现视为放弃"
+      },
+      "publication_at": null,
+      "relations": [
+        {
+          "note": "现金子活动独立于7–12月母计划和积分/会员权益；9/10旧版已下线。",
+          "target_id": "e07414bef25cfbfe8263dbe5",
+          "type": "under_program"
+        }
+      ],
+      "rewards": [
+        {
+          "amount": 600,
+          "currency": "CNY",
+          "label": "T+7十万播放基础档",
+          "scope": "有条件单条档位，不是所有投稿均获奖",
+          "type": "cash",
+          "unit": "元",
+          "validity": null
+        },
+        {
+          "amount": 200,
+          "currency": "CNY",
+          "label": "优质开源画布增量",
+          "scope": "十万播放档另需合格画布",
+          "type": "cash",
+          "unit": "元",
+          "validity": null
+        },
+        {
+          "amount": 70000,
+          "currency": "CNY",
+          "label": "最高档单条上限（含合格画布）",
+          "scope": "72小时2000万播放或100万赞；6万+画布1万；每条一次最高档，不与其他档位重复相加",
+          "type": "cash",
+          "unit": "元",
+          "validity": null
+        },
+        {
+          "amount": 2000,
+          "label": "合格单条2000积分",
+          "scope": "单条有条件奖励；每周最多10000积分",
+          "type": "credits",
+          "validity": null
+        }
+      ],
+      "risks": [
+        {
+          "detail": "现金资格严格禁竞品露出，范围包含视频、评论、工具名称/Logo/界面等；版权与资源位条款仍以母计划全文为准。",
+          "level": "high",
+          "type": "tool_restriction"
+        },
+        {
+          "type": "licence",
+          "level": "high",
+          "detail": "规则含永久、不可撤销、全球、非独家的传播、转载、改编等授权；参加前需逐项对照全文权利范围。长期授权成本不能只按奖励金额判断。"
+        },
+        {
+          "type": "exclusivity",
+          "level": "high",
+          "detail": "最高现金档另要求申报后3个月发布内容和个人主页排他竞品；基础现金资格也禁止视频、评论中的竞品模型和工作流工具名称、Logo、口播、话题与界面。"
+        },
+        {
+          "type": "ongoing",
+          "level": "high",
+          "detail": "获奖作品不能删除或隐藏，露出话题长期保留；现金需要配合工作流宣传。开源画布使提示词、参考素材和连线公开并允许他人复制模板。"
+        }
+      ],
+      "source_id": "jimeng_growth",
+      "steps": [
+        "先取得成长计划层级；即梦+抖音同步发布>1分钟原创AI叙事短片，带#即梦AI创作者成长计划并提报审核。",
+        "申领画布加奖须从画布直接“发布 → 上传新短片”；按本页画布要求准备新内容，一画布一短片，两项分别审核。",
+        "达到数据档位后，一条作品一次提报最高档；现金每周最多3条，合格投稿2000积分/条、每周最多10000积分。",
+        "次月第一周统一发放上月审核通过现金，7个工作日到账；180个工作日未提现视为放弃。"
+      ],
+      "summary": "成长计划内9月20日至10月31日的有条件现金激励；顶档单条7万元并非保底，禁竞品露出。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "time": {
+        "absolute_deadline": null,
+        "absolute_start": null,
+        "batches": [],
+        "confirmed": true,
+        "deadline": "2026-10-31",
+        "deadline_raw": "2026-10-31",
+        "deadline_tentative": false,
+        "evidence": "本轮官方公开全文明确北京时间（UTC+08:00）；总计划仅月份精度，现金子活动仅日期精度，不补造具体时刻。",
+        "mechanism": "fixed",
+        "policy_effective": "2026-09-20",
+        "policy_end": null,
+        "policy_version": "9/20升级规则；9/10版于9/20下线；画布细则2026-09-30修改",
+        "start": "2026-09-20",
+        "timezone": "+08:00"
+      },
+      "title": "锋芒回响—即梦9/20升级现金激励",
+      "verification": "partial",
+      "verified_at": "2026-09-30",
+      "work_requirements": [
+        "即梦与抖音同步>1分钟原创叙事作品，指定#即梦AI创作者成长计划，提报审核。",
+        "现金禁视频及评论中的竞品模型/工作流工具名称、Logo、口播、话题与界面。"
+      ],
+      "public_review": {
+        "at": "2026-09-30",
+        "method": "上游官方公开页面人工复核交接；未登录、未提交表单",
+        "overall": "部分字段已核，整体仍有缺口",
+        "fields_verified": [
+          "北京时间与日精度窗口",
+          "七档基础现金与画布加奖",
+          "画布公开全文",
+          "审核/结算/作品持续保留",
+          "授权和最高档竞品排他"
+        ],
+        "remaining": [
+          "本人层级/作品/数据资格",
+          "现金税前或税后口径",
+          "未披露的具体开始/截止时刻",
+          "个人退出和违约处理细则"
+        ]
+      },
+      "cash_tiers": [
+        {
+          "condition": "T+7播放10万",
+          "base": 600,
+          "canvas_bonus": 200,
+          "currency": "CNY",
+          "tax": null
+        },
+        {
+          "condition": "T+7播放50万",
+          "base": 3000,
+          "canvas_bonus": 500,
+          "currency": "CNY",
+          "tax": null
+        },
+        {
+          "condition": "T+7播放100万",
+          "base": 15000,
+          "canvas_bonus": 3000,
+          "currency": "CNY",
+          "tax": null
+        },
+        {
+          "condition": "T+7播放300万",
+          "base": 18000,
+          "canvas_bonus": 4000,
+          "currency": "CNY",
+          "tax": null
+        },
+        {
+          "condition": "T+7播放500万或20万赞",
+          "base": 25000,
+          "canvas_bonus": 5000,
+          "currency": "CNY",
+          "tax": null
+        },
+        {
+          "condition": "72小时1000万播放或50万赞",
+          "base": 30000,
+          "canvas_bonus": 8000,
+          "currency": "CNY",
+          "tax": null
+        },
+        {
+          "condition": "72小时2000万播放或100万赞",
+          "base": 60000,
+          "canvas_bonus": 10000,
+          "currency": "CNY",
+          "tax": null
+        }
+      ],
+      "canvas_requirements": [
+        "仅限已入选成长计划的创作者；基础奖金和画布奖金可以叠加，两项分别审核，并非上传即获奖金。",
+        "必须从画布直接“发布 → 上传新短片”；先从其他入口发布再绑定画布不适用。",
+        "内容和画布须在新规则启动后制作；历史内容不适用。一画布对应一短片，通常分别审核1–3个工作日。",
+        "优质画布须覆盖4个创作阶段；至少4个概念结果且覆盖至少2类；至少10个分镜结果、10个动态结果和1个粗剪节点。",
+        "画布内AI直接生成时长目标至少80%，覆盖高潮和高光；参数完整、创作路径可追溯。",
+        "开源后提示词、参考素材和连线可公开，他人可复制模板；提交前核对参考素材、角色和工作流的可公开权利。"
+      ]
+    },
+    {
+      "assessment": {
+        "ai_policy": "allowed",
+        "personal_eligibility": "not_checked",
+        "reason": "已核公开公告；具体作品、账号与完整授权尚未逐项核验，保留候选。",
+        "role": "candidate"
+      },
+      "edition": "公开入驻计划（轮次未核）",
+      "eligibility": [
+        "面向严肃创作者；具体资格门槛未公开核验。"
+      ],
+      "entry_url": "https://design.minimax.cn/",
+      "evidence": [
+        {
+          "excerpt": "严肃创作者共创Skills、玩法和原创IP；Agent抢先、Skills收益分成、联合营销。不是海螺国内超创规则。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。",
+          "observed_at": "2026-09-30",
+          "origin": "manual_handoff",
+          "url": "https://design.minimax.cn/"
+        },
+        {
+          "origin": "manual_handoff",
+          "observed_at": "2026-09-30",
+          "url": "https://design.minimax.cn/",
+          "method": "manual_public_review_handoff",
+          "excerpt": "官方页面确认 creators@minimaxi.com 入驻联系；权益为Agent早期体验、Skills收益分成、联合营销。未公开分成比例、结算、筛选、材料与截止；指南飞书登录未继续。",
+          "note": "本轮公开原文复核交接。历史证据保留；自动抓取能力和本账号资格不随人工补核升级。"
+        }
+      ],
+      "id": "8b7d34b49a64b3b8f4bfe493",
+      "kind": "creator_program",
+      "official_url": "https://design.minimax.cn/",
+      "organizer": "MiniMax Design",
+      "origin": "manual_review",
+      "platform": "MiniMax Design",
+      "program": {
+        "effective_version": null,
+        "exit": null,
+        "join": "官方入驻联系邮箱 creators@minimaxi.com 已确认；筛选条件与提交材料未公开。指南飞书需登录，未继续。",
+        "ongoing_requirements": "共创Skills/玩法/原创IP，持续要求未核",
+        "revenue": "Skills收益分成，比例未核",
+        "settlement": null
+      },
+      "publication_at": null,
+      "rewards": [
+        {
+          "amount": null,
+          "label": "Agent抢先、Skills分成与联合营销",
+          "scope": "比例和结算未知，非定额补贴",
+          "type": "other",
+          "validity": null
+        }
+      ],
+      "risks": [
+        {
+          "detail": "原创IP、Skills权属、收益比例、退出和结算条款未核。",
+          "level": "review",
+          "type": "licence"
+        }
+      ],
+      "source_id": "minimax_design",
+      "steps": [
+        "查看官网执导者入驻入口并复核合同/分成，再决定是否申请。",
+        "通过官方页面列出的 creators@minimaxi.com 核对入驻流程、分成比例、结算、版权、持续和退出条件；本库没有发送邮件。"
+      ],
+      "summary": "严肃创作者共创Skills、玩法和原创IP；Agent抢先、Skills收益分成、联合营销。不是海螺国内超创规则。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "time": {
+        "absolute_deadline": null,
+        "absolute_start": null,
+        "batches": [],
+        "confirmed": false,
+        "deadline": null,
+        "evidence": null,
+        "mechanism": "unspecified",
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "start": null,
+        "timezone": null
+      },
+      "title": "MiniMax Design执导者入驻计划",
+      "verification": "partial",
+      "verified_at": "2026-09-30",
+      "work_requirements": [],
+      "public_review": {
+        "at": "2026-09-30",
+        "method": "上游官方公开页面人工复核交接；未登录、未提交表单",
+        "overall": "部分字段已核，整体仍有缺口",
+        "fields_verified": [
+          "官方联系邮箱",
+          "三类权益的存在"
+        ],
+        "remaining": [
+          "筛选条件/材料",
+          "分成比例/结算",
+          "版权/持续/退出条款",
+          "当前报名窗口或常年开放依据"
+        ]
+      },
+      "contact_email": "creators@minimaxi.com",
+      "entry_status": "官方联系入口已确认；申请筛选与合同条款待问"
+    },
+    {
+      "assessment": {
+        "ai_policy": "allowed",
+        "personal_eligibility": "not_checked",
+        "reason": "官方日期与未开始/禁用状态冲突，待复核；宣传金额不是已核个人可领取。",
+        "role": "candidate"
+      },
+      "edition": "官方活动3337027127191000",
+      "eligibility": [],
+      "entry_url": null,
+      "evidence": [
+        {
+          "excerpt": "中文宣传单篇最高3000元税后、月结；详情显示2026-06-14至2028-06-29，但Not Started且禁用，门槛待公布。",
+          "note": "父线程2026-09-30官方原文研究移交；人工条款不会由自动刷新覆盖。未公开字段留空。",
+          "observed_at": "2026-09-30",
+          "origin": "manual_handoff",
+          "url": "https://www.vidu.com/activity/3337027127191000"
+        },
+        {
+          "excerpt": "中文宣传最高3000元税后、月结；详情未开始与禁用状态单独保留。",
+          "observed_at": "2026-09-30",
+          "origin": "manual_handoff",
+          "url": "https://www.vidu.com/zh/earn"
+        },
+        {
+          "origin": "manual_handoff",
+          "observed_at": "2026-09-30",
+          "url": "https://www.vidu.com/activity/3337027127191000",
+          "method": "manual_public_review_handoff",
+          "excerpt": "2026-09-30官方活动详情仍NotStarted、报名禁用；日期2026-06-14至2028-06-29与状态冲突，粉丝/互动门槛待公布。中文“立即报名”和最高3000元不能证明该活动开放。",
+          "note": "本轮公开原文复核交接。历史证据保留；自动抓取能力和本账号资格不随人工补核升级。"
+        }
+      ],
+      "id": "f5b419d006f340d23210de1c",
+      "kind": "limited_benefit",
+      "official_url": "https://www.vidu.com/activity/3337027127191000",
+      "organizer": "Vidu",
+      "origin": "manual_review",
+      "platform": "Vidu",
+      "program": {
+        "effective_version": null,
+        "exit": null,
+        "join": null,
+        "ongoing_requirements": null,
+        "revenue": null,
+        "settlement": "中文宣传月结；当前活动状态冲突，实际细则未核"
+      },
+      "publication_at": null,
+      "relations": [
+        {
+          "note": "创作者成长与有条件稿件激励分别核验；加入母计划不证明星火开放。",
+          "target_id": "eb01230e80d2a963f1363394",
+          "type": "under_program"
+        }
+      ],
+      "rewards": [
+        {
+          "amount": 3000,
+          "currency": "CNY",
+          "label": "中文宣传单篇最高3000元税后",
+          "scope": "待复核的官方宣传上限；未证明当前可领",
+          "type": "cash",
+          "unit": "元",
+          "validity": null
+        }
+      ],
+      "risks": [
+        {
+          "detail": "当前报名、内容门槛和版权细则未核，不按宣传奖励推动投稿。",
+          "level": "review",
+          "type": "licence"
+        }
+      ],
+      "source_id": "vidu_earn",
+      "steps": [],
+      "summary": "中文宣传单篇最高3000元税后、月结；详情显示2026-06-14至2028-06-29，但Not Started且禁用，门槛待公布。",
+      "tags": [
+        "AI",
+        "影视创作"
+      ],
+      "time": {
+        "absolute_deadline": null,
+        "absolute_start": null,
+        "batches": [],
+        "confirmed": false,
+        "conflict": "2026-09-30复核：活动详情仍NotStarted/报名禁用，与展示日期冲突；粉丝互动门槛待公布。中文立即报名不证明此活动开放。",
+        "deadline": null,
+        "evidence": null,
+        "mechanism": "fixed",
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "source_window": {
+          "end": "2028-06-29",
+          "note": "页面展示周期；不等同已确认报名窗口。",
+          "start": "2026-06-14"
+        },
+        "start": null,
+        "timezone": null
+      },
+      "title": "Vidu星火 / ViduEarn（官方状态冲突）",
+      "verification": "partial",
+      "verified_at": "2026-09-30",
+      "work_requirements": [],
+      "public_review": {
+        "at": "2026-09-30",
+        "method": "上游官方公开页面人工复核交接；未登录、未提交表单",
+        "overall": "部分字段已核，整体仍有缺口",
+        "fields_verified": [
+          "详情仍NotStarted且禁用",
+          "展示日期和开放状态冲突",
+          "粉丝/互动门槛尚待公布"
+        ],
+        "remaining": [
+          "当前真实开放状态",
+          "粉丝/互动门槛",
+          "可领取现金的完整条件",
+          "版权和退出细则"
+        ]
+      }
+    }
+  ]
+}

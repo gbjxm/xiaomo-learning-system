@@ -1,0 +1,734 @@
+{
+  "schema_version": 1,
+  "assets": {
+    "ef5e01bd360d25230465ae09a8178853b41f9c649c288b238322482e46026662": {
+      "filename": "ef5e01bd360d25230465ae09a8178853b41f9c649c288b238322482e46026662.png",
+      "width": 3000,
+      "height": 1746,
+      "sha256": "ef5e01bd360d25230465ae09a8178853b41f9c649c288b238322482e46026662",
+      "kind": "event_poster",
+      "source_page": "https://www.liblib.tv/activity/62",
+      "image_url": "https://liblibai-online.liblib.cloud/libtv-activity/1789971238659.png",
+      "applicable_edition": "2026 / 活动62",
+      "asset_label": "官方活动封面",
+      "rights_note": "来源于 LibTV 官方活动清单 coverUrl 公开封面；仅个人本地识别展示，不主张额外商用权。",
+      "observed_at": "2026-09-30T11:38:37.615381+00:00",
+      "pixel_review_note": "实际查看：紫蓝星空、五名王者人物，LibTV × 王者荣耀标识与“王者无界剧场计划”标题清晰；公开活动对象 activityId=62 精确绑定。",
+      "pixel_reviewed": true
+    },
+    "27a18c136561caf6bee94c2917b8331d22d25767becd3b77befa54a9a49d2760": {
+      "filename": "27a18c136561caf6bee94c2917b8331d22d25767becd3b77befa54a9a49d2760.jpg",
+      "width": 4167,
+      "height": 2350,
+      "sha256": "27a18c136561caf6bee94c2917b8331d22d25767becd3b77befa54a9a49d2760",
+      "kind": "event_poster",
+      "source_page": "https://www.liblib.tv/activity/61",
+      "image_url": "https://liblibai-online.liblib.cloud/libtv-activity/1788766423731.jpg",
+      "applicable_edition": "2026 / 活动61",
+      "asset_label": "官方活动封面",
+      "rights_note": "来源于 LibTV 官方活动清单 coverUrl 公开封面；仅个人本地识别展示，不主张额外商用权。",
+      "observed_at": "2026-09-30T11:38:39.196713+00:00",
+      "pixel_review_note": "实际查看：金黄色平遥城景，标题“X小时之后 AI短片黑客松”，下方9.28–9.30平遥及联办方对应；活动61封面，与正文获奖公示banner区分。",
+      "pixel_reviewed": true
+    },
+    "4388045107f211a54c9339917d4313606afb76ec00bd63032c66dd916bd23faa": {
+      "filename": "4388045107f211a54c9339917d4313606afb76ec00bd63032c66dd916bd23faa.jpg",
+      "width": 4167,
+      "height": 2350,
+      "sha256": "4388045107f211a54c9339917d4313606afb76ec00bd63032c66dd916bd23faa",
+      "kind": "event_poster",
+      "source_page": "https://www.liblib.tv/activity/60",
+      "image_url": "https://liblibai-online.liblib.cloud/libtv-activity/1787645479485.jpg",
+      "applicable_edition": "2026 / 活动60",
+      "asset_label": "官方活动封面",
+      "rights_note": "来源于 LibTV 官方活动清单 coverUrl 公开封面；仅个人本地识别展示，不主张额外商用权。",
+      "observed_at": "2026-09-30T11:38:40.416398+00:00",
+      "pixel_review_note": "实际查看：黑白“一场戏的诞生”与08.25–09.22、LibTV及北京电影学院标识；木偶线/分镜拼图；绑定活动60。",
+      "pixel_reviewed": true
+    },
+    "8f23d0e5dc2c3a1e076b6e1fb7d667501999e70fca0503b4efb1f7562b110164": {
+      "filename": "8f23d0e5dc2c3a1e076b6e1fb7d667501999e70fca0503b4efb1f7562b110164.jpg",
+      "width": 1000,
+      "height": 564,
+      "sha256": "8f23d0e5dc2c3a1e076b6e1fb7d667501999e70fca0503b4efb1f7562b110164",
+      "kind": "event_poster",
+      "source_page": "https://www.liblib.tv/activity/59",
+      "image_url": "https://liblibai-online.liblib.cloud/libtv-activity/1787059726145.jpg",
+      "applicable_edition": "2026 / 活动59",
+      "asset_label": "官方活动封面",
+      "rights_note": "来源于 LibTV 官方活动清单 coverUrl 公开封面；仅个人本地识别展示，不主张额外商用权。",
+      "observed_at": "2026-09-30T11:38:40.771916+00:00",
+      "pixel_review_note": "实际查看：蓝色牛头武士，“重制那头牛大赛”、8.19–8.26；活动59封面。",
+      "pixel_reviewed": true
+    },
+    "f775631dad75a679315cd2fe7ceaaffd4a0449bed2c9b2308f3afe8c984db52d": {
+      "filename": "f775631dad75a679315cd2fe7ceaaffd4a0449bed2c9b2308f3afe8c984db52d.jpg",
+      "width": 2360,
+      "height": 1000,
+      "sha256": "f775631dad75a679315cd2fe7ceaaffd4a0449bed2c9b2308f3afe8c984db52d",
+      "kind": "event_poster",
+      "source_page": "https://www.liblib.tv/activity/55",
+      "image_url": "https://liblibai-online.liblib.cloud/web/ae93620a110f4bebbf8932e6a045ec4d/864389c4-8d24-4927-a0c4-61b4b649d549.jpeg",
+      "applicable_edition": "2026 / 活动55",
+      "asset_label": "官方活动海报",
+      "rights_note": "来源于 LibTV 官方活动55正文公开海报；仅个人本地识别展示，不主张额外商用权。",
+      "observed_at": "2026-09-30T11:38:42.043950+00:00",
+      "pixel_review_note": "实际查看：蓝红摄影片场，“Skill导演大师赛，开机！”、“3大片场/10项大奖/40+入围席位”；来自活动55正文海报，非平台通用logo。",
+      "pixel_reviewed": true
+    },
+    "a5c9c5245afa5bac4656432d79dbe5cafd1e1e3b8bdc9c4a39b4494d1e0e5493": {
+      "filename": "a5c9c5245afa5bac4656432d79dbe5cafd1e1e3b8bdc9c4a39b4494d1e0e5493.jpg",
+      "width": 3547,
+      "height": 2000,
+      "sha256": "a5c9c5245afa5bac4656432d79dbe5cafd1e1e3b8bdc9c4a39b4494d1e0e5493",
+      "kind": "event_poster",
+      "source_page": "https://www.liblib.tv/activity/53",
+      "image_url": "https://liblibai-online.liblib.cloud/libtv-activity/1783923757023.jpeg",
+      "applicable_edition": "2026 / 活动53",
+      "asset_label": "官方活动封面",
+      "rights_note": "来源于 LibTV 官方活动清单 coverUrl 公开封面；仅个人本地识别展示，不主张额外商用权。",
+      "observed_at": "2026-09-30T11:38:43.072384+00:00",
+      "pixel_review_note": "实际查看：蓝黄街景，“走！扫街去”、7.15–8.15、LibTV/高德扫街榜/阿里云；原海报旧“进行中”仅为历史宣传，不改变数据库已截止状态。",
+      "pixel_reviewed": true
+    },
+    "c912ae713a69784bce40c6b8a0b955cc6ba5cbd9151437876a978104dea9504c": {
+      "filename": "c912ae713a69784bce40c6b8a0b955cc6ba5cbd9151437876a978104dea9504c.jpg",
+      "width": 3547,
+      "height": 2000,
+      "sha256": "c912ae713a69784bce40c6b8a0b955cc6ba5cbd9151437876a978104dea9504c",
+      "kind": "event_poster",
+      "source_page": "https://www.liblib.tv/activity/50",
+      "image_url": "https://liblibai-online.liblib.cloud/libtv-activity/1779089967852.jpeg",
+      "applicable_edition": "2026 / 活动50",
+      "asset_label": "官方活动封面",
+      "rights_note": "来源于 LibTV 官方活动清单 coverUrl 公开封面；仅个人本地识别展示，不主张额外商用权。",
+      "observed_at": "2026-09-30T11:38:47.534009+00:00",
+      "pixel_review_note": "实际查看：紫色绘画眼睛，“LibTV大乱斗Vol.2 AI，想象和尖叫”、5.18–6.1；使用官方coverUrl，否决同页正文第一张联系二维码。",
+      "pixel_reviewed": true
+    },
+    "797c3e5bbd9f124ffa23d10c59daa15758938173d0ddbf635a3eb96e35aae866": {
+      "filename": "797c3e5bbd9f124ffa23d10c59daa15758938173d0ddbf635a3eb96e35aae866.png",
+      "width": 1920,
+      "height": 623,
+      "sha256": "797c3e5bbd9f124ffa23d10c59daa15758938173d0ddbf635a3eb96e35aae866",
+      "kind": "event_poster",
+      "source_page": "https://www.bilibili.com/blackboard/era/DjrNk7LG6agRh9Lu.html",
+      "image_url": "https://i0.hdslb.com/bfs/activity-plat/static/10499/11961/d41d8cd98f00b204e9800998ecf8427e/yQ2sZRYBOC.png",
+      "applicable_edition": "2026 / AiShorts",
+      "asset_label": "官方活动横幅",
+      "rights_note": "公开官方素材仅缓存用于个人本地识别展示；保留出处，不主张额外商用权或将素材作为可再授权资产。",
+      "observed_at": "2026-09-30T11:44:07+00:00",
+      "pixel_review_note": "实际查看：HiShorts! × updream双方标识、“AI短片大赛”、AiShorts鸟形线稿，与该官方活动页对应。图本身未印年份，适用年度依据该记录官方活动页面关联。",
+      "pixel_reviewed": true
+    },
+    "d78b1e6848108f46a5cba0e1d7c5140754a6b55031cd3de04eaaeaa109a3d65a": {
+      "filename": "d78b1e6848108f46a5cba0e1d7c5140754a6b55031cd3de04eaaeaa109a3d65a.webp",
+      "width": 1200,
+      "height": 949,
+      "sha256": "d78b1e6848108f46a5cba0e1d7c5140754a6b55031cd3de04eaaeaa109a3d65a",
+      "kind": "event_poster",
+      "source_page": "https://jingrui-ai-competition.youku.com/?view=rules",
+      "image_url": "https://g.alicdn.com/youku_operation_fe/jingdong-ai-contest-react/0.0.6/assets/hero-title-v51.webp",
+      "applicable_edition": "2026",
+      "asset_label": "官方活动标题图",
+      "rights_note": "公开官方素材仅缓存用于个人本地识别展示；保留出处，不主张额外商用权或将素材作为可再授权资产。",
+      "observed_at": "2026-09-30T11:44:07+00:00",
+      "pixel_review_note": "实际查看：清晰“鲸锐AI创作大赛”、JINGRUI AI TALENT COMPETITION，以及总奖金1000万/单项最高200万；是官方本届页面静态JS明确引用的标题图，未执行外部JS。",
+      "pixel_reviewed": true
+    },
+    "6bcc4d365379de6aff6263f6f6afa9a5decc6f02c176aa94aa27e4d50bdfb7ea": {
+      "filename": "6bcc4d365379de6aff6263f6f6afa9a5decc6f02c176aa94aa27e4d50bdfb7ea.png",
+      "width": 942,
+      "height": 503,
+      "sha256": "6bcc4d365379de6aff6263f6f6afa9a5decc6f02c176aa94aa27e4d50bdfb7ea",
+      "kind": "event_poster",
+      "source_page": "https://www.xmwenlian.com/home/article/detail/id/7928.html",
+      "image_url": "https://www.xmwenlian.com/Uploads/Editor/images/2026-09-14/6aa75776b9c6e.png",
+      "applicable_edition": "2026",
+      "asset_label": "2026官方活动公告图",
+      "rights_note": "公开官方素材仅缓存用于个人本地识别展示；保留出处，不主张额外商用权或将素材作为可再授权资产。",
+      "observed_at": "2026-09-30T11:44:07+00:00",
+      "pixel_review_note": "实际查看：金色胶片主视觉，清晰写“2026金鸡AI影展”；来自厦门市文联发布的当届官方征集公告正文。",
+      "pixel_reviewed": true
+    },
+    "61ea79e7fc649077569702d53f4d01855a163102161d21a3125bbf27ebd11d4a": {
+      "filename": "61ea79e7fc649077569702d53f4d01855a163102161d21a3125bbf27ebd11d4a.png",
+      "width": 726,
+      "height": 162,
+      "sha256": "61ea79e7fc649077569702d53f4d01855a163102161d21a3125bbf27ebd11d4a",
+      "kind": "organizer_mark",
+      "source_page": "https://www.bjiff.com/bannergdtp/202602/t20260203_188677.html",
+      "image_url": "https://www.bjiff.com/images/logo_hq.png",
+      "applicable_edition": "2026",
+      "asset_label": "北影节标识 · 非赛道专属",
+      "rights_note": "公开官方素材仅缓存用于个人本地识别展示；保留出处，不主张额外商用权或将素材作为可再授权资产。",
+      "observed_at": "2026-09-30T11:44:07+00:00",
+      "pixel_review_note": "实际查看：横版顶部标识中彩色放映胶片风车图形清晰，透明背景；取自该官方征片公告顶部，宜深色底展示。仅代表北京国际电影节，不能冒充AIGC电影单元或通义万相赛道专属logo。",
+      "pixel_reviewed": true,
+      "image_background": "#14212f"
+    },
+    "3974e5b1e106300debddfdf5a3b1b6ef3eb07fefdeac2139ef6e729ee5fa258d": {
+      "filename": "3974e5b1e106300debddfdf5a3b1b6ef3eb07fefdeac2139ef6e729ee5fa258d.jpg",
+      "width": 779,
+      "height": 615,
+      "sha256": "3974e5b1e106300debddfdf5a3b1b6ef3eb07fefdeac2139ef6e729ee5fa258d",
+      "kind": "event_poster",
+      "source_page": "https://www.cuc.edu.cn/2026/0825/c10001a273403/page.htm",
+      "image_url": "https://www.cuc.edu.cn/_upload/article/images/d8/d9/cd39890549a4a919d0800741fced/4472f00c-d947-4d8b-9408-94fd7329c14f.jpg",
+      "applicable_edition": "2026",
+      "asset_label": "2026官方征集函封面",
+      "rights_note": "公开官方素材仅缓存用于个人本地识别展示；保留出处，不主张额外商用权或将素材作为可再授权资产。",
+      "observed_at": "2026-09-30T11:44:07+00:00",
+      "pixel_review_note": "实际查看：蓝色框内明确“Aniwow!2026”、第21届中国（北京）国际大学生动画节、“白杨奖”大学生竞赛单元征集函及2026.09.14截稿日。",
+      "pixel_reviewed": true
+    },
+    "21249b652e79b39130c42cb2262e698691df11740c7527d45258193af78a5858": {
+      "filename": "21249b652e79b39130c42cb2262e698691df11740c7527d45258193af78a5858.png",
+      "width": 2400,
+      "height": 1260,
+      "sha256": "21249b652e79b39130c42cb2262e698691df11740c7527d45258193af78a5858",
+      "kind": "event_poster",
+      "source_page": "https://www.hkaiiff.org/zh-hans/festival/2027/documents/entry-guide",
+      "image_url": "https://www.hkaiiff.org/share/festival-2027.png?v=20260927-vector-1",
+      "applicable_edition": "2027",
+      "asset_label": "2027官方影展分享图",
+      "rights_note": "公开官方素材仅缓存用于个人本地识别展示；保留出处，不主张额外商用权或将素材作为可再授权资产。",
+      "observed_at": "2026-09-30T11:44:07+00:00",
+      "pixel_review_note": "实际查看：HKAIIFF标识、“AI-NATIVE CINEMA”和醒目“2027”；图片来自2027官方征集指南的og:image，不影响奖励与主体仍待尽调状态。",
+      "pixel_reviewed": true
+    },
+    "9b3c48e3337e1abd03e81116ed6a22ae10989fda731a344a9cf5adaaf08785c2": {
+      "filename": "9b3c48e3337e1abd03e81116ed6a22ae10989fda731a344a9cf5adaaf08785c2.png",
+      "width": 1800,
+      "height": 945,
+      "sha256": "9b3c48e3337e1abd03e81116ed6a22ae10989fda731a344a9cf5adaaf08785c2",
+      "kind": "event_poster",
+      "source_page": "https://aif.runwayml.com/",
+      "image_url": "https://aiff.runwayml.com/opengraph-image.png?4df29fdf42d71751",
+      "applicable_edition": "2026",
+      "asset_label": "官方影展分享图 · 含其他单元",
+      "rights_note": "公开官方素材仅缓存用于个人本地识别展示；保留出处，不主张额外商用权或将素材作为可再授权资产。",
+      "observed_at": "2026-09-30T11:44:07+00:00",
+      "pixel_review_note": "实际查看：黑白分享图写AI FILM ADVERTISING NEW MEDIA GAMING DESIGN FASHION FESTIVAL及Runway，匹配2026官方AIF网站；为整个影展通用主视觉，并非电影组专属标识。",
+      "pixel_reviewed": true
+    },
+    "29e7fce5e590c15726563480c1c3f67f7d3e1f350a1b8cad5bae65b1a6091544": {
+      "filename": "29e7fce5e590c15726563480c1c3f67f7d3e1f350a1b8cad5bae65b1a6091544.webp",
+      "width": 1080,
+      "height": 720,
+      "sha256": "29e7fce5e590c15726563480c1c3f67f7d3e1f350a1b8cad5bae65b1a6091544",
+      "kind": "event_poster",
+      "source_page": "https://www.minimax.cn/news/海影节minimax登岛海螺ai我的人生电影完整获奖名单公布",
+      "image_url": "https://www.minimax.cn/_next/image?url=https%3A%2F%2Ffilecdn.minimax.chat%2Fpublic%2F890f4d8d-009b-4df5-bb33-f20edaea0e59.webp&w=3840&q=75",
+      "applicable_edition": "2025",
+      "asset_label": "2025官方活动现场图 · 非logo",
+      "rights_note": "公开官方素材仅缓存用于个人本地识别展示；保留出处，不主张额外商用权或将素材作为可再授权资产。",
+      "observed_at": "2026-09-30T11:44:07+00:00",
+      "pixel_review_note": "实际查看：海南岛国际电影节现场投影清楚写“海螺AI·我的人生电影”，为该2025官方获奖名单文章正文现场照；并非2026海螺活动或独立官方logo。",
+      "pixel_reviewed": true
+    },
+    "427c4fcec4ed5541575fe0813f166fb15bf3f77f7fd24a65eb68482bdd3296a4": {
+      "filename": "427c4fcec4ed5541575fe0813f166fb15bf3f77f7fd24a65eb68482bdd3296a4.webp",
+      "width": 900,
+      "height": 508,
+      "sha256": "427c4fcec4ed5541575fe0813f166fb15bf3f77f7fd24a65eb68482bdd3296a4",
+      "kind": "event_poster",
+      "source_page": "https://www.liblib.tv/activity/56",
+      "image_url": "https://liblibai-online.liblib.cloud/libtv-activity/1785468657963.png?x-oss-process=image/resize,w_900,m_lfit/format,webp",
+      "applicable_edition": "2026 / 活动56",
+      "asset_label": "官方活动封面",
+      "rights_note": "来源于LibTV官方活动页公开封面缩略图，仅个人本地识别展示，不主张额外商用权。",
+      "observed_at": "2026-09-30T12:51:18.223156+00:00",
+      "pixel_review_note": "实际查看：红黑无畏契约人物，LibTV及游可爱标识，“瓦漫节·无畏契约觉醒计划”“8/1正式开启”；活动56标题与公开coverUrl双重对应。",
+      "pixel_reviewed": true,
+      "entity": "LibTV",
+      "brand_key": "libtv"
+    },
+    "ce6cf844df3d1e331a82819ecdb647bce7dc89e8fa6c4dc59a0f6f8fa89a27f9": {
+      "filename": "ce6cf844df3d1e331a82819ecdb647bce7dc89e8fa6c4dc59a0f6f8fa89a27f9.webp",
+      "width": 900,
+      "height": 507,
+      "sha256": "ce6cf844df3d1e331a82819ecdb647bce7dc89e8fa6c4dc59a0f6f8fa89a27f9",
+      "kind": "event_poster",
+      "source_page": "https://www.liblib.tv/activity/52",
+      "image_url": "https://liblibai-online.liblib.cloud/libtv-activity/1781092871863.png?x-oss-process=image/resize,w_900,m_lfit/format,webp",
+      "applicable_edition": "2026 / 活动52",
+      "asset_label": "官方活动封面",
+      "rights_note": "来源于LibTV官方活动页公开封面缩略图，仅个人本地识别展示，不主张额外商用权。",
+      "observed_at": "2026-09-30T12:51:18.470929+00:00",
+      "pixel_review_note": "实际查看：蓝黄城市、红裤摄影视角人物，LibTV标识、“广告“导演”请就位”、6.10–7.8；活动52封面，不是平台通用图。",
+      "pixel_reviewed": true,
+      "entity": "LibTV",
+      "brand_key": "libtv"
+    },
+    "abab62aaf646f8f4c4fa44d483efa340fdf48c202293c438b7176304b0896d51": {
+      "filename": "abab62aaf646f8f4c4fa44d483efa340fdf48c202293c438b7176304b0896d51.webp",
+      "width": 900,
+      "height": 506,
+      "sha256": "abab62aaf646f8f4c4fa44d483efa340fdf48c202293c438b7176304b0896d51",
+      "kind": "event_poster",
+      "source_page": "https://www.liblib.tv/activity/51",
+      "image_url": "https://liblibai-online.liblib.cloud/libtv-activity/1779622999609.jpeg?x-oss-process=image/resize,w_900,m_lfit/format,webp",
+      "applicable_edition": "2026 / 活动51",
+      "asset_label": "官方活动封面",
+      "rights_note": "来源于LibTV官方活动页公开封面缩略图，仅个人本地识别展示，不主张额外商用权。",
+      "observed_at": "2026-09-30T12:51:18.559670+00:00",
+      "pixel_review_note": "实际查看：红色国风山水与飞鸟，“精卫计划”字样、LibTV、优酷及民艺非遗标识；活动51正式封面。",
+      "pixel_reviewed": true,
+      "entity": "LibTV",
+      "brand_key": "libtv"
+    },
+    "ed55730f99ffebed007af04c38dbe4a050e324aecff66d43cc44850c4e4fb728": {
+      "filename": "ed55730f99ffebed007af04c38dbe4a050e324aecff66d43cc44850c4e4fb728.webp",
+      "width": 900,
+      "height": 508,
+      "sha256": "ed55730f99ffebed007af04c38dbe4a050e324aecff66d43cc44850c4e4fb728",
+      "kind": "event_poster",
+      "source_page": "https://www.liblib.tv/activity/49",
+      "image_url": "https://liblibai-online.liblib.cloud/libtv-activity/1777019183342.png?x-oss-process=image/resize,w_900,m_lfit/format,webp",
+      "applicable_edition": "2026 / 活动49",
+      "asset_label": "官方活动封面",
+      "rights_note": "来源于LibTV官方活动页公开封面缩略图，仅个人本地识别展示，不主张额外商用权。",
+      "observed_at": "2026-09-30T12:51:18.639334+00:00",
+      "pixel_review_note": "实际查看：黑白竹帘人脸和背影，“LibTV大乱斗Vol.1 显形记”、4/24–5/21；活动49正式封面。",
+      "pixel_reviewed": true,
+      "entity": "LibTV",
+      "brand_key": "libtv"
+    },
+    "ec2dbd72df32646e58b5db897cfde3f9dd46a368de520431ee952e8802c134f0": {
+      "filename": "ec2dbd72df32646e58b5db897cfde3f9dd46a368de520431ee952e8802c134f0.webp",
+      "width": 900,
+      "height": 503,
+      "sha256": "ec2dbd72df32646e58b5db897cfde3f9dd46a368de520431ee952e8802c134f0",
+      "kind": "event_poster",
+      "source_page": "https://www.liblib.tv/activity/7",
+      "image_url": "https://liblibai-online.liblib.cloud/libtv-activity/1775059183181.jpg?x-oss-process=image/resize,w_900,m_lfit/format,webp",
+      "applicable_edition": "年度未核 / 活动7",
+      "asset_label": "官方活动封面",
+      "rights_note": "来源于LibTV官方活动页公开封面缩略图，仅个人本地识别展示，不主张额外商用权。",
+      "observed_at": "2026-09-30T12:51:18.750052+00:00",
+      "pixel_review_note": "实际查看：赛车场红色跑车，“LibTV×Seedance2.0 AI影像狂飙季”“即日起–4月下旬”；活动7对应，图片未印年份，保留记录年度未核，不从素材时间戳推定年份。",
+      "pixel_reviewed": true,
+      "entity": "LibTV",
+      "brand_key": "libtv"
+    },
+    "6307f5907b667139c44f1ff4eb14b095d78c39f1d3b177795fe357af04d5989f": {
+      "filename": "6307f5907b667139c44f1ff4eb14b095d78c39f1d3b177795fe357af04d5989f.png",
+      "width": 560,
+      "height": 169,
+      "sha256": "6307f5907b667139c44f1ff4eb14b095d78c39f1d3b177795fe357af04d5989f",
+      "kind": "platform_mark",
+      "source_page": "https://jimeng.jianying.com/",
+      "image_url": "https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/jimeng-logo-large.16d119dc.png",
+      "applicable_edition": "平台通用标识；赛事届次见记录",
+      "asset_label": "即梦AI 官方平台标识",
+      "rights_note": "公开官方平台标识，仅用于本机个人信息库识别及来源说明；不主张额外商用权，不代表主办方授权或推荐。",
+      "observed_at": "2026-09-30T12:49:35.398350+00:00",
+      "pixel_review_note": "实际查看：青蓝金渐变三角折叠图形，白色“即梦AI”及“即刻造梦”字标；官方首页footer PNG，比仅favicon更直接；透明底白字宜放在深色展示底上。",
+      "pixel_reviewed": true,
+      "entity": "即梦AI",
+      "brand_key": "jimeng",
+      "image_background": "#14212f"
+    },
+    "005ae13e41012dceb64db994089fe9c3122d6bbfc0549e83e7387d64fa5e9a99": {
+      "filename": "005ae13e41012dceb64db994089fe9c3122d6bbfc0549e83e7387d64fa5e9a99.png",
+      "width": 180,
+      "height": 180,
+      "sha256": "005ae13e41012dceb64db994089fe9c3122d6bbfc0549e83e7387d64fa5e9a99",
+      "kind": "organizer_mark",
+      "source_page": "https://www.aaiff.ai/",
+      "image_url": "https://www.aaiff.ai/apple-icon.png?apple-icon.0dcuc~h4.k~xv.png",
+      "applicable_edition": "2026",
+      "asset_label": "AAIFF影展通用标识 · 非当届专属",
+      "rights_note": "公开官方品牌素材仅缓存用于个人本地识别展示，保留官方出处；不主张额外商用权、再授权或官方合作身份。",
+      "observed_at": "2026-09-30T12:54:09+00:00",
+      "pixel_review_note": "实际查看：白底橙色AAIFF字样及橙色角部色块；来自当前AAIFF 2026官方主页明确声明的apple-touch icon，图中没有年份，不作为专属2026海报。",
+      "pixel_reviewed": true,
+      "entity_evidence": {
+        "url": "https://aaiff.ai/terms",
+        "note": "官网标题“AAIFF 2026 — Astana AI Film Festival”，官方icon引用直接绑定AAIFF影展品牌。"
+      }
+    },
+    "46769e094835e7ef9c5a813cbb702333ecd3afa6671455ecece4436756fbee97": {
+      "filename": "46769e094835e7ef9c5a813cbb702333ecd3afa6671455ecece4436756fbee97.png",
+      "width": 36,
+      "height": 36,
+      "sha256": "46769e094835e7ef9c5a813cbb702333ecd3afa6671455ecece4436756fbee97",
+      "kind": "organizer_mark",
+      "source_page": "https://www.cuc.edu.cn/2026/0811/c10001a273225/page.htm",
+      "image_url": "https://www.cuc.edu.cn/_upload/tpl/02/d4/724/template724/favicon.ico",
+      "applicable_edition": "2026",
+      "asset_label": "主办方标识 · 中国传媒大学",
+      "rights_note": "公开官方品牌素材仅缓存用于个人本地识别展示，保留官方出处；不主张额外商用权、再授权或官方合作身份。",
+      "observed_at": "2026-09-30T12:54:09+00:00",
+      "pixel_review_note": "实际查看36×36像素：绿色、金黄色圆形校徽；无当届年份。官方征集通知页面直接引用此favicon，扩展名.ico但实际字节为PNG，不执行ICO/SVG。",
+      "pixel_reviewed": true,
+      "entity_evidence": {
+        "url": "https://www.cuc.edu.cn/2026/0811/c10001a273225/page.htm",
+        "note": "该赛事官方中传通知及既有研究证据明确中国传媒大学为主办方。"
+      }
+    },
+    "104e7b08c5aee376fd9411522225363063f30b7a605b6101800b279667c0efe0": {
+      "filename": "104e7b08c5aee376fd9411522225363063f30b7a605b6101800b279667c0efe0.png",
+      "width": 32,
+      "height": 32,
+      "sha256": "104e7b08c5aee376fd9411522225363063f30b7a605b6101800b279667c0efe0",
+      "kind": "platform_mark",
+      "source_page": "https://seko.sensetime.com/activity/2079017609580478466",
+      "image_url": "https://seko.sensetime.com/logo-32x32.png",
+      "applicable_edition": "2026",
+      "asset_label": "Seko平台标识 · 非活动专属",
+      "rights_note": "公开官方品牌素材仅缓存用于个人本地识别展示，保留官方出处；不主张额外商用权、再授权或官方合作身份。",
+      "observed_at": "2026-09-30T12:54:09+00:00",
+      "pixel_review_note": "实际查看32×32像素：黑色立体折叠S字形，白/透明背景；该官方活动页面明确引用Seko平台favicon，不冒充SMG或年度计划独立logo。",
+      "pixel_reviewed": true,
+      "entity_evidence": {
+        "url": "https://seko.sensetime.com/activity/2079017609580478466",
+        "note": "官方活动页面位于Seko平台且标题含“Seko”，官网rel=icon明确引用/logo-32x32.png。"
+      }
+    },
+    "c8923ec0a9b8f11f28e2c61725776cd20fcb073b2671507415ec192d39715fe8": {
+      "filename": "c8923ec0a9b8f11f28e2c61725776cd20fcb073b2671507415ec192d39715fe8.png",
+      "width": 32,
+      "height": 32,
+      "sha256": "c8923ec0a9b8f11f28e2c61725776cd20fcb073b2671507415ec192d39715fe8",
+      "kind": "organizer_mark",
+      "source_page": "https://www.ecnu.edu.cn/",
+      "image_url": "https://www.ecnu.edu.cn/images/favicon.ico",
+      "applicable_edition": "2026",
+      "asset_label": "主办方标识 · 华东师范大学",
+      "rights_note": "公开官方品牌素材仅缓存用于个人本地识别展示，保留官方出处；不主张额外商用权、再授权或官方合作身份。",
+      "observed_at": "2026-09-30T12:58:18.072074+00:00",
+      "pixel_review_note": "实际查看：32×32红色圆形华东师大校徽，来自学校官网favicon；原始低分辨率，非比赛专属图。",
+      "pixel_reviewed": true,
+      "entity": "华东师范大学",
+      "entity_evidence": {
+        "url": "https://comm.ecnu.edu.cn/c3/c5/c51744a771013/page.htm",
+        "note": "赛事官方通知及记录明确华东师范大学为主办方。"
+      },
+      "conversion_method": "Chrome原生ICO解码；Canvas等尺寸转为静态PNG，不重绘Logo。"
+    },
+    "4f80b63ae40869b37227f5bb513113f5e9578570ffe5e88f5377cb2a60a48e41": {
+      "filename": "4f80b63ae40869b37227f5bb513113f5e9578570ffe5e88f5377cb2a60a48e41.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "4f80b63ae40869b37227f5bb513113f5e9578570ffe5e88f5377cb2a60a48e41",
+      "kind": "organizer_mark",
+      "source_page": "https://www.firstfilm.org.cn/",
+      "image_url": "https://www.firstfilm.org.cn/favicon.png",
+      "applicable_edition": "2026",
+      "asset_label": "FIRST影展通用标识 · 非超短片专属",
+      "rights_note": "公开官方品牌素材仅缓存用于个人本地识别展示，保留官方出处；不主张额外商用权、再授权或官方合作身份。",
+      "observed_at": "2026-09-30T12:54:09+00:00",
+      "pixel_review_note": "实际查看256×256：黑白立体堆叠FIRST字样，图中没有2021或其他年份；来自当前官方首页明确引用的favicon，和先前排除的2021字标区分。",
+      "pixel_reviewed": true,
+      "entity_evidence": {
+        "url": "https://www.firstfilm.org.cn/wp-content/uploads/2026/03/%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%B1%8AFIRST%E9%9D%92%E5%B9%B4%E7%94%B5%E5%B1%95%E8%B6%85%E7%9F%AD%E7%89%87%E5%8D%95%E5%85%83%E7%AB%A0%E7%A8%8B.pdf",
+        "note": "官方FIRST影展首页标题与favicon引用明确对应FIRST品牌；此图不是第20届或2026超短片专属标识。"
+      }
+    },
+    "brand-bilibili": {
+      "filename": "cccf93bd64c30b6c8670cb871460213029d11161555d63eef9ce791c825f2544.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "cccf93bd64c30b6c8670cb871460213029d11161555d63eef9ce791c825f2544",
+      "kind": "platform_mark",
+      "source_page": "https://www.bilibili.com/",
+      "image_url": "https://i0.hdslb.com/bfs/static/jinkela/long/images/512.png",
+      "applicable_edition": "平台通用标识，不代表任何具体赛事/计划或年度专属图",
+      "asset_label": "官网WEB / apple-touch图标",
+      "rights_note": "官方公开网站标识，仅个人本地识别展示；不主张计划专属标志或额外商用权。",
+      "observed_at": "2026-09-30T12:58:13.878833+00:00",
+      "pixel_review_note": "实际查看512×512像素：粉红渐变背景、电视机轮廓、白色bilibili字样，左上角蓝色WEB角标。与哔哩哔哩官网link rel=apple-touch-icon一致；为通用网站图标，不是花火/创作激励/二创赛专属标识。",
+      "pixel_reviewed": true,
+      "entity": "哔哩哔哩"
+    },
+    "brand-bilibili-company": {
+      "filename": "cccf93bd64c30b6c8670cb871460213029d11161555d63eef9ce791c825f2544.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "cccf93bd64c30b6c8670cb871460213029d11161555d63eef9ce791c825f2544",
+      "kind": "organizer_mark",
+      "source_page": "https://www.bilibili.com/",
+      "image_url": "https://i0.hdslb.com/bfs/static/jinkela/long/images/512.png",
+      "applicable_edition": "平台通用标识，不代表任何具体赛事/计划或年度专属图",
+      "asset_label": "哔哩哔哩公司标识（官网WEB图标）",
+      "rights_note": "官方公开网站标识，仅个人本地识别展示；不主张计划专属标志或额外商用权。",
+      "observed_at": "2026-09-30T12:58:13.878833+00:00",
+      "pixel_review_note": "实际查看512×512像素：粉红渐变背景、电视机轮廓、白色bilibili字样，左上角蓝色WEB角标。与哔哩哔哩官网link rel=apple-touch-icon一致；为通用网站图标，不是花火/创作激励/二创赛专属标识。 updream官方公开主页另明确“哔哩哔哩自研AI视频创作产品”；这里只标公司，不标成updream专属图。",
+      "pixel_reviewed": true,
+      "entity": "哔哩哔哩",
+      "entity_evidence": {
+        "url": "https://www.updream.cn/",
+        "excerpt": "哔哩哔哩自研AI视频创作产品，面向B站UP主。",
+        "observed_at": "2026-09-30T12:58:13.878833+00:00",
+        "method": "公开官方主页文字；本机robots入口返回应用页，停止继续下载该源素材。"
+      }
+    },
+    "brand-minimax-design": {
+      "filename": "5c6c458e04e5cc555ad9be0b9a7586c8b41cba929a580909eaa79ce38e1152bb.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "5c6c458e04e5cc555ad9be0b9a7586c8b41cba929a580909eaa79ce38e1152bb",
+      "kind": "platform_mark",
+      "source_page": "https://design.minimax.cn/",
+      "image_url": "https://design.minimax.cn/favicon.png",
+      "applicable_edition": "平台通用标识，不代表任何具体赛事/计划或年度专属图",
+      "asset_label": "MiniMax Design官网favicon",
+      "rights_note": "官方公开网站标识，仅个人本地识别展示；不主张计划专属标志或额外商用权。",
+      "observed_at": "2026-09-30T12:58:13.878833+00:00",
+      "pixel_review_note": "实际查看512×512像素：淡紫色圆角背景、黑色双眼吉祥物形象；出自MiniMax Design官网声明的favicon.png。为产品通用图标，不是执导者入驻计划专属图。",
+      "pixel_reviewed": true,
+      "entity": "MiniMax Design"
+    },
+    "brand-hailuo": {
+      "filename": "457a9656ca95bd4b35278b0dbd82210bc6ad2548698e542a6138fca8a7deec8f.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "457a9656ca95bd4b35278b0dbd82210bc6ad2548698e542a6138fca8a7deec8f",
+      "kind": "platform_mark",
+      "source_page": "https://hailuoai.video/affiliate",
+      "image_url": "https://cdn.hailuoai.video/open-hailuo-video-web/public_assets/favicon.png",
+      "applicable_edition": "平台通用标识，不代表任何具体赛事/计划或年度专属图",
+      "asset_label": "Hailuo AI官网favicon",
+      "rights_note": "官方公开网站标识，仅个人本地识别展示；不主张计划专属标志或额外商用权。",
+      "observed_at": "2026-09-30T12:58:13.878833+00:00",
+      "pixel_review_note": "实际查看64×64像素：白底圆角方形，橙红粉紫渐变螺旋图案；Hailuo海外Affiliate官方页面明确引用该favicon。为产品通用图标，不是Affiliate计划专属图。",
+      "pixel_reviewed": true,
+      "entity": "Hailuo AI"
+    },
+    "brand-bytedance-company": {
+      "filename": "a500bdd269da409df570a6b6dd6cfc5d194f2f0e0e5d1966f947369c9116009d.png",
+      "width": 717,
+      "height": 184,
+      "sha256": "a500bdd269da409df570a6b6dd6cfc5d194f2f0e0e5d1966f947369c9116009d",
+      "kind": "organizer_mark",
+      "source_page": "https://www.bytedance.com/zh/",
+      "image_url": "https://www.bytedance.com/zh/",
+      "applicable_edition": "公司通用标识，不代表抖音平台或对应赛事/计划专属图",
+      "asset_label": "字节跳动公司标识（官网内嵌PNG）",
+      "rights_note": "官网内嵌PNG没有独立图片URL，来源链接为图片所在官方页面。官网媒体素材声明仅用于新闻编辑之目的；此处用于个人本地信息识别，不主张额外商用权。",
+      "observed_at": "2026-09-30T12:58:13.878833+00:00",
+      "pixel_review_note": "实际查看717×184像素：透明底纯白条形标记、英文ByteDance和中文字节跳动，公司标识清晰；不是抖音平台标识，须用深色背景。",
+      "pixel_reviewed": true,
+      "entity": "字节跳动",
+      "entity_evidence": {
+        "url": "https://www.bytedance.com/zh/",
+        "excerpt": "官网首页列明抖音短视频上线、抖音品牌升级与记录美好生活slogan；页面标题字节跳动。"
+      },
+      "image_background": "#14212f"
+    }
+  },
+  "items": {
+    "c67dc9fa57e4d56782e5056b": {
+      "asset_id": "ef5e01bd360d25230465ae09a8178853b41f9c649c288b238322482e46026662",
+      "label": "官方活动封面",
+      "edition": "2026 / 活动62"
+    },
+    "d03461862e34bf2ca91fa698": {
+      "asset_id": "27a18c136561caf6bee94c2917b8331d22d25767becd3b77befa54a9a49d2760",
+      "label": "官方活动封面",
+      "edition": "2026 / 活动61"
+    },
+    "68ee18a0abd8124021470c0a": {
+      "asset_id": "4388045107f211a54c9339917d4313606afb76ec00bd63032c66dd916bd23faa",
+      "label": "官方活动封面",
+      "edition": "2026 / 活动60"
+    },
+    "3ca65e2d63ffd543dc5c8f81": {
+      "asset_id": "8f23d0e5dc2c3a1e076b6e1fb7d667501999e70fca0503b4efb1f7562b110164",
+      "label": "官方活动封面",
+      "edition": "2026 / 活动59"
+    },
+    "63e146860feed31b7a6652ba": {
+      "asset_id": "f775631dad75a679315cd2fe7ceaaffd4a0449bed2c9b2308f3afe8c984db52d",
+      "label": "官方活动海报",
+      "edition": "2026 / 活动55"
+    },
+    "68a13fce2c0e1cc364af0a9a": {
+      "asset_id": "a5c9c5245afa5bac4656432d79dbe5cafd1e1e3b8bdc9c4a39b4494d1e0e5493",
+      "label": "官方活动封面",
+      "edition": "2026 / 活动53"
+    },
+    "d282b56b9955d4b29bcc04c9": {
+      "asset_id": "c912ae713a69784bce40c6b8a0b955cc6ba5cbd9151437876a978104dea9504c",
+      "label": "官方活动封面",
+      "edition": "2026 / 活动50"
+    },
+    "1f5dcee0aef1a6eb2b021be0": {
+      "asset_id": "797c3e5bbd9f124ffa23d10c59daa15758938173d0ddbf635a3eb96e35aae866",
+      "label": "官方活动横幅",
+      "edition": "2026 / AiShorts"
+    },
+    "673357c2eced5f0fab289a8d": {
+      "asset_id": "d78b1e6848108f46a5cba0e1d7c5140754a6b55031cd3de04eaaeaa109a3d65a",
+      "label": "官方活动标题图",
+      "edition": "2026"
+    },
+    "13f7c62d86d7da63fca3057b": {
+      "asset_id": "6bcc4d365379de6aff6263f6f6afa9a5decc6f02c176aa94aa27e4d50bdfb7ea",
+      "label": "2026官方活动公告图",
+      "edition": "2026"
+    },
+    "94f2c228f9cda3ce3db9025c": {
+      "asset_id": "61ea79e7fc649077569702d53f4d01855a163102161d21a3125bbf27ebd11d4a",
+      "label": "北影节标识 · 非赛道专属",
+      "edition": "2026"
+    },
+    "f2531346de21e67a636e3725": {
+      "asset_id": "61ea79e7fc649077569702d53f4d01855a163102161d21a3125bbf27ebd11d4a",
+      "label": "北影节标识 · 非通义万相赛道专属",
+      "edition": "2026 / 通义万相专属赛道"
+    },
+    "5b989cd9eebff2c081df9dd7": {
+      "asset_id": "3974e5b1e106300debddfdf5a3b1b6ef3eb07fefdeac2139ef6e729ee5fa258d",
+      "label": "2026官方征集函封面",
+      "edition": "2026"
+    },
+    "65f3cd66f70120b610ba6723": {
+      "asset_id": "21249b652e79b39130c42cb2262e698691df11740c7527d45258193af78a5858",
+      "label": "2027官方影展分享图",
+      "edition": "2027"
+    },
+    "8b37ba7ad68d0847fb3aca6a": {
+      "asset_id": "9b3c48e3337e1abd03e81116ed6a22ae10989fda731a344a9cf5adaaf08785c2",
+      "label": "官方影展分享图 · 含其他单元",
+      "edition": "2026"
+    },
+    "0254476b2666d6b86c004b0a": {
+      "asset_id": "29e7fce5e590c15726563480c1c3f67f7d3e1f350a1b8cad5bae65b1a6091544",
+      "label": "2025官方活动现场图 · 非logo",
+      "edition": "2025"
+    },
+    "a09b6cf6a295e5a9d5fd6de0": {
+      "asset_id": "427c4fcec4ed5541575fe0813f166fb15bf3f77f7fd24a65eb68482bdd3296a4",
+      "label": "官方活动封面",
+      "edition": "2026 / 活动56"
+    },
+    "e9bc02e1bba25f0aeea64d6a": {
+      "asset_id": "ce6cf844df3d1e331a82819ecdb647bce7dc89e8fa6c4dc59a0f6f8fa89a27f9",
+      "label": "官方活动封面",
+      "edition": "2026 / 活动52"
+    },
+    "4c9fa85e9ccc56971e48ed9b": {
+      "asset_id": "abab62aaf646f8f4c4fa44d483efa340fdf48c202293c438b7176304b0896d51",
+      "label": "官方活动封面",
+      "edition": "2026 / 活动51"
+    },
+    "dd7c3d721a6bea07b506abb1": {
+      "asset_id": "ed55730f99ffebed007af04c38dbe4a050e324aecff66d43cc44850c4e4fb728",
+      "label": "官方活动封面",
+      "edition": "2026 / 活动49"
+    },
+    "6de6e3383d94b68a3a6c9994": {
+      "asset_id": "ec2dbd72df32646e58b5db897cfde3f9dd46a368de520431ee952e8802c134f0",
+      "label": "官方活动封面",
+      "edition": "年度未核 / 活动7"
+    },
+    "e07414bef25cfbfe8263dbe5": {
+      "asset_id": "6307f5907b667139c44f1ff4eb14b095d78c39f1d3b177795fe357af04d5989f",
+      "label": "即梦AI 官方平台标识",
+      "edition": "平台通用标识；赛事届次见记录"
+    },
+    "a4dd21da51346371e24f5094": {
+      "asset_id": "6307f5907b667139c44f1ff4eb14b095d78c39f1d3b177795fe357af04d5989f",
+      "label": "即梦AI 官方平台标识",
+      "edition": "平台通用标识；赛事届次见记录"
+    },
+    "d5a03fd8ee9dcd20dbf447e3": {
+      "asset_id": "6307f5907b667139c44f1ff4eb14b095d78c39f1d3b177795fe357af04d5989f",
+      "label": "即梦AI 官方平台标识",
+      "edition": "平台通用标识；赛事届次见记录"
+    },
+    "090a25b695cf9fcd315e7f16": {
+      "asset_id": "005ae13e41012dceb64db994089fe9c3122d6bbfc0549e83e7387d64fa5e9a99",
+      "label": "AAIFF影展通用标识 · 非当届专属",
+      "edition": "2026"
+    },
+    "a9fc87f318602759f8f83ba1": {
+      "asset_id": "46769e094835e7ef9c5a813cbb702333ecd3afa6671455ecece4436756fbee97",
+      "label": "主办方标识 · 中国传媒大学",
+      "edition": "2026"
+    },
+    "6ea09526c3f7ee86e7981e88": {
+      "asset_id": "104e7b08c5aee376fd9411522225363063f30b7a605b6101800b279667c0efe0",
+      "label": "Seko平台标识 · 非活动专属",
+      "edition": "2026"
+    },
+    "8be090b0a8e1eff0ef6c92f8": {
+      "asset_id": "c8923ec0a9b8f11f28e2c61725776cd20fcb073b2671507415ec192d39715fe8",
+      "label": "主办方标识 · 华东师范大学",
+      "edition": "2026"
+    },
+    "88f7c183097d995cdee38eb6": {
+      "asset_id": "4f80b63ae40869b37227f5bb513113f5e9578570ffe5e88f5377cb2a60a48e41",
+      "label": "FIRST影展通用标识 · 非超短片专属",
+      "edition": "2026"
+    },
+    "dd18da1f436d633bb62d2538": {
+      "asset_id": "brand-bilibili",
+      "label": "平台标识·哔哩哔哩",
+      "edition": "2026 / 03-03轮"
+    },
+    "77077a3206e6e83dc54510cd": {
+      "asset_id": "brand-bilibili",
+      "label": "平台标识·哔哩哔哩",
+      "edition": "官方客服2026-05-05 / 2026核验"
+    },
+    "d60c099035869e212b5cd251": {
+      "asset_id": "brand-bilibili",
+      "label": "平台标识·哔哩哔哩",
+      "edition": "商业合作机制 / 2026核验"
+    },
+    "6e39f9755ad765fbec7a3c24": {
+      "asset_id": "brand-bilibili",
+      "label": "平台标识·哔哩哔哩",
+      "edition": "2025-10-01生效结算改动"
+    },
+    "e7f5fb4e93105b2546f1c285": {
+      "asset_id": "brand-bilibili-company",
+      "label": "公司标识·哔哩哔哩",
+      "edition": "轮次未核"
+    },
+    "f767f5b9b5af2414f5a08ad8": {
+      "asset_id": "brand-bilibili-company",
+      "label": "公司标识·哔哩哔哩",
+      "edition": "2026 / 08-17轮"
+    },
+    "8b7d34b49a64b3b8f4bfe493": {
+      "asset_id": "brand-minimax-design",
+      "label": "平台标识·MiniMax Design",
+      "edition": "公开入驻计划（轮次未核）"
+    },
+    "cc3cf426236d7396b4103de4": {
+      "asset_id": "brand-hailuo",
+      "label": "平台标识·Hailuo AI",
+      "edition": "公开推广计划（轮次未核）"
+    },
+    "a79579464f63cd8aef7cadfb": {
+      "asset_id": "brand-bytedance-company",
+      "label": "字节跳动公司标识",
+      "edition": "长期倡议 / 2026核验"
+    },
+    "190bfc71efb7cd2eb8ca66d1": {
+      "asset_id": "brand-bytedance-company",
+      "label": "字节跳动公司标识",
+      "edition": "2026 / 截止03-31子活动"
+    },
+    "d2a151c2d148a5858cdecc7c": {
+      "asset_id": "brand-bytedance-company",
+      "label": "字节跳动公司标识",
+      "edition": "官方规则 / 修订日期未核"
+    },
+    "57eb71171b59492e80edb94b": {
+      "asset_id": "brand-bytedance-company",
+      "label": "字节跳动公司标识",
+      "edition": "2026 / 穹顶巨幕特别赛道"
+    },
+    "969f262b17644b658ed0d23a": {
+      "asset_id": "brand-bytedance-company",
+      "label": "字节跳动公司标识",
+      "edition": "2026 / 常规及原专项赛道"
+    }
+  }
+}

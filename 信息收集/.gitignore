@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+data/*.sqlite3*
+data/*.lock
+data/backups/
+output/**/*.sqlite3*
+output/enhancement/qa-app/
+output/adversarial/qa-app/
+output/visual/qa-app/
+output/playwright/.cache/
+.playwright-cli/
+.local-test/

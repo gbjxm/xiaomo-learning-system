@@ -1,0 +1,30 @@
+{
+  "format": "raw-sqlite-table-export",
+  "sourceSnapshot": "cloud-data/snapshots/信息收集/data/opportunities.sqlite3",
+  "table": "settings",
+  "schema": [
+    {
+      "cid": 0,
+      "name": "key",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 1
+    },
+    {
+      "cid": 1,
+      "name": "value",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    }
+  ],
+  "rowCount": 1,
+  "rows": [
+    {
+      "key": "seeds_imported",
+      "value": "1"
+    }
+  ]
+}

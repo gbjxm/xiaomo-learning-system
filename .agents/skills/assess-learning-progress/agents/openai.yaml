@@ -1,0 +1,4 @@
+interface:
+  display_name: "学习进展与能力依据"
+  short_description: "依据真实回答和产物判断阶段能力，区分帮助条件、表现与未决限制"
+  default_prompt: "请用 $assess-learning-progress 结合我的实际回答或产物，判断这项能力在当前目标下是否暂时够用。"

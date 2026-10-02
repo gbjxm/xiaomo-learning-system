@@ -1,0 +1,4 @@
+interface:
+  display_name: "学习复盘与调整建议"
+  short_description: "围绕真实经历轻量回顾学习方法与安排，提出尚待采用的调整建议"
+  default_prompt: "请用 $review-learning-cycle 回顾这段真实学习经历，找出有效做法和需要调整的一步。"

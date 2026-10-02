@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import { DatabaseSync, backup } from 'node:sqlite';
+import { fileURLToPath } from 'node:url';
+import { PROJECT_ROOT, ObservatoryStore, migrateStore } from '../../../../web/observatory/store.mjs';
+import { validateMaterial } from '../../../../web/observatory/model.mjs';
+const testRoot=path.dirname(fileURLToPath(import.meta.url));const runRoot=path.join(testRoot,`migration-${Date.now()}`);const dataDir=path.join(runRoot,'data');fs.mkdirSync(dataDir,{recursive:true});
+const db=new DatabaseSync(path.join(dataDir,'observatory.sqlite3'));
+const schema=fs.readFileSync(path.join(PROJECT_ROOT,'web','observatory','schema.sql'),'utf8').replace("'archived', 'deleted'","'archived'");
+db.exec(schema);db.prepare('INSERT INTO store_meta VALUES (1, ?, 1, ?, ?, ?)').run('store_legacy_isolated_test','isolated',PROJECT_ROOT,new Date().toISOString());
+const now=new Date().toISOString();db.prepare('INSERT INTO materials VALUES (?, 1, ?, ?, ?, ?)').run('mat_legacy','active',JSON.stringify(validateMaterial({original:{kind:'text',text:'【结构迁移隔离测试】原文'},originalImpression:'原始感受'})),now,now);db.prepare('INSERT INTO topics VALUES (?, 1, ?, ?, ?, ?)').run('topic_legacy','paused',JSON.stringify({title:'隔离旧结构专题',question:'问题',scope:'测试'}),now,now);db.prepare('INSERT INTO topic_materials VALUES (?, ?)').run('topic_legacy','mat_legacy');
+await backup(db,path.join(runRoot,'explicit-protection-snapshot.sqlite3'));db.close();
+const store=new ObservatoryStore({dataDir});await assert.rejects(()=>store.identity(),e=>e.code==='INVALID_DATABASE');
+await assert.rejects(()=>migrateStore({dataDir,expectedStoreId:'wrong'}),e=>e.code==='STORE_IDENTITY_MISMATCH');
+const identity=await migrateStore({dataDir,expectedStoreId:'store_legacy_isolated_test'});assert.equal(identity.schemaVersion,2);assert.equal(identity.storeId,'store_legacy_isolated_test');assert.equal((await store.readMaterial('mat_legacy')).record.originalImpression,'原始感受');assert.deepEqual((await store.readTopic('topic_legacy')).record.materialIds,['mat_legacy']);
+await store.updateTopic({identity,submissionId:'migration-delete-test',topicId:'topic_legacy',expectedRevision:1,patch:{status:'deleted'}});const current=await store.readTopic('topic_legacy');assert.equal(current.record.status,'deleted');assert.deepEqual(current.record.materialIds,['mat_legacy']);
+fs.writeFileSync(path.join(testRoot,'migration-evidence.json'),JSON.stringify({node:process.version,runRoot,dataDir,identity,status:'passed',scope:'constructed isolated schema1 fixture; no historical or real user database migrated'},null,2));process.stdout.write('PASS 显式结构1→2升级，保护快照、身份、素材原话和关联保留；专题可恢复删除\n');

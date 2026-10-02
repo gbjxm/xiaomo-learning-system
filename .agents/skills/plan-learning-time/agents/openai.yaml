@@ -1,0 +1,4 @@
+interface:
+  display_name: "日周月安排与重排"
+  short_description: "按实际时间与精力衔接月周日安排，保留休息并支持灵活重排"
+  default_prompt: "请用 $plan-learning-time 结合我今天的时间、状态和当前重点安排学习，并留出休息。"

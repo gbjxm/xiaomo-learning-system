@@ -1,0 +1,274 @@
+{
+  "format": "raw-sqlite-table-export",
+  "sourceSnapshot": "cloud-data/snapshots/素材观察室/data/observatory.sqlite3",
+  "table": "attachments",
+  "schema": [
+    {
+      "cid": 0,
+      "name": "id",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 1
+    },
+    {
+      "cid": 1,
+      "name": "original_filename",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 2,
+      "name": "relative_path",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 3,
+      "name": "sha256",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 4,
+      "name": "mime_type",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 5,
+      "name": "byte_length",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 6,
+      "name": "permission_status",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": "'unknown'",
+      "pk": 0
+    },
+    {
+      "cid": 7,
+      "name": "status",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    }
+  ],
+  "rowCount": 20,
+  "rows": [
+    {
+      "id": "att_8ee49b3313b6145a1871109dcb346bdcfd87c2ff",
+      "original_filename": "精卫文本定位示意.png",
+      "relative_path": "att_8ee49b3313b6145a1871109dcb346bdcfd87c2ff-b357ec7e21a6b821c569e4cd3f48d8bd338618afb22345299ce3a2afd8128f8f.png",
+      "sha256": "b357ec7e21a6b821c569e4cd3f48d8bd338618afb22345299ce3a2afd8128f8f",
+      "mime_type": "image/png",
+      "byte_length": 257678,
+      "permission_status": "自制文本定位示意；随本例使用时保留非原页标识及古文来源",
+      "status": "registered"
+    },
+    {
+      "id": "att_e3117b2ce8acecf71fa72c6161ef1afac70a4221",
+      "original_filename": "Sintel-trailer-w3c.mp4",
+      "relative_path": "att_e3117b2ce8acecf71fa72c6161ef1afac70a4221-b670602fa00934ca27c4351bb0efe7ea7a07fae57284e44226025eeed7c51254.mp4",
+      "sha256": "b670602fa00934ca27c4351bb0efe7ea7a07fae57284e44226025eeed7c51254",
+      "mime_type": "video/mp4",
+      "byte_length": 4372373,
+      "permission_status": "CC BY 3.0；© copyright Blender Foundation | www.sintel.org。本例取W3C公开演示镜像；关键帧为原片截取，联系表缩放并加PTS标签。署名、许可链接及改动说明须随成果保存。",
+      "status": "registered"
+    },
+    {
+      "id": "att_99e3401e863bca41f57a050940a86623ab709880",
+      "original_filename": "overview-0-30s.png",
+      "relative_path": "att_99e3401e863bca41f57a050940a86623ab709880-a97a9fccf0141920dddcea1c7daac625e523ae796b9d4b2d54b55a663d43c50c.png",
+      "sha256": "a97a9fccf0141920dddcea1c7daac625e523ae796b9d4b2d54b55a663d43c50c",
+      "mime_type": "image/png",
+      "byte_length": 535894,
+      "permission_status": "CC BY 3.0；© copyright Blender Foundation | www.sintel.org。本例取W3C公开演示镜像；关键帧为原片截取，联系表缩放并加PTS标签。署名、许可链接及改动说明须随成果保存。",
+      "status": "registered"
+    },
+    {
+      "id": "att_d2de5501491edbda7291cefe1e2eab41dc0598eb",
+      "original_filename": "focus-13.5-22s.png",
+      "relative_path": "att_d2de5501491edbda7291cefe1e2eab41dc0598eb-8edc2ea82b4d3fe7455622ef161dfd16ae8d6fc6aeb6671e81ac806cbc96fd06.png",
+      "sha256": "8edc2ea82b4d3fe7455622ef161dfd16ae8d6fc6aeb6671e81ac806cbc96fd06",
+      "mime_type": "image/png",
+      "byte_length": 714374,
+      "permission_status": "CC BY 3.0；© copyright Blender Foundation | www.sintel.org。本例取W3C公开演示镜像；关键帧为原片截取，联系表缩放并加PTS标签。署名、许可链接及改动说明须随成果保存。",
+      "status": "registered"
+    },
+    {
+      "id": "att_a30faf0ac2a80d0f868a35ceb6a504e76d7050bd",
+      "original_filename": "frame-0333-pts-13.875.png",
+      "relative_path": "att_a30faf0ac2a80d0f868a35ceb6a504e76d7050bd-8968e0fc7da7abb9d99eaef36060ac184932eacb691d231c63558d30a5bcbb11.png",
+      "sha256": "8968e0fc7da7abb9d99eaef36060ac184932eacb691d231c63558d30a5bcbb11",
+      "mime_type": "image/png",
+      "byte_length": 304570,
+      "permission_status": "CC BY 3.0；© copyright Blender Foundation | www.sintel.org。本例取W3C公开演示镜像；关键帧为原片截取，联系表缩放并加PTS标签。署名、许可链接及改动说明须随成果保存。",
+      "status": "registered"
+    },
+    {
+      "id": "att_551494f107a32d58e49cc7579cb6317be697a81b",
+      "original_filename": "frame-0334-pts-13.917.png",
+      "relative_path": "att_551494f107a32d58e49cc7579cb6317be697a81b-ab8078c0059ad5e22f50b8641d59c40fde1cd1344812d65da4e96399c7dc0574.png",
+      "sha256": "ab8078c0059ad5e22f50b8641d59c40fde1cd1344812d65da4e96399c7dc0574",
+      "mime_type": "image/png",
+      "byte_length": 252240,
+      "permission_status": "CC BY 3.0；© copyright Blender Foundation | www.sintel.org。本例取W3C公开演示镜像；关键帧为原片截取，联系表缩放并加PTS标签。署名、许可链接及改动说明须随成果保存。",
+      "status": "registered"
+    },
+    {
+      "id": "att_f6df39f2f6a1ee564765d7d610409983ecbe6426",
+      "original_filename": "frame-0396-pts-16.500.png",
+      "relative_path": "att_f6df39f2f6a1ee564765d7d610409983ecbe6426-9d745831cd0e8c48b43ef5751acbb9c9c1c0649c5b90386c81a67d9ec6fa8b75.png",
+      "sha256": "9d745831cd0e8c48b43ef5751acbb9c9c1c0649c5b90386c81a67d9ec6fa8b75",
+      "mime_type": "image/png",
+      "byte_length": 165539,
+      "permission_status": "CC BY 3.0；© copyright Blender Foundation | www.sintel.org。本例取W3C公开演示镜像；关键帧为原片截取，联系表缩放并加PTS标签。署名、许可链接及改动说明须随成果保存。",
+      "status": "registered"
+    },
+    {
+      "id": "att_32bda614670723b899edd7154bdf2b6d38321bbf",
+      "original_filename": "frame-0408-pts-17.000.png",
+      "relative_path": "att_32bda614670723b899edd7154bdf2b6d38321bbf-d2d2b076551c978c2ef834a6e363a48c642dc333f2656a32f8d689d05c6593dd.png",
+      "sha256": "d2d2b076551c978c2ef834a6e363a48c642dc333f2656a32f8d689d05c6593dd",
+      "mime_type": "image/png",
+      "byte_length": 149734,
+      "permission_status": "CC BY 3.0；© copyright Blender Foundation | www.sintel.org。本例取W3C公开演示镜像；关键帧为原片截取，联系表缩放并加PTS标签。署名、许可链接及改动说明须随成果保存。",
+      "status": "registered"
+    },
+    {
+      "id": "att_c3f92ac19140b89ddebecfa4cecc0fbc8e275f14",
+      "original_filename": "frame-0480-pts-20.000.png",
+      "relative_path": "att_c3f92ac19140b89ddebecfa4cecc0fbc8e275f14-c565fb761a04d5225fdb454c9242ac46c93136628f943ede73ed06a0e31799f8.png",
+      "sha256": "c565fb761a04d5225fdb454c9242ac46c93136628f943ede73ed06a0e31799f8",
+      "mime_type": "image/png",
+      "byte_length": 399647,
+      "permission_status": "CC BY 3.0；© copyright Blender Foundation | www.sintel.org。本例取W3C公开演示镜像；关键帧为原片截取，联系表缩放并加PTS标签。署名、许可链接及改动说明须随成果保存。",
+      "status": "registered"
+    },
+    {
+      "id": "att_200e684eab6c5e4aa95611bbba18926795bb603b",
+      "original_filename": "ASR草稿-去本机路径副本.txt",
+      "relative_path": "att_200e684eab6c5e4aa95611bbba18926795bb603b-693d5dd65f037279d68cf696f3f26dc8dedc4d3913eee2df999b44fc4f5ef38c.txt",
+      "sha256": "693d5dd65f037279d68cf696f3f26dc8dedc4d3913eee2df999b44fc4f5ef38c",
+      "mime_type": "text/plain",
+      "byte_length": 1273,
+      "permission_status": "CC BY 3.0；© copyright Blender Foundation | www.sintel.org。本例取W3C公开演示镜像；关键帧为原片截取，联系表缩放并加PTS标签。署名、许可链接及改动说明须随成果保存。",
+      "status": "registered"
+    },
+    {
+      "id": "att_4cb6875ac64cf0732df03826cd38f4a59be49c78",
+      "original_filename": "scene-candidates.txt",
+      "relative_path": "att_4cb6875ac64cf0732df03826cd38f4a59be49c78-6610c5cbc49ec1390bf38014e926efe668bd5851447a6b55672a3923be84dd97.txt",
+      "sha256": "6610c5cbc49ec1390bf38014e926efe668bd5851447a6b55672a3923be84dd97",
+      "mime_type": "text/plain",
+      "byte_length": 1021,
+      "permission_status": "CC BY 3.0；© copyright Blender Foundation | www.sintel.org。本例取W3C公开演示镜像；关键帧为原片截取，联系表缩放并加PTS标签。署名、许可链接及改动说明须随成果保存。",
+      "status": "registered"
+    },
+    {
+      "id": "att_8aaadf5c4ef7453e8904b6ccdae2353a88dd630e",
+      "original_filename": "Alice-第一章-公版英文原文.txt",
+      "relative_path": "att_8aaadf5c4ef7453e8904b6ccdae2353a88dd630e-25f4343a0369c3eb47cbd7027fe4226daf493ae0391e7ca442aab8ce615db242.txt",
+      "sha256": "25f4343a0369c3eb47cbd7027fe4226daf493ae0391e7ca442aab8ce615db242",
+      "mime_type": "text/plain",
+      "byte_length": 11778,
+      "permission_status": "Project Gutenberg目录标Public domain in the USA；本轮只保存已读单章/单短篇英文，不含现代中文译本、原书其余篇章或未知许可图片。PG条款对美国以外使用提示核当地法律。",
+      "status": "registered"
+    },
+    {
+      "id": "att_93b5a68ef6f5b87eb68e7d8bdf3901147915ef54",
+      "original_filename": "Bremen-第27篇-公版英文全文.txt",
+      "relative_path": "att_93b5a68ef6f5b87eb68e7d8bdf3901147915ef54-d24e6ecd97664bfc73569bb0527ad25ee8175046b019f8ee47e86f887c92f91f.txt",
+      "sha256": "d24e6ecd97664bfc73569bb0527ad25ee8175046b019f8ee47e86f887c92f91f",
+      "mime_type": "text/plain",
+      "byte_length": 6671,
+      "permission_status": "Project Gutenberg目录标Public domain in the USA；本轮只保存已读单章/单短篇英文，不含现代中文译本、原书其余篇章或未知许可图片。PG条款对美国以外使用提示核当地法律。",
+      "status": "registered"
+    },
+    {
+      "id": "att_c5f615cdcd7844937010f0f663506ce66ce27784",
+      "original_filename": "Met-greatwave-cc0.jpg",
+      "relative_path": "att_c5f615cdcd7844937010f0f663506ce66ce27784-cbb9988f2f18b9180a1cc0cf5dbb0e3bbf8f2e85d17930cf6ca9ab36fac36303.jpg",
+      "sha256": "cbb9988f2f18b9180a1cc0cf5dbb0e3bbf8f2e85d17930cf6ca9ab36fac36303",
+      "mime_type": "image/jpeg",
+      "byte_length": 2342637,
+      "permission_status": "CC0；Met对象45434 isPublicDomain=true；https://www.metmuseum.org/hubs/open-access",
+      "status": "registered"
+    },
+    {
+      "id": "att_c36462f3b0034858cced6b901dbbbf9245f3f153",
+      "original_filename": "NPM-cabbage-cc0.jpg",
+      "relative_path": "att_c36462f3b0034858cced6b901dbbbf9245f3f153-3034f05ce481b06c1a45b0d3149524a3b4da4d1affb46a8714119af59148aee7.jpg",
+      "sha256": "3034f05ce481b06c1a45b0d3149524a3b4da4d1affb46a8714119af59148aee7",
+      "mime_type": "image/jpeg",
+      "byte_length": 44682,
+      "permission_status": "CC0；官页Lower / Presentation Size Image (CC0)；450×600展示图，未用CC BY4.0高分辨率",
+      "status": "registered"
+    },
+    {
+      "id": "att_dfdd2cf464ed94f2aabf295ace98df7e129ffe75",
+      "original_filename": "frame-000.png",
+      "relative_path": "att_dfdd2cf464ed94f2aabf295ace98df7e129ffe75-4159144b6c9716cf895eb1414deb9c2401ea99c0bcaef5084e11c0b7de9c1b33.png",
+      "sha256": "4159144b6c9716cf895eb1414deb9c2401ea99c0bcaef5084e11c0b7de9c1b33",
+      "mime_type": "image/png",
+      "byte_length": 430696,
+      "permission_status": "CC BY 3.0；官方about https://peach.blender.org/about/；14.000秒完整原帧，无裁切调色，保留署名与许可链接",
+      "status": "registered"
+    },
+    {
+      "id": "att_7b5430703c52e5260e3ebc3fc58b1ffed82d151f",
+      "original_filename": "frame-002.png",
+      "relative_path": "att_7b5430703c52e5260e3ebc3fc58b1ffed82d151f-067c4b50c7c96acb648703823d7add9c6215e86ea83158de32b5cfb5d1f50408.png",
+      "sha256": "067c4b50c7c96acb648703823d7add9c6215e86ea83158de32b5cfb5d1f50408",
+      "mime_type": "image/png",
+      "byte_length": 382428,
+      "permission_status": "CC BY 3.0；官方about https://peach.blender.org/about/；30.000秒完整原帧，无裁切调色，保留署名与许可链接",
+      "status": "registered"
+    },
+    {
+      "id": "att_6e6df95308c8a774241234f25762dbe734ff71ef",
+      "original_filename": "frame-000.png",
+      "relative_path": "att_6e6df95308c8a774241234f25762dbe734ff71ef-f963eaecaf0e6e3f75fdf0a30b4b540aff2739999c60339fd2bedf436420cf9e.png",
+      "sha256": "f963eaecaf0e6e3f75fdf0a30b4b540aff2739999c60339fd2bedf436420cf9e",
+      "mime_type": "image/png",
+      "byte_length": 153790,
+      "permission_status": "NASA媒体指引允许署名的个人教育/信息用途 https://www.nasa.gov/nasa-brand-center/images-and-media/；仅从官方无音轨版定位抽帧，无裁切调色，不暗示NASA审阅/背书",
+      "status": "registered"
+    },
+    {
+      "id": "att_5ce7777a9b51094667a50d265518347345406ef9",
+      "original_filename": "frame-001.png",
+      "relative_path": "att_5ce7777a9b51094667a50d265518347345406ef9-9d6f496a8807f4eb49f2cc867203eebd0a76364025712c7121a92c65b3802930.png",
+      "sha256": "9d6f496a8807f4eb49f2cc867203eebd0a76364025712c7121a92c65b3802930",
+      "mime_type": "image/png",
+      "byte_length": 1850958,
+      "permission_status": "NASA媒体指引允许署名的个人教育/信息用途 https://www.nasa.gov/nasa-brand-center/images-and-media/；仅从官方无音轨版定位抽帧，无裁切调色，不暗示NASA审阅/背书",
+      "status": "registered"
+    },
+    {
+      "id": "att_6031f653d5fbdac17c01ddbdf9ab5a4ad18ba1ac",
+      "original_filename": "frame-002.png",
+      "relative_path": "att_6031f653d5fbdac17c01ddbdf9ab5a4ad18ba1ac-47501cea48814612a3b67b958fecb3b7a54eff6749b980be63e18bb426cd85c9.png",
+      "sha256": "47501cea48814612a3b67b958fecb3b7a54eff6749b980be63e18bb426cd85c9",
+      "mime_type": "image/png",
+      "byte_length": 1785849,
+      "permission_status": "NASA媒体指引允许署名的个人教育/信息用途 https://www.nasa.gov/nasa-brand-center/images-and-media/；仅从官方无音轨版定位抽帧，无裁切调色，不暗示NASA审阅/背书",
+      "status": "registered"
+    }
+  ]
+}

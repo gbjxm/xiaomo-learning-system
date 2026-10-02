@@ -1,0 +1,66 @@
+{
+  "format": "raw-sqlite-table-export",
+  "sourceSnapshot": "cloud-data/snapshots/素材观察室/data/observatory.sqlite3",
+  "table": "store_meta",
+  "schema": [
+    {
+      "cid": 0,
+      "name": "singleton",
+      "type": "INTEGER",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 1
+    },
+    {
+      "cid": 1,
+      "name": "store_id",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 2,
+      "name": "schema_version",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 3,
+      "name": "scope",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 4,
+      "name": "project_root",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 5,
+      "name": "created_at",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    }
+  ],
+  "rowCount": 1,
+  "rows": [
+    {
+      "singleton": 1,
+      "store_id": "store_4b9a06fd-0329-4a71-b32c-ef1a6f053d7d",
+      "schema_version": 2,
+      "scope": "production",
+      "project_root": "D:\\codex\\小陌的学习系统",
+      "created_at": "2026-10-01T11:41:31.643Z"
+    }
+  ]
+}

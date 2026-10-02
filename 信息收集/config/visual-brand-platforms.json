@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "assets": {
+    "brand-bilibili": {
+      "filename": "cccf93bd64c30b6c8670cb871460213029d11161555d63eef9ce791c825f2544.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "cccf93bd64c30b6c8670cb871460213029d11161555d63eef9ce791c825f2544",
+      "source_page": "https://www.bilibili.com/",
+      "image_url": "https://i0.hdslb.com/bfs/static/jinkela/long/images/512.png",
+      "kind": "platform_mark",
+      "entity": "哔哩哔哩",
+      "applicable_edition": "平台通用标识，不代表任何具体赛事/计划或年度专属图",
+      "asset_label": "官网WEB / apple-touch图标",
+      "rights_note": "官方公开网站标识，仅个人本地识别展示；不主张计划专属标志或额外商用权。",
+      "observed_at": "2026-09-30T12:58:13.878833+00:00",
+      "pixel_review_note": "实际查看512×512像素：粉红渐变背景、电视机轮廓、白色bilibili字样，左上角蓝色WEB角标。与哔哩哔哩官网link rel=apple-touch-icon一致；为通用网站图标，不是花火/创作激励/二创赛专属标识。",
+      "pixel_reviewed": true,
+      "retrieval_method": "unchanged official raster"
+    },
+    "brand-minimax-design": {
+      "filename": "5c6c458e04e5cc555ad9be0b9a7586c8b41cba929a580909eaa79ce38e1152bb.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "5c6c458e04e5cc555ad9be0b9a7586c8b41cba929a580909eaa79ce38e1152bb",
+      "source_page": "https://design.minimax.cn/",
+      "image_url": "https://design.minimax.cn/favicon.png",
+      "kind": "platform_mark",
+      "entity": "MiniMax Design",
+      "applicable_edition": "平台通用标识，不代表任何具体赛事/计划或年度专属图",
+      "asset_label": "MiniMax Design官网favicon",
+      "rights_note": "官方公开网站标识，仅个人本地识别展示；不主张计划专属标志或额外商用权。",
+      "observed_at": "2026-09-30T12:58:13.878833+00:00",
+      "pixel_review_note": "实际查看512×512像素：淡紫色圆角背景、黑色双眼吉祥物形象；出自MiniMax Design官网声明的favicon.png。为产品通用图标，不是执导者入驻计划专属图。",
+      "pixel_reviewed": true,
+      "retrieval_method": "unchanged official raster"
+    },
+    "brand-hailuo": {
+      "filename": "457a9656ca95bd4b35278b0dbd82210bc6ad2548698e542a6138fca8a7deec8f.png",
+      "width": 64,
+      "height": 64,
+      "sha256": "457a9656ca95bd4b35278b0dbd82210bc6ad2548698e542a6138fca8a7deec8f",
+      "source_page": "https://hailuoai.video/affiliate",
+      "image_url": "https://cdn.hailuoai.video/open-hailuo-video-web/public_assets/favicon.png",
+      "kind": "platform_mark",
+      "entity": "Hailuo AI",
+      "applicable_edition": "平台通用标识，不代表任何具体赛事/计划或年度专属图",
+      "asset_label": "Hailuo AI官网favicon",
+      "rights_note": "官方公开网站标识，仅个人本地识别展示；不主张计划专属标志或额外商用权。",
+      "observed_at": "2026-09-30T12:58:13.878833+00:00",
+      "pixel_review_note": "实际查看64×64像素：白底圆角方形，橙红粉紫渐变螺旋图案；Hailuo海外Affiliate官方页面明确引用该favicon。为产品通用图标，不是Affiliate计划专属图。",
+      "pixel_reviewed": true,
+      "retrieval_method": "unchanged official raster"
+    },
+    "brand-bilibili-company": {
+      "filename": "cccf93bd64c30b6c8670cb871460213029d11161555d63eef9ce791c825f2544.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "cccf93bd64c30b6c8670cb871460213029d11161555d63eef9ce791c825f2544",
+      "source_page": "https://www.bilibili.com/",
+      "image_url": "https://i0.hdslb.com/bfs/static/jinkela/long/images/512.png",
+      "kind": "organizer_mark",
+      "entity": "哔哩哔哩",
+      "applicable_edition": "平台通用标识，不代表任何具体赛事/计划或年度专属图",
+      "asset_label": "哔哩哔哩公司标识（官网WEB图标）",
+      "rights_note": "官方公开网站标识，仅个人本地识别展示；不主张计划专属标志或额外商用权。",
+      "observed_at": "2026-09-30T12:58:13.878833+00:00",
+      "pixel_review_note": "实际查看512×512像素：粉红渐变背景、电视机轮廓、白色bilibili字样，左上角蓝色WEB角标。与哔哩哔哩官网link rel=apple-touch-icon一致；为通用网站图标，不是花火/创作激励/二创赛专属标识。 updream官方公开主页另明确“哔哩哔哩自研AI视频创作产品”；这里只标公司，不标成updream专属图。",
+      "pixel_reviewed": true,
+      "retrieval_method": "unchanged official raster",
+      "entity_evidence": {
+        "url": "https://www.updream.cn/",
+        "excerpt": "哔哩哔哩自研AI视频创作产品，面向B站UP主。",
+        "observed_at": "2026-09-30T12:58:13.878833+00:00",
+        "method": "公开官方主页文字；本机robots入口返回应用页，停止继续下载该源素材。"
+      }
+    },
+    "brand-bytedance-company": {
+      "filename": "a500bdd269da409df570a6b6dd6cfc5d194f2f0e0e5d1966f947369c9116009d.png",
+      "width": 717,
+      "height": 184,
+      "sha256": "a500bdd269da409df570a6b6dd6cfc5d194f2f0e0e5d1966f947369c9116009d",
+      "source_page": "https://www.bytedance.com/zh/",
+      "entity": "字节跳动",
+      "entity_evidence": {
+        "url": "https://www.bytedance.com/zh/",
+        "excerpt": "官网首页列明抖音短视频上线、抖音品牌升级与记录美好生活slogan；页面标题字节跳动。"
+      },
+      "pixel_review_note": "实际查看717×184像素：透明底纯白条形标记、英文ByteDance和中文字节跳动，公司标识清晰；不是抖音平台标识，须用深色背景。",
+      "image_background": "#14212f",
+      "kind": "organizer_mark",
+      "image_url": "https://www.bytedance.com/zh/",
+      "source_inline": true,
+      "applicable_edition": "公司通用标识，不代表抖音平台或对应赛事/计划专属图",
+      "asset_label": "字节跳动公司标识（官网内嵌PNG）",
+      "observed_at": "2026-09-30T12:58:13.878833+00:00",
+      "pixel_reviewed": true,
+      "retrieval_method": "未修改字节官网HTML中img alt=ByteDance的内嵌PNG data URI，只Base64解码原字节；没有独立HTTPS图片地址。",
+      "rights_note": "官网内嵌PNG没有独立图片URL，来源链接为图片所在官方页面。官网媒体素材声明仅用于新闻编辑之目的；此处用于个人本地信息识别，不主张额外商用权。"
+    }
+  },
+  "items": {
+    "dd18da1f436d633bb62d2538": {
+      "asset_id": "brand-bilibili",
+      "label": "平台标识·哔哩哔哩",
+      "edition": "2026 / 03-03轮",
+      "entity": "哔哩哔哩"
+    },
+    "77077a3206e6e83dc54510cd": {
+      "asset_id": "brand-bilibili",
+      "label": "平台标识·哔哩哔哩",
+      "edition": "官方客服2026-05-05 / 2026核验",
+      "entity": "哔哩哔哩"
+    },
+    "d60c099035869e212b5cd251": {
+      "asset_id": "brand-bilibili",
+      "label": "平台标识·哔哩哔哩",
+      "edition": "商业合作机制 / 2026核验",
+      "entity": "哔哩哔哩"
+    },
+    "6e39f9755ad765fbec7a3c24": {
+      "asset_id": "brand-bilibili",
+      "label": "平台标识·哔哩哔哩",
+      "edition": "2025-10-01生效结算改动",
+      "entity": "哔哩哔哩"
+    },
+    "e7f5fb4e93105b2546f1c285": {
+      "asset_id": "brand-bilibili-company",
+      "label": "公司标识·哔哩哔哩",
+      "edition": "轮次未核",
+      "entity": "哔哩哔哩"
+    },
+    "f767f5b9b5af2414f5a08ad8": {
+      "asset_id": "brand-bilibili-company",
+      "label": "公司标识·哔哩哔哩",
+      "edition": "2026 / 08-17轮",
+      "entity": "哔哩哔哩"
+    },
+    "8b7d34b49a64b3b8f4bfe493": {
+      "asset_id": "brand-minimax-design",
+      "label": "平台标识·MiniMax Design",
+      "edition": "公开入驻计划（轮次未核）",
+      "entity": "MiniMax Design"
+    },
+    "cc3cf426236d7396b4103de4": {
+      "asset_id": "brand-hailuo",
+      "label": "平台标识·Hailuo AI",
+      "edition": "公开推广计划（轮次未核）",
+      "entity": "Hailuo AI"
+    },
+    "a79579464f63cd8aef7cadfb": {
+      "asset_id": "brand-bytedance-company",
+      "label": "字节跳动公司标识",
+      "edition": "长期倡议 / 2026核验",
+      "entity": "字节跳动"
+    },
+    "190bfc71efb7cd2eb8ca66d1": {
+      "asset_id": "brand-bytedance-company",
+      "label": "字节跳动公司标识",
+      "edition": "2026 / 截止03-31子活动",
+      "entity": "字节跳动"
+    },
+    "d2a151c2d148a5858cdecc7c": {
+      "asset_id": "brand-bytedance-company",
+      "label": "字节跳动公司标识",
+      "edition": "官方规则 / 修订日期未核",
+      "entity": "字节跳动"
+    },
+    "57eb71171b59492e80edb94b": {
+      "asset_id": "brand-bytedance-company",
+      "label": "字节跳动公司标识",
+      "edition": "2026 / 穹顶巨幕特别赛道",
+      "entity": "字节跳动"
+    },
+    "969f262b17644b658ed0d23a": {
+      "asset_id": "brand-bytedance-company",
+      "label": "字节跳动公司标识",
+      "edition": "2026 / 常规及原专项赛道",
+      "entity": "字节跳动"
+    }
+  }
+}

@@ -1,0 +1,621 @@
+{
+  "format": "raw-sqlite-table-export",
+  "sourceSnapshot": "cloud-data/snapshots/信息收集/data/opportunities.sqlite3",
+  "table": "sources",
+  "schema": [
+    {
+      "cid": 0,
+      "name": "id",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 1
+    },
+    {
+      "cid": 1,
+      "name": "config",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 2,
+      "name": "last_attempt_at",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 3,
+      "name": "last_fetched_at",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 4,
+      "name": "last_success_at",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 5,
+      "name": "status",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": "'pending'",
+      "pk": 0
+    },
+    {
+      "cid": 6,
+      "name": "message",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": "'尚未运行单次检查'",
+      "pk": 0
+    },
+    {
+      "cid": 7,
+      "name": "coverage",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 8,
+      "name": "last_article_success_at",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    }
+  ],
+  "rowCount": 49,
+  "rows": [
+    {
+      "id": "libtv",
+      "config": "{\"adapter\":\"libtv\",\"allowed_hosts\":[\"www.liblib.tv\",\"liblib.tv\"],\"capability\":\"automatic_discovery\",\"id\":\"libtv\",\"name\":\"LibTV 官方活动清单\",\"note\":\"图片、正文引用或字段缺失会报告部分提取，不能用标题代替完整规则。\",\"platform\":\"LibTV\",\"respect_robots\":true,\"scope\":\"公开活动清单及嵌入规则；不是平台全部福利\",\"url\":\"https://www.liblib.tv/activity\"}",
+      "last_attempt_at": "2026-10-01T16:55:35+00:00",
+      "last_fetched_at": "2026-10-01T16:55:39+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "本页列出 12 个公开活动，实际处理 12 个，筛选保留 12 个；0 个通过正文结构检查。缺失规则 / 图片条款待人工核验",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"entries\":12,\"external_rules\":37,\"image_refs\":22,\"listed_entries\":12,\"reason\":\"已取得12条官方嵌入正文；不等于图片或外链全文\",\"state\":\"embedded_text\"},\"rules\":{\"blockers\":[\"图片内容未核\",\"外链完整规则未核\",\"正文缺失或未说明的字段保留未知\"],\"checked_items\":12,\"complete_items\":0,\"extracted_field_groups\":24,\"reason\":\"提取到24组明确规则段落；0/12条规则覆盖完整\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "aishorts",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"www.bilibili.com\"],\"capability\":\"known_page\",\"id\":\"aishorts\",\"name\":\"HiShorts! × updream AI 短片大赛\",\"note\":\"规则主要为图片，需要人工阅读；截止日期不采用冲突的第三方说法。\",\"platform\":\"updream / B站\",\"respect_robots\":true,\"scope\":\"指定官方活动页\",\"url\":\"https://www.bilibili.com/blackboard/era/DjrNk7LG6agRh9Lu.html\"}",
+      "last_attempt_at": "2026-10-01T16:55:35+00:00",
+      "last_fetched_at": "2026-10-01T16:55:40+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "取得部分页面文字，正文 / 规则结构尚不完整；不能判定没有更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[],\"links\":[],\"reason\":\"没有识别到公开富文本JSON；不执行网页脚本\",\"state\":\"no_text\",\"text_chars\":28},\"rules\":{\"fields\":{},\"missing\":[\"完整活动/机制条款\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "updream",
+      "config": "{\"adapter\":\"homepage\",\"allowed_hosts\":[\"www.updream.cn\",\"updream.cn\"],\"capability\":\"known_page\",\"id\":\"updream\",\"name\":\"updream 官方主页 / 特约导演线索\",\"note\":\"不使用登录态，不调用未公开接口。\",\"platform\":\"updream\",\"respect_robots\":true,\"scope\":\"主页可用性；长期计划规则待核\",\"url\":\"https://www.updream.cn/\"}",
+      "last_attempt_at": "2026-10-01T16:55:35+00:00",
+      "last_fetched_at": "2026-09-30T03:01:09+00:00",
+      "last_success_at": null,
+      "status": "failed",
+      "message": "robots入口返回验证/应用页面；无法确认访问策略，停止该源；保留已保存内容，不视为无更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"robots入口返回验证/应用页面；无法确认访问策略，停止该源\",\"state\":\"failed\"},\"rules\":{\"reason\":\"请求失败，不代表规则没有更新\",\"state\":\"not_checked\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "jimeng",
+      "config": "{\"adapter\":\"homepage\",\"allowed_hosts\":[\"jimeng.jianying.com\"],\"capability\":\"known_page\",\"id\":\"jimeng\",\"name\":\"即梦 官方主页\",\"note\":\"主页可访问不代表福利已收全。\",\"platform\":\"即梦\",\"respect_robots\":true,\"scope\":\"官方福利入口待适配\",\"url\":\"https://jimeng.jianying.com/\"}",
+      "last_attempt_at": "2026-10-01T16:55:35+00:00",
+      "last_fetched_at": "2026-10-01T16:55:44+00:00",
+      "last_success_at": null,
+      "status": "pending",
+      "message": "主页可访问，未接通可完整检查的福利 / 机制规则源",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAoCAYAAACWwljjAAAFQklEQVRYw+3Wa1BUdRjH8SOpMeg4WhZGpDIxiaaTeUFgWrxE4AVRQJGlRRAVIV1JkbgMgQLi5AVBQSVLSp0xlEAUKBEEFZCrCstll8UV2AV2YbmoGCrYv31+R95UL5pmmtamZ+bz6rz5nvOc/5zDcX9jGLs/iTxuyvIlWYkRFeTHA2HVRFtzfhthTG5KuH96/vUgNlC4mMgyw1NJit/aAXLKazYje9xtIMZ/OZz50gW+9hcNkvoLEemEPbnrSP47QYwxQ5Ifv54RqzcXwFFvSyjaOhfavN8F7Y5ZcC/HH9JOB4LNa9Zw5YA76OZV8vIGMdZtSp7cDrtOnOavYiQhTAiPwi1AMtIQaqyngsxpBtw2GAGDKfaQmpUAa6xc4Vfp4UtEdzAMycsT9JQ1Tyctl/2eEkuTlYysF/rCUNxMqDEzgTqzSXBnpgnIHCzgjvEEuD52DLBr3rA1MAaWmNtB582wdtIljZ9G9D+IPU6aTxIPBjHCcXvg3CEh9K2fDLWvjIH6D6fwTIyheuwEqLUyhzLOALq8pkN+bgRw3HY4FBsMzxojZxP9DequLjAlQwVrbpIjhyIY4UYGQ/buhdBqPxlk3Gion2IMDQIz3kJe/ZS34I7uHkmD7VSQVgYDNyIAwsNCgfXGXoOBPjP9DKrOCAogA2etGTmTHAMcFwFZye7wS5QlVHGjoEw4A2qPCUBZ6AzNcQ5Q/YYRdO+YB1U3dsDwypLio4FJ3ECryIzWz6Cm3NgTRHN8HiPF6eHAGSbAdh8feFZkB7krzaHE9h2o85sDsiAbkIsXQMN+e2CtGyF0kzdwXCgU5++D/ouLQFV4OEU/g2Q/iNuIPNaKkQflAWBqexxGjhLDVUcL6IwSQN3SGVChe6FJg9dckCx6D1QBliDZLIAxo7eA8eyv4KE0BJqTrHkZvnL9DJKn+Twmt0NsGGHZy2Dn3kQYfsQ53Hh4/r4RNGz8AIpdzKEuaAF0RC2E57MmQgE3ATjuM/CPiANW7AqSfQJQ5vk362eQKmd3JrmXsoSRocpNIMnbB9zbceDIWUPmuHFQNMkISqa9DpUvNK6YDpW2s8DfwBK48WFQnhMCgzUBoLy0BrRVe5P0NWjPLdKUsJiR1tR1wGp8IeZwMgx/SrgRvjxuAziNcwLvyathLOcJHLflhRDYGRYFrNET2rJ5yvPLoas0tOj/oL8UpC4JHyTSU+6MNCS4gvKoAB5WiKG+MAQSg0WwLXQ/ZJ3xhao0FxB5hYCbUwAEfhEF3Td8QP2dAOQnPwFlxgrolUVq9TPoaX+ZB2nLc2Gk6awj1MU78HZZwJMid2Byb550JQwVO0NfxlJgdz14vWKeRAiK6DlQF28PLZdcoLNcBIO92bb6GTQ8Q/13RURT6tlH2gvXMlITLYD6uI+gp2ozdF0VQXumM6ivCqGvahM8kPiDItkeGo8tB025GFQ3xFrSr06zI3/4yde7oN7m0sWk5eKWDqK5JWJQvAHac9ygq3Adr9gTNNc3QG85rzPfHe5/7wDtPwuhp/Zz6CjyhaZzwi6ivfetHdH/oP77+3PJQOsuRnqkQdCa4wWqyx6gyecpL64GTaEX7ycXUJz4GJp1B4O0X/Hg0Xp1tFV+8Ei1k6c5coHofxBrrzQinbKYo0SVJ+wn6iurGHlY5gY911aDJnMFaHXXiDp9GQyvtKfUA9QFTtBZ7gPdit0tpFd9OpwwFmlA9D/o9yNLDpxIKmI8PMnNSNtviCLVpYTITzrXEGWaq4qos0WgOPdpCenIF+eRrurjB4k0PXopYZG6gMg/D/gNBUxhAbSAmKMAAAAASUVORK5CYII=\",\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVAAAABYCAMAAACUEl8yAAACkVBMVEUAAAD////////////4///////////////////////////+//37/v/////////////////////////////+///9///////////87tn////////////////////////////+///////////////////////////////////////7//////////8lvfb////////////////////8//8nuPX////////5zgr9mx0t2fkiovMju/Mm2/uo+v8iuvQjsfEjvfQjtfMku/Qgi/f48kT69GD/giet+v+/+/8kzvcdf/j6tyMjwPXE/P+u+/8jyPar+v8ksfH3yxWm9/+g+v+1+//c/v8kxvYgkPe//f8s7v/34wgj3Pvq/f8j6P0db/z7uhEr4Pv9oR6m/P8i5/7M/f/5xQ77940m5v3J/f/4ywys+//+hiYfgPm2+f8cZ/6A9/8ghfj/einx/v9a9v/8oxuQ9///dyn33ARb9f/+/Nn48UEcY//9+apT8v/9/cv/eSj///8i7P4j3Psi5P0i6f4j8v8j2PqS+f8i7/8i5v0kuvMjy/cj0/ic+v8j1foj4fyi+v8p8/8jzvh6+P818/8j3/t19/9r9/9m9v+D+P9h9v9O9f8jwvUhmPUinfRw9/879P8v8/+M+f9T9f9A9P+1+/+n+v+H+P9Y9v8jyPaX+f8hk/YiovMktPJ/+P9F9P+w+/9c9v/C/P9J9f8j0Pgjxfa7+/8gjvfc/v8jv/TI/P+r+//U/f8gifgjp/Ikr/HO/f8efPrk/v8jq/EddvsegfkfhPjr/v8ccPzx///36gT7thT5//8caf76ww/41wf37yH8qRj34AT9+8n7+JP+jCP9+a3+/u7+/eH69XdLkI1+AAAAgXRSTlMAgDb4COPAF/xEeBMOQPSYT1hvKS8f3iYF59iM8MpL7F09xGjQo5K6tIdTYyIKrZ50sHwbGben/v0hxqB5UDThxnViPv77+9x+PCcR893Fs61XIh3y7eDXnCrh3tegjIFqUzo17enS0Lexm5aKbULr4dbRvrSqcVpW5N7VyKmNhWXZuKYJAAAPq0lEQVR42uzWO26DQBSF4atUSOkj+rTpYQEwjTtaGkSBJURlybKVNNmWCyoahAeRYYA4Xk3u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\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/0.301b96dc.jpg\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/1.3f1e8284.jpg\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/1.727df331.jpg\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/1.border.76d67794.png\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/10.dee0435a.jpg\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/2.border.a2d7d116.png\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/2.cb6917b0.jpg\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/2.f68a4d76.jpg\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/3.87edc664.jpg\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/3.abaef3cc.jpg\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/4.1e1aff5c.jpg\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/4.69dc595a.jpg\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/5.1d107b21.jpg\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/5.1e569bfc.jpg\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/6.895eb8f7.jpg\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/6.b5a7ed58.jpg\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/7.fd0d4add.jpg\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/8.5b0a2a1d.jpg\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/9.6b5c599b.jpg\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/board.50b0813e.png\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/jimeng/landing_page/static/image/jimeng-logo-large.16d119dc.png\",\"https://p26-piu.byteimg.com/tos-cn-i-8jisjyls3a/4477efe5e1354552b664d019efd75757~tplv-8jisjyls3a-3:0:0:q15.png\",\"https://p26-piu.byteimg.com/tos-cn-i-8jisjyls3a/7b8a829017e04613b3c187f2a1dbd8f7~tplv-8jisjyls3a-3:0:0:q15.png\",\"https://p26-piu.byteimg.com/tos-cn-i-8jisjyls3a/877a1bfcd8d0452a9efc6744dce0dce0~tplv-8jisjyls3a-3:0:0:q15.png\",\"https://p3-piu.byteimg.com/tos-cn-i-8jisjyls3a/433f0e1cdec04b9b841ff2d5020625bf~tplv-8jisjyls3a-3:0:0:q15.png\",\"https://p3-piu.byteimg.com/tos-cn-i-8jisjyls3a/5d312245789b4058aa097add8c2007d3~tplv-8jisjyls3a-3:0:0:q15.png\",\"https://p6-piu.byteimg.com/tos-cn-i-8jisjyls3a/877a1bfcd8d0452a9efc6744dce0dce0~tplv-8jisjyls3a-3:0:0:q15.png\",\"https://p6-piu.byteimg.com/tos-cn-i-8jisjyls3a/b4867c4f2299474688421d1318c77985~tplv-8jisjyls3a-3:0:0:q15.png\",\"https://p6-piu.byteimg.com/tos-cn-i-8jisjyls3a/ebe075a8957d48bf9fd37f8a148a62df~tplv-8jisjyls3a-3:0:0:q15.png\",\"https://p9-piu.byteimg.com/tos-cn-i-8jisjyls3a/4ff4f6490c46488cbafb0bbebaf7c6cf~tplv-8jisjyls3a-3:0:0:q15.png\",\"https://p9-piu.byteimg.com/tos-cn-i-8jisjyls3a/d666a13675544253aa0b8aa2b6e88be6~tplv-8jisjyls3a-3:0:0:q15.png\",\"https://p9-piu.byteimg.com/tos-cn-i-8jisjyls3a/fa7f71711b314db29c2ab85600d14411~tplv-8jisjyls3a-3:0:0:q15.png\"],\"links\":[\"https://beian.miit.gov.cn/\",\"https://beian.mps.gov.cn/#/query/webSearch?code=44030002004191\",\"https://jimeng.jianying.com/ai-tool/explore?need_login=true\",\"https://jimeng.jianying.com/ai-tool/home?need_login=true\",\"https://jimeng.jianying.com/ai-tool/home?need_login=true&detailId=7324213975539879220&workDetailType=Image&itemType=9\",\"https://jimeng.jianying.com/ai-tool/home?need_login=true&detailId=7353206216786595109&workDetailType=Image&itemType=9\",\"https://jimeng.jianying.com/ai-tool/home?need_login=true&detailId=7355848479995989298&workDetailType=Image&itemType=9\",\"https://jimeng.jianying.com/ai-tool/home?need_login=true&detailId=7376269586641046819&workDetailType=Image&itemType=9\",\"https://jimeng.jianying.com/ai-tool/home?need_login=true&detailId=7382120899144731913&workDetailType=Image&itemType=9\",\"https://jimeng.jianying.com/ai-tool/home?need_login=true&detailId=7383941417011285286&workDetailType=Image&itemType=9\",\"https://jimeng.jianying.com/ai-tool/home?need_login=true&detailId=7384327666322722100&workDetailType=Image&itemType=9\",\"https://jimeng.jianying.com/ai-tool/home?need_login=true&detailId=7387327513451564298&workDetailType=Image&itemType=9\",\"https://jimeng.jianying.com/ai-tool/home?need_login=true&detailId=7387769101030051108&workDetailType=Image&itemType=9\",\"https://jimeng.jianying.com/ai-tool/home?need_login=true&detailId=7389129537776373007&workDetailType=Image&itemType=9\",\"https://jimeng.jianying.com/ai-tool/home?need_login=true&detailId=7392826731456990500&workDetailType=Image&itemType=9\",\"https://jimeng.jianying.com/ai-tool/image/generate?need_login=true\",\"https://jimeng.jianying.com/visionary\",\"https://lf3-cdn-tos.draftstatic.com/obj/ies-hotsoon-draft/vco/fadfa00e-21c4-41ac-a1ac-c694e7ccedca.html\",\"https://lf9-cdn-tos.draftstatic.com/obj/ies-hotsoon-draft/vco/17620dba-f821-4a18-85f9-b8b11f73304a.html\",\"https://lf9-cdn-tos.draftstatic.com/obj/ies-hotsoon-draft/vco/jimeng_certification.html\",\"https://space.bilibili.com/3546611372264291?spm_id_from=333.337.0.0\",\"https://www.douyin.com/user/MS4wLjABAAAATAf2FKPSpZx_TdDWzwzNlznaEE6HttAqJgrnRPGdW24adAIlxfGeasDraUIR5JRp\",\"https://www.xiaohongshu.com/user/profile/6503ced7000000001603b380\"],\"reason\":\"取得产品主页，不代表发现机制正文\",\"state\":\"homepage_only\",\"text_chars\":1078},\"rules\":{\"reason\":\"福利或机制列表尚未适配\",\"state\":\"unadapted\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "xyq",
+      "config": "{\"adapter\":\"homepage\",\"allowed_hosts\":[\"xyq.jianying.com\"],\"capability\":\"known_page\",\"id\":\"xyq\",\"name\":\"小云雀 官方主页\",\"note\":\"公开正文不足时保留待核验。\",\"platform\":\"小云雀\",\"respect_robots\":true,\"scope\":\"官方福利入口待适配\",\"url\":\"https://xyq.jianying.com/\"}",
+      "last_attempt_at": "2026-10-01T16:55:39+00:00",
+      "last_fetched_at": "2026-10-01T16:55:46+00:00",
+      "last_success_at": null,
+      "status": "pending",
+      "message": "主页可访问，未接通可完整检查的福利 / 机制规则源",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/xiaoyunque/landing_page/static/image/jinghui.60466ac4.png\",\"https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/growth/xiaoyunque/landing_page/static/svg/chevron-right.2fff8438.svg\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/00af93032fcf4af69bfbb0c6b3824eb0~tplv-e844mpvzdi-compress:q75.webp\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/049fa8f0c4b24d83ad5f806d572fb706~tplv-e844mpvzdi-compress:q75.webp\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/19b1c4f8a87049a19207c6109c0e3fe3~tplv-e844mpvzdi-compress:q90.image\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/1b41543b609e44138fdb41c9c7581a5c~tplv-e844mpvzdi-compress:q90.image\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/38f49de6c71b4cff90bc34f6c5516952~tplv-e844mpvzdi-compress:q90.image\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/3cfc7aeff5d141aaa81258850aeb62f0~tplv-e844mpvzdi-compress:q90.image\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/492b4298905b4d66bb306ba126ea436a~tplv-e844mpvzdi-compress:q90.image?v=voice-avatar-refresh-2\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/49642febeb2c452c88a5940073bae0be~tplv-e844mpvzdi-compress:q90.image\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/5daaa7a9bef943ab8b8ae93f66aa496e~tplv-e844mpvzdi-compress:q90.image?v=voice-avatar-refresh-2\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/637dc06ee52f47f784ece4be9f657492~tplv-e844mpvzdi-compress:q75.webp\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/7c6ba6cb7e4a49fab5d08984f803b8dc~tplv-e844mpvzdi-compress:q75.webp\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/82ae112faac5490088d027dd05e2d72a~tplv-e844mpvzdi-compress:q75.webp\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/8848960ed1e94e54942b3a5ca7d584b3~tplv-e844mpvzdi-compress:q90.image\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/8c751fcf57764118be16582fc3ed09e2~tplv-e844mpvzdi-compress:q75.webp\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/a273339f736e4def9575622038bdfe39~tplv-e844mpvzdi-compress:q90.image?v=voice-avatar-refresh-2\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/b7db57bee34f4550b05de6c0f7e2d80f~tplv-e844mpvzdi-compress:q90.image\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/ba882d13e6b145b0b328a01141b33f6b~tplv-e844mpvzdi-compress:q90.image?v=voice-avatar-refresh-2\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/bc55090eb514462fb40d8d7220c0be4f~tplv-e844mpvzdi-image.image\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/c65fb2d44c56441eb121152eef00638c~tplv-e844mpvzdi-compress:q75.webp\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/d998fc7dbd374e328d11ab1b43f5be43~tplv-e844mpvzdi-compress:q75.webp\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/ee43b2187f084d29a9ad9368154ef42b~tplv-e844mpvzdi-compress:q90.image\",\"https://p11-seeyou-cn.byteimg.com/tos-cn-i-e844mpvzdi/fd0c175e67c64870b85a794848a1394d~tplv-e844mpvzdi-compress:q90.image\",\"https://p11-xiaoyunque.byteimg.com/tos-cn-i-men7yzdrs1/52bb6455f9f94d569993bccf98f886bd~tplv-men7yzdrs1-resize:500:500.webp\",\"https://p16-seeyou-sg.ibyteimg.com/tos-alisg-i-2zwwjm3azk-sg/233faa26e38b4a56971ec20966d6b88e~tplv-2zwwjm3azk-compress:q90.image\",\"https://p16-seeyou-sg.ibyteimg.com/tos-alisg-i-2zwwjm3azk-sg/3c2ea9b9a9de41eea810f5660d1b15cf~tplv-2zwwjm3azk-compress:q90.image\",\"https://p16-seeyou-sg.ibyteimg.com/tos-alisg-i-2zwwjm3azk-sg/519a490e5584496cbfa1bd226f621e6d~tplv-2zwwjm3azk-compress:q90.image\",\"https://p16-seeyou-sg.ibyteimg.com/tos-alisg-i-2zwwjm3azk-sg/6db0cccfa55140779faec8d7ba8810a2~tplv-2zwwjm3azk-compress:q90.image\",\"https://p26-piu.byteimg.com/tos-cn-i-8jisjyls3a/e97656b7a5674bd095f8ad9d6a0c150f~tplv-8jisjyls3a-2:0:0:q75.image\"],\"links\":[\"https://beian.miit.gov.cn/\",\"https://beian.mps.gov.cn/\",\"https://p11-xiaoyunque.byteimg.com/tos-cn-i-men7yzdrs1/18f9e2ba77da466b89f4a0834076b161~tplv-men7yzdrs1-webp.webp\",\"https://sf1-cdn-tos.douyinstatic.com/obj/ies-hotsoon-draft/vco/503995fb-a603-4549-91a0-8316a9a2f1de.html\",\"https://sf1-cdn-tos.douyinstatic.com/obj/ies-hotsoon-draft/vco/a40822a6-30c0-4037-919d-49230f660a25.html\",\"https://www.douyin.com/user/MS4wLjABAAAADLjhhf0-VNlcMT45Ca4hYbiVvjGo3tln_97KvBwiLBo\",\"https://xhslink.com/m/AE3qaFvuF69\",\"https://xyq.jianying.com/articles\",\"https://xyq.jianying.com/login\",\"https://xyq.jianying.com/model-ecosystem\",\"https://xyq.jianying.com/pricing\",\"https://xyq.jianying.com/tutorials\"],\"reason\":\"取得产品主页，不代表发现机制正文\",\"state\":\"homepage_only\",\"text_chars\":1535},\"rules\":{\"reason\":\"福利或机制列表尚未适配\",\"state\":\"unadapted\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "oiioii",
+      "config": "{\"adapter\":\"homepage\",\"allowed_hosts\":[\"www.oiioii.tv\",\"oiioii.tv\"],\"capability\":\"known_page\",\"id\":\"oiioii\",\"name\":\"OiiOii 官方主页（候选）\",\"note\":\"不根据产品首页推断创作者激励。\",\"platform\":\"OiiOii\",\"respect_robots\":true,\"scope\":\"候选平台，机制与入口待核\",\"url\":\"https://www.oiioii.tv/\"}",
+      "last_attempt_at": "2026-10-01T16:55:40+00:00",
+      "last_fetched_at": "2026-10-01T16:55:49+00:00",
+      "last_success_at": null,
+      "status": "pending",
+      "message": "主页可访问，未接通可完整检查的福利 / 机制规则源",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"https://static-oiioii-sg.hogiai.cn/home-v3/card-media/0119b891-17e5-4175-b8a3-bfb439c7fd64_cover.webp\",\"https://static-oiioii-sg.hogiai.cn/home-v3/card-media/3833a9d6-7a98-4dd2-bc4b-61fc78751623_cover.webp\",\"https://static-oiioii-sg.hogiai.cn/home-v3/card-media/4338d7e3-eec6-41d0-901c-81c0762fd0e5_cover.webp\",\"https://static-oiioii-sg.hogiai.cn/home-v3/card-media/474da636-a974-4474-a140-55cf097e65bb_cover.webp\",\"https://static-oiioii-sg.hogiai.cn/home-v3/card-media/aefcb837-a11f-4d63-b6c2-dad391d9d0de_cover.webp\",\"https://static-oiioii-sg.hogiai.cn/home-v3/card-media/b2de2d48-3493-43a9-8b02-b48a412640ef_cover.webp\",\"https://static-oiioii-sg.hogiai.cn/home-v3/card-media/c5dbf938-0e6a-4f6e-aabd-0591cab07118_cover.webp\",\"https://static-oiioii-sg.hogiai.cn/home-v3/card-media/ddd509bf-72fc-4eb2-a057-28575350b610_cover.webp\",\"https://static-oiioii-sg.hogiai.cn/home-v3/card-media/f2fd6106-76f2-4343-8ece-c5981c4bea6a_cover.webp\",\"https://static-oiioii-sg.hogiai.cn/home_recommends_v2/389d5ad0-ab17-47fe-bd1d-2c3e24820536_cover_w480q80v2.webp\",\"https://static-oiioii-sg.hogiai.cn/home_recommends_v2/5fb248b3-2439-4919-a5b7-713772e40a7c_cover_w480q80v2.webp\",\"https://static-oiioii-sg.hogiai.cn/home_recommends_v2/6f9387a4-2929-4a8b-8ff0-083a7d384130_cover_w480q80v2.webp\",\"https://static-oiioii-sg.hogiai.cn/home_recommends_v2/8c43470c-0da0-4fca-a602-4c7b33f6b74b_cover_w480q80v2.webp\",\"https://static-oiioii-sg.hogiai.cn/home_recommends_v2/9236f5e6-b762-4d63-995d-098fb09e9c7b_cover_w480q80v2.webp\",\"https://static-oiioii-sg.hogiai.cn/oii_agent_ip/20260924/homepage/character.png\"],\"links\":[\"https://app.impact.com/campaign-campaign-info-v2/OiiOii.brand\",\"https://docs.google.com/document/d/1plIxnmE-XoWP-GbOsZ9jqiz5qKXS7ysg1-rsJ4pifEY/edit?tab=t.0\",\"https://www.instagram.com/oiioii_ai/\",\"https://www.oiioii.tv/auth-policy\",\"https://www.oiioii.tv/auth-terms\",\"https://www.oiioii.tv/blog\",\"https://www.oiioii.tv/blog/ai-educational-video-generator\",\"https://www.oiioii.tv/blog/ai-tool-for-game-cutscenes\",\"https://www.oiioii.tv/blog/turn-manga-into-video-ai\",\"https://www.oiioii.tv/en/?tab=creator#home-chatbox\",\"https://www.oiioii.tv/en/?tab=creator&chatboxPreset=3d#home-chatbox\",\"https://www.oiioii.tv/en/?tab=creator&chatboxPreset=anime#home-chatbox\",\"https://www.oiioii.tv/en/?tab=creator&chatboxPreset=realistic#home-chatbox\",\"https://www.oiioii.tv/en/gemini-omni\",\"https://www.oiioii.tv/en/gpt-image-2\",\"https://www.oiioii.tv/en/grok-imagine-15\",\"https://www.oiioii.tv/en/happyhorse1-1\",\"https://www.oiioii.tv/en/kling-30-standard\",\"https://www.oiioii.tv/en/kling-o1\",\"https://www.oiioii.tv/en/kling-v3-omni\",\"https://www.oiioii.tv/en/midjourney-niji-6\",\"https://www.oiioii.tv/en/midjourney-niji-7\",\"https://www.oiioii.tv/en/midjourney-v81\",\"https://www.oiioii.tv/en/midjourney-v82\",\"https://www.oiioii.tv/en/minimax-h3\",\"https://www.oiioii.tv/en/music-video\",\"https://www.oiioii.tv/en/nano-banana-20\",\"https://www.oiioii.tv/en/nano-pro\",\"https://www.oiioii.tv/en/novelai\",\"https://www.oiioii.tv/en/seedance-20-mini\",\"https://www.oiioii.tv/en/seedance2-5\",\"https://www.oiioii.tv/en/seedance20fast\",\"https://www.oiioii.tv/en/seedance20pro\",\"https://www.oiioii.tv/en/seedream-50\",\"https://www.oiioii.tv/en/seedream-50-pro\",\"https://www.oiioii.tv/en/seedream4-5\",\"https://www.oiioii.tv/en/sora2\",\"https://www.oiioii.tv/en/suno\",\"https://www.oiioii.tv/en/vidu-q3-mix\",\"https://www.oiioii.tv/en/vidu-q3-pro\",\"https://www.oiioii.tv/en/vidu-q3-ref\",\"https://www.oiioii.tv/en/wan27\",\"https://www.oiioii.tv/faq\",\"https://www.oiioii.tv/features/canvas\",\"https://www.oiioii.tv/how-it-works\",\"https://www.oiioii.tv/oii-tv?tab=creator\",\"https://www.oiioii.tv/price\",\"https://www.oiioii.tv/use-cases/brands\",\"https://www.oiioii.tv/use-cases/content-creators\",\"https://www.oiioii.tv/use-cases/educators\",\"https://www.oiioii.tv/use-cases/game-studios\",\"https://www.reddit.com/u/OiiOiiAI/s/lps5RsxyPP\",\"https://www.youtube.com/@OiiOii_AI\",\"https://x.com/OiiOii_AI\"],\"reason\":\"取得产品主页，不代表发现机制正文\",\"state\":\"homepage_only\",\"text_chars\":2832},\"rules\":{\"reason\":\"福利或机制列表尚未适配\",\"state\":\"unadapted\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "bili_white",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"www.bilibili.com\"],\"capability\":\"known_page\",\"id\":\"bili_white\",\"name\":\"B站 白模赛官方动态（历史）\",\"note\":\"历史样本：积分与投流不是现金。\",\"platform\":\"B站 / updream\",\"respect_robots\":true,\"scope\":\"指定历史公告\",\"url\":\"https://www.bilibili.com/opus/1237442539704811557\"}",
+      "last_attempt_at": "2026-10-01T16:55:40+00:00",
+      "last_fetched_at": null,
+      "last_success_at": null,
+      "status": "failed",
+      "message": "官方页面返回访问限制 / 验证页面；未绕过",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"官方返回访问验证页，已停止该源\",\"state\":\"blocked\"},\"rules\":{\"reason\":\"未取得正文，保留独立人工证据\",\"state\":\"not_checked\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "bili_remix",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"www.bilibili.com\"],\"capability\":\"known_page\",\"id\":\"bili_remix\",\"name\":\"B站 二创赛官方动态（历史）\",\"note\":\"历史样本：奖金池与结算媒介分开记录。\",\"platform\":\"B站\",\"respect_robots\":true,\"scope\":\"指定历史公告\",\"url\":\"https://www.bilibili.com/opus/1175154222470004785\"}",
+      "last_attempt_at": "2026-10-01T16:55:44+00:00",
+      "last_fetched_at": null,
+      "last_success_at": null,
+      "status": "failed",
+      "message": "<urlopen error _ssl.c:993: The handshake operation timed out>；保留已保存内容，不视为无更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"<urlopen error _ssl.c:993: The handshake operation timed out>\",\"state\":\"failed\"},\"rules\":{\"reason\":\"请求失败，不代表规则没有更新\",\"state\":\"not_checked\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "douyin_programs",
+      "config": "{\"adapter\":\"unadapted\",\"allowed_hosts\":[\"creator.douyin.com\",\"www.douyin.com\"],\"capability\":\"manual\",\"id\":\"douyin_programs\",\"name\":\"抖音 登录态创作者中心\",\"note\":\"精选 / 伙伴计划的公开官方页已另行登记；登录态本账号页面未接通。\",\"platform\":\"抖音\",\"respect_robots\":true,\"scope\":\"本账号定向激励与加入状态\",\"url\":\"https://creator.douyin.com/\"}",
+      "last_attempt_at": "2026-10-01T16:55:46+00:00",
+      "last_fetched_at": null,
+      "last_success_at": null,
+      "status": "pending",
+      "message": "精选 / 伙伴计划的公开官方页已另行登记；登录态本账号页面未接通。",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"精选 / 伙伴计划的公开官方页已另行登记；登录态本账号页面未接通。\",\"state\":\"unadapted\"},\"rules\":{\"reason\":\"公开规则源未适配，未请求账号登录\",\"state\":\"unadapted\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "bili_programs",
+      "config": "{\"adapter\":\"unadapted\",\"allowed_hosts\":[\"member.bilibili.com\",\"www.bilibili.com\"],\"capability\":\"manual\",\"id\":\"bili_programs\",\"name\":\"B站 创作激励与伙伴机制\",\"note\":\"未连接登录态创作者中心，不能宣称覆盖全部机制。\",\"platform\":\"B站\",\"respect_robots\":true,\"scope\":\"长期创作激励与规则更新\",\"url\":\"https://member.bilibili.com/\"}",
+      "last_attempt_at": "2026-10-01T16:55:46+00:00",
+      "last_fetched_at": null,
+      "last_success_at": null,
+      "status": "pending",
+      "message": "未连接登录态创作者中心，不能宣称覆盖全部机制。",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"未连接登录态创作者中心，不能宣称覆盖全部机制。\",\"state\":\"unadapted\"},\"rules\":{\"reason\":\"公开规则源未适配，未请求账号登录\",\"state\":\"unadapted\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "xiaohongshu",
+      "config": "{\"adapter\":\"unadapted\",\"allowed_hosts\":[\"creator.xiaohongshu.com\",\"www.xiaohongshu.com\"],\"capability\":\"manual\",\"id\":\"xiaohongshu\",\"name\":\"小红书 创作者服务平台\",\"note\":\"登录限制；公开官方规则页待登记。\",\"platform\":\"小红书\",\"respect_robots\":true,\"scope\":\"长期机制、活动、流量扶持与规则\",\"url\":\"https://creator.xiaohongshu.com/\"}",
+      "last_attempt_at": "2026-10-01T16:55:46+00:00",
+      "last_fetched_at": null,
+      "last_success_at": null,
+      "status": "pending",
+      "message": "登录限制；公开官方规则页待登记。",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"登录限制；公开官方规则页待登记。\",\"state\":\"unadapted\"},\"rules\":{\"reason\":\"公开规则源未适配，未请求账号登录\",\"state\":\"unadapted\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "wechat",
+      "config": "{\"adapter\":\"unadapted\",\"allowed_hosts\":[\"mp.weixin.qq.com\"],\"capability\":\"manual\",\"id\":\"wechat\",\"name\":\"微信公众号 官方规则与激励\",\"note\":\"未提供可核验的公众号列表或全量接口；未适配，不做全平台覆盖承诺。\",\"platform\":\"公众号\",\"respect_robots\":true,\"scope\":\"创作者机制、平台政策与补贴\",\"url\":\"https://mp.weixin.qq.com/\"}",
+      "last_attempt_at": "2026-10-01T16:55:46+00:00",
+      "last_fetched_at": null,
+      "last_success_at": null,
+      "status": "pending",
+      "message": "未提供可核验的公众号列表或全量接口；未适配，不做全平台覆盖承诺。",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"未提供可核验的公众号列表或全量接口；未适配，不做全平台覆盖承诺。\",\"state\":\"unadapted\"},\"rules\":{\"reason\":\"公开规则源未适配，未请求账号登录\",\"state\":\"unadapted\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "douyin_selected",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"www.xingtu.cn\"],\"capability\":\"known_page\",\"id\":\"douyin_selected\",\"name\":\"抖音精选计划 官方说明\",\"note\":\"长期内容扶持不等于现金分成。加入条件与AI资格未核。\",\"platform\":\"抖音\",\"respect_robots\":true,\"scope\":\"长期精选倡议与限时子活动说明\",\"url\":\"https://www.xingtu.cn/help-center/demander/114908\"}",
+      "last_attempt_at": "2026-10-01T16:55:46+00:00",
+      "last_fetched_at": "2026-10-01T16:55:51+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "公开正文文本完整取得（2455字）；规则字段仍有缺口，图片 / 外链及账号资格另核",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_049bd503f051414ca721e85e2093c5c9.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_05cf49bae49b42cda25d8d66f821162c.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_22c76c9faefe4c6eb6cdc790efdf1c69.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_2a0505f2cd40487681c6fbf5f27c09cf.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_4deb55c1a06f404e86ae835ff58a067a.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_75519b6238074f9b91b466bccb187a50.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_855098866fb74785817bd66ac70ab6c2.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_9366228cc32140a18b14a8c803bd973b.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_9eb08dac525a4e23b07bcdce21b56db4.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_a424decb68844ed19f2fb552c3622349.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_b33411af43fe447d99eb83b925e349e5.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_bdfcaf8ba71041a6a1cc1a12f4beedc8.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_d23c417a3d0b41ba8bb4932449430ad3.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_daec25c72ad7484ab66fc0ca586aec2d.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_e1743ce11a8c4e29bf0ff96ce503f5c2.png\"],\"links\":[\"https://bytedance.larkoffice.com/docx/MyetdlCTwoQxqdxWUTXcnv6bnGc\",\"https://bytedance.larkoffice.com/docx/VrWrdRdWOosnEUxlTDFc8Yq9n5e\",\"https://www.xingtu.cn/help-center/demander/120245\"],\"reason\":\"官方 article-content 容器\",\"state\":\"text_complete\",\"text_chars\":2455},\"rules\":{\"fields\":{\"精选计划定位\":\"由抖音发起的长期优质创作倡议，旨在持续发现和鼓励更多受用户喜爱的好作品，不负热爱，创作常新，期待未来有更多好作品被看见，更多创作者在热爱中闪闪发光\",\"长期在线说明\":\"平台主推项目达人，长期在线\"},\"missing\":[\"创作者加入方式与资格\",\"收益与结算细则\",\"持续达标与退出条件\",\"专属AI内容资格\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": "2026-10-01T16:55:51+00:00"
+    },
+    {
+      "id": "douyin_partner_intro",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"www.xingtu.cn\"],\"capability\":\"known_page\",\"id\":\"douyin_partner_intro\",\"name\":\"创作者伙伴计划 官方升级说明\",\"note\":\"加入机会以作者页面、公告或站内信为准。\",\"platform\":\"抖音 / 西瓜\",\"respect_robots\":true,\"scope\":\"中视频升级说明\",\"url\":\"https://www.xingtu.cn/help-center/author/141762\"}",
+      "last_attempt_at": "2026-10-01T16:55:49+00:00",
+      "last_fetched_at": "2026-10-01T16:55:51+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "公开正文文本完整取得（2657字）；规则字段仍有缺口，图片 / 外链及账号资格另核",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_29043dec1b15464faa7aa60ff947242c.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_3bea1966e97647779d12a0f050467cf6.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_44761a3e5e1a40299f422411c53fb353.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_4bd6a33c95a54bf8a1658dbb5f458fe1.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_5908d151c6f94e3899d6d4a1558d568d.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_79a84405f43f4cba9cc6c5370e53ed2c.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_865e03590cea42f6bda3f305b6403bf5.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_8bf9d1b18b024a94a6748ed3ebfd9c1f.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_90046016ac424a18a696663c44768af4.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_9cd8137e9c5a431980e20fe5048a6c41.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_9e7c1fc3ca034d1aa4348ac3a15c6f02.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_afc306433f614e12a567273ee852e785.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_bb08d9c3e62f4270ab9991b54fa29d26.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_c8e0b90b8d5e47a9b1c45f286e1e3bf0.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_d0f9a22843544d96b9055809d7c65129.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_dc19fa20003c4d958b1485d8469c3dc2.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_de0147a5b6d343b4b05b36533de0de75.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_e26c5e1ac22e449abebe45849a4943d3.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_ec48a6e50e1f4d44a8435c7163a58b64.png\",\"https://lf3-star.xingtu.cn/obj/cognition-public/attachment_fd956b749c5c4876995a68733285dfa4.png\"],\"links\":[\"https://baike.toutiao.com/detail/192/567/0?enter_from=left_navigation\",\"https://i.snssdk.com/magic/eco/runtime/release/661ceef7d4f467070808af60?appType=ixigua&magic_page_no=1&magic_source=mu_jhgz_v3a1\",\"https://www.xingtu.cn/help-center/author/109194\",\"https://www.xingtu.cn/pages/help-center/author/article/detail/109250\",\"https://www.xingtu.cn/pages/help-center/author/article/detail/109266\"],\"reason\":\"官方 article-content 容器\",\"state\":\"text_complete\",\"text_chars\":2657},\"rules\":{\"fields\":{\"伙伴计划升级\":\"3.​分成升级：中视频伙伴计划会升级为全新的创作者伙伴计划，参与创作服务升级可优先加入全新分成计划，升级后分成条件将降低对内容体裁、横竖、时长的限制，更鼓励原创和优质。全新分成计划针对不同平台条件不同，抖音&西瓜分成条件及提现方式可见 创作者伙伴计划，头条分成条件及提现方式可见 头条视频创作收益；\"},\"missing\":[\"现行伙伴计划完整规则\",\"账号开放批次\",\"当前收益算法与结算\",\"专属AI内容资格\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": "2026-10-01T16:55:51+00:00"
+    },
+    {
+      "id": "douyin_partner_rules",
+      "config": "{\"adapter\":\"image_article\",\"allowed_hosts\":[\"i.snssdk.com\"],\"capability\":\"known_page\",\"id\":\"douyin_partner_rules\",\"name\":\"创作者伙伴计划 官方规则长图\",\"note\":\"官方不定期开放，账号定向 / 分批；不能当作常年开放。\",\"platform\":\"抖音 / 西瓜\",\"respect_robots\":true,\"scope\":\"六张官方规则长图；需OCR或人工\",\"url\":\"https://i.snssdk.com/magic/eco/runtime/release/661ceef7d4f467070808af60?appType=ixigua&magic_page_no=1&magic_source=mu_jhgz_v3a1\"}",
+      "last_attempt_at": "2026-10-01T16:55:49+00:00",
+      "last_fetched_at": "2026-09-30T03:37:13+00:00",
+      "last_success_at": null,
+      "status": "failed",
+      "message": "The read operation timed out；保留已保存内容，不视为无更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"The read operation timed out\",\"state\":\"failed\"},\"rules\":{\"reason\":\"请求失败，不代表规则没有更新\",\"state\":\"not_checked\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "bili_incentive",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"www.bilibili.com\"],\"capability\":\"known_page\",\"id\":\"bili_incentive\",\"name\":\"B站 视频创作激励 官方客服说明\",\"note\":\"不沿用2023旧门槛；AI作品资格待核。\",\"platform\":\"B站\",\"respect_robots\":true,\"scope\":\"2026-05-05官方客服条件与权益\",\"url\":\"https://www.bilibili.com/opus/1198858284376784900\"}",
+      "last_attempt_at": "2026-10-01T16:55:51+00:00",
+      "last_fetched_at": null,
+      "last_success_at": null,
+      "status": "failed",
+      "message": "官方页面返回访问限制 / 验证页面；未绕过",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"官方返回访问验证页，已停止该源\",\"state\":\"blocked\"},\"rules\":{\"reason\":\"未取得正文，保留独立人工证据\",\"state\":\"not_checked\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "bili_huahuo",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"e.bilibili.com\"],\"capability\":\"known_page\",\"id\":\"bili_huahuo\",\"name\":\"B站 花火官方平台定义\",\"note\":\"不是保底补贴或播放分成。当前准入门槛未核。\",\"platform\":\"B站\",\"respect_robots\":true,\"scope\":\"商业合作撮合机制\",\"url\":\"https://e.bilibili.com/observe/observe_1.html\"}",
+      "last_attempt_at": "2026-10-01T16:55:51+00:00",
+      "last_fetched_at": "2026-10-01T16:56:05+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "取得部分页面文字，正文 / 规则结构尚不完整；不能判定没有更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"https://i0.hdslb.com/bfs/activity-plat/static/20200811/8a3e1fa14e30dc3be9c5324f604e5991/4aOS-fsRrq.png\",\"https://i0.hdslb.com/bfs/activity-plat/static/20200811/8a3e1fa14e30dc3be9c5324f604e5991/4k0K4-5fsX.png\",\"https://i0.hdslb.com/bfs/activity-plat/static/20200811/8a3e1fa14e30dc3be9c5324f604e5991/RQ-E5sfX4q.png\",\"https://i0.hdslb.com/bfs/activity-plat/static/20200811/8a3e1fa14e30dc3be9c5324f604e5991/Sc26AxR4Er.png\",\"https://i0.hdslb.com/bfs/activity-plat/static/20200811/8a3e1fa14e30dc3be9c5324f604e5991/ioPw6WBZNG.png\",\"https://i0.hdslb.com/bfs/activity-plat/static/20200811/8a3e1fa14e30dc3be9c5324f604e5991/n~tFoOqQlp.png\",\"https://i0.hdslb.com/bfs/activity-plat/static/20200811/8a3e1fa14e30dc3be9c5324f604e5991/tRs8V94myS.jpg\"],\"links\":[],\"reason\":\"指定公告正文结构尚未适配\",\"state\":\"partial_text\",\"text_chars\":420},\"rules\":{\"fields\":{},\"missing\":[\"完整活动/机制条款\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "bili_huahuo_rules",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"www.bilibili.com\"],\"capability\":\"known_page\",\"id\":\"bili_huahuo_rules\",\"name\":\"B站 花火贝壳结算规则\",\"note\":\"选择贝壳自提的个人订单，完成T+1转贝壳；其余模式不据此推断。\",\"platform\":\"B站\",\"respect_robots\":true,\"scope\":\"2025-10-01结算改动官方页\",\"url\":\"https://www.bilibili.com/blackboard/activity-EHM5wokgqh.html\"}",
+      "last_attempt_at": "2026-10-01T16:56:00+00:00",
+      "last_fetched_at": "2026-10-01T16:56:06+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "公开正文文本完整取得（3548字）；规则字段仍有缺口，图片 / 外链及账号资格另核",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"https://i0.hdslb.com/bfs/activity-plat/static/d9d24858b6eba6069b98cd5e9575c01f/05WcZaSMen.png\",\"https://i0.hdslb.com/bfs/activity-plat/static/d9d24858b6eba6069b98cd5e9575c01f/65YmlUi0rc.png\",\"https://i0.hdslb.com/bfs/activity-plat/static/d9d24858b6eba6069b98cd5e9575c01f/ZzlOJf1A98.png\",\"https://i0.hdslb.com/bfs/activity-plat/static/d9d24858b6eba6069b98cd5e9575c01f/cfaxqu9tqm.png\",\"https://i0.hdslb.com/bfs/activity-plat/static/d9d24858b6eba6069b98cd5e9575c01f/sEkBJzIJZR.png\"],\"links\":[\"https://huahuo.bilibili.com/#/help/detail/?domain=up-v2&title=%E7%BA%BF%E4%B8%8A%E7%BB%93%E7%AE%97%E5%8D%95%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B%EF%BC%9F%E6%88%91%E4%BB%AC%E6%80%8E%E4%B9%88%E5%BC%80%E7%A5%A8%E7%BB%99%E5%B9%B3%E5%8F%B0%EF%BC%9F&id=577\",\"https://www.bilibili.com/blackboard/activity-buBLKxnmS1.html\"],\"reason\":\"公开 __initialState JSON 的全部富文本组件\",\"state\":\"text_complete\",\"text_chars\":3548},\"rules\":{\"fields\":{\"到账时点\":\"2025年10月1日0点起，花火平台所有采用个人结算的UP主*，在您确认结算方式变更为【贝壳自提】后，您当前花火钱包内的余额（如有）及此后的花火订单收益，会在花火订单完成后T+1个自然日自动转入您的贝壳钱包，UP主可前往贝壳钱包自行操作提现。\",\"提现入口\":\"贝壳钱包操作入口为【B站APP-我的-我的钱包-我的收入-贝壳提现】。具体提现规则和计税规则请前往贝壳查看：《关于UP主提现系统的更新说明》。\",\"规则生效\":\"2025年10月1日0点起，花火平台所有采用个人结算的UP主*，在您确认结算方式变更为【贝壳自提】后，您当前花火钱包内的余额（如有）及此后的花火订单收益，会在花火订单完成后T+1个自然日自动转入您的贝壳钱包，UP主可前往贝壳钱包自行操作提现。\",\"适用结算方式\":\"2025年10月1日0点起，花火平台所有采用个人结算的UP主*，在您确认结算方式变更为【贝壳自提】后，您当前花火钱包内的余额（如有）及此后的花火订单收益，会在花火订单完成后T+1个自然日自动转入您的贝壳钱包，UP主可前往贝壳钱包自行操作提现。\"},\"missing\":[\"链接中的完整提现与计税条款\",\"后续版本有效性\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": "2026-10-01T16:56:06+00:00"
+    },
+    {
+      "id": "xhs_pgy",
+      "config": "{\"adapter\":\"homepage\",\"allowed_hosts\":[\"pgy.xiaohongshu.com\"],\"capability\":\"known_page\",\"id\":\"xhs_pgy\",\"name\":\"小红书 蒲公英（候选）\",\"note\":\"登录态未接通，不能据首页判断AI内容准入或收益。\",\"platform\":\"小红书\",\"respect_robots\":true,\"scope\":\"官方候选入口，规则与门槛待核\",\"url\":\"https://pgy.xiaohongshu.com/microapp/distribution/home\"}",
+      "last_attempt_at": "2026-10-01T16:56:02+00:00",
+      "last_fetched_at": "2026-09-30T03:37:15+00:00",
+      "last_success_at": null,
+      "status": "failed",
+      "message": "robots入口返回验证/应用页面；无法确认访问策略，停止该源；保留已保存内容，不视为无更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"robots入口返回验证/应用页面；无法确认访问策略，停止该源\",\"state\":\"failed\"},\"rules\":{\"reason\":\"请求失败，不代表规则没有更新\",\"state\":\"not_checked\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "jingrui_2026",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"jingrui-ai-competition.youku.com\"],\"capability\":\"known_page\",\"id\":\"jingrui_2026\",\"name\":\"鲸锐AI创作大赛官方规则\",\"note\":\"JS外壳不等于规则全文；未登录投稿端，人工证据保留。\",\"platform\":\"优酷 / 虎鲸文娱\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://jingrui-ai-competition.youku.com/?view=rules\"}",
+      "last_attempt_at": "2026-10-01T16:56:02+00:00",
+      "last_fetched_at": "2026-10-01T16:56:08+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "取得部分页面文字，正文 / 规则结构尚不完整；不能判定没有更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[],\"links\":[],\"reason\":\"指定公告正文结构尚未适配\",\"state\":\"no_text\",\"text_chars\":8},\"rules\":{\"fields\":{},\"missing\":[\"完整活动/机制条款\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "jinji_ai_2026",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"www.xmwenlian.com\"],\"capability\":\"known_page\",\"id\":\"jinji_ai_2026\",\"name\":\"2026金鸡AI影展官方公告（文联发布）\",\"note\":\"公告来源中国金鸡百花电影节；可抓取正文，二维码与报名表未核；原文未注明时区。\",\"platform\":\"金鸡百花电影节\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://www.xmwenlian.com/home/article/detail/id/7928.html\"}",
+      "last_attempt_at": "2026-10-01T16:56:05+00:00",
+      "last_fetched_at": "2026-10-01T16:56:13+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "公开正文文本完整取得（2097字）；规则字段仍有缺口，图片 / 外链及账号资格另核",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"https://www.xmwenlian.com/Uploads/Editor/images/2026-09-14/6aa7548dcdb2f.png\",\"https://www.xmwenlian.com/Uploads/Editor/images/2026-09-14/6aa754c3e7eb9.png\",\"https://www.xmwenlian.com/Uploads/Editor/images/2026-09-14/6aa75776b9c6e.png\"],\"links\":[],\"reason\":\"厦门市文联 br2 公告正文容器\",\"state\":\"text_complete\",\"text_chars\":2097},\"rules\":{\"fields\":{\"AI画面占比与标识\":\"3. 影片AI生成画面占比≥50%，片头统一标注“本片含AI生成画面”；\",\"影游联动邮箱\":\"AIGC影游联动单元（游戏IP改编方向）：AI@bigscreen1950.com\",\"截止原文\":\"作品征集自公告发布之日起开放，申报截止时间：2026年10月5日24时，逾期不予受理。\",\"报名费用\":\"1. 本次影展全程免收申报报名费；\",\"版权归属与使用范围\":\"3. 组委会拥有入围作品非商业公益展映、线上宣传、行业论坛放映使用权，作品完整著作权归申报创作方所有；\",\"科影融合邮箱\":\"AIGC科影融合单元（科学传播方向）：zgkpzx@kpcswa.org.cn\"},\"missing\":[\"公告未注明截止时区\",\"二维码报名入口与报名表尚未核验\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": "2026-10-01T16:56:13+00:00"
+    },
+    {
+      "id": "cuc_aigc_2026",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"www.cuc.edu.cn\"],\"capability\":\"known_page\",\"id\":\"cuc_aigc_2026\",\"name\":\"中传2026 AIGC与可视化大赛官方通知\",\"note\":\"完整章程DOCX未读；学校通知不是教育部竞赛目录证明。\",\"platform\":\"中国传媒大学\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://www.cuc.edu.cn/2026/0811/c10001a273225/page.htm\"}",
+      "last_attempt_at": "2026-10-01T16:56:06+00:00",
+      "last_fetched_at": "2026-10-01T16:56:15+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "取得部分页面文字，正文 / 规则结构尚不完整；不能判定没有更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"https://www.cuc.edu.cn/_upload/article/images/f2/f7/0a101caf40d9bded533564ac9927/56022c91-c623-4de9-9ab7-2e65210fd5a3.png\",\"https://www.cuc.edu.cn/_upload/tpl/02/d4/724/template724/images/logo.svg\",\"https://www.cuc.edu.cn/_upload/tpl/02/d4/724/template724/images/logo2.svg\",\"https://www.cuc.edu.cn/_upload/tpl/02/d4/724/template724/images/logo_cai.svg\",\"https://www.cuc.edu.cn/_upload/tpl/02/d4/724/template724/images/tago.png\",\"https://www.cuc.edu.cn/_upload/tpl/02/d4/724/template724/images/top.svg\",\"https://www.cuc.edu.cn/_visitcount?siteId=5&type=3&articleId=273225\"],\"links\":[\"https://beian.miit.gov.cn/\",\"https://cucef.cuc.edu.cn/\",\"https://dyjs.cuc.edu.cn/gsapp/sys/emaphome/portal/index.do\",\"https://dzpz.cuc.edu.cn/\",\"https://educen.cuc.edu.cn/\",\"https://educen.cuc.edu.cn/8424/list.htm\",\"https://fnc.cuc.edu.cn/\",\"https://gaozhi.cuc.edu.cn/\",\"https://gnc.cuc.edu.cn/\",\"https://gs.cuc.edu.cn/10144/list.htm\",\"https://gs.cuc.edu.cn/py/5007/list.htm\",\"https://i.cuc.edu.cn/\",\"https://icuc.cuc.edu.cn/\",\"https://icuc.cuc.edu.cn/2618/list.htm\",\"https://icuc.cuc.edu.cn/7289/list.htm\",\"https://ilib.cuc.edu.cn\",\"https://international.cuc.edu.cn/\",\"https://its.cuc.edu.cn/fwtzzn/list.htm\",\"https://jobs.cuc.edu.cn/#/app/CUC/epxing_recruit/zpwz\",\"https://jwc.cuc.edu.cn/cs/list.htm\",\"https://jwc.cuc.edu.cn/jxcgj_10659/list.htm\",\"https://jwc.cuc.edu.cn/jxms/list.htm\",\"https://jwc.cuc.edu.cn/kcjs/list.htm\",\"https://jwc.cuc.edu.cn/sjjy/list.htm\",\"https://jwc.cuc.edu.cn/tsjy/list.htm\",\"https://jxgz.cuc.edu.cn/\",\"https://jxgz.cuc.edu.cn/zyjygjwykwxm_11448/list.htm\",\"https://jxjy.cuc.edu.cn\",\"https://jy.cuc.edu.cn/\",\"https://mail.cuc.edu.cn/\",\"https://mba.cuc.edu.cn/\",\"https://mpa.cuc.edu.cn/\",\"https://oa.cuc.edu.cn/\",\"https://periodical.cuc.edu.cn/\",\"https://prevby.cuc.edu.cn\",\"https://research.cuc.edu.cn/\",\"https://srv.cuc.edu.cn/\",\"https://srv.cuc.edu.cn/8886/list.htm\",\"https://study.enaea.edu.cn/login.do\",\"https://vpn.cuc.edu.cn/\",\"https://www.chsi.com.cn/\",\"https://www.cuc.edu.cn/10001/list.htm\",\"https://www.cuc.edu.cn/10025/list.htm\",\"https://www.cuc.edu.cn/10050/list.htm\",\"https://www.cuc.edu.cn/10052/list.htm\",\"https://www.cuc.edu.cn/10054/list.htm\",\"https://www.cuc.edu.cn/10092/list.htm\",\"https://www.cuc.edu.cn/10093/list.htm\",\"https://www.cuc.edu.cn/10095/list.htm\",\"https://www.cuc.edu.cn/10220/list.htm\",\"https://www.cuc.edu.cn/10221/list.htm\",\"https://www.cuc.edu.cn/10794/list.htm\",\"https://www.cuc.edu.cn/10795/list.htm\",\"https://www.cuc.edu.cn/10796/list.htm\",\"https://www.cuc.edu.cn/10797/list.htm\",\"https://www.cuc.edu.cn/10798/list.htm\",\"https://www.cuc.edu.cn/10799/list.htm\",\"https://www.cuc.edu.cn/1369/list.htm\",\"https://www.cuc.edu.cn/1374/list.htm\",\"https://www.cuc.edu.cn/1375/list.htm\",\"https://www.cuc.edu.cn/1376/list.htm\",\"https://www.cuc.edu.cn/1377/list.htm\",\"https://www.cuc.edu.cn/1379/list.htm\",\"https://www.cuc.edu.cn/1380/list.htm\",\"https://www.cuc.edu.cn/9984/list.htm\",\"https://www.cuc.edu.cn/9996/list.htm\",\"https://www.cuc.edu.cn/9997/list.htm\",\"https://www.cuc.edu.cn/9998/list.htm\",\"https://www.cuc.edu.cn/9999/list.htm\",\"https://www.cuc.edu.cn/aqscz1/list.htm\",\"https://www.cuc.edu.cn/byw/list.htm\",\"https://www.cuc.edu.cn/cmjt/list.htm\",\"https://www.cuc.edu.cn/cucnews/\",\"https://www.cuc.edu.cn/dtqh/list.htm\",\"https://www.cuc.edu.cn/jbbf/list.htm\",\"https://www.cuc.edu.cn/jrtj_10844/list.htm\",\"https://www.cuc.edu.cn/jwsj/list.htm\",\"https://www.cuc.edu.cn/main.htm\",\"https://www.cuc.edu.cn/news/\",\"https://www.cuc.edu.cn/rcpywlw/list.htm\",\"https://www.cuc.edu.cn/sjdt/list.htm\",\"https://www.cuc.edu.cn/sjhz/list.htm\",\"https://www.cuc.edu.cn/sp/list.htm\",\"https://www.cuc.edu.cn/spcs/list.htm\",\"https://www.cuc.edu.cn/sysp/list.htm\",\"https://www.cuc.edu.cn/sysp1/list.htm\",\"https://www.cuc.edu.cn/tpk/list.htm\",\"https://www.cuc.edu.cn/tsxy/list.htm\",\"https://www.cuc.edu.cn/tzgg_10851/list.htm\",\"https://www.cuc.edu.cn/xrld2/list.htm\",\"https://www.cuc.edu.cn/xrldtsy/list.htm\",\"https://www.cuc.edu.cn/xxgk/list.htm\",\"https://www.cuc.edu.cn/xyshwxw/list.htm\",\"https://www.cuc.edu.cn/zcxw/list.htm\",\"https://www.cuc.edu.cn/zlcs/list.htm\",\"https://www.cuc.edu.cn/zsjy/list.htm\",\"https://www.cuc.edu.cn/zsjywbjw/list.htm\",\"https://www.cuc.edu.cn/zsxx/list.htm\",\"https://www.cuc.edu.cn/zt/list.htm\",\"https://www.cuc.edu.cn/ztwz/list.htm\",\"https://www.cuc.edu.cn/zxgx/list.htm\",\"https://www.most.gov.cn/index.html\",\"https://www.nsfc.gov.cn/\",\"https://xgw.cuc.edu.cn/\",\"https://xiaoyou.cuc.edu.cn/\",\"https://xxgk.cuc.edu.cn/\",\"https://xyy.cuc.edu.cn/\",\"https://yjs.cuc.edu.cn/yjsxkapp/sys/xsxkapp/index.html\",\"https://yz.cuc.edu.cn/\",\"https://zchq.cuc.edu.cn/\",\"https://zhaosheng.cuc.edu.cn/\",\"https://zikao.cuc.edu.cn/\"],\"reason\":\"指定公告正文结构尚未适配\",\"state\":\"partial_text\",\"text_chars\":2769},\"rules\":{\"fields\":{},\"missing\":[\"完整活动/机制条款\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "smg_seko_2026",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"seko.sensetime.com\"],\"capability\":\"known_page\",\"id\":\"smg_seko_2026\",\"name\":\"SMG创所未见年度AI短片计划\",\"note\":\"页面截止与正文暂定并存；暂定日期不触发自动归档。\",\"platform\":\"SMG / Seko\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://seko.sensetime.com/activity/2079017609580478466\"}",
+      "last_attempt_at": "2026-10-01T16:56:06+00:00",
+      "last_fetched_at": "2026-10-01T16:56:18+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "取得部分页面文字，正文 / 规则结构尚不完整；不能判定没有更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"https://seko-resource.sensetime.com/STS/animo/dev/resource/publicVideo/20260724published/7e44080309ea95e7bf657ce0b6c6d762.png\"],\"links\":[\"https://my.feishu.cn/drive/folder/AjaAfY83WlqwfudtGYhce2gKnOg\",\"https://seko.sensetime.com/avatar-video\",\"https://seko.sensetime.com/characters\",\"https://seko.sensetime.com/explore\",\"https://seko.sensetime.com/my-space\",\"https://seko.sensetime.com/skill-community\"],\"reason\":\"指定公告正文结构尚未适配\",\"state\":\"partial_text\",\"text_chars\":1956},\"rules\":{\"fields\":{},\"missing\":[\"完整活动/机制条款\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "vacat_2026",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"www.lg.gov.cn\"],\"capability\":\"known_page\",\"id\":\"vacat_2026\",\"name\":\"瓦卡奖VACAT2026政府通知\",\"note\":\"10月20日只适用穹顶巨幕特别赛道；详细格式及版权未核。\",\"platform\":\"抖音 / 上影\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://www.lg.gov.cn/gkmlpt/content/12/12890/post_12890803.html\"}",
+      "last_attempt_at": "2026-10-01T16:56:08+00:00",
+      "last_fetched_at": null,
+      "last_success_at": null,
+      "status": "failed",
+      "message": "<urlopen error [SSL: BAD_ECPOINT] bad ecpoint (_ssl.c:1010)>；保留已保存内容，不视为无更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"<urlopen error [SSL: BAD_ECPOINT] bad ecpoint (_ssl.c:1010)>\",\"state\":\"failed\"},\"rules\":{\"reason\":\"请求失败，不代表规则没有更新\",\"state\":\"not_checked\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "bjiff_aigc_2026",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"www.bjiff.com\"],\"capability\":\"known_page\",\"id\":\"bjiff_aigc_2026\",\"name\":\"北影节2026 AIGC单元官方公告\",\"note\":\"2026已截止，2027未有已核公告；通义万相奖金仅属于专属子赛道。\",\"platform\":\"北京国际电影节\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://www.bjiff.com/bannergdtp/202602/t20260203_188677.html\"}",
+      "last_attempt_at": "2026-10-01T16:56:13+00:00",
+      "last_fetched_at": "2026-10-01T16:56:22+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "取得部分页面文字，正文 / 规则结构尚不完整；不能判定没有更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"https://www.bjiff.com/bannergdtp/202602/W020260203450094034756.jpg\",\"https://www.bjiff.com/bannergdtp/202602/W020260203450094195399.jpg\",\"https://www.bjiff.com/images/logo_hq.png\",\"https://www.bjiff.com/images/pc_partner.png\"],\"links\":[\"https://beian.miit.gov.cn/#/\"],\"reason\":\"指定公告正文结构尚未适配\",\"state\":\"partial_text\",\"text_chars\":4655},\"rules\":{\"fields\":{},\"missing\":[\"完整活动/机制条款\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "student_tv_2026",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"comm.ecnu.edu.cn\"],\"capability\":\"known_page\",\"id\":\"student_tv_2026\",\"name\":\"上海大学生电视节2026 AI视频大赛通知\",\"note\":\"人工核验条款独立保存；自动正文、规则字段与账号资格分别报告。\",\"platform\":\"上海大学生电视节\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://comm.ecnu.edu.cn/c3/c5/c51744a771013/page.htm\"}",
+      "last_attempt_at": "2026-10-01T16:56:15+00:00",
+      "last_fetched_at": "2026-10-01T16:56:23+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "取得部分页面文字，正文 / 规则结构尚不完整；不能判定没有更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"https://comm.ecnu.edu.cn/_upload/site/03/3c/828/logo.png\",\"https://comm.ecnu.edu.cn/_upload/tpl/15/06/5382/template5382/images/logo2.png\",\"https://comm.ecnu.edu.cn/_visitcount?siteId=828&type=3&articleId=771013\",\"https://mmbiz.qpic.cn/mmbiz_png/8ia8TAN7AMh5L5e3DZdJtiaNU2SwAX9UFmNHwqs0TDjgyr4eb0P5omj51hLKplUbVyD1Y204xd2zCWJYWYzNnwGmkcfaA8x6tB0iczt1PPRXicE/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=6\",\"https://mmbiz.qpic.cn/mmbiz_png/8ia8TAN7AMh7YXLFMFxrf64S1A9DCvumASam1Zv714gyV1SPSInqEuLPLv7MLTrUyAIndp5yNjvU2eEl7O5aSmKxtXOB3hZIEeT7XxtcWjeY/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=1\",\"https://mmbiz.qpic.cn/sz_mmbiz_png/8ia8TAN7AMh5I4Hmo5GMjAia6lMouZ31EIpWb7HeQWHBy0tvJIIibMKPvbNuxVHxvCQBPBQAzo13gztGoQ7ib2BEQZykRQCt8bsOfDPcjmphL78/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=5\"],\"links\":[\"https://comm.ecnu.edu.cn/41499/list.htm\",\"https://comm.ecnu.edu.cn/41500/list.htm\",\"https://comm.ecnu.edu.cn/41502/list.htm\",\"https://comm.ecnu.edu.cn/41503/list.htm\",\"https://comm.ecnu.edu.cn/41504/list.htm\",\"https://comm.ecnu.edu.cn/41505/list.htm\",\"https://comm.ecnu.edu.cn/41506/list.htm\",\"https://comm.ecnu.edu.cn/41509/list.htm\",\"https://comm.ecnu.edu.cn/41511/list.htm\",\"https://comm.ecnu.edu.cn/41512/list.htm\",\"https://comm.ecnu.edu.cn/41520/list.htm\",\"https://comm.ecnu.edu.cn/41560/list.htm\",\"https://comm.ecnu.edu.cn/41561/list.htm\",\"https://comm.ecnu.edu.cn/41562/list.htm\",\"https://comm.ecnu.edu.cn/41563/list.htm\",\"https://comm.ecnu.edu.cn/41578/list.htm\",\"https://comm.ecnu.edu.cn/41587/list.htm\",\"https://comm.ecnu.edu.cn/41611/list.htm\",\"https://comm.ecnu.edu.cn/41612/list.htm\",\"https://comm.ecnu.edu.cn/_web/_search/api/search/new.rst?locale=zh_CN&request_locale=zh_CN&_p=YXM9ODI4JnQ9NTM4MiZkPTE4Mjk2JnA9MSZtPUMm\",\"https://comm.ecnu.edu.cn/dxcb/list.htm\",\"https://comm.ecnu.edu.cn/jldt/list.htm\",\"https://comm.ecnu.edu.cn/jlxm/list.htm\",\"https://comm.ecnu.edu.cn/main.htm\",\"https://comm.ecnu.edu.cn/xrld/list.htm\",\"https://comm.ecnu.edu.cn/xzjg/list.htm\",\"https://comm.ecnu.edu.cn/yjjg/list.htm\",\"https://elearning.ecnu.edu.cn/\",\"https://houqin.ecnu.edu.cn/28837/list.htm\",\"https://labcomm.ecnu.edu.cn\",\"https://lib.ecnu.edu.cn/\",\"https://portal2020.ecnu.edu.cn/mydashboard\",\"https://u-office.ecnu.edu.cn/xiaoli/\",\"https://www.ecnu.edu.cn/\"],\"reason\":\"指定公告正文结构尚未适配\",\"state\":\"partial_text\",\"text_chars\":3097},\"rules\":{\"fields\":{},\"missing\":[\"完整活动/机制条款\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "aniwow_2026",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"www.cuc.edu.cn\"],\"capability\":\"known_page\",\"id\":\"aniwow_2026\",\"name\":\"Aniwow2026白杨奖官方通知\",\"note\":\"人工核验条款独立保存；自动正文、规则字段与账号资格分别报告。\",\"platform\":\"Aniwow / 中国传媒大学\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://www.cuc.edu.cn/2026/0825/c10001a273403/page.htm\"}",
+      "last_attempt_at": "2026-10-01T16:56:16+00:00",
+      "last_fetched_at": "2026-10-01T16:56:24+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "取得部分页面文字，正文 / 规则结构尚不完整；不能判定没有更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"https://www.cuc.edu.cn/_upload/article/images/d8/d9/cd39890549a4a919d0800741fced/4472f00c-d947-4d8b-9408-94fd7329c14f.jpg\",\"https://www.cuc.edu.cn/_upload/article/images/d8/d9/cd39890549a4a919d0800741fced/4d226a94-0d5a-4fd9-9df7-e1e4c7081b1c.png\",\"https://www.cuc.edu.cn/_upload/article/images/d8/d9/cd39890549a4a919d0800741fced/f146f658-b36d-4c53-baac-bb3248bf859c.png\",\"https://www.cuc.edu.cn/_upload/tpl/02/d4/724/template724/images/logo.svg\",\"https://www.cuc.edu.cn/_upload/tpl/02/d4/724/template724/images/logo2.svg\",\"https://www.cuc.edu.cn/_upload/tpl/02/d4/724/template724/images/logo_cai.svg\",\"https://www.cuc.edu.cn/_upload/tpl/02/d4/724/template724/images/tago.png\",\"https://www.cuc.edu.cn/_upload/tpl/02/d4/724/template724/images/top.svg\",\"https://www.cuc.edu.cn/_visitcount?siteId=5&type=3&articleId=273403\"],\"links\":[\"https://beian.miit.gov.cn/\",\"https://cucef.cuc.edu.cn/\",\"https://dyjs.cuc.edu.cn/gsapp/sys/emaphome/portal/index.do\",\"https://dzpz.cuc.edu.cn/\",\"https://educen.cuc.edu.cn/\",\"https://educen.cuc.edu.cn/8424/list.htm\",\"https://filmfreeway.com/Aniwow2026欢迎各高校以集体方式统一递交作品。如遇投递相关问题，可通过邮件咨询。\",\"https://fnc.cuc.edu.cn/\",\"https://gaozhi.cuc.edu.cn/\",\"https://gnc.cuc.edu.cn/\",\"https://gs.cuc.edu.cn/10144/list.htm\",\"https://gs.cuc.edu.cn/py/5007/list.htm\",\"https://i.cuc.edu.cn/\",\"https://icuc.cuc.edu.cn/\",\"https://icuc.cuc.edu.cn/2618/list.htm\",\"https://icuc.cuc.edu.cn/7289/list.htm\",\"https://ilib.cuc.edu.cn\",\"https://international.cuc.edu.cn/\",\"https://its.cuc.edu.cn/fwtzzn/list.htm\",\"https://jobs.cuc.edu.cn/#/app/CUC/epxing_recruit/zpwz\",\"https://jwc.cuc.edu.cn/cs/list.htm\",\"https://jwc.cuc.edu.cn/jxcgj_10659/list.htm\",\"https://jwc.cuc.edu.cn/jxms/list.htm\",\"https://jwc.cuc.edu.cn/kcjs/list.htm\",\"https://jwc.cuc.edu.cn/sjjy/list.htm\",\"https://jwc.cuc.edu.cn/tsjy/list.htm\",\"https://jxgz.cuc.edu.cn/\",\"https://jxgz.cuc.edu.cn/zyjygjwykwxm_11448/list.htm\",\"https://jxjy.cuc.edu.cn\",\"https://jy.cuc.edu.cn/\",\"https://mail.cuc.edu.cn/\",\"https://mba.cuc.edu.cn/\",\"https://mpa.cuc.edu.cn/\",\"https://oa.cuc.edu.cn/\",\"https://periodical.cuc.edu.cn/\",\"https://prevby.cuc.edu.cn\",\"https://research.cuc.edu.cn/\",\"https://srv.cuc.edu.cn/\",\"https://srv.cuc.edu.cn/8886/list.htm\",\"https://study.enaea.edu.cn/login.do\",\"https://vpn.cuc.edu.cn/\",\"https://www.chsi.com.cn/\",\"https://www.cuc.edu.cn/10001/list.htm\",\"https://www.cuc.edu.cn/10025/list.htm\",\"https://www.cuc.edu.cn/10050/list.htm\",\"https://www.cuc.edu.cn/10052/list.htm\",\"https://www.cuc.edu.cn/10054/list.htm\",\"https://www.cuc.edu.cn/10092/list.htm\",\"https://www.cuc.edu.cn/10093/list.htm\",\"https://www.cuc.edu.cn/10095/list.htm\",\"https://www.cuc.edu.cn/10220/list.htm\",\"https://www.cuc.edu.cn/10221/list.htm\",\"https://www.cuc.edu.cn/10794/list.htm\",\"https://www.cuc.edu.cn/10795/list.htm\",\"https://www.cuc.edu.cn/10796/list.htm\",\"https://www.cuc.edu.cn/10797/list.htm\",\"https://www.cuc.edu.cn/10798/list.htm\",\"https://www.cuc.edu.cn/10799/list.htm\",\"https://www.cuc.edu.cn/1369/list.htm\",\"https://www.cuc.edu.cn/1374/list.htm\",\"https://www.cuc.edu.cn/1375/list.htm\",\"https://www.cuc.edu.cn/1376/list.htm\",\"https://www.cuc.edu.cn/1377/list.htm\",\"https://www.cuc.edu.cn/1379/list.htm\",\"https://www.cuc.edu.cn/1380/list.htm\",\"https://www.cuc.edu.cn/9984/list.htm\",\"https://www.cuc.edu.cn/9996/list.htm\",\"https://www.cuc.edu.cn/9997/list.htm\",\"https://www.cuc.edu.cn/9998/list.htm\",\"https://www.cuc.edu.cn/9999/list.htm\",\"https://www.cuc.edu.cn/aqscz1/list.htm\",\"https://www.cuc.edu.cn/byw/list.htm\",\"https://www.cuc.edu.cn/cmjt/list.htm\",\"https://www.cuc.edu.cn/cucnews/\",\"https://www.cuc.edu.cn/dtqh/list.htm\",\"https://www.cuc.edu.cn/jbbf/list.htm\",\"https://www.cuc.edu.cn/jrtj_10844/list.htm\",\"https://www.cuc.edu.cn/jwsj/list.htm\",\"https://www.cuc.edu.cn/main.htm\",\"https://www.cuc.edu.cn/news/\",\"https://www.cuc.edu.cn/rcpywlw/list.htm\",\"https://www.cuc.edu.cn/sjdt/list.htm\",\"https://www.cuc.edu.cn/sjhz/list.htm\",\"https://www.cuc.edu.cn/sp/list.htm\",\"https://www.cuc.edu.cn/spcs/list.htm\",\"https://www.cuc.edu.cn/sysp/list.htm\",\"https://www.cuc.edu.cn/sysp1/list.htm\",\"https://www.cuc.edu.cn/tpk/list.htm\",\"https://www.cuc.edu.cn/tsxy/list.htm\",\"https://www.cuc.edu.cn/tzgg_10851/list.htm\",\"https://www.cuc.edu.cn/xrld2/list.htm\",\"https://www.cuc.edu.cn/xrldtsy/list.htm\",\"https://www.cuc.edu.cn/xxgk/list.htm\",\"https://www.cuc.edu.cn/xyshwxw/list.htm\",\"https://www.cuc.edu.cn/zcxw/list.htm\",\"https://www.cuc.edu.cn/zlcs/list.htm\",\"https://www.cuc.edu.cn/zsjy/list.htm\",\"https://www.cuc.edu.cn/zsjywbjw/list.htm\",\"https://www.cuc.edu.cn/zsxx/list.htm\",\"https://www.cuc.edu.cn/zt/list.htm\",\"https://www.cuc.edu.cn/ztwz/list.htm\",\"https://www.cuc.edu.cn/zxgx/list.htm\",\"https://www.most.gov.cn/index.html\",\"https://www.nsfc.gov.cn/\",\"https://xgw.cuc.edu.cn/\",\"https://xiaoyou.cuc.edu.cn/\",\"https://xxgk.cuc.edu.cn/\",\"https://xyy.cuc.edu.cn/\",\"https://yjs.cuc.edu.cn/yjsxkapp/sys/xsxkapp/index.html\",\"https://yz.cuc.edu.cn/\",\"https://zchq.cuc.edu.cn/\",\"https://zhaosheng.cuc.edu.cn/\",\"https://zikao.cuc.edu.cn/\"],\"reason\":\"指定公告正文结构尚未适配\",\"state\":\"partial_text\",\"text_chars\":5099},\"rules\":{\"fields\":{},\"missing\":[\"完整活动/机制条款\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "aaiff_2026",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"aaiff.ai\"],\"capability\":\"known_page\",\"id\":\"aaiff_2026\",\"name\":\"Astana AAIFF2026现行条款\",\"note\":\"条款9月15日更新，截止9月7日；投资与奖金分开，跨境上传/收款资格未核。\",\"platform\":\"Astana AI Film Festival\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://aaiff.ai/terms\"}",
+      "last_attempt_at": "2026-10-01T16:56:18+00:00",
+      "last_fetched_at": "2026-10-01T16:56:25+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "取得部分页面文字，正文 / 规则结构尚不完整；不能判定没有更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"https://aaiff.ai/logo.svg\",\"https://aaiff.ai/sponsor-freedom-black.png\",\"https://aaiff.ai/sponsor-freedom-white.png\",\"https://aaiff.ai/sponsor-networkschool-black.png\",\"https://aaiff.ai/sponsor-networkschool-white.png\"],\"links\":[\"https://aaiff.ai/#contest\",\"https://aaiff.ai/#events\",\"https://aaiff.ai/#faq\",\"https://aaiff.ai/#jury\",\"https://aaiff.ai/#roadmap\",\"https://aaiff.ai/#rules\",\"https://aaiff.ai/#stats\",\"https://aaiff.ai/privacy-policy\",\"https://aaiff.ai/terms\",\"https://t.me/AAIFF_bot\",\"https://www.instagram.com/aaiff.ai/\",\"https://x.com/AstanaAIFF\"],\"reason\":\"指定公告正文结构尚未适配\",\"state\":\"partial_text\",\"text_chars\":25492},\"rules\":{\"fields\":{},\"missing\":[\"完整活动/机制条款\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "first_2026",
+      "config": "{\"adapter\":\"unadapted\",\"allowed_hosts\":[\"www.firstfilm.org.cn\"],\"capability\":\"manual\",\"id\":\"first_2026\",\"name\":\"FIRST2026超短片官方章程PDF\",\"note\":\"官方PDF人工核验移交；本地自动正文解析尚未适配，未猜截止。\",\"platform\":\"FIRST青年电影展\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://www.firstfilm.org.cn/wp-content/uploads/2026/03/%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%B1%8AFIRST%E9%9D%92%E5%B9%B4%E7%94%B5%E5%B1%95%E8%B6%85%E7%9F%AD%E7%89%87%E5%8D%95%E5%85%83%E7%AB%A0%E7%A8%8B.pdf\"}",
+      "last_attempt_at": "2026-10-01T16:56:22+00:00",
+      "last_fetched_at": null,
+      "last_success_at": null,
+      "status": "pending",
+      "message": "官方PDF人工核验移交；本地自动正文解析尚未适配，未猜截止。",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"官方PDF人工核验移交；本地自动正文解析尚未适配，未猜截止。\",\"state\":\"unadapted\"},\"rules\":{\"reason\":\"公开规则源未适配，未请求账号登录\",\"state\":\"unadapted\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "hkaiiff_2027",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"www.hkaiiff.org\"],\"capability\":\"known_page\",\"id\":\"hkaiiff_2027\",\"name\":\"HKAIIFF2027官方指南（尽调候选）\",\"note\":\"费用99美元；2027奖金和主体未完成尽调，不能将往届算力宣传当现金。\",\"platform\":\"HKAIIFF\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://www.hkaiiff.org/zh-hans/festival/2027/documents/entry-guide\"}",
+      "last_attempt_at": "2026-10-01T16:56:22+00:00",
+      "last_fetched_at": "2026-10-01T16:56:25+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "取得部分页面文字，正文 / 规则结构尚不完整；不能判定没有更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"https://www.hkaiiff.org/brand/festival.svg\"],\"links\":[\"https://hkaiiff.io/festival?edition=2027&lang=zh-Hans\",\"https://hkaiiff.io/index?lang=zh-Hans\",\"https://www.hkaiiff.org/documents/2027/HKAIIFF-FEST-2027-001_v1.4_zh-Hans.pdf\",\"https://www.hkaiiff.org/zh-hans\",\"https://www.hkaiiff.org/zh-hans/about/accreditation\",\"https://www.hkaiiff.org/zh-hans/brand\",\"https://www.hkaiiff.org/zh-hans/contact\",\"https://www.hkaiiff.org/zh-hans/creators\",\"https://www.hkaiiff.org/zh-hans/creators/mcn\",\"https://www.hkaiiff.org/zh-hans/faq\",\"https://www.hkaiiff.org/zh-hans/festival\",\"https://www.hkaiiff.org/zh-hans/festival/2027\",\"https://www.hkaiiff.org/zh-hans/festival/2027/awards\",\"https://www.hkaiiff.org/zh-hans/festival/2027/documents\",\"https://www.hkaiiff.org/zh-hans/festival/2027/eligibility\",\"https://www.hkaiiff.org/zh-hans/festival/2027/entry-guide\",\"https://www.hkaiiff.org/zh-hans/festival/2027/judging\",\"https://www.hkaiiff.org/zh-hans/festival/2027/partners\",\"https://www.hkaiiff.org/zh-hans/festival/2027/questions\",\"https://www.hkaiiff.org/zh-hans/glossary\",\"https://www.hkaiiff.org/zh-hans/hackathon\",\"https://www.hkaiiff.org/zh-hans/hkaiiff-2026-laureates\",\"https://www.hkaiiff.org/zh-hans/impact\",\"https://www.hkaiiff.org/zh-hans/index\",\"https://www.hkaiiff.org/zh-hans/index/ask\",\"https://www.hkaiiff.org/zh-hans/index/code\",\"https://www.hkaiiff.org/zh-hans/index/plans\",\"https://www.hkaiiff.org/zh-hans/index/standard\",\"https://www.hkaiiff.org/zh-hans/market\",\"https://www.hkaiiff.org/zh-hans/media-coverage\",\"https://www.hkaiiff.org/zh-hans/news\",\"https://www.hkaiiff.org/zh-hans/partners\",\"https://www.hkaiiff.org/zh-hans/partners#directions\",\"https://www.hkaiiff.org/zh-hans/partners/contact\",\"https://www.hkaiiff.org/zh-hans/partners/hosting\",\"https://www.hkaiiff.org/zh-hans/press-kit\",\"https://www.hkaiiff.org/zh-hans/privacy\",\"https://www.hkaiiff.org/zh-hans/research\",\"https://www.hkaiiff.org/zh-hans/watch\",\"https://www.hkaiiff.org/zh-hans/whitepaper\"],\"reason\":\"指定公告正文结构尚未适配\",\"state\":\"partial_text\",\"text_chars\":4737},\"rules\":{\"fields\":{},\"missing\":[\"完整活动/机制条款\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "runway_aif_2026",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"aif.runwayml.com\"],\"capability\":\"known_page\",\"id\":\"runway_aif_2026\",\"name\":\"Runway AIF2026电影组官方条款\",\"note\":\"列项现金与总ARV口径冲突；2026已截止，2027未知。\",\"platform\":\"Runway\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://aif.runwayml.com/terms-film\"}",
+      "last_attempt_at": "2026-10-01T16:56:23+00:00",
+      "last_fetched_at": "2026-10-01T16:56:27+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "取得部分页面文字，正文 / 规则结构尚不完整；不能判定没有更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"https://d3phaj0sisr2ct.cloudfront.net/aiff/images/logos/gotham-logo.svg\",\"https://d3phaj0sisr2ct.cloudfront.net/aiff/images/logos/monks-logo-1.svg\",\"https://d3phaj0sisr2ct.cloudfront.net/aiff/images/logos/nvidia-logo.svg\",\"https://d3phaj0sisr2ct.cloudfront.net/aiff/images/logos/rw-logo.svg\",\"https://d3phaj0sisr2ct.cloudfront.net/aiff/images/logos/tribeca-logo-2.svg\",\"https://d3phaj0sisr2ct.cloudfront.net/site/assets/adobe-logo.svg\",\"https://d3phaj0sisr2ct.cloudfront.net/site/assets/lionsgate_logo.svg\",\"https://d3phaj0sisr2ct.cloudfront.net/site/assets/roku-logo.svg\"],\"links\":[\"https://aif.runwayml.com/\",\"https://aif.runwayml.com/#about\",\"https://aif.runwayml.com/#awards\",\"https://aif.runwayml.com/gallery\",\"https://aif.runwayml.com/screening-room\",\"https://aif.runwayml.com/terms\",\"https://aif.runwayml.com/terms-film\",\"https://runwayml.com\"],\"reason\":\"指定公告正文结构尚未适配\",\"state\":\"partial_text\",\"text_chars\":23898},\"rules\":{\"fields\":{},\"missing\":[\"完整活动/机制条款\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "jimeng_growth",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"bytedance.larkoffice.com\"],\"capability\":\"known_page\",\"id\":\"jimeng_growth\",\"name\":\"即梦AI创作者成长计划官方飞书\",\"note\":\"父线程读到9月29日修改；飞书虚拟滚动，HTTP空壳不算无变化；全文与资源位/IP条款需复核。\",\"platform\":\"即梦 / 抖音\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://bytedance.larkoffice.com/docx/YxNFd4psVoyvwwxFg2Pc7IgQnjg\"}",
+      "last_attempt_at": "2026-10-01T16:56:24+00:00",
+      "last_fetched_at": null,
+      "last_success_at": null,
+      "status": "failed",
+      "message": "跳转到未登记的域名，已停止；保留已保存内容，不视为无更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"跳转到未登记的域名，已停止\",\"state\":\"failed\"},\"rules\":{\"reason\":\"请求失败，不代表规则没有更新\",\"state\":\"not_checked\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "jimeng_canvas",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"bytedance.larkoffice.com\"],\"capability\":\"known_page\",\"id\":\"jimeng_canvas\",\"name\":\"即梦优质开源画布细则（待完整核验）\",\"note\":\"独立画布细则未核全文；不可据现金宣传视为画布合格。\",\"platform\":\"即梦\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://bytedance.larkoffice.com/docx/X84WdYVa0oQXD3xb0ATcIaOjnUe?from=from_copylink\"}",
+      "last_attempt_at": "2026-10-01T16:56:25+00:00",
+      "last_fetched_at": null,
+      "last_success_at": null,
+      "status": "failed",
+      "message": "跳转到未登记的域名，已停止；保留已保存内容，不视为无更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"跳转到未登记的域名，已停止\",\"state\":\"failed\"},\"rules\":{\"reason\":\"请求失败，不代表规则没有更新\",\"state\":\"not_checked\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "jimeng_new_image",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"jimeng.jianying.com\"],\"capability\":\"known_page\",\"id\":\"jimeng_new_image\",\"name\":\"即梦2026-004新影像活动（历史）\",\"note\":\"官方已颁奖至6/30；不是现行成长计划或常年开放。\",\"platform\":\"即梦\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://jimeng.jianying.com/ai-tool/activity-detail/2026-004-dreamina-weekly-challenge\"}",
+      "last_attempt_at": "2026-10-01T16:56:25+00:00",
+      "last_fetched_at": "2026-10-01T16:56:30+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "取得部分页面文字，正文 / 规则结构尚不完整；不能判定没有更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[],\"links\":[],\"reason\":\"指定公告正文结构尚未适配\",\"state\":\"no_text\",\"text_chars\":16},\"rules\":{\"fields\":{},\"missing\":[\"完整活动/机制条款\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "kling_artist",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"www.sina.cn\"],\"capability\":\"known_page\",\"id\":\"kling_artist\",\"name\":\"可灵官方认证账号：创作者计划3.0\",\"note\":\"新浪载体上的认证可灵AI微博公告；官网国内robots限制未绕过；现行申请规则未核。\",\"platform\":\"可灵\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://www.sina.cn/news/detail/5292411603651728.html\"}",
+      "last_attempt_at": "2026-10-01T16:56:27+00:00",
+      "last_fetched_at": "2026-10-01T16:56:31+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "公开正文文本完整取得（206字）；规则字段仍有缺口，图片 / 外链及账号资格另核",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"http://wx1.sinaimg.cn/middle/008ED3lrly1icmiu5ktl5j30ti9vzhdz.jpg\"],\"links\":[],\"reason\":\"已核官方公开正文容器（含明确映射的流式HTML，不执行脚本）\",\"state\":\"text_complete\",\"text_chars\":206},\"rules\":{\"fields\":{\"平台资源池\":\"每月百万现金、千万灵感值、亿级曝光资源扶持，\",\"计划版本\":\"可灵AI创作者计划3.0正式升级！\"},\"missing\":[\"当前申请门槛与现金档位\",\"完整版权/独家与有效期\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": "2026-10-01T16:56:31+00:00"
+    },
+    {
+      "id": "kling_partner",
+      "config": "{\"adapter\":\"unadapted\",\"allowed_hosts\":[\"ir.kuaishou.com\"],\"capability\":\"manual\",\"id\":\"kling_partner\",\"name\":\"快手CSR：可灵未来合伙人计划\",\"note\":\"官方CSR文件佐证机制存在；当前加入、分成、版权和申请期未知，未自动解析文件。\",\"platform\":\"可灵 / 快手\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://ir.kuaishou.com/static-files/1561a9ec-6131-4d2d-81a7-b220c8520c25\"}",
+      "last_attempt_at": "2026-10-01T16:56:28+00:00",
+      "last_fetched_at": null,
+      "last_success_at": null,
+      "status": "pending",
+      "message": "官方CSR文件佐证机制存在；当前加入、分成、版权和申请期未知，未自动解析文件。",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"官方CSR文件佐证机制存在；当前加入、分成、版权和申请期未知，未自动解析文件。\",\"state\":\"unadapted\"},\"rules\":{\"reason\":\"公开规则源未适配，未请求账号登录\",\"state\":\"unadapted\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "minimax_design",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"design.minimax.cn\"],\"capability\":\"known_page\",\"id\":\"minimax_design\",\"name\":\"MiniMax Design执导者入驻计划\",\"note\":\"官网现有入驻说明；具体分成、版权、结算和期限未知，与海螺国内超创分开。\",\"platform\":\"MiniMax Design\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://design.minimax.cn/\"}",
+      "last_attempt_at": "2026-10-01T16:56:28+00:00",
+      "last_fetched_at": "2026-10-01T16:56:32+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "取得部分页面文字，正文 / 规则结构尚不完整；不能判定没有更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[],\"links\":[],\"reason\":\"官网community入驻说明含隐藏区；当前展示和申请入口未核\",\"state\":\"partial_text\",\"text_chars\":471},\"rules\":{\"fields\":{\"入驻说明\":\"为严肃创作者准备的入驻计划，为品牌方与机构准备的工业级交付通道，以及一座教你\\\"执导\\\"而非\\\"生成\\\"的教程库。\",\"收益权益\":\"一支共创 Skills、玩法与原创 IP 的执导者社群。入选创作者享 Agent 抢先体验、Skills 收益分成、联合营销资源。\"},\"missing\":[\"当前可用申请入口（HTML社群区隐藏）\",\"分成比例、合同与结算期限\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "hailuo_affiliate",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"hailuoai.video\"],\"capability\":\"known_page\",\"id\":\"hailuo_affiliate\",\"name\":\"Hailuo海外Affiliate官方计划\",\"note\":\"海外推广成交佣金，不是短片投稿奖金；中国大陆支付税务资格未核。\",\"platform\":\"海螺 / Hailuo\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://hailuoai.video/affiliate\"}",
+      "last_attempt_at": "2026-10-01T16:56:28+00:00",
+      "last_fetched_at": "2026-10-01T16:56:33+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "公开正文文本完整取得（4793字）；规则字段仍有缺口，图片 / 外链及账号资格另核",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[],\"links\":[\"https://app.impact.com/campaign-campaign-info-v2/HailuoAI.brand\"],\"reason\":\"已核官方公开正文容器（含明确映射的流式HTML，不执行脚本）\",\"state\":\"text_complete\",\"text_chars\":4793},\"rules\":{\"fields\":{\"佣金说明\":\"Turn your AI content🎬Actioninto commission💸Up to 30%.\",\"支付说明\":\"$10 minimum payout · no earnings cap\",\"锁定时点\":\"All transactions are locked 27 days after the end of the day they are tracked, and are paid 30 days after the month they get locked in. You will be paid via the platform account you used to sign-up for our affiliate program.\"},\"missing\":[\"签约端完整推广合同及适用地区/支付税务条款\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": "2026-10-01T16:56:33+00:00"
+    },
+    {
+      "id": "vidu_artist",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"www.vidu.com\"],\"capability\":\"known_page\",\"id\":\"vidu_artist\",\"name\":\"Vidu官方创作者计划\",\"note\":\"长期成长机制与付费创作者套餐分开；公开申请审核不等于永久无条件开放。\",\"platform\":\"Vidu\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://www.vidu.com/zh/artist-program\"}",
+      "last_attempt_at": "2026-10-01T16:56:30+00:00",
+      "last_fetched_at": "2026-10-01T16:56:34+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "公开正文文本完整取得（1325字）；规则字段仍有缺口，图片 / 外链及账号资格另核",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"https://image01.cf.vidu.studio/vidu/media-asset/collage-fb66b54f.webp\",\"https://image01.cf.vidu.studio/vidu/media-asset/creator-artist-6d63a8c4.webp\",\"https://image01.cf.vidu.studio/vidu/media-asset/creator-rising-e2a4fa32.webp\",\"https://image01.cf.vidu.studio/vidu/media-asset/hero-bg-33c38341.webp\",\"https://image01.cf.vidu.studio/vidu/media-asset/step-1-2909323c.webp\",\"https://image01.cf.vidu.studio/vidu/media-asset/step-2-5de059f4.webp\",\"https://image01.cf.vidu.studio/vidu/media-asset/step-3-9f9c09b4.webp\"],\"links\":[],\"reason\":\"已核官方公开正文容器（含明确映射的流式HTML，不执行脚本）\",\"state\":\"text_complete\",\"text_chars\":1325},\"rules\":{\"fields\":{\"层级与权益\":\"无论你是已形成个人风格的成熟创作者，还是正在探索 AI 影像的新锐力量，都欢迎加入。Vidu 将通过专属活动、创作激励、官方合作与创意任务，为不同发展阶段的创作者提供全方位支持。\",\"长期机制定位\":\"Vidu 创作者计划，是面向所有热爱 AI 影像创作的伙伴们推出的长期成长与共创计划。\",\"非独家说明\":\"把你已经在做的事变成收入：发布 AI 视频，按播放与表现拿积分奖励。无粉丝门槛，不签独家，随时可提。\"},\"missing\":[\"具体积分与持续达标/退出细则\",\"完整合作授权合同\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": "2026-10-01T16:56:34+00:00"
+    },
+    {
+      "id": "vidu_earn",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"www.vidu.com\"],\"capability\":\"known_page\",\"id\":\"vidu_earn\",\"name\":\"ViduEarn星火官方活动详情\",\"note\":\"中文宣传与详情Not Started冲突，按钮禁用；不能按页面日期标开放。\",\"platform\":\"Vidu\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://www.vidu.com/activity/3337027127191000\"}",
+      "last_attempt_at": "2026-10-01T16:56:31+00:00",
+      "last_fetched_at": "2026-10-01T16:56:34+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "取得部分页面文字，正文 / 规则结构尚不完整；不能判定没有更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[],\"links\":[],\"reason\":\"指定公告正文结构尚未适配\",\"state\":\"no_text\",\"text_chars\":38},\"rules\":{\"fields\":{},\"missing\":[\"完整活动/机制条款\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "hailuo_life_2025",
+      "config": "{\"adapter\":\"article\",\"allowed_hosts\":[\"www.minimax.cn\"],\"capability\":\"known_page\",\"id\":\"hailuo_life_2025\",\"name\":\"海螺我的人生电影官方获奖公告\",\"note\":\"2025已颁奖；非2026开放活动，国内超创/先锋导演现行官规仍缺。\",\"platform\":\"海螺 / MiniMax\",\"respect_robots\":true,\"scope\":\"指定官方公告或规则；仅核对已知URL，不是全平台发现\",\"url\":\"https://www.minimax.cn/news/海影节minimax登岛海螺ai我的人生电影完整获奖名单公布\"}",
+      "last_attempt_at": "2026-10-01T16:56:32+00:00",
+      "last_fetched_at": "2026-10-01T16:56:36+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "取得部分页面文字，正文 / 规则结构尚不完整；不能判定没有更新",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"image_refs\":[\"https://www.minimax.cn/_next/image?url=%2Fassets%2Flogo%2Fminimax-horizontal-brand-black.webp&w=256&q=75\",\"https://www.minimax.cn/_next/image?url=%2Fassets%2Flogo%2Fminimax-horizontal-brand-black.webp&w=384&q=75\",\"https://www.minimax.cn/_next/image?url=%2Fassets%2Flogo%2Fminimax-horizontal-white.webp&w=256&q=75\",\"https://www.minimax.cn/_next/image?url=%2Fassets%2Flogo%2Fminimax-horizontal-white.webp&w=384&q=75\",\"https://www.minimax.cn/_next/image?url=https%3A%2F%2Ffilecdn.minimax.chat%2Fpublic%2F0052eccd-8fbd-485b-9007-3d6ef1a80a76.png&w=32&q=75\",\"https://www.minimax.cn/_next/image?url=https%3A%2F%2Ffilecdn.minimax.chat%2Fpublic%2F00874e9c-ad34-4f9f-8537-47e535ec2691.png&w=32&q=75\",\"https://www.minimax.cn/_next/image?url=https%3A%2F%2Ffilecdn.minimax.chat%2Fpublic%2F0f112b95-97b8-4e67-9ef9-e1b869e8342d.png&w=32&q=75\",\"https://www.minimax.cn/_next/image?url=https%3A%2F%2Ffilecdn.minimax.chat%2Fpublic%2F11d4432c-8885-4f72-9221-a9efcd2e79c1.webp&w=3840&q=75\",\"https://www.minimax.cn/_next/image?url=https%3A%2F%2Ffilecdn.minimax.chat%2Fpublic%2F19c37de8-147f-47e8-acdf-afcfe00d346c.png&w=3840&q=75\",\"https://www.minimax.cn/_next/image?url=https%3A%2F%2Ffilecdn.minimax.chat%2Fpublic%2F65518e79-3bb3-40c6-ba61-ae124afc12b5.jpg&w=3840&q=75\",\"https://www.minimax.cn/_next/image?url=https%3A%2F%2Ffilecdn.minimax.chat%2Fpublic%2F69c9db2b-9298-469b-9fa0-4af102fad930.webp&w=3840&q=75\",\"https://www.minimax.cn/_next/image?url=https%3A%2F%2Ffilecdn.minimax.chat%2Fpublic%2F756afba2-5149-469f-8dc1-9e6f1489bd8c.png&w=3840&q=75\",\"https://www.minimax.cn/_next/image?url=https%3A%2F%2Ffilecdn.minimax.chat%2Fpublic%2F890f4d8d-009b-4df5-bb33-f20edaea0e59.webp&w=3840&q=75\",\"https://www.minimax.cn/_next/image?url=https%3A%2F%2Ffilecdn.minimax.chat%2Fpublic%2Fa533807b-9ff6-4f86-a72e-8eb31d0245c1.png&w=48&q=75\",\"https://www.minimax.cn/_next/image?url=https%3A%2F%2Ffilecdn.minimax.chat%2Fpublic%2Fd01e8064-2baf-4c26-adc8-53e9dfaa252d.png&w=32&q=75\"],\"links\":[\"https://agent.minimax.cn/\",\"https://design.minimax.cn/\",\"https://ir.minimax.cn/\",\"https://www.minimax.cn\",\"https://www.minimax.cn/\",\"https://www.minimax.cn/about\",\"https://www.minimax.cn/audio\",\"https://www.minimax.cn/blog/minimax-h3\",\"https://www.minimax.cn/blog/minimax-music-3-0-cn\",\"https://www.minimax.cn/careers\",\"https://www.minimax.cn/models/text\",\"https://www.minimax.cn/models/text/m27\",\"https://www.minimax.cn/models/text/m3\",\"https://www.minimax.cn/news\",\"https://www.minimax.cn/news/minimax-speech-28\",\"https://www.minimax.io/news\",\"https://www.xingyeai.com/\"],\"reason\":\"指定公告正文结构尚未适配\",\"state\":\"partial_text\",\"text_chars\":3642},\"rules\":{\"fields\":{},\"missing\":[\"完整活动/机制条款\"],\"reason\":\"已提取公告明示信息；页面未说明或外链未核部分保留未知\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "kling_public_entry",
+      "config": "{\"adapter\":\"unadapted\",\"allowed_hosts\":[\"kling.ai\"],\"capability\":\"manual\",\"id\":\"kling_public_entry\",\"name\":\"可灵国内官方入口（访问受限）\",\"note\":\"国内官方robots/访问限制，不绕过；官方账号公告与CSR另存人工证据。\",\"platform\":\"可灵\",\"respect_robots\":true,\"scope\":\"入口受限，无自动活动发现\",\"url\":\"https://kling.ai/cn\"}",
+      "last_attempt_at": "2026-10-01T16:56:33+00:00",
+      "last_fetched_at": null,
+      "last_success_at": null,
+      "status": "pending",
+      "message": "国内官方robots/访问限制，不绕过；官方账号公告与CSR另存人工证据。",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"国内官方robots/访问限制，不绕过；官方账号公告与CSR另存人工证据。\",\"state\":\"unadapted\"},\"rules\":{\"reason\":\"公开规则源未适配，未请求账号登录\",\"state\":\"unadapted\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "hailuo_domestic_gap",
+      "config": "{\"adapter\":\"unadapted\",\"allowed_hosts\":[\"hailuoai.com\"],\"capability\":\"manual\",\"id\":\"hailuo_domestic_gap\",\"name\":\"海螺国内超创/先锋导演（现行规则缺口）\",\"note\":\"仅有2024–25转载线索，当前官方规则未核；不制造现行计划记录。\",\"platform\":\"海螺\",\"respect_robots\":true,\"scope\":\"现行国内创作者激励规则未接通\",\"url\":\"https://hailuoai.com/\"}",
+      "last_attempt_at": "2026-10-01T16:56:33+00:00",
+      "last_fetched_at": null,
+      "last_success_at": null,
+      "status": "pending",
+      "message": "仅有2024–25转载线索，当前官方规则未核；不制造现行计划记录。",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"仅有2024–25转载线索，当前官方规则未核；不制造现行计划记录。\",\"state\":\"unadapted\"},\"rules\":{\"reason\":\"公开规则源未适配，未请求账号登录\",\"state\":\"unadapted\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "wanxiang_gap",
+      "config": "{\"adapter\":\"unadapted\",\"allowed_hosts\":[\"modelscope.cn\"],\"capability\":\"manual\",\"id\":\"wanxiang_gap\",\"name\":\"通义万相魔搭活动入口（壳页缺口）\",\"note\":\"当前只见壳页，没有当前活动实证；不生成开放活动。\",\"platform\":\"通义万相\",\"respect_robots\":true,\"scope\":\"具体活动规则待核\",\"url\":\"https://modelscope.cn/events/114/%E6%AF%94%E8%B5%9B%E8%AF%A6%E6%83%85\"}",
+      "last_attempt_at": "2026-10-01T16:56:33+00:00",
+      "last_fetched_at": null,
+      "last_success_at": null,
+      "status": "pending",
+      "message": "当前只见壳页，没有当前活动实证；不生成开放活动。",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"当前只见壳页，没有当前活动实证；不生成开放活动。\",\"state\":\"unadapted\"},\"rules\":{\"reason\":\"公开规则源未适配，未请求账号登录\",\"state\":\"unadapted\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "bjiff_ai_list",
+      "config": "{\"adapter\":\"official_list\",\"allowed_hosts\":[\"www.bjiff.com\"],\"capability\":\"automatic_discovery\",\"discovery\":{\"creative_words\":[\"AI\",\"AIGC\",\"影视\",\"电影\",\"影展\",\"影像\",\"视频\",\"短片\",\"动画\",\"数字艺术\",\"创作者\",\"创作扶持\"],\"exclude_title\":[\"获奖名单\",\"入围名单\",\"颁奖\",\"成功举办\",\"论坛\",\"讲座\",\"招聘\"],\"max_candidates\":8,\"minimum_entries\":1,\"opportunity_words\":[\"征集\",\"征片\",\"征案\",\"征稿\",\"报名\",\"招募\",\"创作计划\",\"扶持\",\"激励\",\"补贴\",\"入驻\",\"创投\",\"规则\",\"结算\",\"奖励\",\"福利\",\"比赛\",\"大赛\"],\"pagination\":{\"max_pages\":3,\"mode\":\"bjiff_static\",\"path_prefixes\":[\"/xghd/jjdlllt_18698/\"]},\"path_prefixes\":[\"/xghd/jjdlllt_18698/\"],\"path_suffix\":\".html\"},\"id\":\"bjiff_ai_list\",\"name\":\"北影节AIGC单元公开公告\",\"note\":\"本机公开列表发现；正文、开放状态及个人资格另核，访问限制即停止。\",\"platform\":\"北影节\",\"respect_robots\":true,\"scope\":\"AIGC专栏公开分页，单次最多3页，按官方页数终止；不等于北影节全部单元或下一届已开放\",\"url\":\"https://www.bjiff.com/xghd/jjdlllt_18698/\"}",
+      "last_attempt_at": "2026-10-01T16:56:33+00:00",
+      "last_fetched_at": "2026-10-01T16:56:56+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "本次已扫描的2页范围解析 14 个公告；筛出 5 条，实际处理 5 条，新增线索 2，已有条目 0，正文失败 0。停止原因：官方末页。未完成页、未解析条目、正文失败、轮次变更待核、处理上限或取消均不能视为无更新。候选保持待核，不计为已核开放机会。",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"公开列表已取得；候选原文另核\",\"state\":\"partial_text\",\"text_chars\":4521},\"discovery\":{\"accepted\":5,\"article_failure_details\":[],\"article_failures\":0,\"date_range\":{\"newest\":\"2026-04-23\",\"oldest\":\"2026-02-03\"},\"duplicate_entries\":0,\"identity_changes_pending\":1,\"known_items\":0,\"limit\":8,\"list_failure_details\":[],\"list_failures\":0,\"listed_cards\":14,\"matched\":5,\"new_candidates\":2,\"page_count_reported\":2,\"page_limit\":3,\"per_page\":[{\"current_page_reported\":1,\"date_range\":{\"newest\":\"2026-04-23\",\"oldest\":\"2026-03-23\"},\"entries\":10,\"listed_cards\":10,\"page\":1,\"page_count_reported\":2,\"raw_hash\":\"48684654758e409de02188c34a683a7ec8166079da3e8e569473e689e7681e6f\",\"status\":\"success\",\"unparsed_cards\":0,\"url\":\"https://www.bjiff.com/xghd/jjdlllt_18698/\"},{\"current_page_reported\":2,\"date_range\":{\"newest\":\"2026-03-18\",\"oldest\":\"2026-02-03\"},\"entries\":4,\"listed_cards\":4,\"page\":2,\"page_count_reported\":2,\"raw_hash\":\"f24d3e835f9820248a0338bd840e5a663e052eb4c80c82a7551deea53d0947fa\",\"status\":\"success\",\"unparsed_cards\":0,\"url\":\"https://www.bjiff.com/xghd/jjdlllt_18698/index_1.html\"}],\"processed\":5,\"remaining_pages\":false,\"round_ambiguities\":1,\"scan_finished_at\":\"2026-10-01T16:56:56+00:00\",\"scan_pages\":2,\"scan_started_at\":\"2026-10-01T16:56:33+00:00\",\"scanned\":14,\"scope\":\"AIGC专栏公开分页，单次最多3页，按官方页数终止；不等于北影节全部单元或下一届已开放\",\"selected\":5,\"state\":\"partial_list\",\"stop_reason\":\"official_last_page\",\"unparsed_cards\":0},\"rules\":{\"reason\":\"未将线索自动写为正式记录\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "xm_calls_list",
+      "config": "{\"adapter\":\"official_list\",\"allowed_hosts\":[\"www.xmwenlian.com\"],\"capability\":\"automatic_discovery\",\"discovery\":{\"creative_words\":[\"AI\",\"AIGC\",\"影视\",\"电影\",\"影展\",\"影像\",\"视频\",\"短片\",\"动画\",\"数字艺术\",\"创作者\",\"创作扶持\"],\"exclude_title\":[\"获奖名单\",\"入围名单\",\"颁奖\",\"成功举办\",\"论坛\",\"讲座\",\"招聘\"],\"max_candidates\":12,\"minimum_entries\":1,\"opportunity_words\":[\"征集\",\"征片\",\"征案\",\"征稿\",\"报名\",\"招募\",\"创作计划\",\"扶持\",\"激励\",\"补贴\",\"入驻\",\"创投\",\"规则\",\"结算\",\"奖励\",\"福利\",\"比赛\",\"大赛\"],\"pagination\":{\"max_pages\":3,\"mode\":\"next_link\",\"path_prefixes\":[\"/home/article/index/category/55/\"]},\"path_prefixes\":[\"/home/article/detail/id/\"],\"path_suffix\":\".html\"},\"id\":\"xm_calls_list\",\"name\":\"厦门市文联征集启事\",\"note\":\"本机公开列表发现；正文、开放状态及个人资格另核，访问限制即停止。\",\"platform\":\"厦门文联 / 金鸡影展\",\"respect_robots\":true,\"scope\":\"征集栏目真实下一页，单次最多3页；筛选影视/AI/短片及创作扶持，不覆盖所有文联栏目\",\"url\":\"https://www.xmwenlian.com/home/article/index/category/55.html\"}",
+      "last_attempt_at": "2026-10-01T16:56:34+00:00",
+      "last_fetched_at": "2026-10-01T16:56:53+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "本次已扫描的2页范围解析 23 个公告；筛出 7 条，实际处理 7 条，新增线索 0，已有条目 0，正文失败 0。停止原因：未显示下一页。未完成页、未解析条目、正文失败、轮次变更待核、处理上限或取消均不能视为无更新。候选保持待核，不计为已核开放机会。",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"公开列表已取得；候选原文另核\",\"state\":\"partial_text\",\"text_chars\":2783},\"discovery\":{\"accepted\":7,\"article_failure_details\":[],\"article_failures\":0,\"date_range\":{\"newest\":\"2026-09-18\",\"oldest\":\"2014-05-16\"},\"duplicate_entries\":0,\"identity_changes_pending\":5,\"known_items\":0,\"limit\":12,\"list_failure_details\":[],\"list_failures\":0,\"listed_cards\":27,\"matched\":7,\"new_candidates\":0,\"page_count_reported\":null,\"page_limit\":3,\"per_page\":[{\"date_range\":{\"newest\":\"2026-09-18\",\"oldest\":\"2026-04-09\"},\"entries\":20,\"listed_cards\":20,\"page\":1,\"raw_hash\":\"f6e0899c7619d771a20b11ac3b031ff6ace80a7954fd4741f5ab02a1c01d0732\",\"status\":\"success\",\"unparsed_cards\":0,\"url\":\"https://www.xmwenlian.com/home/article/index/category/55.html\"},{\"date_range\":{\"newest\":\"2026-04-07\",\"oldest\":\"2014-05-16\"},\"entries\":3,\"listed_cards\":7,\"page\":2,\"raw_hash\":\"68a368afcdbb94e469b13b6c0f913a2bc6cad9778dc4da09a14591ed6c0864d6\",\"status\":\"success\",\"unparsed_cards\":0,\"url\":\"https://www.xmwenlian.com/home/article/index/category/55/p/2.html\"}],\"processed\":7,\"remaining_pages\":false,\"round_ambiguities\":7,\"scan_finished_at\":\"2026-10-01T16:56:53+00:00\",\"scan_pages\":2,\"scan_started_at\":\"2026-10-01T16:56:34+00:00\",\"scanned\":23,\"scope\":\"征集栏目真实下一页，单次最多3页；筛选影视/AI/短片及创作扶持，不覆盖所有文联栏目\",\"selected\":7,\"state\":\"partial_list\",\"stop_reason\":\"no_next_link\",\"unparsed_cards\":0},\"rules\":{\"reason\":\"未将线索自动写为正式记录\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "cuc_news_list",
+      "config": "{\"adapter\":\"official_list\",\"allowed_hosts\":[\"www.cuc.edu.cn\"],\"capability\":\"automatic_discovery\",\"discovery\":{\"creative_words\":[\"AI\",\"AIGC\",\"影视\",\"电影\",\"影展\",\"影像\",\"视频\",\"短片\",\"动画\",\"数字艺术\",\"创作者\",\"创作扶持\"],\"exclude_title\":[\"获奖名单\",\"入围名单\",\"颁奖\",\"成功举办\",\"论坛\",\"讲座\",\"招聘\"],\"max_candidates\":8,\"minimum_entries\":1,\"opportunity_words\":[\"征集\",\"征片\",\"征案\",\"征稿\",\"报名\",\"招募\",\"创作计划\",\"扶持\",\"激励\",\"补贴\",\"入驻\",\"创投\",\"规则\",\"结算\",\"奖励\",\"福利\",\"比赛\",\"大赛\"],\"pagination\":{\"max_pages\":3,\"mode\":\"next_link\",\"path_prefixes\":[\"/10001/list\"]},\"path_prefixes\":[\"/cucnews/20\",\"/20\"],\"path_suffix\":\"/page.htm\"},\"id\":\"cuc_news_list\",\"name\":\"中国传媒大学公开新闻公告\",\"note\":\"本机公开列表发现；正文、开放状态及个人资格另核，访问限制即停止。\",\"platform\":\"中国传媒大学\",\"respect_robots\":true,\"scope\":\"学校新闻真实下一页，单次最多3页；仅标题匹配创作机会，不覆盖全部历史或学院公告\",\"url\":\"https://www.cuc.edu.cn/10001/list.htm\"}",
+      "last_attempt_at": "2026-10-01T16:56:34+00:00",
+      "last_fetched_at": "2026-10-01T16:56:47+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "本次已扫描的3页范围解析 42 个公告；筛出 2 条，实际处理 2 条，新增线索 2，已有条目 0，正文失败 0。停止原因：达到本次页数上限，仍有后续页。未完成页、未解析条目、正文失败、轮次变更待核、处理上限或取消均不能视为无更新。候选保持待核，不计为已核开放机会。",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"公开列表已取得；候选原文另核\",\"state\":\"partial_text\",\"text_chars\":26150},\"discovery\":{\"accepted\":2,\"article_failure_details\":[],\"article_failures\":0,\"date_range\":{\"newest\":\"2026-09-30\",\"oldest\":\"2026-08-02\"},\"duplicate_entries\":0,\"identity_changes_pending\":1,\"known_items\":0,\"limit\":8,\"list_failure_details\":[],\"list_failures\":0,\"listed_cards\":42,\"matched\":2,\"new_candidates\":2,\"page_count_reported\":418,\"page_limit\":3,\"per_page\":[{\"current_page_reported\":1,\"date_range\":{\"newest\":\"2026-09-30\",\"oldest\":\"2026-09-19\"},\"entries\":14,\"listed_cards\":14,\"page\":1,\"page_count_reported\":418,\"raw_hash\":\"7ecc9c4cfa05678f08afcf9f68f6a12c0548b7cf22307dd166bd7518bf9d6992\",\"status\":\"success\",\"unparsed_cards\":0,\"url\":\"https://www.cuc.edu.cn/10001/list.htm\"},{\"current_page_reported\":2,\"date_range\":{\"newest\":\"2026-09-19\",\"oldest\":\"2026-08-29\"},\"entries\":14,\"listed_cards\":14,\"page\":2,\"page_count_reported\":418,\"raw_hash\":\"005c0c6c5a2cd371155111a350d0f35eb38aab96c684e64d35b295c8e6bd3983\",\"status\":\"success\",\"unparsed_cards\":0,\"url\":\"https://www.cuc.edu.cn/10001/list2.htm\"},{\"current_page_reported\":3,\"date_range\":{\"newest\":\"2026-08-28\",\"oldest\":\"2026-08-02\"},\"entries\":14,\"listed_cards\":14,\"page\":3,\"page_count_reported\":418,\"raw_hash\":\"fd27abd2aaa2561a27cebaac537ff080cc335eca892762d12801d345c3bb50d7\",\"status\":\"success\",\"unparsed_cards\":0,\"url\":\"https://www.cuc.edu.cn/10001/list3.htm\"}],\"processed\":2,\"remaining_pages\":true,\"round_ambiguities\":2,\"scan_finished_at\":\"2026-10-01T16:56:47+00:00\",\"scan_pages\":3,\"scan_started_at\":\"2026-10-01T16:56:34+00:00\",\"scanned\":42,\"scope\":\"学校新闻真实下一页，单次最多3页；仅标题匹配创作机会，不覆盖全部历史或学院公告\",\"selected\":2,\"state\":\"partial_list\",\"stop_reason\":\"page_limit\",\"unparsed_cards\":0},\"rules\":{\"reason\":\"未将线索自动写为正式记录\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "first_featured_list",
+      "config": "{\"adapter\":\"official_list\",\"allowed_hosts\":[\"www.firstfilm.org.cn\"],\"capability\":\"automatic_discovery\",\"discovery\":{\"creative_words\":[],\"exclude_title\":[\"获奖名单\",\"入围名单\",\"颁奖\",\"成功举办\",\"论坛\",\"讲座\",\"招聘\"],\"max_candidates\":6,\"minimum_entries\":1,\"opportunity_words\":[\"征集\",\"征片\",\"征案\",\"征稿\",\"报名\",\"招募\",\"创作计划\",\"扶持\",\"激励\",\"补贴\",\"入驻\",\"创投\",\"规则\",\"结算\",\"奖励\",\"福利\",\"比赛\",\"大赛\"],\"path_prefixes\":[\"/\"],\"path_suffix\":\"/\"},\"id\":\"first_featured_list\",\"name\":\"FIRST官网精选公告\",\"note\":\"本机公开列表发现；正文、开放状态及个人资格另核，访问限制即停止。\",\"platform\":\"FIRST青年电影展\",\"respect_robots\":true,\"scope\":\"首页精选公告6条左右；可发现征案计划，不覆盖全部历史或全部投稿单元\",\"url\":\"https://www.firstfilm.org.cn/\"}",
+      "last_attempt_at": "2026-10-01T16:56:36+00:00",
+      "last_fetched_at": "2026-10-01T16:56:58+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "本页解析 6 个公告；筛出 2 条，实际处理 2 条，新增线索 0，已有条目 0，正文失败 1。停止原因：仅配置首屏。未完成页、未解析条目、正文失败、轮次变更待核、处理上限或取消均不能视为无更新。候选保持待核，不计为已核开放机会。",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"公开列表已取得；候选原文另核\",\"state\":\"partial_text\",\"text_chars\":934},\"discovery\":{\"accepted\":2,\"article_failure_details\":[{\"candidate_id\":\"38b9dd14a3572133cd7fb052\",\"error\":\"<urlopen error _ssl.c:993: The handshake operation timed out>\",\"official_url\":\"https://www.firstfilm.org.cn/download-media/300%e5%87%bb%e5%be%81%e6%a1%88-%e8%bf%99%e4%b8%80%e7%a7%92%e7%9a%84%e4%b8%96%e7%95%8c%e6%a8%aa%e6%88%aa%e9%9d%a2/\",\"title\":\"300击征案 | 这一秒的世界横截面\"}],\"article_failures\":1,\"date_range\":{\"newest\":\"2026-08-13\",\"oldest\":\"2026-05-14\"},\"duplicate_entries\":0,\"identity_changes_pending\":0,\"known_items\":0,\"limit\":6,\"list_failure_details\":[],\"list_failures\":0,\"listed_cards\":6,\"matched\":2,\"new_candidates\":0,\"page_count_reported\":null,\"page_limit\":1,\"per_page\":[{\"date_range\":{\"newest\":\"2026-08-13\",\"oldest\":\"2026-05-14\"},\"entries\":6,\"listed_cards\":6,\"page\":1,\"raw_hash\":\"896e035a2c3fbccbf55fbf98f485a3637ae106f045768069d9a22bdd7a1dc745\",\"status\":\"success\",\"unparsed_cards\":0,\"url\":\"https://www.firstfilm.org.cn/\"}],\"processed\":2,\"remaining_pages\":false,\"round_ambiguities\":2,\"scan_finished_at\":\"2026-10-01T16:56:58+00:00\",\"scan_pages\":1,\"scan_started_at\":\"2026-10-01T16:56:36+00:00\",\"scanned\":6,\"scope\":\"首页精选公告6条左右；可发现征案计划，不覆盖全部历史或全部投稿单元\",\"selected\":2,\"state\":\"partial_list\",\"stop_reason\":\"single_page_scope\",\"unparsed_cards\":0},\"rules\":{\"reason\":\"未将线索自动写为正式记录\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    },
+    {
+      "id": "minimax_blog_list",
+      "config": "{\"adapter\":\"official_list\",\"allowed_hosts\":[\"www.minimax.cn\"],\"capability\":\"automatic_discovery\",\"discovery\":{\"creative_words\":[\"AI\",\"AIGC\",\"影视\",\"电影\",\"影展\",\"影像\",\"视频\",\"短片\",\"动画\",\"数字艺术\",\"创作者\",\"创作扶持\"],\"exclude_title\":[\"获奖名单\",\"入围名单\",\"颁奖\",\"成功举办\",\"论坛\",\"讲座\",\"招聘\"],\"max_candidates\":8,\"minimum_entries\":1,\"opportunity_words\":[\"征集\",\"征片\",\"征案\",\"征稿\",\"报名\",\"招募\",\"创作计划\",\"扶持\",\"激励\",\"补贴\",\"入驻\",\"创投\",\"规则\",\"结算\",\"奖励\",\"福利\",\"比赛\",\"大赛\"],\"path_prefixes\":[\"/blog/\"],\"path_suffix\":\"\"},\"id\":\"minimax_blog_list\",\"name\":\"MiniMax官方博客公告\",\"note\":\"本机公开列表发现；正文、开放状态及个人资格另核，访问限制即停止。\",\"platform\":\"MiniMax\",\"respect_robots\":true,\"scope\":\"官方博客首屏；仅创作计划/扶持等机会，不把模型发布当比赛或补贴\",\"url\":\"https://www.minimax.cn/blog\"}",
+      "last_attempt_at": "2026-10-01T16:56:47+00:00",
+      "last_fetched_at": "2026-10-01T16:56:49+00:00",
+      "last_success_at": null,
+      "status": "partial",
+      "message": "本页解析 13 个公告；筛出 0 条，实际处理 0 条，新增线索 0，已有条目 0，正文失败 0。停止原因：仅配置首屏。该扫描范围发现检查成功零新增。候选保持待核，不计为已核开放机会。",
+      "coverage": "{\"account\":{\"reason\":\"未连接个人账号；公开规则不能证明本账号或AI作品符合资格\",\"state\":\"not_checked\"},\"article\":{\"reason\":\"公开列表已取得；候选原文另核\",\"state\":\"partial_text\",\"text_chars\":3074},\"discovery\":{\"accepted\":0,\"article_failure_details\":[],\"article_failures\":0,\"date_range\":{\"newest\":\"2026-08-13\",\"oldest\":\"2025-01-15\"},\"duplicate_entries\":0,\"identity_changes_pending\":0,\"known_items\":0,\"limit\":8,\"list_failure_details\":[],\"list_failures\":0,\"listed_cards\":13,\"matched\":0,\"new_candidates\":0,\"page_count_reported\":null,\"page_limit\":1,\"per_page\":[{\"date_range\":{\"newest\":\"2026-08-13\",\"oldest\":\"2025-01-15\"},\"entries\":13,\"listed_cards\":13,\"page\":1,\"raw_hash\":\"bf9bdf2bf3333e89c3ce227ceeb7db1f76fa23c26822b41383622585ee3a9a48\",\"status\":\"success\",\"unparsed_cards\":0,\"url\":\"https://www.minimax.cn/blog\"}],\"processed\":0,\"remaining_pages\":false,\"round_ambiguities\":0,\"scan_finished_at\":\"2026-10-01T16:56:49+00:00\",\"scan_pages\":1,\"scan_started_at\":\"2026-10-01T16:56:47+00:00\",\"scanned\":13,\"scope\":\"官方博客首屏；仅创作计划/扶持等机会，不把模型发布当比赛或补贴\",\"selected\":0,\"state\":\"success_zero\",\"stop_reason\":\"single_page_scope\",\"unparsed_cards\":0},\"rules\":{\"reason\":\"未将线索自动写为正式记录\",\"state\":\"partial\"}}",
+      "last_article_success_at": null
+    }
+  ]
+}

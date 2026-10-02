@@ -1,0 +1,47 @@
+{
+  "actual_call": true,
+  "package": "faster-whisper",
+  "version": "1.2.1",
+  "model": "cached base.en CTranslate2",
+  "local_files_only": true,
+  "network": "offline environment; no URL/model identifier supplied",
+  "device": "cpu",
+  "compute_type": "int8",
+  "semantic_scope": "ASR draft only, not listening/voice/music/sound analysis",
+  "elapsed_seconds": 1.9689999999973224,
+  "info": {
+    "language": "en",
+    "language_probability": 1,
+    "duration": 51.9253125
+  },
+  "segments": [
+    {
+      "start": 0,
+      "end": 15,
+      "text": " What brings you to the land of the gatekeepers?",
+      "avg_logprob": -0.4754529154818991,
+      "no_speech_prob": 0.10996932536363602
+    },
+    {
+      "start": 15,
+      "end": 23,
+      "text": " I'm searching for someone.",
+      "avg_logprob": -0.4754529154818991,
+      "no_speech_prob": 0.10996932536363602
+    },
+    {
+      "start": 23,
+      "end": 40,
+      "text": " A dangerous quest for a lone hunter.",
+      "avg_logprob": -0.2763193988800049,
+      "no_speech_prob": 0.008746849372982979
+    },
+    {
+      "start": 40,
+      "end": 46,
+      "text": " I've been alone for as long as I can remember.",
+      "avg_logprob": -0.2763193988800049,
+      "no_speech_prob": 0.008746849372982979
+    }
+  ]
+}

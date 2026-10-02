@@ -1,0 +1,129 @@
+{
+  "documents": [
+    {
+      "edition": "2026 / 活动62",
+      "eligibility": [
+        "王者 IP 新创作作品；具体主体资格待核"
+      ],
+      "entry_url": "https://www.liblib.tv/activity/62",
+      "evidence": [
+        {
+          "excerpt": "前序任务人工核验移交；未提供精确核验时刻。与本次抓取分开。",
+          "note": "部分字段已核；缺失字段仍待核验。",
+          "observed_at": null,
+          "origin": "manual_handoff",
+          "url": "https://www.liblib.tv/activity/62"
+        },
+        {
+          "origin": "manual_review",
+          "url": "https://www.liblib.tv/activity/62",
+          "observed_at": "2026-09-30T02:51:32+00:00",
+          "excerpt": "本次核读LibTV官方清单中的公开规则正文，补充封面、首发及双端话题要求。正式授权条款外链未在本次完整重核，保留前序版权限制证据。"
+        }
+      ],
+      "id": "c67dc9fa57e4d56782e5056b",
+      "kind": "competition",
+      "official_url": "https://www.liblib.tv/activity/62",
+      "organizer": "LibTV × 王者荣耀 / 腾讯",
+      "origin": "manual_review",
+      "platform": "LibTV / 抖音",
+      "program": {
+        "effective_version": null,
+        "exit": null,
+        "join": null,
+        "ongoing_requirements": null,
+        "revenue": null,
+        "settlement": null
+      },
+      "publication_at": null,
+      "rewards": [
+        {
+          "amount": 1500000,
+          "currency": "CNY",
+          "label": "税前现金总奖池",
+          "scope": "总奖池",
+          "type": "cash",
+          "validity": null
+        },
+        {
+          "amount": 500000,
+          "currency": "CNY",
+          "label": "一等奖",
+          "scope": "单奖（总奖池内）",
+          "type": "cash",
+          "validity": null
+        },
+        {
+          "amount": 3000000,
+          "label": "奖励积分",
+          "scope": "奖励池",
+          "type": "credits",
+          "unit": "积分",
+          "validity": "3个月"
+        },
+        {
+          "amount": 7000000,
+          "label": "启动算力池",
+          "scope": "独立扶持池",
+          "type": "compute",
+          "unit": "算力池（口径待核）",
+          "validity": null
+        }
+      ],
+      "risks": [
+        {
+          "detail": "腾讯广泛排他、可转授权；使用范围须审阅官方全文。",
+          "level": "high",
+          "type": "exclusive"
+        },
+        {
+          "detail": "获奖作品著作权转让是发奖前提；是否接受应在投稿前判断。",
+          "level": "high",
+          "type": "transfer"
+        },
+        {
+          "type": "first_release",
+          "level": "high",
+          "detail": "作品须为此次大赛全新制作并首发活动平台；音乐须原创或有合法授权。"
+        }
+      ],
+      "source_id": "libtv",
+      "steps": [
+        "LibTV与抖音双端同步投稿，内容一致，任一端缺失视为未完成",
+        "抖音必须带 #王者无界剧场；不得带除LibTV外其他AI创作工具相关tag",
+        "截止前可更新画布和成片；截止后更新画布 / 社媒链接将使投稿无效"
+      ],
+      "summary": "王者 IP AI 影像征集。现金、奖励积分和启动算力分开；获奖作品版权转让及排他授权需重点审阅。",
+      "tags": [
+        "AI",
+        "影视",
+        "王者IP",
+        "短片"
+      ],
+      "time": {
+        "absolute_deadline": null,
+        "absolute_start": null,
+        "batches": [],
+        "confirmed": true,
+        "deadline": "2026-11-22T23:59:59",
+        "evidence": "移交核验：2026-09-21 15:00 至 2026-11-22 23:59:59；原文未注明时区。",
+        "mechanism": "fixed",
+        "policy_effective": null,
+        "policy_end": null,
+        "policy_version": null,
+        "start": "2026-09-21T15:00:00",
+        "timezone": null
+      },
+      "title": "王者无界剧场计划",
+      "verification": "partial",
+      "verified_at": "2026-09-30T02:51:32+00:00",
+      "work_requirements": [
+        "时长至少2分钟",
+        "16:9 横版，至少720p",
+        "王者IP新作",
+        "投稿需横版16:9封面，分辨率不低于1920×1080；有片名 / 标题",
+        "画面无黑边、无水印，有配乐或配音；不得使用第三方版权英雄与联名皮肤素材"
+      ]
+    }
+  ]
+}

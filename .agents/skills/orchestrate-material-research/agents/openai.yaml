@@ -1,0 +1,4 @@
+interface:
+  display_name: "素材深研总控"
+  short_description: "围绕明确素材问题组织专业深拆、证据核对与图文成果回流和接续"
+  default_prompt: "使用 $orchestrate-material-research，围绕这份素材中我关注的细节确定范围，逐步深研并保存可接续的图文成果。"
