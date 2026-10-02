@@ -21,7 +21,9 @@
         "submissions": 48,
         "topic_materials": 8,
         "topics": 8
-      }
+      },
+      "journalMode": "delete",
+      "immutableReadVerificationRequired": true
     },
     "information": {
       "snapshot": "cloud-data/snapshots/信息收集/data/opportunities.sqlite3",
@@ -37,7 +39,9 @@
         "settings": 1,
         "sources": 49,
         "versions": 93
-      }
+      },
+      "journalMode": "delete",
+      "immutableReadVerificationRequired": true
     }
   },
   "files": [
@@ -791,14 +795,14 @@
     {
       "path": "cloud-data/snapshots/信息收集/data/opportunities.sqlite3",
       "bytes": 2510848,
-      "sha256": "8b654f3b99530ab4bba590320c7ce9cfbc71b7d11edb9ac42bbec49547f1b576",
+      "sha256": "cead3e7ae54a1499e1941b14131e15f77871e9438966a3799a42e420ec32e278",
       "category": "authoritative-database-consistent-snapshot",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
       "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
-      "transformation": "SQLite Connection.backup from mode=ro source"
+      "transformation": "SQLite Connection.backup from mode=ro source; output-only journal_mode=DELETE"
     },
     {
       "path": "cloud-data/snapshots/素材观察室/data/observatory.sqlite3",
@@ -810,7 +814,7 @@
         "relativePath": "素材观察室/data/observatory.sqlite3"
       },
       "sourceSha256": "160f42f0d6037d70dbf6535e2c0b631827e7a6f8a6497177fa922d0f4d576eda",
-      "transformation": "SQLite Connection.backup from mode=ro source"
+      "transformation": "SQLite Connection.backup from mode=ro source; output-only journal_mode=DELETE"
     },
     {
       "path": "cloud-data/ui/学习小岛/data/ui-state.json",
@@ -4042,5 +4046,12 @@
     "reviewedSyntheticTestPatternCount": 2,
     "reviewFileLocalOnly": true,
     "valuesNeverLogged": true
+  },
+  "outputSnapshotNormalization": {
+    "atUtc": "2026-10-02T16:03:55.821399+00:00",
+    "journalMode": "delete",
+    "logicalDataAndSchemaUnchanged": true,
+    "verification": "mode=ro&immutable=1",
+    "authoritativeSourcesOpened": false
   }
 }

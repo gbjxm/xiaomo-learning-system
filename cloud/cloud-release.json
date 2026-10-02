@@ -1,6 +1,6 @@
 {
   "schema": "xiaomo.cloud-readable-release/v1",
-  "created_at": "2026-10-02T15:54:44.620229+00:00",
+  "created_at": "2026-10-02T16:07:04.752771+00:00",
   "system": "learning",
   "formal_source_unchanged": true,
   "cloud_candidates_are_formally_adopted": false,
@@ -172,8 +172,8 @@
     },
     {
       "path": "cloud/source-manifest.json",
-      "bytes": 178103,
-      "sha256": "c0216eb9a1ea1be8262e9c8af9c767d96a6b18e4a38f77c7f4a946261d252e34"
+      "bytes": 178584,
+      "sha256": "bf781312dd1ec32114a777bb3b7a70cc03d5d2160c34538f8b5bab3588f8e9a2"
     },
     {
       "path": "cloud/systems.json",
@@ -353,17 +353,7 @@
     {
       "path": "cloud-data/snapshots/信息收集/data/opportunities.sqlite3",
       "bytes": 2510848,
-      "sha256": "8b654f3b99530ab4bba590320c7ce9cfbc71b7d11edb9ac42bbec49547f1b576"
-    },
-    {
-      "path": "cloud-data/snapshots/信息收集/data/opportunities.sqlite3-shm",
-      "bytes": 32768,
-      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
-    },
-    {
-      "path": "cloud-data/snapshots/信息收集/data/opportunities.sqlite3-wal",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "sha256": "cead3e7ae54a1499e1941b14131e15f77871e9438966a3799a42e420ec32e278"
     },
     {
       "path": "cloud-data/snapshots/素材观察室/data/observatory.sqlite3",
