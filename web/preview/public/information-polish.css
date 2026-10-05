@@ -181,3 +181,46 @@
 @media(min-width:1700px){[data-preview-region=information] .workspace{padding-top:39px;padding-bottom:36px}[data-preview-region=information] .page-heading h1{font-size:36px}[data-preview-region=information] .opportunity-card{grid-template-columns:124px minmax(0,1fr) 188px;gap:25px;padding:28px 0}[data-preview-region=information] .opportunity-identity.card{width:124px}[data-preview-region=information] .opportunity-identity.card .identity-frame{height:106px}[data-preview-region=information] .card-title{font-size:22px}[data-preview-region=information] .card-summary{font-size:14px}[data-preview-region=information] .card-facts dd{font-size:13px}}
 [data-preview-region=information].preview-tools-closed #main{margin-left:0}
 @media(prefers-reduced-motion:reduce){[data-preview-region=information] *,[data-preview-region=information] *::before,[data-preview-region=information] *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/* These are derived dates and personal review entries, never inferred validity. */
+[data-preview-region="information"] .info-verification-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+  margin-top: 8px;
+  color: #686861;
+  font-size: 12px;
+  line-height: 1.55;
+}
+[data-preview-region="information"] .info-verification-line .text-button {
+  font-size: inherit;
+  color: #806044;
+}
+[data-preview-region="information"] .info-change-review-links {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0;
+}
+[data-preview-region="information"] .info-change-review-links .text-button {
+  justify-self: start;
+  text-align: left;
+  white-space: normal;
+}
+[data-preview-region="information"] .info-change-review-note {
+  margin: 6px 0 12px;
+  color: #64665e;
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+[data-preview-region="information"] .note-version-comparison {
+  margin: 12px 0;
+  border-top: 1px solid #dedfd5;
+  padding: 12px 0;
+}
+[data-preview-region="information"] .note-version-comparison pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: inherit;
+  line-height: 1.7;
+}

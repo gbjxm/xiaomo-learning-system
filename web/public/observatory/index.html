@@ -9,12 +9,14 @@
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="/observatory/app.css">
   <script src="/observatory/app.js" defer></script>
+  <link rel="stylesheet" href="/terminal/shell.css">
+  <script src="/terminal/shell.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到内容</a>
   <div class="dataset-banner" id="datasetBanner" role="status">正在核对数据入口…</div>
   <header class="shell-header">
-    <a class="brand" href="#collection"><span class="brand-mark" aria-hidden="true">◧</span><span><small>小陌的学习系统</small><strong>素材观察室</strong></span></a>
+    <a class="brand" href="#collection"><span class="brand-mark" aria-hidden="true">◧</span><span><small>小陌的个人终端</small><strong>素材观察室</strong></span></a>
     <nav aria-label="观察室导航"><a href="#collection" id="navCollection">收藏</a><a href="#topics" id="navTopics">研究专题</a><a href="/learning/">学习小岛</a><a href="/information/">信息收集</a></nav>
     <button class="quiet-button" id="reloadRecords" type="button">重新加载</button>
   </header>
@@ -51,6 +53,6 @@
 
   <dialog id="markDialog" aria-labelledby="markTitle"><form id="markForm" class="dialog-inner"><div class="dialog-heading"><h2 id="markTitle">标记关注片段</h2><button class="icon-button" type="button" data-close="markDialog" aria-label="关闭标记窗口">×</button></div><label for="markKind">标记方式</label><select id="markKind"><option value="text">文字选段</option><option value="time">视频时间</option><option value="image">图片局部说明</option><option value="general">其他关注点</option></select><label for="markAttachment">对应附件 <span class="optional">可选</span></label><select id="markAttachment"></select><div id="markTimeFields" class="field-pair" hidden><div><label for="markStart">起始秒数</label><input id="markStart" type="number" min="0" step="0.01"></div><div><label for="markEnd">结束秒数</label><input id="markEnd" type="number" min="0" step="0.01"></div></div><label for="markText">选段原文 / 局部说明</label><textarea id="markText" rows="3" maxlength="2000000"></textarea><label for="markNote">为什么关注这里</label><textarea id="markNote" rows="2" maxlength="2000000"></textarea><p id="markError" class="form-error" hidden role="alert"></p><div class="dialog-actions"><button type="submit" class="primary-button">保存标记</button></div></form></dialog>
 
-  <dialog id="handoffDialog" aria-labelledby="handoffTitle"><div class="dialog-inner wide-dialog"><div class="dialog-heading"><div><small class="eyebrow">把问题与停止处一起带过去</small><h2 id="handoffTitle">交给 Codex 继续研究</h2></div><button class="icon-button" type="button" data-close="handoffDialog" aria-label="关闭交接窗口">×</button></div><p class="subtle">从当前持久化记录生成。复制后由你粘贴到 Codex；不会自动发送或启动研究。</p><label for="handoffText">交接文本（可手动全选复制）</label><textarea id="handoffText" rows="17" readonly spellcheck="false"></textarea><div class="dialog-actions"><span id="copyStatus" class="subtle" role="status" aria-live="polite">尚未复制。</span><button class="secondary-button" id="downloadHandoff" type="button">下载文本</button><button class="primary-button" id="copyHandoff" type="button">复制交接文本</button></div></div></dialog>
+  <dialog id="handoffDialog" aria-labelledby="handoffTitle"><div class="dialog-inner wide-dialog"><div class="dialog-heading"><div><small class="eyebrow">把问题与停止处一起带过去</small><h2 id="handoffTitle">交给 Codex 继续研究</h2></div><button class="icon-button" type="button" data-close="handoffDialog" aria-label="关闭交接窗口">×</button></div><p class="subtle">不会自动打开聊天、发送或启动研究。</p><ol class="plain-list"><li>复制下面的交接文本。</li><li>粘贴到本项目的 Codex 对话（也可交给已连接本项目的主聊天），并说“按交接继续研究”；新关注点可以一并说明。</li><li>Codex 确认写回后，回本页点“重新加载”查看成果。电脑与本地执行连接需保持可用。</li></ol><p id="handoffContext" class="warning-note" role="status"></p><label for="handoffText">交接文本（可手动全选复制）</label><textarea id="handoffText" rows="17" readonly spellcheck="false"></textarea><div class="dialog-actions"><span id="copyStatus" class="subtle" role="status" aria-live="polite">尚未复制。</span><button class="secondary-button" id="downloadHandoff" type="button">下载文本</button><button class="primary-button" id="copyHandoff" type="button">复制交接文本</button></div></div></dialog>
 </body>
 </html>

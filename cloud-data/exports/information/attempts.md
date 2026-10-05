@@ -1,6 +1,6 @@
 # attempts
 
-源快照：`cloud-data/snapshots/信息收集/data/opportunities.sqlite3`；记录数：177。
+源快照：`cloud-data/snapshots/信息收集/data/opportunities.sqlite3`；记录数：226。
 
 这是字段原样目录，不是新研究结论。原话、个人笔记、来源、AI 分析和候选仍按原字段分开；完整字段见同名 JSON。
 
@@ -1063,6 +1063,300 @@
 ## 记录 177：177
 
 - `id`：177
+- `source_id`：first_featured_list
+- `status`：partial
+
+## 记录 178：178
+
+- `id`：178
+- `source_id`：aishorts
+- `status`：partial
+
+## 记录 179：179
+
+- `id`：179
+- `source_id`：updream
+- `status`：failed
+
+## 记录 180：180
+
+- `id`：180
+- `source_id`：libtv
+- `status`：partial
+
+## 记录 181：181
+
+- `id`：181
+- `source_id`：jimeng
+- `status`：pending
+
+## 记录 182：182
+
+- `id`：182
+- `source_id`：xyq
+- `status`：pending
+
+## 记录 183：183
+
+- `id`：183
+- `source_id`：douyin_programs
+- `status`：pending
+
+## 记录 184：184
+
+- `id`：184
+- `source_id`：bili_programs
+- `status`：pending
+
+## 记录 185：185
+
+- `id`：185
+- `source_id`：xiaohongshu
+- `status`：pending
+
+## 记录 186：186
+
+- `id`：186
+- `source_id`：wechat
+- `status`：pending
+
+## 记录 187：187
+
+- `id`：187
+- `source_id`：bili_remix
+- `status`：failed
+
+## 记录 188：188
+
+- `id`：188
+- `source_id`：bili_white
+- `status`：failed
+
+## 记录 189：189
+
+- `id`：189
+- `source_id`：oiioii
+- `status`：pending
+
+## 记录 190：190
+
+- `id`：190
+- `source_id`：douyin_selected
+- `status`：partial
+
+## 记录 191：191
+
+- `id`：191
+- `source_id`：douyin_partner_intro
+- `status`：partial
+
+## 记录 192：192
+
+- `id`：192
+- `source_id`：douyin_partner_rules
+- `status`：failed
+
+## 记录 193：193
+
+- `id`：193
+- `source_id`：bili_incentive
+- `status`：failed
+
+## 记录 194：194
+
+- `id`：194
+- `source_id`：bili_huahuo_rules
+- `status`：partial
+
+## 记录 195：195
+
+- `id`：195
+- `source_id`：bili_huahuo
+- `status`：partial
+
+## 记录 196：196
+
+- `id`：196
+- `source_id`：xhs_pgy
+- `status`：failed
+
+## 记录 197：197
+
+- `id`：197
+- `source_id`：jingrui_2026
+- `status`：partial
+
+## 记录 198：198
+
+- `id`：198
+- `source_id`：jinji_ai_2026
+- `status`：partial
+
+## 记录 199：199
+
+- `id`：199
+- `source_id`：cuc_aigc_2026
+- `status`：partial
+
+## 记录 200：200
+
+- `id`：200
+- `source_id`：vacat_2026
+- `status`：failed
+
+## 记录 201：201
+
+- `id`：201
+- `source_id`：smg_seko_2026
+- `status`：partial
+
+## 记录 202：202
+
+- `id`：202
+- `source_id`：bjiff_aigc_2026
+- `status`：partial
+
+## 记录 203：203
+
+- `id`：203
+- `source_id`：first_2026
+- `status`：pending
+
+## 记录 204：204
+
+- `id`：204
+- `source_id`：student_tv_2026
+- `status`：partial
+
+## 记录 205：205
+
+- `id`：205
+- `source_id`：aniwow_2026
+- `status`：partial
+
+## 记录 206：206
+
+- `id`：206
+- `source_id`：aaiff_2026
+- `status`：partial
+
+## 记录 207：207
+
+- `id`：207
+- `source_id`：hkaiiff_2027
+- `status`：partial
+
+## 记录 208：208
+
+- `id`：208
+- `source_id`：jimeng_growth
+- `status`：failed
+
+## 记录 209：209
+
+- `id`：209
+- `source_id`：jimeng_canvas
+- `status`：failed
+
+## 记录 210：210
+
+- `id`：210
+- `source_id`：kling_partner
+- `status`：pending
+
+## 记录 211：211
+
+- `id`：211
+- `source_id`：jimeng_new_image
+- `status`：partial
+
+## 记录 212：212
+
+- `id`：212
+- `source_id`：kling_artist
+- `status`：partial
+
+## 记录 213：213
+
+- `id`：213
+- `source_id`：minimax_design
+- `status`：partial
+
+## 记录 214：214
+
+- `id`：214
+- `source_id`：runway_aif_2026
+- `status`：partial
+
+## 记录 215：215
+
+- `id`：215
+- `source_id`：vidu_artist
+- `status`：failed
+
+## 记录 216：216
+
+- `id`：216
+- `source_id`：kling_public_entry
+- `status`：pending
+
+## 记录 217：217
+
+- `id`：217
+- `source_id`：hailuo_domestic_gap
+- `status`：pending
+
+## 记录 218：218
+
+- `id`：218
+- `source_id`：wanxiang_gap
+- `status`：pending
+
+## 记录 219：219
+
+- `id`：219
+- `source_id`：vidu_earn
+- `status`：failed
+
+## 记录 220：220
+
+- `id`：220
+- `source_id`：hailuo_life_2025
+- `status`：partial
+
+## 记录 221：221
+
+- `id`：221
+- `source_id`：cuc_news_list
+- `status`：partial
+
+## 记录 222：222
+
+- `id`：222
+- `source_id`：hailuo_affiliate
+- `status`：partial
+
+## 记录 223：223
+
+- `id`：223
+- `source_id`：bjiff_ai_list
+- `status`：partial
+
+## 记录 224：224
+
+- `id`：224
+- `source_id`：minimax_blog_list
+- `status`：partial
+
+## 记录 225：225
+
+- `id`：225
+- `source_id`：xm_calls_list
+- `status`：partial
+
+## 记录 226：226
+
+- `id`：226
 - `source_id`：first_featured_list
 - `status`：partial
 

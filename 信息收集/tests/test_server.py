@@ -1,9 +1,11 @@
 import json
+import shutil
 import tempfile
 import threading
 import unittest
 import urllib.error
 import urllib.request
+import uuid
 from helpers import ScopedTemp
 from pathlib import Path
 from opportunities.collect import UpdateManager
@@ -16,8 +18,14 @@ class ServerTests(unittest.TestCase):
     def setUp(self):
         (ROOT / "output").mkdir(exist_ok=True)
         self.temp = ScopedTemp(ROOT / "output","http-test-")
-        self.path = Path(self.temp.name)/"data.sqlite3"
-        self.store = Store(ROOT,self.path)
+        self.root = Path(self.temp.name)
+        (self.root / 'config').mkdir()
+        for name in ('sources.json','rules.json'):
+            shutil.copyfile(ROOT / 'config' / name, self.root / 'config' / name)
+        (self.root / 'static').mkdir()
+        shutil.copyfile(ROOT / 'static' / 'index.html', self.root / 'static' / 'index.html')
+        self.path = self.root / "data.sqlite3"
+        self.store = Store(self.root,self.path)
         self.calls = []
         self.release = threading.Event()
         def runner(store,**kwargs):
@@ -59,13 +67,20 @@ class ServerTests(unittest.TestCase):
         self.assertEqual(ctx.exception.code,403)
     def test_stop_and_restart_persist_note_and_data(self):
         _,data=self.request('/api/state');item=data['items'][0]
-        self.request('/api/preference',{'id':item['id'],'starred':True,'note':'重启保留'},data['token'])
+        self.request('/api/preference',{'id':item['id'],'starred':True,'note':'重启保留','expectedPreferenceRevision':item['preference_revision'],'submissionId':uuid.uuid4().hex},data['token'])
         self.request('/api/stop',{},data['token']);self.thread.join(3)
         self.assertFalse(self.thread.is_alive())
-        restarted=Store(ROOT,self.path)
+        restarted=Store(self.root,self.path)
         selected=next(x for x in restarted.items() if x['id']==item['id'])
         self.assertTrue(selected['starred']);self.assertEqual(selected['note'],'重启保留')
         self.assertEqual(len(restarted.items()),len(data['items']))
+    def test_legacy_preference_without_version_is_rejected(self):
+        _,data=self.request('/api/state');item=data['items'][0]
+        with self.assertRaises(urllib.error.HTTPError) as caught:
+            self.request('/api/preference',{'id':item['id'],'note':'旧客户端不可覆盖'},data['token'])
+        self.assertEqual(caught.exception.code,409)
+        _,latest=self.request('/api/detail?id='+item['id'])
+        self.assertEqual((latest['note'],latest['preference_revision']),(item['note'],item['preference_revision']))
     def test_no_path_traversal_and_static_security_headers(self):
         with self.assertRaises(urllib.error.HTTPError) as ctx:self.request('/../app.py')
         self.assertEqual(ctx.exception.code,404)

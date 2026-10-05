@@ -1,6 +1,6 @@
 # materials
 
-源快照：`cloud-data/snapshots/素材观察室/data/observatory.sqlite3`；记录数：8。
+源快照：`cloud-data/snapshots/素材观察室/data/observatory.sqlite3`；记录数：10。
 
 这是字段原样目录，不是新研究结论。原话、个人笔记、来源、AI 分析和候选仍按原字段分开；完整字段见同名 JSON。
 
@@ -484,6 +484,114 @@
     "saved": true,
     "access": "not_checked",
     "preview": "attachment_specific",
+    "read": "not_read",
+    "researched": false
+  }
+}
+~~~~
+
+
+## 记录 9：mat_df70761e-8a7d-4421-90d0-231f90d0f15a
+
+- `id`：mat_df70761e-8a7d-4421-90d0-231f90d0f15a
+- `revision`：1
+- `status`：active
+- `created_at`：2026-10-02T17:52:56.318Z
+- `updated_at`：2026-10-02T17:52:56.318Z
+
+### 原字段 `body_json`
+
+~~~~json
+{
+  "title": "深研实测｜唐葡萄花鸟纹银香囊",
+  "original": {
+    "kind": "link",
+    "text": "唐代葡萄花鸟纹银香囊，陕西历史博物馆藏。先留馆藏链接，材料与用途待研究。",
+    "url": "https://www.sxhm.com/collections/detail/9948.html",
+    "source": {
+      "title": "陕西历史博物馆·葡萄花鸟纹银香囊",
+      "uri": "https://www.sxhm.com/collections/detail/9948.html",
+      "author": "陕西历史博物馆",
+      "publishedAt": "",
+      "locator": "馆藏页名称、时代与图片"
+    }
+  },
+  "originalImpression": "",
+  "currentImpression": "",
+  "impressionHistory": [],
+  "notes": [],
+  "tags": [
+    "真实深研实测·20261002",
+    "传统小物件"
+  ],
+  "segments": [],
+  "attachmentIds": [],
+  "source": {
+    "title": "陕西历史博物馆·葡萄花鸟纹银香囊",
+    "uri": "https://www.sxhm.com/collections/detail/9948.html",
+    "author": "陕西历史博物馆",
+    "publishedAt": "",
+    "locator": "馆藏页名称、时代与图片"
+  },
+  "sourceHistory": [],
+  "capabilities": {
+    "saved": true,
+    "access": "not_checked",
+    "preview": "text",
+    "read": "not_read",
+    "researched": false
+  }
+}
+~~~~
+
+
+## 记录 10：mat_c5afa305-85dc-4bdd-8652-e7778fc89104
+
+- `id`：mat_c5afa305-85dc-4bdd-8652-e7778fc89104
+- `revision`：1
+- `status`：active
+- `created_at`：2026-10-02T17:52:56.328Z
+- `updated_at`：2026-10-02T17:52:56.328Z
+
+### 原字段 `body_json`
+
+~~~~json
+{
+  "title": "深研实测｜宋定伯捉鬼",
+  "original": {
+    "kind": "link",
+    "text": "宋定伯夜行逢鬼，与鬼同行后将其带入宛市。《搜神记》卷十六，原文与版本待研究。",
+    "url": "https://github.com/kanripo/KR3l0099/blob/master/KR3l0099_016.txt",
+    "source": {
+      "title": "Kanripo《搜神记》卷十六·文渊阁四库本转录",
+      "uri": "https://github.com/kanripo/KR3l0099/blob/master/KR3l0099_016.txt",
+      "author": "题署晋干宝；Kanripo数字转录",
+      "publishedAt": "",
+      "locator": "KR3l0099_016.txt，WYG卷16叶8b末—9b前"
+    }
+  },
+  "originalImpression": "",
+  "currentImpression": "",
+  "impressionHistory": [],
+  "notes": [],
+  "tags": [
+    "真实深研实测·20261002",
+    "传统故事"
+  ],
+  "segments": [],
+  "attachmentIds": [],
+  "source": {
+    "title": "Kanripo《搜神记》卷十六·文渊阁四库本转录",
+    "uri": "https://github.com/kanripo/KR3l0099/blob/master/KR3l0099_016.txt",
+    "author": "题署晋干宝；Kanripo数字转录",
+    "publishedAt": "",
+    "locator": "KR3l0099_016.txt，WYG卷16叶8b末—9b前"
+  },
+  "sourceHistory": [],
+  "capabilities": {
+    "saved": true,
+    "access": "not_checked",
+    "preview": "text",
     "read": "not_read",
     "researched": false
   }

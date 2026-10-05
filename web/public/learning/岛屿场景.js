@@ -101,6 +101,39 @@
   }
   const views = {home,story,visual,post};
   const names = {home:'主岛家园',story:'故事花园',visual:'影像采光工坊',post:'剪辑声音港湾'};
+  // 与终端首页共用已选定的四张原图，不生成第二套岛屿或小猫。
+  const cats = {
+    home: {name:'英短蓝猫', crop:'518 268 88 86', center:[558,309]},
+    story: {name:'三花田园猫', crop:'294 220 86 88', center:[333,265]},
+    visual: {name:'暹罗猫', crop:'491 250 88 84', center:[536,294]},
+    post: {name:'缅因猫', crop:'382 236 99 98', center:[432,287]}
+  };
+  const paintingUrl = island => `/terminal/assets/${Object.hasOwn(views,island)?island:'home'}.png`;
+  function useSelectedPainting(host,island) {
+    const svg=host.querySelector('svg'),title=svg.querySelector('title');
+    const painting=document.createElementNS('http://www.w3.org/2000/svg','image');
+    for(const [key,value] of Object.entries({href:paintingUrl(island),width:'900',height:'650',preserveAspectRatio:'xMidYMid meet',class:'island-painting','aria-hidden':'true'}))painting.setAttribute(key,value);
+    const places=[...svg.querySelectorAll('.scene-place')];
+    for(const place of places){
+      place.querySelector('.scene-prop')?.remove();
+      if(island==='home'&&place.dataset.place==='traces'){
+        place.dataset.place='journey';place.setAttribute('aria-label','每日旅程 · 领航室');
+        place.querySelector('title').textContent='每日旅程，进入领航室';
+        place.querySelector('.scene-label').textContent='每日旅程';
+      }
+      if(place.dataset.place==='cat'){
+        const cat=cats[island];place.setAttribute('aria-label',`和${cat.name}待一会儿`);place.querySelector('title').textContent=`和${cat.name}待一会儿`;
+        place.setAttribute('transform',`translate(${cat.center.join(' ')})`);
+        const hit=place.querySelector('.scene-hit');for(const [key,value] of Object.entries({x:'-50',y:'-51',width:'100',height:'101'}))hit.setAttribute(key,value);
+      }
+    }
+    svg.replaceChildren(title,painting,...places);
+    painting.addEventListener('error',()=>{if(host.querySelector('.scene-image-error'))return;const warning=document.createElement('p');warning.className='scene-image-error';warning.textContent='岛屿画面暂未加载，文字入口仍可使用。';warning.setAttribute('role','status');host.append(warning);});
+  }
+  function catPortrait(island='home') {
+    const key=Object.hasOwn(cats,island)?island:'home',cat=cats[key];
+    return `<svg class="island-cat-portrait" viewBox="${cat.crop}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${cat.name}"><title>岛上的${cat.name}</title><image href="${paintingUrl(key)}" width="900" height="650" preserveAspectRatio="xMidYMid meet"/></svg>`;
+  }
   function mount(container, options = {}) {
     if (!container || typeof container.appendChild !== 'function') throw new TypeError('IslandScenes.mount requires a DOM container');
     const island = Object.hasOwn(views, options.island) ? options.island : 'home';
@@ -109,6 +142,7 @@
     host.className = `island-scenes scene-${island}`;
     const titleId = `island-scene-title-${++serial}`;
     host.innerHTML = `<svg viewBox="0 0 900 650" preserveAspectRatio="xMidYMid meet" role="group" aria-labelledby="${titleId}"><title id="${titleId}">${names[island]}，六处可探索的地点与一只小猫</title>${waves()}${views[island](count)}</svg>`;
+    useSelectedPainting(host,island);
     function activate(event) {
       const target = event.target.closest('[data-place]');
       if (!target || !host.contains(target)) return;
@@ -121,5 +155,5 @@
     container.appendChild(host);
     return { destroy() { host.removeEventListener('click',activate);host.removeEventListener('keydown',activate);host.remove(); } };
   }
-  window.IslandScenes = Object.freeze({mount});
+  window.IslandScenes = Object.freeze({mount,catPortrait,paintingUrl});
 }());

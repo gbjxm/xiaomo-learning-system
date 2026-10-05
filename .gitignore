@@ -11,6 +11,8 @@
 **/*.lock
 **/*.pid
 **/*.log
+**/*.sqlite3-wal
+**/*.sqlite3-shm
 **/profile/
 **/Default/
 /备份/

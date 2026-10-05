@@ -68,7 +68,7 @@
       "pk": 0
     }
   ],
-  "rowCount": 21,
+  "rowCount": 22,
   "rows": [
     {
       "id": 1,
@@ -278,6 +278,16 @@
       "before_id": 63,
       "after_id": 85,
       "diff": "--- 上次提取\n+++ 本次提取\n@@ -1,13 +1,13 @@\n-https://www.minimax.cn/blog/minimax-music-3-0-cn\tMiniMax Music 3.0：新一代开放权重、生产级全能音乐模型\n-https://www.minimax.cn/blog/minimax-h3\tMiniMax H3：打破任务和模态的边界\n-https://www.minimax.cn/blog/minimax-maxproof-math-proof-evolution\tMaxProof: 生成式验证强化学习驱动的数学证明进化系统\n-https://www.minimax.cn/blog/minimax-m3\tMiniMax M3：前沿 Coding 能力，1M上下文，原生多模态，一个模型全给你\n-https://www.minimax.cn/blog/sparse-token-forgetting-investigation\t为什么MiniMax大模型不认识\"马嘉祺\"？Minimax内部排查稀疏 Token 遗忘问题的记录\n-https://www.minimax.cn/blog/minimax-agent-team-long-running-1779893521\tMiniMax Agent Team: 为长程任务，持续进化而生\n-https://www.minimax.cn/blog/minimax-m27\tMiniMax M2.7: 开启模型的自我进化\n-https://www.minimax.cn/blog/forge-scalable-agent-rl\tForge: 可扩展的 Agent 强化学习框架与算法\n-https://www.minimax.cn/blog/minimax-m25\tMiniMax M2.5: 更快更强更智能，为真实世界生产力而生\n-https://www.minimax.cn/blog/minimax-m2-her\tMiniMax-M2-her 技术深度解析\n-https://www.minimax.cn/blog/minimax-m21\tMiniMax M2.1: 大幅提升多语言编程，为真实世界复杂任务而生\n-https://www.minimax.cn/blog/minimax-m2\tMiniMax M2 & Agent，大巧若拙\n-https://www.minimax.cn/blog/minimax-01-%E7%B3%BB%E5%88%97\tMiniMax-01开源：新架构开启Agent时代\n+https://www.minimax.cn/blog/minimax-music-3-0-cn\tMiniMax Music 3.0：新一代开放权重、生产级全能音乐模型\t2026-08-13\n+https://www.minimax.cn/blog/minimax-h3\tMiniMax H3：打破任务和模态的边界\t2026-07-31\n+https://www.minimax.cn/blog/minimax-maxproof-math-proof-evolution\tMaxProof: 生成式验证强化学习驱动的数学证明进化系统\t2026-06-09\n+https://www.minimax.cn/blog/minimax-m3\tMiniMax M3：前沿 Coding 能力，1M上下文，原生多模态，一个模型全给你\t2026-06-01\n+https://www.minimax.cn/blog/sparse-token-forgetting-investigation\t为什么MiniMax大模型不认识\"马嘉祺\"？Minimax内部排查稀疏 Token 遗忘问题的记录\t2026-05-25\n+https://www.minimax.cn/blog/minimax-agent-team-long-running-1779893521\tMiniMax Agent Team: 为长程任务，持续进化而生\t2026-04-27\n+https://www.minimax.cn/blog/minimax-m27\tMiniMax M2.7: 开启模型的自我进化\t2026-03-18\n+https://www.minimax.cn/blog/forge-scalable-agent-rl\tForge: 可扩展的 Agent 强化学习框架与算法\t2026-02-12\n+https://www.minimax.cn/blog/minimax-m25\tMiniMax M2.5: 更快更强更智能，为真实世界生产力而生\t2026-02-12\n+https://www.minimax.cn/blog/minimax-m2-her\tMiniMax-M2-her 技术深度解析\t2026-01-28\n+https://www.minimax.cn/blog/minimax-m21\tMiniMax M2.1: 大幅提升多语言编程，为真实世界复杂任务而生\t2025-12-23\n+https://www.minimax.cn/blog/minimax-m2\tMiniMax M2 & Agent，大巧若拙\t2025-10-27\n+https://www.minimax.cn/blog/minimax-01-%E7%B3%BB%E5%88%97\tMiniMax-01开源：新架构开启Agent时代\t2025-01-15",
+      "state": "review_pending"
+    },
+    {
+      "id": 22,
+      "source_id": "smg_seko_2026",
+      "url": "https://seko.sensetime.com/activity/2079017609580478466",
+      "at": "2026-10-03T07:11:26+00:00",
+      "before_id": 72,
+      "after_id": 88,
+      "diff": "--- 上次提取\n+++ 本次提取\n@@ -2,7 +2,7 @@\n 返回\n 去创作立即投稿\n “AI”了！2026年度AI短片计划全球启动\n-距离截稿还有30 天 7 小时\n+距离截稿还有28 天 16 小时\n 活动时间: 2026-07-24 09:31:14～\n 2026-10-31 23:59:59\n 由上海广播电视台、上海市静安区人民政府主办，上海东方娱乐传媒集团有限公司承办，商汤科技独家冠名的“创所未见•2026年度AI短片计划”致力于打造全球性、专业性、引领性的文化科技赛事IP。本次计划将搭建全球AIGC创作者交流高地，挖掘优质AIGC内容与人才，推动人工智能与影视创作、文化传播深度融合，让中国文化魅力与上海城市精神通过AIGC技术对话世界。",
       "state": "review_pending"
     }
   ]

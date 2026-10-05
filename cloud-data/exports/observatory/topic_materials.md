@@ -1,6 +1,6 @@
 # topic_materials
 
-源快照：`cloud-data/snapshots/素材观察室/data/observatory.sqlite3`；记录数：8。
+源快照：`cloud-data/snapshots/素材观察室/data/observatory.sqlite3`；记录数：10。
 
 这是字段原样目录，不是新研究结论。原话、个人笔记、来源、AI 分析和候选仍按原字段分开；完整字段见同名 JSON。
 
@@ -43,4 +43,14 @@
 
 - `topic_id`：topic_200b024e-2206-458b-b245-150d0b43469e
 - `material_id`：mat_324d11e0-f160-4d21-8e59-6839aa37f4f5
+
+## 记录 9：9
+
+- `topic_id`：topic_ecf5858c-d3db-42c2-9ed7-56854e7f93fa
+- `material_id`：mat_df70761e-8a7d-4421-90d0-231f90d0f15a
+
+## 记录 10：10
+
+- `topic_id`：topic_13617e30-a4f2-4e1e-b693-def92a386ef9
+- `material_id`：mat_c5afa305-85dc-4bdd-8652-e7778fc89104
 

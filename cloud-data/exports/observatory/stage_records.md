@@ -1,6 +1,6 @@
 # stage_records
 
-源快照：`cloud-data/snapshots/素材观察室/data/observatory.sqlite3`；记录数：12。
+源快照：`cloud-data/snapshots/素材观察室/data/observatory.sqlite3`；记录数：16。
 
 这是字段原样目录，不是新研究结论。原话、个人笔记、来源、AI 分析和候选仍按原字段分开；完整字段见同名 JSON。
 
@@ -4006,6 +4006,1679 @@
   "materialVersions": [
     {
       "materialId": "mat_324d11e0-f160-4d21-8e59-6839aa37f4f5",
+      "revision": 1
+    }
+  ],
+  "author": "ai"
+}
+~~~~
+
+
+## 记录 13：stage_b7075376-4748-4075-834c-3a22c6134d82
+
+- `id`：stage_b7075376-4748-4075-834c-3a22c6134d82
+- `topic_id`：topic_ecf5858c-d3db-42c2-9ed7-56854e7f93fa
+- `topic_revision`：2
+- `created_at`：2026-10-02T18:07:35.038Z
+
+### 原字段 `body_json`
+
+~~~~json
+{
+  "focus": "测试假设（AI设定，非小陌原话）：何家村这枚小银香囊怎样把“可以活动的器物”与“细密的花鸟纹”放在一起？先核具体实物，再提可观察的短片候选。",
+  "confirmed": [
+    "馆方公开金银器目录第634行把七一127、唐镂空飞鸟葡萄纹银熏球与原名葡萄花鸟纹银香囊对应；当前官网记直径4.5cm、链长7.5cm、重36g。",
+    "实际查看馆方外观原图和中国矿大2021年转载的打开状态照片；物件的运动未实际观察。",
+    "馆方现代说明与旧官网转载说明支持持平结构；不能据此认证这件古物在任意颠簸下均绝对安全。"
+  ],
+  "candidates": [
+    "以外壳缓转与内盂保持朝上的相对运动构成形式对照，先做可控复原或模型运动核验。",
+    "用侧光、近景和开合动作表现羽毛刻线、空隙及内外金银色差，不把现代摄影色调当古代原貌。"
+  ],
+  "parked": [
+    "杨贵妃爱情信物的具体归属、汉代发明者及通往现代陀螺仪的直系传播链：缺乏足以落实此件实物的证据，本轮不采用。",
+    "不扩写端午民俗、香料百科或完整剧本。"
+  ],
+  "unknown": [
+    "具体制作年份、作坊、主人与窖藏埋藏原因未定。",
+    "这件器物曾用何种香料、燃料、香品形态和操作步骤未核；未查残留分析或燃烧测试。",
+    "葡萄纹的原始寓意、花形的精确植物种属与鸟的物种没有本轮直接证据。",
+    "4.5cm与旧介绍/研究图注4.6cm的测量口径差异未解释。",
+    "内部小盂的成分与局部鎏金范围未实测；不能凭金色照片确定纯金。"
+  ],
+  "nextStep": "本轮可收束于具体身份、形制与静态图证。若采用外动内稳的创作候选，先用明确标注的复原模型或馆方运动演示核查相对运动，再决定画面；如要叙述古代燃香操作，先补具体香料/燃料与使用史证据。",
+  "limitations": [
+    "素材关注点由AI为真实流程实测设定，不是小陌个人感受，也不算个人学习进展。",
+    "未接触、拆解或动态观看古物；照片不证明运动性能和温度安全。",
+    "未直接读《一切经音义》《旧唐书》《西京杂记》的古籍原页；研究论文转引只按作者解释使用。",
+    "2024论文实际阅读对象是何家村例图注、唐代器物/工艺段、名称与文献证据争议段及结论；其全部脚注所列原书未逐件查阅。",
+    "官方照片与旧官网转载图片未见开放复用许可；本地研究参考不等于可用于公开号、商业短片或素材分发。"
+  ],
+  "paragraphs": [
+    {
+      "paragraphId": "para_object_20261002_preview",
+      "heading": "收藏预览",
+      "markdown": "一枚直径约4.5厘米的唐代银香囊：镂空球壳织入鸟与枝叶，内部持平结构让盛香小盂保持朝上。研究对象是何家村出土、现藏陕西历史博物馆的具体一件。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_catalogue",
+          "locator": "sheet1 第634行 A–J列",
+          "note": "支持名称对应、唐代与尺寸"
+        },
+        {
+          "sourceId": "src_object_hoard_link",
+          "locator": "正文“来自何家村窖藏”段",
+          "note": "支持具体出土来源"
+        },
+        {
+          "sourceId": "src_object_mechanism",
+          "locator": "正文第二段关于球囊与机环",
+          "note": "支持馆方所述持平功能"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_overview",
+      "heading": "内容概要",
+      "markdown": "这件“葡萄花鸟纹银香囊”是一件金属熏香器，虽叫“囊”，外层却是能打开的球壳。它在1970年发现的西安何家村唐代窖藏中出土，现由陕西历史博物馆收藏。馆方公开目录的文物编号是“七一127”：现名“唐镂空飞鸟葡萄纹银熏球”，原名即“葡萄花鸟纹银香囊”，这里的两个名称指向同一条馆藏记录。\n\n按当前官网，它直径4.5厘米，链长7.5厘米，重36克。银球由两半扣合，链与挂钩提供悬挂条件；内部设环架和小香盂。现代说明指出，环架允许外壳转动时香盂仍保持朝上，使香料不易倾洒。这样的解释可以帮助理解结构，但本轮只看了静态照片，没有亲眼验证古物运动。\n\n它可看的重点有两处：花鸟纹既是表面装饰，也是穿透球壳的空隙；内部小盂与外部球壳可以有不同的运动姿态。谁使用过这一枚、焚烧过什么香料、为何埋藏，都还没有落实。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_catalogue",
+          "locator": "sheet1 第634行 A–J列",
+          "note": "支持编号、两个名称、年代和测量值"
+        },
+        {
+          "sourceId": "src_object_hoard_link",
+          "locator": "正文“来自何家村窖藏”段",
+          "note": "支持器物的何家村来源"
+        },
+        {
+          "sourceId": "src_object_hoard",
+          "locator": "展览简介首段",
+          "note": "支持1970年10月发掘背景"
+        },
+        {
+          "sourceId": "src_object_cumt",
+          "locator": "图解首段",
+          "note": "支持银壳两半、环架及香盂形制；此为旧官网转载"
+        },
+        {
+          "sourceId": "src_object_mechanism",
+          "locator": "正文第二段",
+          "note": "支持馆方现代持平说明"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_exterior",
+      "heading": "先看这件实物：花纹、接缝与挂链",
+      "markdown": "![馆方实物原图：葡萄花鸟纹银香囊外观，保留原水印](attachment:att_052120bc91bc179d9ac8756c07015436061dc919)\n\n图：陕西历史博物馆当前馆藏页原图，未裁切、未调色；保留馆方水印。图片展示这件实物的一个外观角度，开放复用许可未核。\n\n在上半球正中，鸟纹横向展开，羽部由成排刻线表现；鸟下方有花叶形块面，曲枝穿行其间。中部两道实边相接，留下清楚的水平接缝；左前侧可见扣合部件。链条由顶部向右侧垂下，末端有较大的挂钩。透过镂空处能看见金色内层。\n\n照片中的银壳呈棕灰色，刻线边缘受光较亮。这里记录的是摄影下的现状色感；没有色卡、成分报告或清理记录，不能据此还原刚制成时的银色，也不能把所有暗色都确定为某一种氧化物。",
+      "basisKind": "direct_observation",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_photo",
+          "locator": "完整1912×1280图；上半球中鸟、中央接缝、右侧链钩与镂空处",
+          "note": "仅支持这张照片可见的外观和色感"
+        }
+      ],
+      "attachmentIds": [
+        "att_052120bc91bc179d9ac8756c07015436061dc919"
+      ]
+    },
+    {
+      "paragraphId": "para_object_20261002_inside",
+      "heading": "打开后的图证：看得见的环架与香盂",
+      "markdown": "![实物打开状态照片：中国矿大2021年转载的旧官网图片](attachment:att_099fd1ab578131652e8a479c01c785e2e994955e)\n\n图：中国矿业大学中华优秀传统文化传承基地2021年页面的打开状态图片；该页面署来源“陕西历史博物馆官方网站”。未改图。原始摄影许可与最初发布日期未核，不能写成新拍的官方图。\n\n左边半球内可以看见金色的小盂及包围它的环架；右边半球是翻开的球壳，链条放在一旁。这比闭合外观更直接地说明：小盂与外壳之间留有活动空间。照片没有标出每一个铆钉、轴线与转动范围，所以“双轴相连、内外环连接次序”仍须依据文字说明，不能说全部从此图独立验证。",
+      "basisKind": "direct_observation",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_interior",
+          "locator": "693×462打开状态图；左侧小盂与环架、右侧球盖",
+          "note": "支持静态内景与读取边界"
+        }
+      ],
+      "attachmentIds": [
+        "att_099fd1ab578131652e8a479c01c785e2e994955e"
+      ]
+    },
+    {
+      "paragraphId": "para_object_20261002_construction",
+      "heading": "馆藏说明：材料、开合和持平结构",
+      "markdown": "中国矿大保存的旧官网介绍记载：外壳为银质，两半球可开合；下半球中有两层银质机环，内置半球形香盂，部件之间通过银铆钉连接。材料表述需分层看：当前官网仅分类为“金银器”；旧馆文转载称内部为“金香盂”；Fang同件图2–3的整体材质图注则是“银，局部鎏金”。整体图注未逐一交代每个部件，以上不能由本轮合并成“内盂经检测为纯金”。因此观察段只称金色小盂，旧文材质描述按来源保留；成分与鎏金范围未实测。\n\n可以按“壳—外环—内环—盂”理解连接关系：壳偏转，环架给小盂留下转动自由；在重力作用下，较低的重心趋向下方，使盂口保持朝上。馆方2022年现代说明亦介绍这一效果。它依赖活动结构与重力，不能仅因为外形近似就说器物里有高速旋转的现代陀螺。\n\n结构适合携带或悬挂这一判断，有链钩与盛香盂作依据；把此件具体安排在衣袖、车帐、被褥还是某种仪式里，则缺少直接使用记录。尤其不能把“减少倾洒”升级为“任何晃动都不会漏火、不会烫伤”。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_cumt",
+          "locator": "图解首段，从“香囊外壁用银制”至“香盂始终保持重心向下”",
+          "note": "支持材料、部件与重力说明；是校方转载旧馆文，不是实物检测"
+        },
+        {
+          "sourceId": "src_object_mechanism",
+          "locator": "正文第二段，钩链/活轴及香料不洒说明",
+          "note": "支持当前馆方对持平效果的现代介绍"
+        },
+        {
+          "sourceId": "src_object_collection",
+          "locator": "时期/尺寸/材质字段",
+          "note": "支持现官网金银器分类"
+        },
+        {
+          "sourceId": "src_object_fang",
+          "locator": "Figures 2–3图注：Silver, partially gilded",
+          "note": "支持研究图注对同件整体材质的描述，未交代各部件成分"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_craft",
+      "heading": "工艺依据及能说到哪里",
+      "markdown": "Flavia Xi Fang在2024年研究中把这类唐代香囊的制作概括为锤揲银片成形、用錾具镂空；何家村例列在图2–3。本轮按研究者的工艺归纳使用，未对这件实物检测工具痕、焊口或鎏金层。",
+      "basisKind": "author_interpretation",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_fang",
+          "locator": "Tang Incense Spheres and Their Sites of Discovery；Figures 2–3；“All the Tang spherical censers ... beaten silver”段",
+          "note": "支持工艺通类归纳；不能替代此件的工序检测"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_beauty",
+      "heading": "研究解释：两个可继续看的点",
+      "markdown": "**外面活动，里面安定。** 这件器物的趣味并不止于“机关复杂”：环架把外壳的姿态和盛香盂的姿态分开了。若后续运动证据与文字一致，观看时就能同时看见外部变化与内部保持。这是一种由结构造成的形式关系；“人在动荡中守住中心”是我们可以借用的表达，并非已核的唐代器物寓意。\n\n**线条既描画，也留出空隙。** 鸟的轮廓、叶片块面、细枝曲线与孔洞交替出现。静态近景可以让视线从鸟羽进入枝条，再穿到金色内盂；换一个受光角度，线条明暗也会改变。银壳不是单纯给小盂套上花纹，它把内外两层同时交给观看者。不过拍光是否产生清楚纹样投影、烟是否沿特定孔洞流动，都需要实拍或物理模拟，不能从这张照片编出来。",
+      "basisKind": "ai_hypothesis",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_photo",
+          "locator": "上半球鸟纹及枝叶镂空局部",
+          "note": "分析依据是实际观察的线面与孔洞"
+        },
+        {
+          "sourceId": "src_object_mechanism",
+          "locator": "持平说明段",
+          "note": "相对运动判断依据为馆方文字，运动本身未核"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_symbol",
+      "heading": "解释差异：花鸟纹没有唯一答案",
+      "markdown": "Fang把何家村飞鸟、葡萄与花纹作为波斯及地中海艺术联系的线索；这是比较研究解释，不能直接指定每个纹样的原始寓意。",
+      "basisKind": "author_interpretation",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_fang",
+          "locator": "Tang Incense Spheres and Their Sites of Discovery；Hejiacun段的装饰描述",
+          "note": "支持作者的艺术联系解释，不支持唯一传播路线或唯一象征"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_symbol_unknown",
+      "heading": "“多子多福”与“爱情信物”的边界",
+      "markdown": "“多子多福”“富贵”“忠贞爱情”可以成为今天的观看联想，但本轮没有读到这件器物的唐代题记或原主解释，不能把这些词写成它的确定原意。葡萄纹名称证明识别题材，不等于已经证明古人的祝愿。\n\n杨贵妃身边出现“香囊”的文献故事，也不能把此件何家村器物认领给她：地点与物件身份并没有被同一证据链连接。研究论文还提醒，“香囊”可以指织物袋或金属器，不能只凭香囊保存完好便确定材质。本轮未直接核《旧唐书》原页，因而不重讲该故事，更不从它反推此件的主人。",
+      "basisKind": "unknown",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_fang",
+          "locator": "名称讨论中Lady Yang’s scented sachet段；织物袋/金属器的识别问题",
+          "note": "支持作者提出的名物识别争议；原始古籍本轮未读"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_dating",
+      "heading": "年代与尺寸：保留能够改变判断的差异",
+      "markdown": "当前官网和公开目录均给“唐”，本轮不把它缩成某一年。1970年10月是现代发掘时间；2021年校方转载、2022年馆方介绍和2024年论文是现代资料时间，都不是制造年代。器物制作、后来使用与最后埋入窖藏也不是同一时点。\n\n当前馆方两处数据一致为直径4.5厘米；2021年旧官网转载记高、宽4.6厘米，2024年论文图注也记直径4.6厘米。差别很小，但没有测量说明，不能宣布谁量错或擅自统一。本次采用当前馆方4.5厘米作识别值，保留4.6厘米这一资料差异；制作精密复原时仍须向馆方核尺寸与轴件细节。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_catalogue",
+          "locator": "sheet1 第634行 D/G/I/J列",
+          "note": "支持唐代与4.5/7.5/36g数据"
+        },
+        {
+          "sourceId": "src_object_collection",
+          "locator": "时期与尺寸字段",
+          "note": "支持当前官网数据"
+        },
+        {
+          "sourceId": "src_object_cumt",
+          "locator": "规格及发布日期",
+          "note": "支持2021年转述的4.6厘米"
+        },
+        {
+          "sourceId": "src_object_fang",
+          "locator": "Figures 2–3图注",
+          "note": "支持研究图注的4.6厘米"
+        },
+        {
+          "sourceId": "src_object_hoard",
+          "locator": "简介首段",
+          "note": "支持发掘时间"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_origin",
+      "heading": "暂不讲一条确定的发明史",
+      "markdown": "“汉代丁缓造炉，一路发展成现代陀螺仪”需要连续的文本、实物与传播证据。Fang指出这条直系联系及唐代器物的确切来源尚未坐实。本轮没有补核其所引古籍，因此只保留争议，不断言汉代实物已被发现、此件发明于唐朝，或它直接启发了航天设备。",
+      "basisKind": "unknown",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_fang",
+          "locator": "Ding Huan/Xijing zaji争议段；结论末段",
+          "note": "支持研究者对谱系和来源的不确定判断"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_creative",
+      "heading": "创作联想·候选：先留动作与条件",
+      "markdown": "**候选一：缓转与朝上。** 在明确标注的复原模型上，外壳缓慢倾转，镜头贴近环架与盂口，观察两者是否产生可读的相对运动。可表达外界变化中保留一处安定，也可纯粹拍“一个精巧结构怎样工作”。成立条件是模型结构正确、运动清楚；不需要把它安给真实唐代人物或预写爱情情节。\n\n**候选二：从鸟羽到内部的金色。** 先给外壳侧光近景，让羽毛与叶脉刻线出现；再由接缝打开到内盂，把观看从表面纹样引到使用结构。可以观察手怎样握球、链钩怎样悬挂、盖体怎样打开，但姿势必须由复原件验证；动作不等于唐代使用礼仪。声音可以从复原件采集细小链响与开合声，不能宣称古物本身有某种固定音色。\n\n若需要烟，先决定是有出处的燃香复原还是明确的艺术效果；本轮没有香料配方、燃烧状态或烟量证据。",
+      "basisKind": "ai_hypothesis",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_photo",
+          "locator": "外壳刻线、接缝、链钩及透见内盂局部",
+          "note": "支持可取近景细节"
+        },
+        {
+          "sourceId": "src_object_interior",
+          "locator": "打开状态图",
+          "note": "支持表面与内部的视觉转换"
+        },
+        {
+          "sourceId": "src_object_mechanism",
+          "locator": "持平说明段",
+          "note": "提供待动态核验的动作假设"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_method",
+      "heading": "方法与读取记录",
+      "markdown": "本阶段由AI设定焦点，未记录小陌个人感受。实际查阅当前馆藏页、馆方金银器目录对应行、何家村展览说明与器物官方现代介绍；下载并目验1912×1280馆方外观图，及693×462校方转载旧官网内景图。目录下载的原件为XLSX，未执行其中内容；仅解析工作表XML核对字段。\n\n2024年论文实际读了与何家村对象、工艺、名称争议、起源及结论有关的正文，未逐一打开全部脚注原书。CBETA页面仅能读取导航外壳，未取得目标古籍正文；MDPI论文访问受限，未作为已读论据。未做古籍OCR、金属成分检测、残留分析、动态演示审看或燃烧试验。\n\n外观图保留原水印，内景图保留转载现状，无裁切、调色与生成示意。馆站声明版权所有，转载图的原始许可亦不明；仅作本地研究参考，公开发布或商业复用前需核对授权。图像登记与正式阶段保存由总控通过现有受控API完成；本稿生成不代表已经写库。",
+      "basisKind": "ai_hypothesis",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_collection",
+          "locator": "当前页面及页尾版权",
+          "note": "登记读取方式与版权边界"
+        },
+        {
+          "sourceId": "src_object_catalogue",
+          "locator": "sheet1 第634行；文件哈希见原件meta",
+          "note": "登记目录解析边界"
+        },
+        {
+          "sourceId": "src_object_interior",
+          "locator": "打开状态图及其来源页面",
+          "note": "登记图片读取与转载关系"
+        },
+        {
+          "sourceId": "src_object_fang",
+          "locator": "实际所读对象段、命名争议段及结论",
+          "note": "登记有限章节范围"
+        }
+      ],
+      "attachmentIds": []
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "src_object_collection",
+      "kind": "external",
+      "title": "陕西历史博物馆：葡萄花鸟纹银香囊",
+      "locator": "时期/尺寸/材质字段及页尾版权",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际完整读取对象字段；“藏品介绍”当前无正文；未核动态展出状态",
+      "licenseStatus": "unknown；未见允许公开/商业复用的开放许可",
+      "uri": "https://www.sxhm.com/collections/detail/9948.html"
+    },
+    {
+      "sourceId": "src_object_catalogue",
+      "kind": "external",
+      "title": "陕西历史博物馆公开藏品目录：金银器类",
+      "locator": "XLSX xl/worksheets/sheet1.xml，第634行 A–J列",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际下载XLSX原件、解析sharedStrings与sheet1；核第634行及列标题，未全面研究其他器物",
+      "licenseStatus": "unknown；未见允许公开/商业复用的开放许可",
+      "uri": "https://www.sxhm.com/down/news/502.html"
+    },
+    {
+      "sourceId": "src_object_hoard",
+      "kind": "external",
+      "title": "陕西历史博物馆：何家村窖藏出土文物展",
+      "locator": "展览简介首段",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读取展览说明；不把宏观展览介绍当此件使用履历",
+      "licenseStatus": "unknown；未见允许公开/商业复用的开放许可",
+      "uri": "https://www.sxhm.com/Hejia_village.html?_isa=1"
+    },
+    {
+      "sourceId": "src_object_hoard_link",
+      "kind": "external",
+      "title": "陕西历史博物馆：黄河流域文明故事系列短片介绍",
+      "locator": "正文“来自何家村窖藏”段",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读网页说明，未点击/审看手绘动画，不从动画提物证",
+      "licenseStatus": "unknown；未见允许公开/商业复用的开放许可",
+      "uri": "https://www.sxhm.com/info/news/detail/16055.html"
+    },
+    {
+      "sourceId": "src_object_mechanism",
+      "kind": "external",
+      "title": "陕西历史博物馆：花鸟添香数字文创的原型与结构说明",
+      "locator": "正文第二段",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读馆方现代文字说明；原型器物与二次创作动画分开，未观看动画",
+      "licenseStatus": "unknown；未见允许公开/商业复用的开放许可",
+      "uri": "https://www.sxhm.com/info/news/detail/1334.html"
+    },
+    {
+      "sourceId": "src_object_cumt",
+      "kind": "external",
+      "title": "中国矿业大学：陕西历史博物馆馆藏（2021年旧官网转载）",
+      "locator": "规格/图解首段/“资料来源：陕西历史博物馆官方网站”",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读页面及两图；明确是校方转载旧馆文，并非独立物证；图解后段古籍转引未核原书",
+      "licenseStatus": "unknown；未见允许公开/商业复用的开放许可",
+      "uri": "https://ilovehsiangbao.cumt.edu.cn/info/1053/1226.htm"
+    },
+    {
+      "sourceId": "src_object_photo",
+      "kind": "external",
+      "title": "陕西历史博物馆实物原图：外观",
+      "locator": "完整1912×1280图；上半球鸟、接缝、链钩",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际下载并目验完整图，未裁切调色；仅一个静态外观角度",
+      "licenseStatus": "馆方水印与官网版权所有；仅本地研究参考，公开/商业复用许可未核",
+      "uri": "https://www.sxhm.com/Uploads/Picture/2023/03/03/s64019e0a01903.JPG"
+    },
+    {
+      "sourceId": "src_object_interior",
+      "kind": "external",
+      "title": "中国矿大转载旧馆图：香囊打开状态",
+      "locator": "完整693×462图；左半球香盂与环架",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际下载并目验；转载页署来源陕西历史博物馆官方网站，原始摄影页面/日期未核",
+      "licenseStatus": "unknown；原始摄影和转载授权未核，仅本地研究参考",
+      "uri": "https://ilovehsiangbao.cumt.edu.cn/__local/9/ED/6F/30291D06A96B0810C3015136CA8_B27A7C9A_8211.png"
+    },
+    {
+      "sourceId": "src_object_fang",
+      "kind": "external",
+      "title": "Flavia Xi Fang（2024）：Scent, Art and Astronomy",
+      "locator": "Figures 2–3；Tang Incense Spheres and Their Sites of Discovery；Ding Huan与香囊命名争议段；结论",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读取何家村例图注、工艺段、命名与文献争议段、结论；不等于逐件核了所引古籍或全部参考书",
+      "licenseStatus": "开放阅读；图像另有原书出处，未据开放访问推断图像可自由复用",
+      "uri": "https://journals.sagepub.com/doi/10.1177/09719458231226000"
+    }
+  ],
+  "researchStatus": "stage_complete",
+  "materialVersions": [
+    {
+      "materialId": "mat_df70761e-8a7d-4421-90d0-231f90d0f15a",
+      "revision": 1
+    }
+  ],
+  "author": "ai"
+}
+~~~~
+
+
+## 记录 14：stage_7bf3acab-f8e3-42a9-a0eb-4ed6812e836f
+
+- `id`：stage_7bf3acab-f8e3-42a9-a0eb-4ed6812e836f
+- `topic_id`：topic_13617e30-a4f2-4e1e-b693-def92a386ef9
+- `topic_revision`：2
+- `created_at`：2026-10-02T18:07:35.181Z
+
+### 原字段 `body_json`
+
+~~~~json
+{
+  "focus": "AI实测假设：完整理解宋定伯条，研究轻重/渡水声的身份试探及问禁忌—唾羊—售卖照应；不记成小陌感受。",
+  "confirmed": [
+    "完整读今本《搜神记》宋定伯条，目验四库影印对应三页；扫描具体阁本未核。",
+    "正文写夜行、佯称鬼、互背、禁忌、渡水、强背入市、化羊及得钱离去；未明写鬼先害人。",
+    "两处类书所读完整转引均归《列异传》，不等于读到独立早期原本。",
+    "今本末句含石崇；所读类书条末未提石崇，不据此确定人物年代。"
+  ],
+  "candidates": [
+    "以承重差异和一有一无的渡水声表现身份试探。",
+    "保留落地成羊与售卖落点，观察同行关系转为控制。"
+  ],
+  "parked": [
+    "全面重建今本辑佚与诞生史。",
+    "普遍唾鬼习俗断言。",
+    "服饰、市场、钱币、时辰、配乐与完整剧本。"
+  ],
+  "unknown": [
+    "故事形成过程、最初讲述者及发生年代未知。",
+    "鬼的意图、定伯预谋、羊与买主后续未交代。",
+    "水声句第二字、宗/宋和扫描阁本待补证。"
+  ],
+  "nextStep": "本轮两项形式问题已可定位回答。若转创作，先由小陌选身份试探或关系转为交易的感觉，再核最少必要时代视觉资料；当前不继续扩写。",
+  "limitations": [
+    "AI实测焦点非用户原话、感受、学习经历或采用方向。",
+    "完整读本条并目验四库影印三页；扫描具体阁本待核；类书仅核数字条文，未核原页；未通读三书。",
+    "题署与今本来历存疑分开；未完成早期《列异传》、辑佚史或起源考证。",
+    "水声字形与宗/宋差异待精校，未改原文或宣布古本异文。",
+    "未补编鬼意图、定伯预谋与后续。页图公开复用许可未核。",
+    "未生成短片或获用户/真人观众评价；视觉复原与普遍民俗未研究。"
+  ],
+  "paragraphs": [
+    {
+      "paragraphId": "para_song_preview_20261002",
+      "heading": "收藏预览",
+      "markdown": "宋定伯夜行遇鬼，假装自己也是鬼。一路互背、渡水后，他把鬼带到宛市；鬼化成羊，被他唾后卖掉。这是《搜神记》卷十六的一则短篇。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "卷十六8b末—9b前；KR3l0099_016.txt L149—163",
+          "note": "完整条支持相遇、同行与售羊结局。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_overview_20261002",
+      "heading": "内容概要",
+      "markdown": "南阳人宋定伯年少时，在夜路上碰见一个自称是鬼的同行者。对方反问他是谁，他骗说自己也是鬼。两人都说要去宛市——故事里双方想去的集市——便一起走了几里。鬼嫌步行太慢，提议轮流背对方，定伯答应了。\n\n鬼先背定伯，发现他很重，怀疑他不是鬼。定伯解释说自己刚成为鬼，所以身体还重；换他背鬼时，鬼几乎没有重量。这样轮换几次，定伯又借“我才成为鬼，不懂禁忌”问鬼怕什么，得到“不喜欢人唾”的回答。遇到水，他让鬼先过，听不到水声；自己过水却发出声响。鬼再次追问，他仍用新死、还不习惯渡水来解释。\n\n将到宛市时，定伯把鬼背在肩上，抓紧它，不理会它大叫着要求下来。到了集市，他把鬼放到地上，鬼变成一只羊。定伯卖它，又怕它再变化，向它吐唾，最后得到一千五百钱离开。本条还附一句石崇谈论“定伯卖鬼得钱”的说法。\n\n这就是本轮完整读到的故事。它没有说明定伯为何夜行、鬼为何去集市，也没有明确写鬼要伤害他；买主、羊后来怎样、鬼是否报复均未交代。条末石崇说法属于所读文本的记载，不能单凭它确定事情发生年代。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "8b末—9a前半；L149—155",
+          "note": "支持人物、相遇、目的地与轮换背负。"
+        },
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "9a后半—9b前；L156—163",
+          "note": "支持问禁忌、渡水、入市、化羊、唾及结尾；从完整条确认未交代部分。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_encounter_20261002",
+      "heading": "原文与白话·夜路相遇",
+      "markdown": "以下原文采用已下载的Kanripo WYG（文渊阁四库本标签）数字转录；本执行者为阅读加了标点，原字未依照通行译文改写。白话为本执行者自译。\n\n> 南陽宋定伯年少時，夜行逢鬼，問之。鬼言：“我是鬼。”鬼問：“汝復誰？”定伯誑之，言：“我亦鬼。”鬼問：“欲至何所？”答曰：“欲至宛市。”\n\n**白话：**南阳的宋定伯年轻时，夜里赶路，碰到了鬼，便询问它。鬼说：“我是鬼。”鬼反问：“你又是谁？”定伯骗它，说：“我也是鬼。”鬼问：“你要去哪里？”他答：“我要去宛市。”\n\n![古籍影印原页：四库影印卷十六第八叶背，故事起句在左侧末两列](attachment:att_8976cb5178e5cf1948e402f4b05834da4dfb0054)\n\n**图证说明：**Internet Archive数字件06050852.cn，元数据记浙江大学图书馆贡献、CADAL资助，PDF第117页=原书卷十六第八叶背。本条从图左侧末两列“南陽宋定伯”开始，续到下一叶正面；图中其余条目不是本案正文。此图是古籍影印页，由原PDF渲染、未重绘文字，不是现代插画或复原图。扫描件只明确四库影印，具体阁本身份尚未核定，不能仅因文字相近就称已核Kanripo的WYG底本。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "8b末—9a首；L149—152",
+          "note": "起句与目的地。"
+        },
+        {
+          "sourceId": "src_song_scan",
+          "locator": "PDF117=卷十六8b，左侧末两列",
+          "note": "实际目验故事起句与原页位置。"
+        },
+        {
+          "sourceId": "src_song_metadata",
+          "locator": "metadata.contributor/scanningcenter/sponsor/description",
+          "note": "图书馆贡献、CADAL及四库影印说明；未明确具体阁本。"
+        }
+      ],
+      "attachmentIds": [
+        "att_8976cb5178e5cf1948e402f4b05834da4dfb0054"
+      ]
+    },
+    {
+      "paragraphId": "para_song_journey_20261002",
+      "heading": "原文与白话·轮换背负，渡水露出差别",
+      "markdown": "> 鬼言：“我亦欲至宛市。”遂行數里。鬼言：“步行太遲，可共遞相擔，何如？”定伯曰：“大善。”鬼便先擔定伯數里。鬼言：“卿太重，將非鬼也。”定伯言：“我新鬼，故身重耳。”定伯因復擔鬼，鬼畧無重。如是再三。定伯復言：“我新鬼，不知有何所畏忌。”鬼答言：“惟不喜人唾。”於是共行。道遇水，定伯令鬼先渡，聼之，了然無聲音。定伯自渡，漕漼作聲。鬼復言：“何以有聲？”定伯曰：“新死，不習渡水，故耳。勿怪吾也。”\n\n**白话：**鬼说它也要去宛市，双方一起走了几里。鬼提议：“走路太慢，我们轮流背对方，好不好？”定伯说：“很好。”鬼先背他走了几里，发觉他很重，怀疑他不是鬼。他说：“我才成为鬼，所以身体还重。”换定伯背鬼时，鬼几乎没有重量。如此轮换几次，他又问：“我才成为鬼，不知道有什么害怕或忌讳的事。”鬼回答：“只是不喜欢人向我吐唾。”两人接着走。路上碰到水，定伯让鬼先渡，听不到声响；他自己过水却发出水声。鬼追问缘故，他回答：“我刚死，还不习惯渡水，所以才这样。别觉得我奇怪。”\n\n“遞相擔”在这里是轮流背负，不是抬轿；“如是再三”译反复轮换，未硬定为三次。“新鬼”是定伯说出来的假身份，不是叙述者确认他真的死了。\n\n![古籍影印原页：四库影印卷十六第九叶正，互背、问禁忌及渡水在本页](attachment:att_4c3183ce84c7afe58eb1fe42274cc54ab8adbf2e)\n\n**图证说明：**PDF第118页=卷十六第九叶正，本页连续含互背、问禁忌、无声渡水、有声渡水及将至宛市，未重绘。Kanripo转录“漕漼”第二字与所看影印字形仍待精校；由于具体阁本同一性也未核，暂留字形问题，不宣布古本异文。白话只取前后文明确的“发出水声”，不依赖定字。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "9a；L152—159",
+          "note": "轮换、轻重、假身份、禁忌与渡水声音。"
+        },
+        {
+          "sourceId": "src_song_scan",
+          "locator": "PDF118=卷十六9a，全页；水声句在左侧第二列",
+          "note": "已目验对应文本；保留字形与具体阁本未核。"
+        }
+      ],
+      "attachmentIds": [
+        "att_4c3183ce84c7afe58eb1fe42274cc54ab8adbf2e"
+      ]
+    },
+    {
+      "paragraphId": "para_song_market_20261002",
+      "heading": "原文与白话·从同行者到待售的羊",
+      "markdown": "> 行欲至宛市，定伯便擔鬼著肩上，急執之。鬼大呼，聲咋咋然，索下。不復聽之，徑至宛市中，下著地，化為一羊，便賣之。恐其變化，唾之，得錢千五百，乃去。當時石崇有言：“定伯賣鬼，得錢千五。”\n\n**白话：**快到宛市时，定伯把鬼背到肩上，紧紧抓住。鬼高声叫喊，要求下来；定伯不再听它，直接走进集市，放它到地上，它化成一只羊。定伯便卖这只羊，怕它再变化，又向它吐唾，得到一千五百钱后离开。所读本还说，当时石崇有“定伯卖鬼，得钱一千五百”这句话。\n\n本条没有交代鬼为什么化羊，也没有说羊后来被宰。吐唾的目的由“恐其變化”交代；这不等于文字说唾液把鬼消灭了，或它从此永远不能变化。交易、唾和收钱是文本连续叙述的动作，具体交割瞬间没有细写。\n\n![古籍影印原页：四库影印卷十六第九叶背，强背、化羊、唾与得钱在右侧前三列](attachment:att_9e0fdcad71918210f9ceda182be289a5d619362d)\n\n**图证说明：**PDF第119页=卷十六第九叶背，本条只占右侧前三列，“吴王夫差女”以下已经进入另一则。不能拿下一则的恋爱、死因或时代补入宋定伯条。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "9a末—9b前；L159—164",
+          "note": "结尾、石崇附句及下一条边界。"
+        },
+        {
+          "sourceId": "src_song_scan",
+          "locator": "PDF119=卷十六9b，右侧前三列与后续起句",
+          "note": "已目验结尾和文本边界。"
+        }
+      ],
+      "attachmentIds": [
+        "att_9e0fdcad71918210f9ceda182be289a5d619362d"
+      ]
+    },
+    {
+      "paragraphId": "para_song_identity_analysis_20261002",
+      "heading": "研究解释·一个假身份怎样连续补住破绽",
+      "markdown": "本轮测试焦点之一是：这篇短文为什么无需交代鬼的外貌，仍能让人感觉双方不一样。答案首先在可以感受的小差别里：鬼背人觉得沉，人背鬼却几乎无重；鬼渡水无声，人渡水有声。重量属于身体触觉，水声属于听觉，两次都让鬼追问身份。\n\n定伯反复沿用“新鬼／新死”：第一次解释身体为什么重，中途以不熟禁忌换取信息，第二次解释为什么渡水出声。同一套身份说辞承担三个动作，使问禁忌嵌在结伴行路里；后面的唾又使用了先前得到的信息。这是由段落先后关系得到的叙述结构解释。\n\n**反证与边界：**正文没有写鬼已完全信任他，也没有写定伯从相遇时就计划卖鬼。“新死”说辞的反复可看作应变，也可在改编中表现成逐步试探；两种心理读法都要由作品另行选择，不能倒写成古文事实。这里也不把“鬼略无重”扩展为所有古代鬼都无重量的知识。",
+      "basisKind": "ai_hypothesis",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "9a L154—158；9b L162",
+          "note": "轻重、身份追问、问禁忌和末尾唾的对应，是本执行者分析依据。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_market_analysis_20261002",
+      "heading": "研究解释·奇事落到集市，关系也变了",
+      "markdown": "第二个可深挖的点是观察现有结尾怎样改变关系。初遇时鬼会说话、提议同行和互背；将至宛市，定伯从轮换背负变成紧抓不放，不再理会鬼的要求；落地后鬼化为羊，接着成为可出售的对象。叙述把“交谈者—背负物—待售的羊”连续放在一起，最后只留下收到钱和离去。\n\n这使超常事件拥有很具体的日常落点：故事没有展开一场法术决斗，而是把说话的鬼带进交易。前面问“不喜人唾”，结尾用唾防变化，也把信息变成了动作。本执行者因此认为，短片可以关注身份和关系的改变，以及结尾的干脆。\n\n**另一种读法必须留着：**从鬼的遭遇看，开头它如实自报身份、提议互背，后面却被抓走售卖。原文未明写它先害人，所以“定伯战胜恶鬼、为民除害”不能直接当事实概要；同样，没写害人不足以证明鬼一定善良。喜剧、诡异或带一点不安，都是可能语气，尚无读者反馈能确定哪一种更有效。这里只是本执行者的研究解释，不是在断言古代人普遍怎样理解鬼或买卖。",
+      "basisKind": "ai_hypothesis",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "8b L149—150；9a L152—159；9b L161—163",
+          "note": "自报身份、互背、强抓、索下、化羊与售卖支持关系变化分析；道德判断另行限定。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_creative_20261002",
+      "heading": "创作联想·两个可观察的候选",
+      "markdown": "**候选一：让身体和声音先于解释被感到。**同一段路上，背人的一方需要承重，换背鬼的一方却几乎不用承重；浅水处先过的脚步听不到水声，后过的脚步有清楚水声。肩膀下沉、呼吸是否费力、脚入水的声响可以成为可表演、可听见的细节。原文只支持轻重和涉水声的差异，具体呼吸、身形与动作幅度是改编假设，须以后用表演/声画样段判断。\n\n**候选二：保留落地成羊的简洁。**围绕肩上求下的声音、紧抓的手、落地后的羊及卖得钱这几个正文已有动作，寻找奇事突然落入普通交易的感觉。羊是否继续用人声、变形是否可见、买主是否察觉、市场是什么时辰，古文没有规定；每加一项，都应标为改编选择。\n\n两项可以任选其一，也可组合。当前没有生成影片、没有人类观众评价，没有把候选记成小陌已采用方向；这里给的是进入创作前可验证的细节，不是完整剧本或分镜。",
+      "basisKind": "ai_hypothesis",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "卷十六9a—9b；L153—163",
+          "note": "候选依据承重、涉水、抓持、化羊与售卖；其余声画细节明确为改编。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_time_20261002",
+      "heading": "时间与底本·题署晋人，不等于已读东晋原稿",
+      "markdown": "本轮固定对象是二十卷今本中的宋定伯条。主文本读Kanripo标为WYG（文渊阁四库全书）的数字转录；图证读图书馆贡献的四库影印三页，具体阁本身份待核。应把四层时间分开：\n\n- **故事设定时间：**本条只写南阳、年少、夜行及宛市，未给年号或可确定的年份。石崇附句是文本记载，不能独自承担定年。\n- **作品作者与成书层：**所读提要称“旧本题曰晋干宝撰”，并记他在晋元帝时任官。这是作者题署与传记层，不是这份见证写成于东晋的证据，更不是本篇首次诞生日期。\n- **当前见证：**转录平台标文渊阁本；提要署乾隆四十三年三月（1778）。所读影印、现代扫描、PDF处理与数字转录是不同保存层次。本轮未读到早期干宝原本，扫描件也未独立核具体阁本。\n- **本次读取：**2026年10月2日固定下载内容、提交号、页码与哈希。这只是可重找的研究时点，不是故事形成日期。\n\n我们读到的是今本保存的一则故事，不能把“东晋作者题署”直接写成“故事在东晋首次诞生”。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "完整条L149—163",
+          "note": "本条未给年号，含石崇附句。"
+        },
+        {
+          "sourceId": "src_song_preface",
+          "locator": "提要000-1a—2a；L11—15、L30—31",
+          "note": "旧本题署、元帝时任官及提要1778日期。"
+        },
+        {
+          "sourceId": "src_song_metadata",
+          "locator": "metadata.description/contributor/publicdate/ocr；PDF文件信息",
+          "note": "四库影印与现代数字处理层；不把上传/处理日期当故事年代。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_preface_20261002",
+      "heading": "馆臣解释·今本来历本来就留着疑问",
+      "markdown": "所读清代提要已经提醒，不能直接把二十卷今本等同于干宝旧书。它先转引胡震亨的怀疑，认为书中存在后人附益；又由馆臣提出《搜神总记》与后人分卷的解释，最后明说“疑以傳疑，今姑仍舊題著之於録焉”。\n\n这里保留的是**清代馆臣的存疑和解释**。胡震亨跋、馆臣拿来比较的其他书，本轮没有逐一读原件；也未完成现代版本研究。因此，不把提要里的假说写成已经证实的完整重辑经过，不自行断言某位在何年重建了今本。这足以提示底本边界，尚不足以证明本篇的诞生过程。",
+      "basisKind": "author_interpretation",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_preface",
+          "locator": "提要000-1b—2a；L17—30",
+          "note": "清代馆臣的转引与存疑；不冒称已读胡跋原件。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_comparison_20261002",
+      "heading": "版本对读·类书指向《列异传》，仍不能宣布起源",
+      "markdown": "本轮另外完整读取了两份类书转引。\n\n**《太平广记》卷三百二十一“鬼六”宋定伯条**保存同一情节，条末作“當時有言定伯賣鬼得錢千五”，随后注明“出列異傳”。本轮所读数字正文没有“石崇”。\n\n**《太平御览》卷八百八十四所读四部丛刊转录**起首作“列異傳曰南陽宗定伯”，也写互背、问人唾、涉水、化羊及售卖，结尾作“于時名宗定伯賣鬼得錢千五百”。这里人名作“宗”，主文本和《太平广记》作“宋”。御览原页未核，暂记电子转录差异，不定哪一姓是原字。\n\n两处引书说明支持“所读类书把这则故事归到《列异传》”。但本轮没有实际读到早期《列异传》独立原本，也未辨明同名书作者；不能据此证明某位作者亲写、故事起源于某一朝代，或哪份是唯一原版。两部类书还可能依赖共同文本，不是两起历史事件的独立目击证词。\n\n对读改变了本轮判断：今本末句提到石崇，不再被拿来填主人公年代；“出《列异传》”保留为可查的传承线索。至于故事最初怎样诞生，仍不能确定。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_tpgj",
+          "locator": "卷321-9a—9b；KR3l0118_321.txt L153—168",
+          "note": "完整条、无石崇末句及出列异传。"
+        },
+        {
+          "sourceId": "src_song_tpyl",
+          "locator": "卷884-2a末—2b；KR3k0012_884.txt L48—59",
+          "note": "完整转引、宗定伯、引书与末句。"
+        },
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "卷十六9b；L163",
+          "note": "主文本石崇附句对照。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_unknown_20261002",
+      "heading": "尚未解决·哪些问题值得另开一小步",
+      "markdown": "故事内容和本轮两项形式焦点已经能回答，但界限仍在：确切发生年代、口传形成过程、最初编者和独立早期底本未确定；鬼的意图、定伯的预谋、羊与买主后续未写。水声句第二字与“宗／宋”还需原页、更清楚版本精校；它们目前不改变“水声暴露身份差异”与完整结尾的基本理解。\n\n若要更严格考据，最小补证是先核《太平御览》这一叶原页和可靠校注，而非继续堆转载。若做时代具象化创作，先定改编设定，再独立查服饰、集市、钱币与使用动作；当前研究不足以认证某套视觉复原。",
+      "basisKind": "unknown",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "完整条L149—163",
+          "note": "已知与未写情节边界。"
+        },
+        {
+          "sourceId": "src_song_tpyl",
+          "locator": "卷884-2a末—2b；L48—59",
+          "note": "宗定伯转录尚未核原页。"
+        },
+        {
+          "sourceId": "src_song_scan",
+          "locator": "PDF118水声句",
+          "note": "已看原页仍留字形与阁本精校缺口。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_method_20261002",
+      "heading": "方法与读取记录",
+      "markdown": "本次为AI实测自设焦点，不是小陌的收藏感受、阅读经历或学习成果。按项目内传统溯源规程，实际读完整宋定伯条、提要与原序，完整读两处类书转引；邻接条目只核边界，未通读三书。Kanripo与影印均为相应底本的现代数字见证，未访问古代原件。\n\nKanripo《搜神记》固定commit 9959e70d799062d8dc3872225ce9a5b429ec5cac，卷16下载SHA-256 5337e1c7a22cc7850a659a9592da1f70a6228f7cca9260facdcb3b1cd69061e9；比较书固定提交与哈希见验证目录comparison-manifest.json。文本严格UTF-8读取，原条L149—163完整。三张页图用既有PyMuPDF从PDF渲染，实际目验117—119页，另看册首四库题页；OCR乱码未用于释义。整册只留验证目录，正式原件仅必要三页和[完整条行号摘录](attachment:att_db9516270888bcac31b9cee7a34167ab211d0c90)。\n\n主文本与扫描的情节和多数文字对应；扫描元数据及题页没有独立确认文渊阁身份，故只能说已核四库影印这三页，不能声明两者必是同一底本。页码、图证身份和限制均保留。\n\n访问失败包括Kanripo站点正文403、CText页403、维基文库API403；未绕过。实际可读取的GitHub公开源及图书馆贡献数字件用于研究，无新依赖、付费、模型下载或第三方私人附件上传。\n\n**复用边界：**古代正文用于必要引用，白话为本执行者自译。数字件元数据未给明确页图公开复用许可；三页用于本项目必要研究对读，不把附件登记许可字段当出版授权。对外发布页图或采用他人现代译文时，仍需核供应方条件。没有生成古籍页或历史复原图。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "固定文件L149—163，commit及SHA-256",
+          "note": "完整条与可重找的内容身份。"
+        },
+        {
+          "sourceId": "src_song_preface",
+          "locator": "提要L11—33，原序L36至末",
+          "note": "实际读取范围。"
+        },
+        {
+          "sourceId": "src_song_tpgj",
+          "locator": "完整宋定伯条L153—168",
+          "note": "完整转引读取范围。"
+        },
+        {
+          "sourceId": "src_song_tpyl",
+          "locator": "完整宗定伯条L48—59",
+          "note": "完整转引读取范围。"
+        },
+        {
+          "sourceId": "src_song_scan",
+          "locator": "PDF117—119；整册SHA-256见来源信息",
+          "note": "目验与派生页图范围，不依靠乱码OCR。"
+        },
+        {
+          "sourceId": "src_song_metadata",
+          "locator": "metadata及files；未见明确图像许可字段",
+          "note": "来源身份与复用边界。"
+        },
+        {
+          "sourceId": "src_song_excerpt",
+          "locator": "完整条L149—163定位摘录全部",
+          "note": "须受控登记并回读后换真实ID。"
+        }
+      ],
+      "attachmentIds": [
+        "att_db9516270888bcac31b9cee7a34167ab211d0c90"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "src_song_sgj",
+      "kind": "external",
+      "title": "《搜神记》WYG卷十六：宋定伯条固定数字转录",
+      "locator": "卷十六8b末—9b前；L149—163",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际完整读本条，核前后边界；固定commit9959e70d799062d8dc3872225ce9a5b429ec5cac。17319字节SHA256 5337e1c7a22cc7850a659a9592da1f70a6228f7cca9260facdcb3b1cd69061e9；另目验四库影印三页，扫描具体阁本未核。",
+      "licenseStatus": "古代正文必要引用；保留数字出处。中文白话为本执行者自译，未用他人现代译本。",
+      "uri": "https://github.com/kanripo/KR3l0099/blob/9959e70d799062d8dc3872225ce9a5b429ec5cac/KR3l0099_016.txt#L149-L163"
+    },
+    {
+      "sourceId": "src_song_preface",
+      "kind": "external",
+      "title": "《搜神记》WYG提要与原序：题署与今本存疑",
+      "locator": "提要000-1a—2a；原序000-3a—3b",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读完整数字提要与原序；未核该文件原页、未逐一读其转引书。2722字节SHA256 53f2c622c8f46796a61752b555404d21383a3152196243edf60ef1e8138baa5b。",
+      "licenseStatus": "古代文本少量必要引用，不复制现代校注。",
+      "uri": "https://github.com/kanripo/KR3l0099/blob/9959e70d799062d8dc3872225ce9a5b429ec5cac/KR3l0099_000.txt"
+    },
+    {
+      "sourceId": "src_song_tpgj",
+      "kind": "external",
+      "title": "《太平广记》WYG卷321鬼六：宋定伯，出《列异传》",
+      "locator": "卷321-9a—9b；完整条L153—168",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读完整该条数字正文及尾注；固定commit7990feeb9c302e37942661d1b29abc22818cc204。下载哈希留comparison-manifest.json，未核本书原页。",
+      "licenseStatus": "古代正文必要引用，保留数字出处。",
+      "uri": "https://github.com/kanripo/KR3l0118/blob/7990feeb9c302e37942661d1b29abc22818cc204/KR3l0118_321.txt#L153-L168"
+    },
+    {
+      "sourceId": "src_song_tpyl",
+      "kind": "external",
+      "title": "《太平御览》SBCK卷884：列异传曰南阳宗定伯",
+      "locator": "卷884-2a末—2b；完整条L48—59",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读完整条数字正文；固定commit42ba052ab54c733387ba30b62dcd4eacb34139b6。下载哈希留comparison-manifest.json；未核本书原页，宗/宋只暂记转录差异。",
+      "licenseStatus": "古代正文必要引用，保留数字出处。",
+      "uri": "https://github.com/kanripo/KR3k0012/blob/42ba052ab54c733387ba30b62dcd4eacb34139b6/KR3k0012_884.txt#L48-L59"
+    },
+    {
+      "sourceId": "src_song_scan",
+      "kind": "external",
+      "title": "浙江大学图书馆贡献《搜神记·卷十一～卷二十》四库影印（具体阁本待核）",
+      "locator": "PDF117、118、119页=卷十六8b、9a、9b；在线索引n116、n117、n118",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际下载6087363字节PDF，SHA256 c6baae55f8f9d4ebfc71a8aa8fda4e990bc05b18598833ac5185e2019b2202a8。定位并目验完整故事三页及册首四库题页，未通读207页。原页由PDF渲染、未重绘；元数据与题页未独立确认具体阁本。",
+      "licenseStatus": "元数据未给明确页图公开复用授权；本项目必要三页研究对读，对外复用待核。",
+      "uri": "https://archive.org/details/06050852.cn/page/n116/mode/1up"
+    },
+    {
+      "sourceId": "src_song_metadata",
+      "kind": "external",
+      "title": "Internet Archive/CADAL数字件06050852.cn元数据",
+      "locator": "metadata.description/contributor/scanningcenter/sponsor/publicdate/ocr及files",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读JSON元数据及文件信息；四库影印、浙江大学图书馆贡献与CADAL资助据此记录。不用元数据证明精确印行年代、文渊阁身份或图像授权。",
+      "licenseStatus": "少量事实元数据转述；图像许可未明确。",
+      "uri": "https://archive.org/metadata/06050852.cn"
+    },
+    {
+      "sourceId": "src_song_excerpt",
+      "kind": "attachment",
+      "title": "宋定伯完整条：固定原文行号定位摘录",
+      "locator": "主文本L149—163，含pb叶码，全文",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "从已下载固定commit文件摘录完整本条，保留行号与pb；须父执行者受控导入回读后替换真实ID。",
+      "licenseStatus": "古代正文必要完整短条摘录；不含他人现代译文。",
+      "attachmentId": "att_db9516270888bcac31b9cee7a34167ab211d0c90"
+    }
+  ],
+  "researchStatus": "stage_complete",
+  "materialVersions": [
+    {
+      "materialId": "mat_c5afa305-85dc-4bdd-8652-e7778fc89104",
+      "revision": 1
+    }
+  ],
+  "author": "ai"
+}
+~~~~
+
+
+## 记录 15：stage_bbc6e50e-20f2-4f3c-a14b-d5d3b9106eac
+
+- `id`：stage_bbc6e50e-20f2-4f3c-a14b-d5d3b9106eac
+- `topic_id`：topic_ecf5858c-d3db-42c2-9ed7-56854e7f93fa
+- `topic_revision`：3
+- `created_at`：2026-10-02T18:17:40.243Z
+
+### 原字段 `body_json`
+
+~~~~json
+{
+  "focus": "测试假设（AI设定，非小陌原话）：何家村这枚小银香囊怎样把“可以活动的器物”与“细密的花鸟纹”放在一起？先核具体实物，再提可观察的短片候选。",
+  "confirmed": [
+    "馆方公开金银器目录第634行把七一127、唐镂空飞鸟葡萄纹银熏球与原名葡萄花鸟纹银香囊对应；当前官网记直径4.5cm、链长7.5cm、重36g。",
+    "实际查看馆方外观原图和中国矿大2021年转载的打开状态照片；物件的运动未实际观察。",
+    "馆方现代说明与旧官网转载说明支持持平结构；不能据此认证这件古物在任意颠簸下均绝对安全。"
+  ],
+  "candidates": [
+    "以外壳缓转与内盂保持朝上的相对运动构成形式对照，先做可控复原或模型运动核验。",
+    "用侧光、近景和开合动作表现羽毛刻线、空隙及内外金银色差，不把现代摄影色调当古代原貌。"
+  ],
+  "parked": [
+    "杨贵妃爱情信物的具体归属、汉代发明者及通往现代陀螺仪的直系传播链：缺乏足以落实此件实物的证据，本轮不采用。",
+    "不扩写端午民俗、香料百科或完整剧本。"
+  ],
+  "unknown": [
+    "具体制作年份、作坊、主人与窖藏埋藏原因未定。",
+    "这件器物曾用何种香料、燃料、香品形态和操作步骤未核；未查残留分析或燃烧测试。",
+    "葡萄纹的原始寓意、花形的精确植物种属与鸟的物种没有本轮直接证据。",
+    "4.5cm与旧介绍/研究图注4.6cm的测量口径差异未解释。",
+    "内部小盂的成分与局部鎏金范围未实测；不能凭金色照片确定纯金。"
+  ],
+  "nextStep": "本轮可收束于具体身份、形制与静态图证。若采用外动内稳的创作候选，先用明确标注的复原模型或馆方运动演示核查相对运动，再决定画面；如要叙述古代燃香操作，先补具体香料/燃料与使用史证据。",
+  "limitations": [
+    "素材关注点由AI为真实流程实测设定，不是小陌个人感受，也不算个人学习进展。",
+    "未接触、拆解或动态观看古物；照片不证明运动性能和温度安全。",
+    "未直接读《一切经音义》《旧唐书》《西京杂记》的古籍原页；研究论文转引只按作者解释使用。",
+    "2024论文实际阅读对象是何家村例图注、唐代器物/工艺段、名称与文献证据争议段及结论；其全部脚注所列原书未逐件查阅。",
+    "官方照片与旧官网转载图片未见开放复用许可；本地研究参考不等于可用于公开号、商业短片或素材分发。"
+  ],
+  "paragraphs": [
+    {
+      "paragraphId": "para_object_20261002_preview",
+      "heading": "收藏预览",
+      "markdown": "一枚直径约4.5厘米的唐代银香囊：镂空球壳织入鸟与枝叶，馆方说明其内部持平结构可让盛香小盂保持朝上。研究对象是何家村出土、现藏陕西历史博物馆的具体一件。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_catalogue",
+          "locator": "sheet1 第634行 A–J列",
+          "note": "支持名称对应、唐代与尺寸"
+        },
+        {
+          "sourceId": "src_object_hoard_link",
+          "locator": "正文“来自何家村窖藏”段",
+          "note": "支持具体出土来源"
+        },
+        {
+          "sourceId": "src_object_mechanism",
+          "locator": "正文第二段关于球囊与机环",
+          "note": "支持馆方所述持平功能"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_overview",
+      "heading": "内容概要",
+      "markdown": "这件“葡萄花鸟纹银香囊”是一件金属熏香器，虽叫“囊”，外层却是能打开的球壳。它在1970年发现的西安何家村唐代窖藏中出土，现由陕西历史博物馆收藏。馆方公开目录的文物编号是“七一127”：现名“唐镂空飞鸟葡萄纹银熏球”，原名即“葡萄花鸟纹银香囊”，这里的两个名称指向同一条馆藏记录。\n\n按当前官网，它直径4.5厘米，链长7.5厘米，重36克。银球由两半扣合，链与挂钩提供悬挂条件；内部设环架和小香盂。现代说明指出，环架允许外壳转动时香盂仍保持朝上，使香料不易倾洒。这样的解释可以帮助理解结构，但本轮只看了静态照片，没有亲眼验证古物运动。\n\n它可看的重点有两处：花鸟纹既是表面装饰，也是穿透球壳的空隙；内部小盂与外部球壳可以有不同的运动姿态。谁使用过这一枚、焚烧过什么香料、为何埋藏，都还没有落实。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_catalogue",
+          "locator": "sheet1 第634行 A–J列",
+          "note": "支持编号、两个名称、年代和测量值"
+        },
+        {
+          "sourceId": "src_object_hoard_link",
+          "locator": "正文“来自何家村窖藏”段",
+          "note": "支持器物的何家村来源"
+        },
+        {
+          "sourceId": "src_object_hoard",
+          "locator": "展览简介首段",
+          "note": "支持1970年10月发掘背景"
+        },
+        {
+          "sourceId": "src_object_cumt",
+          "locator": "图解首段",
+          "note": "支持银壳两半、环架及香盂形制；此为旧官网转载"
+        },
+        {
+          "sourceId": "src_object_mechanism",
+          "locator": "正文第二段",
+          "note": "支持馆方现代持平说明"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_exterior",
+      "heading": "先看这件实物：花纹、接缝与挂链",
+      "markdown": "![馆方实物原图：葡萄花鸟纹银香囊外观，保留原水印](attachment:att_052120bc91bc179d9ac8756c07015436061dc919)\n\n图：陕西历史博物馆当前馆藏页原图，未裁切、未调色；保留馆方水印。图片展示这件实物的一个外观角度，开放复用许可未核。\n\n[查看馆藏原页](https://www.sxhm.com/collections/detail/9948.html) · [打开馆方原图](https://www.sxhm.com/Uploads/Picture/2023/03/03/s64019e0a01903.JPG)\n\n在上半球正中，鸟纹横向展开，羽部由成排刻线表现；鸟下方有花叶形块面，曲枝穿行其间。中部两道实边相接，留下清楚的水平接缝；左前侧可见扣合部件。链条由顶部向右侧垂下，末端有较大的挂钩。透过镂空处能看见金色内层。\n\n照片中的银壳呈棕灰色，刻线边缘受光较亮。这里记录的是摄影下的现状色感；没有色卡、成分报告或清理记录，不能据此还原刚制成时的银色，也不能把所有暗色都确定为某一种氧化物。",
+      "basisKind": "direct_observation",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_photo",
+          "locator": "完整2048×1371图；上半球中鸟、中央接缝、右侧链钩与镂空处",
+          "note": "仅支持这张照片可见的外观和色感"
+        }
+      ],
+      "attachmentIds": [
+        "att_052120bc91bc179d9ac8756c07015436061dc919"
+      ]
+    },
+    {
+      "paragraphId": "para_object_20261002_inside",
+      "heading": "打开后的图证：看得见的环架与香盂",
+      "markdown": "![实物打开状态照片：中国矿大2021年转载的旧官网图片](attachment:att_099fd1ab578131652e8a479c01c785e2e994955e)\n\n图：中国矿业大学中华优秀传统文化传承基地2021年页面的打开状态图片；该页面署来源“陕西历史博物馆官方网站”。未改图。原始摄影许可与最初发布日期未核，不能写成新拍的官方图。\n\n[查看2021年转载页及图](https://ilovehsiangbao.cumt.edu.cn/info/1053/1226.htm)\n\n左边半球内可以看见金色的小盂及包围它的环架；右边半球是翻开的球壳，链条放在一旁。这比闭合外观更直接地说明：小盂与外壳之间留有活动空间。照片没有标出每一个铆钉、轴线与转动范围，所以“双轴相连、内外环连接次序”仍须依据文字说明，不能说全部从此图独立验证。",
+      "basisKind": "direct_observation",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_interior",
+          "locator": "693×465打开状态图；左侧小盂与环架、右侧球盖",
+          "note": "支持静态内景与读取边界"
+        }
+      ],
+      "attachmentIds": [
+        "att_099fd1ab578131652e8a479c01c785e2e994955e"
+      ]
+    },
+    {
+      "paragraphId": "para_object_20261002_construction",
+      "heading": "馆藏说明：材料、开合和持平结构",
+      "markdown": "中国矿大保存的旧官网介绍记载：外壳为银质，两半球可开合；下半球中有两层银质机环，内置半球形香盂，部件之间通过银铆钉连接。材料表述需分层看：当前官网仅分类为“金银器”；旧馆文转载称内部为“金香盂”；Fang同件图2–3的整体材质图注则是“银，局部鎏金”。整体图注未逐一交代每个部件，以上不能由本轮合并成“内盂经检测为纯金”。因此观察段只称金色小盂，旧文材质描述按来源保留；成分与鎏金范围未实测。\n\n可以按“壳—外环—内环—盂”理解连接关系：壳偏转，环架给小盂留下转动自由；在重力作用下，较低的重心趋向下方，使盂口保持朝上。馆方2022年现代说明亦介绍这一效果。它依赖活动结构与重力，不能仅因为外形近似就说器物里有高速旋转的现代陀螺。\n\n结构适合携带或悬挂这一判断，有链钩与盛香盂作依据；把此件具体安排在衣袖、车帐、被褥还是某种仪式里，则缺少直接使用记录。尤其不能把“减少倾洒”升级为“任何晃动都不会漏火、不会烫伤”。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_cumt",
+          "locator": "图解首段，从“香囊外壁用银制”至“香盂始终保持重心向下”",
+          "note": "支持材料、部件与重力说明；是校方转载旧馆文，不是实物检测"
+        },
+        {
+          "sourceId": "src_object_mechanism",
+          "locator": "正文第二段，钩链/活轴及香料不洒说明",
+          "note": "支持当前馆方对持平效果的现代介绍"
+        },
+        {
+          "sourceId": "src_object_collection",
+          "locator": "时期/尺寸/材质字段",
+          "note": "支持现官网金银器分类"
+        },
+        {
+          "sourceId": "src_object_fang",
+          "locator": "Figures 2–3图注：Silver, partially gilded",
+          "note": "支持研究图注对同件整体材质的描述，未交代各部件成分"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_craft",
+      "heading": "工艺依据及能说到哪里",
+      "markdown": "Flavia Xi Fang在2024年研究中把这类唐代香囊的制作概括为锤揲银片成形、用錾具镂空；何家村例列在图2–3。本轮按研究者的工艺归纳使用，未对这件实物检测工具痕、焊口或鎏金层。",
+      "basisKind": "author_interpretation",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_fang",
+          "locator": "Tang Incense Spheres and Their Sites of Discovery；Figures 2–3；“All the Tang spherical censers ... beaten silver”段",
+          "note": "支持工艺通类归纳；不能替代此件的工序检测"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_beauty",
+      "heading": "研究解释：两个可继续看的点",
+      "markdown": "**外面活动，里面安定。** 这件器物的趣味并不止于“机关复杂”：环架把外壳的姿态和盛香盂的姿态分开了。若后续运动证据与文字一致，观看时就能同时看见外部变化与内部保持。这是一种由结构造成的形式关系；“人在动荡中守住中心”是我们可以借用的表达，并非已核的唐代器物寓意。\n\n**线条既描画，也留出空隙。** 鸟的轮廓、叶片块面、细枝曲线与孔洞交替出现。静态近景可以让视线从鸟羽进入枝条，再穿到金色内盂；换一个受光角度，线条明暗也会改变。银壳不是单纯给小盂套上花纹，它把内外两层同时交给观看者。不过拍光是否产生清楚纹样投影、烟是否沿特定孔洞流动，都需要实拍或物理模拟，不能从这张照片编出来。",
+      "basisKind": "ai_hypothesis",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_photo",
+          "locator": "上半球鸟纹及枝叶镂空局部",
+          "note": "分析依据是实际观察的线面与孔洞"
+        },
+        {
+          "sourceId": "src_object_mechanism",
+          "locator": "持平说明段",
+          "note": "相对运动判断依据为馆方文字，运动本身未核"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_symbol",
+      "heading": "解释差异：花鸟纹没有唯一答案",
+      "markdown": "Fang把何家村飞鸟、葡萄与花纹作为波斯及地中海艺术联系的线索；这是比较研究解释，不能直接指定每个纹样的原始寓意。",
+      "basisKind": "author_interpretation",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_fang",
+          "locator": "Tang Incense Spheres and Their Sites of Discovery；Hejiacun段的装饰描述",
+          "note": "支持作者的艺术联系解释，不支持唯一传播路线或唯一象征"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_symbol_unknown",
+      "heading": "“多子多福”与“爱情信物”的边界",
+      "markdown": "“多子多福”“富贵”“忠贞爱情”可以成为今天的观看联想，但本轮没有读到这件器物的唐代题记或原主解释，不能把这些词写成它的确定原意。葡萄纹名称证明识别题材，不等于已经证明古人的祝愿。\n\n杨贵妃身边出现“香囊”的文献故事，也不能把此件何家村器物认领给她：地点与物件身份并没有被同一证据链连接。研究论文还提醒，“香囊”可以指织物袋或金属器，不能只凭香囊保存完好便确定材质。本轮未直接核《旧唐书》原页，因而不重讲该故事，更不从它反推此件的主人。",
+      "basisKind": "unknown",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_fang",
+          "locator": "名称讨论中Lady Yang’s scented sachet段；织物袋/金属器的识别问题",
+          "note": "支持作者提出的名物识别争议；原始古籍本轮未读"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_dating",
+      "heading": "年代与尺寸：保留能够改变判断的差异",
+      "markdown": "当前官网和公开目录均给“唐”，本轮不把它缩成某一年。1970年10月是现代发掘时间；2021年校方转载、2022年馆方介绍和2024年论文是现代资料时间，都不是制造年代。器物制作、后来使用与最后埋入窖藏也不是同一时点。\n\n当前馆方两处数据一致为直径4.5厘米；2021年旧官网转载记高、宽4.6厘米，2024年论文图注也记直径4.6厘米。差别很小，但没有测量说明，不能宣布谁量错或擅自统一。本次采用当前馆方4.5厘米作识别值，保留4.6厘米这一资料差异；制作精密复原时仍须向馆方核尺寸与轴件细节。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_catalogue",
+          "locator": "sheet1 第634行 D/G/I/J列",
+          "note": "支持唐代与4.5/7.5/36g数据"
+        },
+        {
+          "sourceId": "src_object_collection",
+          "locator": "时期与尺寸字段",
+          "note": "支持当前官网数据"
+        },
+        {
+          "sourceId": "src_object_cumt",
+          "locator": "规格及发布日期",
+          "note": "支持2021年转述的4.6厘米"
+        },
+        {
+          "sourceId": "src_object_fang",
+          "locator": "Figures 2–3图注",
+          "note": "支持研究图注的4.6厘米"
+        },
+        {
+          "sourceId": "src_object_hoard",
+          "locator": "简介首段",
+          "note": "支持发掘时间"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_origin",
+      "heading": "暂不讲一条确定的发明史",
+      "markdown": "“汉代丁缓造炉，一路发展成现代陀螺仪”需要连续的文本、实物与传播证据。Fang指出这条直系联系及唐代器物的确切来源尚未坐实。本轮没有补核其所引古籍，因此只保留争议，不断言汉代实物已被发现、此件发明于唐朝，或它直接启发了航天设备。",
+      "basisKind": "unknown",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_fang",
+          "locator": "Ding Huan/Xijing zaji争议段；结论末段",
+          "note": "支持研究者对谱系和来源的不确定判断"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_creative",
+      "heading": "创作联想·候选：先留动作与条件",
+      "markdown": "**候选一：缓转与朝上。** 在明确标注的复原模型上，外壳缓慢倾转，镜头贴近环架与盂口，观察两者是否产生可读的相对运动。可表达外界变化中保留一处安定，也可纯粹拍“一个精巧结构怎样工作”。成立条件是模型结构正确、运动清楚；不需要把它安给真实唐代人物或预写爱情情节。\n\n**候选二：从鸟羽到内部的金色。** 先给外壳侧光近景，让羽毛与叶脉刻线出现；再由接缝打开到内盂，把观看从表面纹样引到使用结构。可以观察手怎样握球、链钩怎样悬挂、盖体怎样打开，但姿势必须由复原件验证；动作不等于唐代使用礼仪。声音可以从复原件采集细小链响与开合声，不能宣称古物本身有某种固定音色。\n\n若需要烟，先决定是有出处的燃香复原还是明确的艺术效果；本轮没有香料配方、燃烧状态或烟量证据。",
+      "basisKind": "ai_hypothesis",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_photo",
+          "locator": "外壳刻线、接缝、链钩及透见内盂局部",
+          "note": "支持可取近景细节"
+        },
+        {
+          "sourceId": "src_object_interior",
+          "locator": "打开状态图",
+          "note": "支持表面与内部的视觉转换"
+        },
+        {
+          "sourceId": "src_object_mechanism",
+          "locator": "持平说明段",
+          "note": "提供待动态核验的动作假设"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_object_20261002_method",
+      "heading": "方法与读取记录",
+      "markdown": "本阶段由AI设定焦点，未记录小陌个人感受。实际查阅当前馆藏页、馆方金银器目录对应行、何家村展览说明与器物官方现代介绍；下载并目验2048×1371馆方外观图，及693×465校方转载旧官网内景图。目录下载的原件为XLSX，未执行其中内容；仅解析工作表XML核对字段。\n\n2024年论文实际读了与何家村对象、工艺、名称争议、起源及结论有关的正文，未逐一打开全部脚注原书。CBETA页面仅能读取导航外壳，未取得目标古籍正文；MDPI论文访问受限，未作为已读论据。未做古籍OCR、金属成分检测、残留分析、动态演示审看或燃烧试验。\n\n外观图保留原水印，内景图保留转载现状，无裁切、调色与生成示意。馆站声明版权所有，转载图的原始许可亦不明；仅作本地研究参考，公开发布或商业复用前需核对授权。两张图像已通过现有受控API登记，并核验格式、原件哈希和持久收据。内景图的来源路径后缀为PNG，但原字节是JPEG；仅以正确的.jpg扩展名登记同一字节，未转换图像。本文第一版已保存于同一专题，当前修正版依据实际交接版本追加；持久化以提交收据及回读为准。",
+      "basisKind": "ai_hypothesis",
+      "sourceRefs": [
+        {
+          "sourceId": "src_object_collection",
+          "locator": "当前页面及页尾版权",
+          "note": "登记读取方式与版权边界"
+        },
+        {
+          "sourceId": "src_object_catalogue",
+          "locator": "sheet1 第634行；文件哈希见原件meta",
+          "note": "登记目录解析边界"
+        },
+        {
+          "sourceId": "src_object_interior",
+          "locator": "打开状态图及其来源页面",
+          "note": "登记图片读取与转载关系"
+        },
+        {
+          "sourceId": "src_object_fang",
+          "locator": "实际所读对象段、命名争议段及结论",
+          "note": "登记有限章节范围"
+        }
+      ],
+      "attachmentIds": []
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "src_object_collection",
+      "kind": "external",
+      "title": "陕西历史博物馆：葡萄花鸟纹银香囊",
+      "locator": "时期/尺寸/材质字段及页尾版权",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际完整读取对象字段；“藏品介绍”当前无正文；未核动态展出状态",
+      "licenseStatus": "unknown；未见允许公开/商业复用的开放许可",
+      "uri": "https://www.sxhm.com/collections/detail/9948.html"
+    },
+    {
+      "sourceId": "src_object_catalogue",
+      "kind": "external",
+      "title": "陕西历史博物馆公开藏品目录：金银器类",
+      "locator": "XLSX xl/worksheets/sheet1.xml，第634行 A–J列",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际下载XLSX原件、解析sharedStrings与sheet1；核第634行及列标题，未全面研究其他器物",
+      "licenseStatus": "unknown；未见允许公开/商业复用的开放许可",
+      "uri": "https://www.sxhm.com/down/news/502.html"
+    },
+    {
+      "sourceId": "src_object_hoard",
+      "kind": "external",
+      "title": "陕西历史博物馆：何家村窖藏出土文物展",
+      "locator": "展览简介首段",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读取展览说明；不把宏观展览介绍当此件使用履历",
+      "licenseStatus": "unknown；未见允许公开/商业复用的开放许可",
+      "uri": "https://www.sxhm.com/Hejia_village.html?_isa=1"
+    },
+    {
+      "sourceId": "src_object_hoard_link",
+      "kind": "external",
+      "title": "陕西历史博物馆：黄河流域文明故事系列短片介绍",
+      "locator": "正文“来自何家村窖藏”段",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读网页说明，未点击/审看手绘动画，不从动画提物证",
+      "licenseStatus": "unknown；未见允许公开/商业复用的开放许可",
+      "uri": "https://www.sxhm.com/info/news/detail/16055.html"
+    },
+    {
+      "sourceId": "src_object_mechanism",
+      "kind": "external",
+      "title": "陕西历史博物馆：花鸟添香数字文创的原型与结构说明",
+      "locator": "正文第二段",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读馆方现代文字说明；原型器物与二次创作动画分开，未观看动画",
+      "licenseStatus": "unknown；未见允许公开/商业复用的开放许可",
+      "uri": "https://www.sxhm.com/info/news/detail/1334.html"
+    },
+    {
+      "sourceId": "src_object_cumt",
+      "kind": "external",
+      "title": "中国矿业大学：陕西历史博物馆馆藏（2021年旧官网转载）",
+      "locator": "规格/图解首段/“资料来源：陕西历史博物馆官方网站”",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读页面及两图；明确是校方转载旧馆文，并非独立物证；图解后段古籍转引未核原书",
+      "licenseStatus": "unknown；未见允许公开/商业复用的开放许可",
+      "uri": "https://ilovehsiangbao.cumt.edu.cn/info/1053/1226.htm"
+    },
+    {
+      "sourceId": "src_object_photo",
+      "kind": "external",
+      "title": "陕西历史博物馆实物原图：外观",
+      "locator": "完整2048×1371图；上半球鸟、接缝、链钩",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际下载并目验完整图，未裁切调色；仅一个静态外观角度",
+      "licenseStatus": "馆方水印与官网版权所有；仅本地研究参考，公开/商业复用许可未核",
+      "uri": "https://www.sxhm.com/Uploads/Picture/2023/03/03/s64019e0a01903.JPG"
+    },
+    {
+      "sourceId": "src_object_interior",
+      "kind": "external",
+      "title": "中国矿大转载旧馆图：香囊打开状态",
+      "locator": "完整693×465图；左半球香盂与环架",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际下载并目验；转载页署来源陕西历史博物馆官方网站，原始摄影页面/日期未核",
+      "licenseStatus": "unknown；原始摄影和转载授权未核，仅本地研究参考",
+      "uri": "https://ilovehsiangbao.cumt.edu.cn/__local/9/ED/6F/30291D06A96B0810C3015136CA8_B27A7C9A_8211.png"
+    },
+    {
+      "sourceId": "src_object_fang",
+      "kind": "external",
+      "title": "Flavia Xi Fang（2024）：Scent, Art and Astronomy",
+      "locator": "Figures 2–3；Tang Incense Spheres and Their Sites of Discovery；Ding Huan与香囊命名争议段；结论",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读取何家村例图注、工艺段、命名与文献争议段、结论；不等于逐件核了所引古籍或全部参考书",
+      "licenseStatus": "开放阅读；图像另有原书出处，未据开放访问推断图像可自由复用",
+      "uri": "https://journals.sagepub.com/doi/10.1177/09719458231226000"
+    }
+  ],
+  "researchStatus": "stage_complete",
+  "materialVersions": [
+    {
+      "materialId": "mat_df70761e-8a7d-4421-90d0-231f90d0f15a",
+      "revision": 1
+    }
+  ],
+  "author": "ai"
+}
+~~~~
+
+
+## 记录 16：stage_428987fb-ef52-49b4-af66-d9d407280a08
+
+- `id`：stage_428987fb-ef52-49b4-af66-d9d407280a08
+- `topic_id`：topic_13617e30-a4f2-4e1e-b693-def92a386ef9
+- `topic_revision`：3
+- `created_at`：2026-10-02T18:17:41.773Z
+
+### 原字段 `body_json`
+
+~~~~json
+{
+  "focus": "AI实测假设：完整理解宋定伯条，研究轻重/渡水声的身份试探及问禁忌—唾羊—售卖照应；不记成小陌感受。",
+  "confirmed": [
+    "完整读今本《搜神记》宋定伯条，目验四库影印对应三页；扫描具体阁本未核。",
+    "正文写夜行、佯称鬼、互背、禁忌、渡水、强背入市、化羊及得钱离去；未明写鬼先害人。",
+    "两处类书所读完整转引均归《列异传》，不等于读到独立早期原本。",
+    "今本末句含石崇；所读类书条末未提石崇，不据此确定人物年代。"
+  ],
+  "candidates": [
+    "以承重差异和一有一无的渡水声表现身份试探。",
+    "保留落地成羊与售卖落点，观察同行关系转为控制。"
+  ],
+  "parked": [
+    "全面重建今本辑佚与诞生史。",
+    "普遍唾鬼习俗断言。",
+    "服饰、市场、钱币、时辰、配乐与完整剧本。"
+  ],
+  "unknown": [
+    "故事形成过程、最初讲述者及发生年代未知。",
+    "鬼的意图、定伯预谋、羊与买主后续未交代。",
+    "水声句第二字、宗/宋和扫描阁本待补证。"
+  ],
+  "nextStep": "本轮两项形式问题已可定位回答。若转创作，先由小陌选身份试探或关系转为交易的感觉，再核最少必要时代视觉资料；当前不继续扩写。",
+  "limitations": [
+    "AI实测焦点非用户原话、感受、学习经历或采用方向。",
+    "完整读本条并目验四库影印三页；扫描具体阁本待核；类书仅核数字条文，未核原页；未通读三书。",
+    "题署与今本来历存疑分开；未完成早期《列异传》、辑佚史或起源考证。",
+    "水声字形与宗/宋差异待精校，未改原文或宣布古本异文。",
+    "未补编鬼意图、定伯预谋与后续。页图公开复用许可未核。",
+    "未生成短片或获用户/真人观众评价；视觉复原与普遍民俗未研究。"
+  ],
+  "paragraphs": [
+    {
+      "paragraphId": "para_song_preview_20261002",
+      "heading": "收藏预览",
+      "markdown": "宋定伯夜行遇鬼，假装自己也是鬼。一路互背、渡水后，他把鬼带到宛市；鬼化成羊，定伯卖它、向它吐唾，最后收钱离开。这是《搜神记》卷十六的一则短篇。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "卷十六8b末—9b前；KR3l0099_016.txt L149—163",
+          "note": "完整条支持相遇、同行与售羊结局。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_overview_20261002",
+      "heading": "内容概要",
+      "markdown": "南阳人宋定伯年少时，在夜路上碰见一个自称是鬼的同行者。对方反问他是谁，他骗说自己也是鬼。两人都说要去宛市——故事里双方想去的集市——便一起走了几里。鬼嫌步行太慢，提议轮流背对方，定伯答应了。\n\n鬼先背定伯，发现他很重，怀疑他不是鬼。定伯解释说自己刚成为鬼，所以身体还重；换他背鬼时，鬼几乎没有重量。这样轮换几次，定伯又借“我才成为鬼，不懂禁忌”问鬼怕什么，得到“不喜欢人唾”的回答。遇到水，他让鬼先过，听不到水声；自己过水却发出声响。鬼再次追问，他仍用新死、还不习惯渡水来解释。\n\n将到宛市时，定伯把鬼背在肩上，抓紧它，不理会它大叫着要求下来。到了集市，他把鬼放到地上，鬼变成一只羊。定伯卖它，又怕它再变化，向它吐唾，最后得到一千五百钱离开。本条还附一句石崇谈论“定伯卖鬼得钱”的说法。\n\n这就是本轮完整读到的故事。它没有说明定伯为何夜行、鬼为何去集市，也没有明确写鬼要伤害他；买主、羊后来怎样、鬼是否报复均未交代。条末石崇说法属于所读文本的记载，不能单凭它确定事情发生年代。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "8b末—9a前半；L149—155",
+          "note": "支持人物、相遇、目的地与轮换背负。"
+        },
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "9a后半—9b前；L156—163",
+          "note": "支持问禁忌、渡水、入市、化羊、唾及结尾；从完整条确认未交代部分。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_encounter_20261002",
+      "heading": "原文与白话·夜路相遇",
+      "markdown": "以下原文采用已下载的Kanripo WYG（文渊阁四库本标签）数字转录；本执行者为阅读加了标点，原字未依照通行译文改写。白话为本执行者自译。\n\n> 南陽宋定伯年少時，夜行逢鬼，問之。鬼言：“我是鬼。”鬼問：“汝復誰？”定伯誑之，言：“我亦鬼。”鬼問：“欲至何所？”答曰：“欲至宛市。”\n\n**白话：**南阳的宋定伯年轻时，夜里赶路，碰到了鬼，便询问它。鬼说：“我是鬼。”鬼反问：“你又是谁？”定伯骗它，说：“我也是鬼。”鬼问：“你要去哪里？”他答：“我要去宛市。”\n\n![古籍影印原页：四库影印卷十六第八叶背，故事起句在左侧末两列](attachment:att_8976cb5178e5cf1948e402f4b05834da4dfb0054)\n\n**图证说明：**Internet Archive数字件06050852.cn，元数据记浙江大学图书馆贡献、CADAL资助，PDF第117页=原书卷十六第八叶背。本条从图左侧末两列“南陽宋定伯”开始，续到下一叶正面；图中其余条目不是本案正文。此图是古籍影印页，由原PDF渲染、未重绘文字，不是现代插画或复原图。扫描件只明确四库影印，具体阁本身份尚未核定，不能仅因文字相近就称已核Kanripo的WYG底本。\n\n[打开原PDF第117页](https://archive.org/download/06050852.cn/06050852.cn.pdf#page=117) · [查看固定转录对应行](https://github.com/kanripo/KR3l0099/blob/9959e70d799062d8dc3872225ce9a5b429ec5cac/KR3l0099_016.txt#L149-L152)",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "8b末—9a首；L149—152",
+          "note": "起句与目的地。"
+        },
+        {
+          "sourceId": "src_song_scan",
+          "locator": "PDF117=卷十六8b，左侧末两列",
+          "note": "实际目验故事起句与原页位置。"
+        },
+        {
+          "sourceId": "src_song_metadata",
+          "locator": "metadata.contributor/scanningcenter/sponsor/description",
+          "note": "图书馆贡献、CADAL及四库影印说明；未明确具体阁本。"
+        }
+      ],
+      "attachmentIds": [
+        "att_8976cb5178e5cf1948e402f4b05834da4dfb0054"
+      ]
+    },
+    {
+      "paragraphId": "para_song_journey_20261002",
+      "heading": "原文与白话·轮换背负，渡水露出差别",
+      "markdown": "> 鬼言：“我亦欲至宛市。”遂行數里。鬼言：“步行太遲，可共遞相擔，何如？”定伯曰：“大善。”鬼便先擔定伯數里。鬼言：“卿太重，將非鬼也。”定伯言：“我新鬼，故身重耳。”定伯因復擔鬼，鬼畧無重。如是再三。定伯復言：“我新鬼，不知有何所畏忌。”鬼答言：“惟不喜人唾。”於是共行。道遇水，定伯令鬼先渡，聼之，了然無聲音。定伯自渡，漕漼作聲。鬼復言：“何以有聲？”定伯曰：“新死，不習渡水，故耳。勿怪吾也。”\n\n**白话：**鬼说它也要去宛市，双方一起走了几里。鬼提议：“走路太慢，我们轮流背对方，好不好？”定伯说：“很好。”鬼先背他走了几里，发觉他很重，怀疑他不是鬼。他说：“我才成为鬼，所以身体还重。”换定伯背鬼时，鬼几乎没有重量。如此轮换几次，他又问：“我才成为鬼，不知道有什么害怕或忌讳的事。”鬼回答：“只是不喜欢人向我吐唾。”两人接着走。路上碰到水，定伯让鬼先渡，听不到声响；他自己过水却发出水声。鬼追问缘故，他回答：“我刚死，还不习惯渡水，所以才这样。别觉得我奇怪。”\n\n“遞相擔”在这里是轮流背负，不是抬轿；“如是再三”译反复轮换，未硬定为三次。“新鬼”是定伯说出来的假身份，不是叙述者确认他真的死了。\n\n![古籍影印原页：四库影印卷十六第九叶正，互背、问禁忌及渡水在本页](attachment:att_4c3183ce84c7afe58eb1fe42274cc54ab8adbf2e)\n\n**图证说明：**PDF第118页=卷十六第九叶正，本页连续含互背、问禁忌、无声渡水、有声渡水及将至宛市，未重绘。Kanripo转录“漕漼”第二字与所看影印字形仍待精校；由于具体阁本同一性也未核，暂留字形问题，不宣布古本异文。白话只取前后文明确的“发出水声”，不依赖定字。\n\n[打开原PDF第118页](https://archive.org/download/06050852.cn/06050852.cn.pdf#page=118) · [查看固定转录对应行](https://github.com/kanripo/KR3l0099/blob/9959e70d799062d8dc3872225ce9a5b429ec5cac/KR3l0099_016.txt#L152-L159)",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "9a；L152—159",
+          "note": "轮换、轻重、假身份、禁忌与渡水声音。"
+        },
+        {
+          "sourceId": "src_song_scan",
+          "locator": "PDF118=卷十六9a，全页；水声句在左侧第二列",
+          "note": "已目验对应文本；保留字形与具体阁本未核。"
+        }
+      ],
+      "attachmentIds": [
+        "att_4c3183ce84c7afe58eb1fe42274cc54ab8adbf2e"
+      ]
+    },
+    {
+      "paragraphId": "para_song_market_20261002",
+      "heading": "原文与白话·从同行者到待售的羊",
+      "markdown": "> 行欲至宛市，定伯便擔鬼著肩上，急執之。鬼大呼，聲咋咋然，索下。不復聽之，徑至宛市中，下著地，化為一羊，便賣之。恐其變化，唾之，得錢千五百，乃去。當時石崇有言：“定伯賣鬼，得錢千五。”\n\n**白话：**快到宛市时，定伯把鬼背到肩上，紧紧抓住。鬼高声叫喊，要求下来；定伯不再听它，直接走进集市，放它到地上，它化成一只羊。定伯便卖这只羊，怕它再变化，又向它吐唾，得到一千五百钱后离开。所读本还说，当时石崇有“定伯卖鬼，得钱一千五百”这句话。\n\n本条没有交代鬼为什么化羊，也没有说羊后来被宰。吐唾的目的由“恐其變化”交代；这不等于文字说唾液把鬼消灭了，或它从此永远不能变化。交易、唾和收钱是文本连续叙述的动作，具体交割瞬间没有细写。\n\n![古籍影印原页：四库影印卷十六第九叶背，强背、化羊、唾与得钱在右侧前三列](attachment:att_9e0fdcad71918210f9ceda182be289a5d619362d)\n\n**图证说明：**PDF第119页=卷十六第九叶背，本条只占右侧前三列，“吴王夫差女”以下已经进入另一则。不能拿下一则的恋爱、死因或时代补入宋定伯条。\n\n[打开原PDF第119页](https://archive.org/download/06050852.cn/06050852.cn.pdf#page=119) · [查看固定转录对应行](https://github.com/kanripo/KR3l0099/blob/9959e70d799062d8dc3872225ce9a5b429ec5cac/KR3l0099_016.txt#L159-L163)",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "9a末—9b前；L159—164",
+          "note": "结尾、石崇附句及下一条边界。"
+        },
+        {
+          "sourceId": "src_song_scan",
+          "locator": "PDF119=卷十六9b，右侧前三列与后续起句",
+          "note": "已目验结尾和文本边界。"
+        }
+      ],
+      "attachmentIds": [
+        "att_9e0fdcad71918210f9ceda182be289a5d619362d"
+      ]
+    },
+    {
+      "paragraphId": "para_song_identity_analysis_20261002",
+      "heading": "研究解释·一个假身份怎样连续补住破绽",
+      "markdown": "本轮测试焦点之一是：这篇短文为什么无需交代鬼的外貌，仍能让人感觉双方不一样。答案首先在可以感受的小差别里：鬼背人觉得沉，人背鬼却几乎无重；鬼渡水无声，人渡水有声。重量属于身体触觉，水声属于听觉，两次都让鬼追问身份。\n\n定伯反复沿用“新鬼／新死”：第一次解释身体为什么重，中途以不熟禁忌换取信息，第二次解释为什么渡水出声。同一套身份说辞承担三个动作，使问禁忌嵌在结伴行路里；后面的唾又使用了先前得到的信息。这是由段落先后关系得到的叙述结构解释。\n\n**反证与边界：**正文没有写鬼已完全信任他，也没有写定伯从相遇时就计划卖鬼。“新死”说辞的反复可看作应变，也可在改编中表现成逐步试探；两种心理读法都要由作品另行选择，不能倒写成古文事实。这里也不把“鬼略无重”扩展为所有古代鬼都无重量的知识。",
+      "basisKind": "ai_hypothesis",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "9a L154—158；9b L162",
+          "note": "轻重、身份追问、问禁忌和末尾唾的对应，是本执行者分析依据。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_market_analysis_20261002",
+      "heading": "研究解释·奇事落到集市，关系也变了",
+      "markdown": "第二个可深挖的点是观察现有结尾怎样改变关系。初遇时鬼会说话、提议同行和互背；将至宛市，定伯从轮换背负变成紧抓不放，不再理会鬼的要求；落地后鬼化为羊，接着成为可出售的对象。叙述把“交谈者—背负物—待售的羊”连续放在一起，最后只留下收到钱和离去。\n\n这使超常事件拥有很具体的日常落点：故事没有展开一场法术决斗，而是把说话的鬼带进交易。前面问“不喜人唾”，结尾用唾防变化，也把信息变成了动作。本执行者因此认为，短片可以关注身份和关系的改变，以及结尾的干脆。\n\n**另一种读法必须留着：**从鬼的遭遇看，开头它如实自报身份、提议互背，后面却被抓走售卖。原文未明写它先害人，所以“定伯战胜恶鬼、为民除害”不能直接当事实概要；同样，没写害人不足以证明鬼一定善良。喜剧、诡异或带一点不安，都是可能语气，尚无读者反馈能确定哪一种更有效。这里只是本执行者的研究解释，不是在断言古代人普遍怎样理解鬼或买卖。",
+      "basisKind": "ai_hypothesis",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "8b L149—150；9a L152—159；9b L161—163",
+          "note": "自报身份、互背、强抓、索下、化羊与售卖支持关系变化分析；道德判断另行限定。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_creative_20261002",
+      "heading": "创作联想·两个可观察的候选",
+      "markdown": "**候选一：让身体和声音先于解释被感到。**同一段路上，背人的一方需要承重，换背鬼的一方却几乎不用承重；浅水处先过的脚步听不到水声，后过的脚步有清楚水声。肩膀下沉、呼吸是否费力、脚入水的声响可以成为可表演、可听见的细节。原文只支持轻重和涉水声的差异，具体呼吸、身形与动作幅度是改编假设，须以后用表演/声画样段判断。\n\n**候选二：保留落地成羊的简洁。**围绕肩上求下的声音、紧抓的手、落地后的羊及卖得钱这几个正文已有动作，寻找奇事突然落入普通交易的感觉。羊是否继续用人声、变形是否可见、买主是否察觉、市场是什么时辰，古文没有规定；每加一项，都应标为改编选择。\n\n两项可以任选其一，也可组合。当前没有生成影片、没有人类观众评价，没有把候选记成小陌已采用方向；这里给的是进入创作前可验证的细节，不是完整剧本或分镜。",
+      "basisKind": "ai_hypothesis",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "卷十六9a—9b；L153—163",
+          "note": "候选依据承重、涉水、抓持、化羊与售卖；其余声画细节明确为改编。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_time_20261002",
+      "heading": "时间与底本·题署晋人，不等于已读东晋原稿",
+      "markdown": "本轮固定对象是二十卷今本中的宋定伯条。主文本读Kanripo标为WYG（文渊阁四库全书）的数字转录；图证读图书馆贡献的四库影印三页，具体阁本身份待核。应把四层时间分开：\n\n- **故事设定时间：**本条只写南阳、年少、夜行及宛市，未给年号或可确定的年份。石崇附句是文本记载，不能独自承担定年。\n- **作品作者与成书层：**所读提要称“旧本题曰晋干宝撰”，并记他在晋元帝时任官。这是作者题署与传记层，不是这份见证写成于东晋的证据，更不是本篇首次诞生日期。\n- **当前见证：**转录平台标文渊阁本；提要署乾隆四十三年三月（1778）。所读影印、现代扫描、PDF处理与数字转录是不同保存层次。本轮未读到早期干宝原本，扫描件也未独立核具体阁本。\n- **本次读取：**2026年10月2日固定下载内容、提交号、页码与哈希。这只是可重找的研究时点，不是故事形成日期。\n\n我们读到的是今本保存的一则故事，不能把“东晋作者题署”直接写成“故事在东晋首次诞生”。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "完整条L149—163",
+          "note": "本条未给年号，含石崇附句。"
+        },
+        {
+          "sourceId": "src_song_preface",
+          "locator": "提要000-1a—2a；L11—15、L30—31",
+          "note": "旧本题署、元帝时任官及提要1778日期。"
+        },
+        {
+          "sourceId": "src_song_metadata",
+          "locator": "metadata.description/contributor/publicdate/ocr；PDF文件信息",
+          "note": "四库影印与现代数字处理层；不把上传/处理日期当故事年代。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_preface_20261002",
+      "heading": "馆臣解释·今本来历本来就留着疑问",
+      "markdown": "所读清代提要已经提醒，不能直接把二十卷今本等同于干宝旧书。它先转引胡震亨的怀疑，认为书中存在后人附益；又由馆臣提出《搜神总记》与后人分卷的解释，最后明说“疑以傳疑，今姑仍舊題著之於録焉”。\n\n这里保留的是**清代馆臣的存疑和解释**。胡震亨跋、馆臣拿来比较的其他书，本轮没有逐一读原件；也未完成现代版本研究。因此，不把提要里的假说写成已经证实的完整重辑经过，不自行断言某位在何年重建了今本。这足以提示底本边界，尚不足以证明本篇的诞生过程。",
+      "basisKind": "author_interpretation",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_preface",
+          "locator": "提要000-1b—2a；L17—30",
+          "note": "清代馆臣的转引与存疑；不冒称已读胡跋原件。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_comparison_20261002",
+      "heading": "版本对读·类书指向《列异传》，仍不能宣布起源",
+      "markdown": "本轮另外完整读取了两份类书转引。\n\n**《太平广记》卷三百二十一“鬼六”宋定伯条**保存同一情节，条末作“當時有言定伯賣鬼得錢千五”，随后注明“出列異傳”。本轮所读数字正文没有“石崇”。\n\n**《太平御览》卷八百八十四所读四部丛刊转录**起首作“列異傳曰南陽宗定伯”，也写互背、问人唾、涉水、化羊及售卖，结尾作“于時名宗定伯賣鬼得錢千五百”。这里人名作“宗”，主文本和《太平广记》作“宋”。御览原页未核，暂记电子转录差异，不定哪一姓是原字。\n\n两处引书说明支持“所读类书把这则故事归到《列异传》”。但本轮没有实际读到早期《列异传》独立原本，也未辨明同名书作者；不能据此证明某位作者亲写、故事起源于某一朝代，或哪份是唯一原版。两部类书还可能依赖共同文本，不是两起历史事件的独立目击证词。\n\n对读改变了本轮判断：今本末句提到石崇，不再被拿来填主人公年代；“出《列异传》”保留为可查的传承线索。至于故事最初怎样诞生，仍不能确定。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_tpgj",
+          "locator": "卷321-9a—9b；KR3l0118_321.txt L153—168",
+          "note": "完整条、无石崇末句及出列异传。"
+        },
+        {
+          "sourceId": "src_song_tpyl",
+          "locator": "卷884-2a末—2b；KR3k0012_884.txt L48—59",
+          "note": "完整转引、宗定伯、引书与末句。"
+        },
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "卷十六9b；L163",
+          "note": "主文本石崇附句对照。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_unknown_20261002",
+      "heading": "尚未解决·哪些问题值得另开一小步",
+      "markdown": "故事内容和本轮两项形式焦点已经能回答，但界限仍在：确切发生年代、口传形成过程、最初编者和独立早期底本未确定；鬼的意图、定伯的预谋、羊与买主后续未写。水声句第二字与“宗／宋”还需原页、更清楚版本精校；它们目前不改变“水声暴露身份差异”与完整结尾的基本理解。\n\n若要更严格考据，最小补证是先核《太平御览》这一叶原页和可靠校注，而非继续堆转载。若做时代具象化创作，先定改编设定，再独立查服饰、集市、钱币与使用动作；当前研究不足以认证某套视觉复原。",
+      "basisKind": "unknown",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "完整条L149—163",
+          "note": "已知与未写情节边界。"
+        },
+        {
+          "sourceId": "src_song_tpyl",
+          "locator": "卷884-2a末—2b；L48—59",
+          "note": "宗定伯转录尚未核原页。"
+        },
+        {
+          "sourceId": "src_song_scan",
+          "locator": "PDF118水声句",
+          "note": "已看原页仍留字形与阁本精校缺口。"
+        }
+      ],
+      "attachmentIds": []
+    },
+    {
+      "paragraphId": "para_song_method_20261002",
+      "heading": "方法与读取记录",
+      "markdown": "本次为AI实测自设焦点，不是小陌的收藏感受、阅读经历或学习成果。按项目内传统溯源规程，实际读完整宋定伯条、提要与原序，完整读两处类书转引；邻接条目只核边界，未通读三书。Kanripo与影印均为相应底本的现代数字见证，未访问古代原件。\n\nKanripo《搜神记》固定commit 9959e70d799062d8dc3872225ce9a5b429ec5cac，卷16下载SHA-256 5337e1c7a22cc7850a659a9592da1f70a6228f7cca9260facdcb3b1cd69061e9；比较书固定提交与哈希见验证目录comparison-manifest.json。文本严格UTF-8读取，原条L149—163完整。三张页图用既有PyMuPDF从PDF渲染，实际目验117—119页，另看册首四库题页；OCR乱码未用于释义。整册只留验证目录，正式原件仅必要三页和完整条行号摘录。完整条行号摘录见本段下方附件卡，可直接下载 TXT 原件。\n\n主文本与扫描的情节和多数文字对应；扫描元数据及题页没有独立确认文渊阁身份，故只能说已核四库影印这三页，不能声明两者必是同一底本。页码、图证身份和限制均保留。\n\n访问失败包括Kanripo站点正文403、CText页403、维基文库API403；未绕过。实际可读取的GitHub公开源及图书馆贡献数字件用于研究，无新依赖、付费、模型下载或第三方私人附件上传。\n\n**复用边界：**古代正文用于必要引用，白话为本执行者自译。数字件元数据未给明确页图公开复用许可；三页用于本项目必要研究对读，不把附件登记许可字段当出版授权。对外发布页图或采用他人现代译文时，仍需核供应方条件。没有生成古籍页或历史复原图。\n\n轻量素材保存的是GitHub master链接；本研究为可重找固定了同一文件的commit与行号。这里明确将素材v1关联到这次实际读取范围，原始链接、短识别、感受栏均保留。固定版本证据不保证master日后内容不变。",
+      "basisKind": "source_fact",
+      "sourceRefs": [
+        {
+          "sourceId": "src_song_sgj",
+          "locator": "固定文件L149—163，commit及SHA-256",
+          "note": "完整条与可重找的内容身份。"
+        },
+        {
+          "sourceId": "src_song_preface",
+          "locator": "提要L11—33，原序L36至末",
+          "note": "实际读取范围。"
+        },
+        {
+          "sourceId": "src_song_tpgj",
+          "locator": "完整宋定伯条L153—168",
+          "note": "完整转引读取范围。"
+        },
+        {
+          "sourceId": "src_song_tpyl",
+          "locator": "完整宗定伯条L48—59",
+          "note": "完整转引读取范围。"
+        },
+        {
+          "sourceId": "src_song_scan",
+          "locator": "PDF117—119；整册SHA-256见来源信息",
+          "note": "目验与派生页图范围，不依靠乱码OCR。"
+        },
+        {
+          "sourceId": "src_song_metadata",
+          "locator": "metadata及files；未见明确图像许可字段",
+          "note": "来源身份与复用边界。"
+        },
+        {
+          "sourceId": "src_song_excerpt",
+          "locator": "完整条L149—163定位摘录全部",
+          "note": "支持完整条行号摘录；实际受控附件ID及原件哈希已核。"
+        },
+        {
+          "sourceId": "src_song_material_mapping",
+          "locator": "素材v1 original.text/url；同一KR3l0099_016卷十六宋定伯条L149—163",
+          "note": "对应已实际读取的保存素材与固定原文，不把动态URL等同未来版本。"
+        }
+      ],
+      "attachmentIds": [
+        "att_db9516270888bcac31b9cee7a34167ab211d0c90"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "src_song_sgj",
+      "kind": "external",
+      "title": "《搜神记》WYG卷十六：宋定伯条固定数字转录",
+      "locator": "卷十六8b末—9b前；L149—163",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际完整读本条，核前后边界；固定commit9959e70d799062d8dc3872225ce9a5b429ec5cac。17319字节SHA256 5337e1c7a22cc7850a659a9592da1f70a6228f7cca9260facdcb3b1cd69061e9；另目验四库影印三页，扫描具体阁本未核。",
+      "licenseStatus": "古代正文必要引用；保留数字出处。中文白话为本执行者自译，未用他人现代译本。",
+      "uri": "https://github.com/kanripo/KR3l0099/blob/9959e70d799062d8dc3872225ce9a5b429ec5cac/KR3l0099_016.txt#L149-L163"
+    },
+    {
+      "sourceId": "src_song_preface",
+      "kind": "external",
+      "title": "《搜神记》WYG提要与原序：题署与今本存疑",
+      "locator": "提要000-1a—2a；原序000-3a—3b",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读完整数字提要与原序；未核该文件原页、未逐一读其转引书。2722字节SHA256 53f2c622c8f46796a61752b555404d21383a3152196243edf60ef1e8138baa5b。",
+      "licenseStatus": "古代文本少量必要引用，不复制现代校注。",
+      "uri": "https://github.com/kanripo/KR3l0099/blob/9959e70d799062d8dc3872225ce9a5b429ec5cac/KR3l0099_000.txt"
+    },
+    {
+      "sourceId": "src_song_tpgj",
+      "kind": "external",
+      "title": "《太平广记》WYG卷321鬼六：宋定伯，出《列异传》",
+      "locator": "卷321-9a—9b；完整条L153—168",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读完整该条数字正文及尾注；固定commit7990feeb9c302e37942661d1b29abc22818cc204。下载哈希留comparison-manifest.json，未核本书原页。",
+      "licenseStatus": "古代正文必要引用，保留数字出处。",
+      "uri": "https://github.com/kanripo/KR3l0118/blob/7990feeb9c302e37942661d1b29abc22818cc204/KR3l0118_321.txt#L153-L168"
+    },
+    {
+      "sourceId": "src_song_tpyl",
+      "kind": "external",
+      "title": "《太平御览》SBCK卷884：列异传曰南阳宗定伯",
+      "locator": "卷884-2a末—2b；完整条L48—59",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读完整条数字正文；固定commit42ba052ab54c733387ba30b62dcd4eacb34139b6。下载哈希留comparison-manifest.json；未核本书原页，宗/宋只暂记转录差异。",
+      "licenseStatus": "古代正文必要引用，保留数字出处。",
+      "uri": "https://github.com/kanripo/KR3k0012/blob/42ba052ab54c733387ba30b62dcd4eacb34139b6/KR3k0012_884.txt#L48-L59"
+    },
+    {
+      "sourceId": "src_song_scan",
+      "kind": "external",
+      "title": "浙江大学图书馆贡献《搜神记·卷十一～卷二十》四库影印（具体阁本待核）",
+      "locator": "PDF117、118、119页=卷十六8b、9a、9b；在线索引n116、n117、n118",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际下载6087363字节PDF，SHA256 c6baae55f8f9d4ebfc71a8aa8fda4e990bc05b18598833ac5185e2019b2202a8。定位并目验完整故事三页及册首四库题页，未通读207页。原页由PDF渲染、未重绘；元数据与题页未独立确认具体阁本。",
+      "licenseStatus": "元数据未给明确页图公开复用授权；本项目必要三页研究对读，对外复用待核。",
+      "uri": "https://archive.org/details/06050852.cn/page/n116/mode/1up"
+    },
+    {
+      "sourceId": "src_song_metadata",
+      "kind": "external",
+      "title": "Internet Archive/CADAL数字件06050852.cn元数据",
+      "locator": "metadata.description/contributor/scanningcenter/sponsor/publicdate/ocr及files",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "实际读JSON元数据及文件信息；四库影印、浙江大学图书馆贡献与CADAL资助据此记录。不用元数据证明精确印行年代、文渊阁身份或图像授权。",
+      "licenseStatus": "少量事实元数据转述；图像许可未明确。",
+      "uri": "https://archive.org/metadata/06050852.cn"
+    },
+    {
+      "sourceId": "src_song_excerpt",
+      "kind": "attachment",
+      "title": "宋定伯完整条：固定原文行号定位摘录",
+      "locator": "主文本L149—163，含pb叶码，全文",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "完整本条从已下载固定commit文件摘录，保留原行号和pb叶码；已通过受控导入登记并回读，原字节哈希核对一致。",
+      "licenseStatus": "古代正文必要完整短条摘录；不含他人现代译文。",
+      "attachmentId": "att_db9516270888bcac31b9cee7a34167ab211d0c90"
+    },
+    {
+      "sourceId": "src_song_material_mapping",
+      "kind": "material",
+      "title": "轻量素材v1与固定原典的实际读取关联",
+      "locator": "素材v1 original.text/url；同一KR3l0099_016卷十六宋定伯条L149—163",
+      "accessedAt": "2026-10-02",
+      "verificationScope": "已读取这条素材v1的短识别、保存原链接与来源位置；沿同一卷十六宋定伯条实际完整读固定commit9959e70d799062d8dc3872225ce9a5b429ec5cac转录L149—163并目验三页四库影印。固定文件的逐句依据仍见src_song_sgj；不保证master动态链接日后内容仍相同，不称已通读卷16或整书。",
+      "licenseStatus": "保留收藏源与固定版本对应；古代正文必要引用，页图对外复用许可未核。",
+      "materialId": "mat_c5afa305-85dc-4bdd-8652-e7778fc89104"
+    }
+  ],
+  "researchStatus": "stage_complete",
+  "materialVersions": [
+    {
+      "materialId": "mat_c5afa305-85dc-4bdd-8652-e7778fc89104",
       "revision": 1
     }
   ],

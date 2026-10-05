@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>小陌 · 学习小岛</title>
+  <title>学习空间 · 小陌的个人终端</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23e1e9d7'/%3E%3Cpath d='M7 16 16 8 25 16M10 14v11h12V14' fill='none' stroke='%23365c53' stroke-width='2'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="体验流程.css">
@@ -12,12 +12,14 @@
   <link rel="stylesheet" href="海岛生活.css">
   <link rel="stylesheet" href="主岛安排.css">
   <link rel="stylesheet" href="integration.css">
+  <link rel="stylesheet" href="/terminal/shell.css">
+  <link rel="stylesheet" href="terminal-learning.css">
 </head>
-<body>
-  <div class="prototype-band"><strong>小陌的学习空间</strong><nav class="module-nav" aria-label="统一入口"><a href="/learning/" aria-current="page">学习小岛</a><a href="/observatory/">素材观察室</a><a href="/information/">信息收集</a></nav></div>
+<body data-terminal-module="learning">
+  <div class="prototype-band"><strong>学习空间</strong><span>主岛与三个领域岛，共用同一份学习记录</span></div>
   <header class="topbar">
     <div class="brand"><span class="brand-mark" aria-hidden="true">⌂</span><div><h1>学习小岛</h1><p>一个可以出发，也可以回来的地方</p></div></div>
-    <nav class="nav" aria-label="世界导航"><button id="homeButton" aria-pressed="true">⌂ 回主岛</button><button id="overviewButton" aria-pressed="false">群岛总览</button><span class="nav-divider" aria-hidden="true"></span><button id="directoryButton">岛屿目录</button><button id="explainButton" class="text">小岛怎么用</button></nav>
+    <nav class="nav" aria-label="学习空间导航"><button id="homeButton" aria-pressed="true">⌂ 主岛学习区</button><button id="overviewButton" aria-pressed="false">学习领域总览</button><span class="nav-divider" aria-hidden="true"></span><button id="directoryButton">岛屿目录</button><button id="learningBookmarks">我的内容</button><button id="legacyLearningBookmarks" class="text">旧学习书签</button><button id="explainButton" class="text">小岛怎么用</button></nav>
   </header>
   <main class="shell" id="shell">
     <section class="map-section" aria-label="群岛空间结构">
@@ -27,7 +29,7 @@
       <div class="place-hint">点一个地方，<strong>走进去看看</strong>。也可以只是待一会儿。</div>
       <div id="islandLife" class="island-life"><div id="sceneMount"></div></div>
       <div id="currentRibbon" class="current-ribbon" hidden><div><small id="ribbonStatus"></small><strong id="ribbonTask"></strong></div><button id="ribbonButton">回到这一块</button></div>
-      <div class="route-dock"><nav class="route-buttons" aria-label="去另一座岛"><button data-route="home" aria-current="page">我的主岛</button><button data-route="story">故事花园</button><button data-route="visual">影像工坊</button><button data-route="post">声音港湾</button></nav><span id="sceneCaption" class="scene-caption">走走看看，也可以什么都不完成</span></div>
+      <div class="route-dock"><nav class="route-buttons" aria-label="去另一座岛"><button data-route="home" aria-current="page">我的主岛</button><button data-route="story">故事花园</button><button data-route="visual">影像工坊</button><button data-route="post">后期港湾</button></nav><span id="sceneCaption" class="scene-caption">走走看看，也可以什么都不完成</span></div>
       <button id="quietExit" class="quiet-exit" hidden>休息好了，回来 →</button>
       <div class="map-area">
         <svg id="world" class="world-svg" viewBox="250 210 620 540" preserveAspectRatio="xMidYMid meet" aria-label="个人主岛与三个领域岛的可点击关系图">
@@ -68,19 +70,20 @@
         <div class="space-tabs" role="tablist" aria-label="岛内去向">
           <button data-tab="desk" id="deskTab" role="tab" aria-selected="true" aria-controls="spaceBody"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18M5 12v9m14-9v9M7 12V5h10v7M10 8h4"/></svg>学习桌</button>
           <button data-tab="courses" id="coursesTab" role="tab" aria-selected="false" aria-controls="spaceBody"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M5 20V5h4v15m1 0V3h4v17m3 0-2-14 4-.5L21 20"/></svg>课程架</button>
-          <button data-tab="traces" id="tracesTab" role="tab" aria-selected="false" aria-controls="spaceBody"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v19l-6-4-6 4zM9 8h6m-6 4h4"/></svg>留下的痕迹</button>
+          <button data-tab="traces" id="tracesTab" role="tab" aria-selected="false" aria-controls="spaceBody"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v19l-6-4-6 4zM9 8h6m-6 4h4"/></svg>我的内容</button>
         </div>
         <div id="spaceBody" class="space-body" role="tabpanel" aria-labelledby="deskTab"></div>
       </section>
       <div id="cue" class="reminder-cue" role="status" hidden><strong id="cueTitle"></strong><p id="cueText"></p><button id="cueRest">歇一会儿</button><button id="cueLater">稍后再说</button><button id="cueCancel" class="text">这次不提醒</button></div>
     </section>
     <aside class="panel" id="learningPanel" aria-label="共享学习面板">
-      <div class="panel-heading"><div><span class="eyebrow" id="panelEyebrow">主岛 · 随手聊聊</span><h2 id="panelTitle">小陌，先坐一会儿</h2><p class="lead" id="panelLead">说说今天的时间和想法，慢慢开始。</p></div><button id="collapsePanel" class="text" aria-label="收起学习面板">收起 ↗</button></div>
+      <div class="panel-heading"><div><span class="eyebrow" id="panelEyebrow">主岛 · 学习向导</span><h2 id="panelTitle">小陌，先坐一会儿</h2><p class="lead" id="panelLead">说说今天想学的内容，慢慢开始。</p></div><button id="collapsePanel" class="text" aria-label="收起学习面板">收起 ↗</button></div>
+      <nav id="personalNavigationLinks" class="learning-personal-links" aria-label="记录入口"><a href="/navigation/?view=chat" data-learning-leave>随手聊聊 · 领航室</a><a href="/navigation/?view=journey" data-learning-leave>每日旅程</a><a href="/learning/content/" data-learning-leave>我的内容</a></nav>
       <div id="reentryBanner" class="return-banner" hidden>已找回上次的界面草稿与书签；实际学习进展以项目记录为准。</div>
       <div class="context"><p>最近在学 <span class="course-name">老白的分镜课</span></p><p id="contextCaption" class="context-caption"></p></div>
       <button id="activeLink" class="active-link" hidden></button>
       <p id="guideNote" class="guide-note"></p>
-      <div class="mode-buttons" aria-label="交流方式"><button data-mode="plan" aria-pressed="true">手动排一块</button><button data-mode="chat" aria-pressed="false">和向导聊聊</button></div>
+      <div class="mode-buttons" aria-label="学习交流方式"><button data-mode="plan" aria-pressed="true">手动排一块</button><button data-mode="chat" aria-pressed="false">和学习向导聊聊</button></div>
       <form id="planForm" novalidate>
         <div class="conversation-entry"><label for="intent" class="sr-only">说说今天的情况或想聊的问题</label><textarea id="intent"></textarea><div class="form-actions"><button id="sendButton" type="submit" class="primary">看看这次怎么安排</button><button type="button" id="justExplore">先逛逛 →</button></div></div>
         <details class="demo-parameters" id="demoParams"><summary>手动参数：时间、课长与去向</summary><p class="note">以下填写值决定手动安排，不解析文字中的时间。真实课长未知时留空。</p><div class="quick-times"><button type="button" data-time="30" aria-pressed="false">半小时</button><button type="button" data-time="90" aria-pressed="true">90 分钟</button><button type="button" data-time="180" aria-pressed="false">半天</button></div><div class="form-group inline-fields"><label for="minutes">可用时间</label><input id="minutes" type="number" min="10" max="480" value="90"><span>分钟</span><label for="buffer">休息余量</label><input id="buffer" type="number" min="0" max="120" value="15"></div><div class="form-group inline-fields"><label for="lessonLength">这节课长</label><input id="lessonLength" type="number" min="1" max="480" placeholder="未知"><span>分钟</span></div><label class="note" for="destination">这次的领域（可改选）</label><select id="destination"><option value="visual">影像与 AI 创作岛</option><option value="story">故事岛</option><option value="post">剪辑音动效岛</option><option value="home">留在个人主岛</option></select></details>
@@ -102,5 +105,7 @@
   <script src="时间安排核心.js"></script>
   <script src="主岛安排.js"></script>
   <script src="integration.js"></script>
+  <script src="terminal-learning.js"></script>
+  <script src="/terminal/shell.js"></script>
 </body>
 </html>

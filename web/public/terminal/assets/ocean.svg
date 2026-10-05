@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="ocean-title ocean-description">
+  <title id="ocean-title">窗外的平静海面</title>
+  <desc id="ocean-description">奶油色薄云停在淡青天空里，浅蓝绿色大海延向柔和的海天线，近处只有舒缓的细波。</desc>
+  <defs>
+    <linearGradient id="ocean-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dce9e4"/>
+      <stop offset="0.72" stop-color="#eaf0e4"/>
+      <stop offset="1" stop-color="#f1efdc"/>
+    </linearGradient>
+    <linearGradient id="ocean-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b8d8cd"/>
+      <stop offset="0.43" stop-color="#add0c4"/>
+      <stop offset="1" stop-color="#91beb5"/>
+    </linearGradient>
+    <linearGradient id="ocean-horizon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef0df" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#eef0df" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="190" fill="url(#ocean-sky)"/>
+  <g fill="#f7f4e6" opacity="0.8">
+    <path d="M17 97c10-9 20-10 29-7 7-13 26-14 37-4 12-5 25-1 31 7 11-2 19 1 24 6-31 4-77 5-121-2Z"/>
+    <path d="M265 127c9-7 18-8 26-5 6-9 18-12 28-6 8-6 21-3 25 4 12-1 20 3 25 8-35 4-71 5-104-1Z"/>
+  </g>
+  <path d="M0 181c85-2 118-1 202 0 78 1 132-2 198-1v220H0Z" fill="url(#ocean-water)"/>
+  <path d="M0 181c86-2 153 2 220 0 61-2 124 0 180-1" fill="none" stroke="#c9dfd0" stroke-width="2"/>
+  <rect y="182" width="400" height="43" fill="url(#ocean-horizon)"/>
+  <g fill="#dce8d6" opacity="0.3">
+    <path d="M0 224c43 3 68-2 107 0 59 3 73 0 128 1 52 1 100 2 165-1v4c-58 3-104-1-165 0-53 1-91 0-128-1-39-1-67 4-107 1Z"/>
+    <path d="M0 288c58 3 93-1 145 0 50 1 90 6 137 3 46-3 81-4 118-1v5c-35-2-75-2-115 2-49 3-90-3-139-4-49-1-87 4-146 0Z"/>
+    <path d="M0 357c52-6 91-3 132 1 54 4 105-3 151-1 43 2 86 7 117 5v5c-41 3-83-4-117-5-44-2-102 6-154 0-41-4-80-5-129 0Z"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <g stroke="#e5edda" stroke-width="1.7" opacity="0.76">
+      <path d="M54 207q18-2 33 0m118-4q24-2 49 0m61 10h22"/>
+      <path d="M127 238q29 4 58 0m89 9q28 3 49 0"/>
+      <path d="M23 270q27 4 50 0m133-1q23-3 45 0m90 9h29"/>
+      <path d="M93 307q36 6 73 0m102 11q28-4 52 0"/>
+      <path d="M22 342q24-3 45 0m127 0q31 5 62 0"/>
+      <path d="M94 378q39 5 73 0m140-4q31 5 58 0"/>
+    </g>
+    <g stroke="#739e98" stroke-width="1.2" opacity="0.27">
+      <path d="M101 218h17m175 17h19M58 253q16-2 31 0m130 47h21"/>
+      <path d="M169 326h23m149 7q14 2 27 0M39 372h26m150 9h31"/>
+    </g>
+  </g>
+</svg>

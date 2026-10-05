@@ -8,8 +8,8 @@ if (-not (Get-Command node -ErrorAction SilentlyContinue)) {
 }
 
 Write-Host '小陌的个人系统正在启动…'
-Write-Host '打开 http://127.0.0.1:8787/learning/ （如已有 LEARNING_PORT 配置，请使用对应端口）。按 Ctrl+C 停止。'
-Write-Host '素材观察室与信息收集在同一应用导航中；信息服务启动不采集。'
+Write-Host '打开 http://127.0.0.1:8787/ （如已有 LEARNING_PORT 配置，请使用对应端口）。按 Ctrl+C 停止。'
+Write-Host '学习、领航、素材与信息在同一终端中；信息服务启动不采集。'
 
 Push-Location -LiteralPath $terminalRoot
 try {

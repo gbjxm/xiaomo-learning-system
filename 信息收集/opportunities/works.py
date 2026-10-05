@@ -166,15 +166,35 @@ def list_workspace(store):
             "note": "全部只保存本机准备情况；没有投稿、报名或接受授权。"}
 
 
-def save_work(store, payload):
-    payload = _object(payload, ("id", "revision", "data"), "作品请求")
+def save_work(store, payload, *, require_submission=False):
+    from .write_protocol import WriteConflict, binding, receipt, save_receipt, submission_id
+    payload = _object(payload, ("id", "revision", "data", "submissionId"), "作品请求")
+    creating = payload.get("id") is None
+    operation = payload.get("submissionId")
+    if creating and (require_submission or operation is not None):
+        operation = submission_id(operation)
     value = "work-" + uuid.uuid4().hex if payload.get("id") is None else payload["id"]
     value = identifier(value)
     data = _work_data(payload.get("data"))
+    expected_revision = _revision(payload)
+    request_binding = binding("work_create", {"revision": expected_revision, "data": data}) if creating and operation else None
     with store.connection() as conn:
         conn.execute("BEGIN IMMEDIATE")
-        saved = put_record(conn, "works", value, data, _revision(payload))
-    return {"saved": True, "record": saved}
+        if request_binding:
+            previous = receipt(conn, operation, "work_create", request_binding)
+            if previous:
+                original = previous["result"].get("record")
+                current = get_record(conn, "works", previous["target"])
+                if not isinstance(original, dict) or original.get("id") != previous["target"]:
+                    raise ValueError("作品提交回执不完整；暂停写入")
+                if current != original:
+                    raise WriteConflict("该次作品新建已完成，但作品后来已修改或删除；请重新读取核对，草稿保留。", code="completed_then_changed", committed=True, record=current)
+                return {**previous["result"], "already_completed": True}
+        saved = put_record(conn, "works", value, data, expected_revision)
+        result = {"saved": True, "record": saved}
+        if request_binding:
+            save_receipt(conn, operation, "work_create", request_binding, value, result)
+    return result
 
 
 def delete_work(store, payload):

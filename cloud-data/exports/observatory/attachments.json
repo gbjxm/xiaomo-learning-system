@@ -68,7 +68,7 @@
       "pk": 0
     }
   ],
-  "rowCount": 20,
+  "rowCount": 26,
   "rows": [
     {
       "id": "att_8ee49b3313b6145a1871109dcb346bdcfd87c2ff",
@@ -268,6 +268,66 @@
       "mime_type": "image/png",
       "byte_length": 1785849,
       "permission_status": "NASA媒体指引允许署名的个人教育/信息用途 https://www.nasa.gov/nasa-brand-center/images-and-media/；仅从官方无音轨版定位抽帧，无裁切调色，不暗示NASA审阅/背书",
+      "status": "registered"
+    },
+    {
+      "id": "att_052120bc91bc179d9ac8756c07015436061dc919",
+      "original_filename": "official-object.JPG",
+      "relative_path": "att_052120bc91bc179d9ac8756c07015436061dc919-b0171d1ca6cd29da5082c4e0858c5d0ce3cde2a755259862ebb704d414b71b28.jpg",
+      "sha256": "b0171d1ca6cd29da5082c4e0858c5d0ce3cde2a755259862ebb704d414b71b28",
+      "mime_type": "image/jpeg",
+      "byte_length": 1468223,
+      "permission_status": "陕西历史博物馆馆藏页官方照片，版权声明All Rights Reserved；本轮本机研究取证引用，未取得对外发布或商业复用许可。",
+      "status": "registered"
+    },
+    {
+      "id": "att_099fd1ab578131652e8a479c01c785e2e994955e",
+      "original_filename": "older-image-2.jpg",
+      "relative_path": "att_099fd1ab578131652e8a479c01c785e2e994955e-7c40eea81184038f2d25a7af62f1da38785e37279d4566aefa4a109bcacbd365.jpg",
+      "sha256": "7c40eea81184038f2d25a7af62f1da38785e37279d4566aefa4a109bcacbd365",
+      "mime_type": "image/jpeg",
+      "byte_length": 33297,
+      "permission_status": "中国矿业大学2021页面转载并自署陕西历史博物馆官网来源；远程路径后缀png但原字节为JPEG，未转换改图，只以正确扩展名登记同一原件。摄影许可未知，仅本机对照研究，不因下载取得发布许可。",
+      "status": "registered"
+    },
+    {
+      "id": "att_8976cb5178e5cf1948e402f4b05834da4dfb0054",
+      "original_filename": "四库影印-卷16-8b.png",
+      "relative_path": "att_8976cb5178e5cf1948e402f4b05834da4dfb0054-ee5458d5969951932a2ff617fc0cfc4338e659f954a3adedfa63024a526f77f9.png",
+      "sha256": "ee5458d5969951932a2ff617fc0cfc4338e659f954a3adedfa63024a526f77f9",
+      "mime_type": "image/png",
+      "byte_length": 321317,
+      "permission_status": "古籍公共领域文本；Internet Archive/CADAL浙江大学图书馆公开影印，具体阁本未核。保留必要三页图作本机核读，数字影印再发布许可未核。",
+      "status": "registered"
+    },
+    {
+      "id": "att_4c3183ce84c7afe58eb1fe42274cc54ab8adbf2e",
+      "original_filename": "四库影印-卷16-9a.png",
+      "relative_path": "att_4c3183ce84c7afe58eb1fe42274cc54ab8adbf2e-993bab7448e77ccf055b0bf3281c5dc21c1639b28a06ee7f35bbc632a3dee248.png",
+      "sha256": "993bab7448e77ccf055b0bf3281c5dc21c1639b28a06ee7f35bbc632a3dee248",
+      "mime_type": "image/png",
+      "byte_length": 362669,
+      "permission_status": "古籍公共领域文本；Internet Archive/CADAL浙江大学图书馆公开影印，具体阁本未核。保留必要三页图作本机核读，数字影印再发布许可未核。",
+      "status": "registered"
+    },
+    {
+      "id": "att_9e0fdcad71918210f9ceda182be289a5d619362d",
+      "original_filename": "四库影印-卷16-9b.png",
+      "relative_path": "att_9e0fdcad71918210f9ceda182be289a5d619362d-0c6ee9f9ffb6e98ac74e50a90cfb00f24f149c4b73ffa7cf71bd93ab403337d2.png",
+      "sha256": "0c6ee9f9ffb6e98ac74e50a90cfb00f24f149c4b73ffa7cf71bd93ab403337d2",
+      "mime_type": "image/png",
+      "byte_length": 357854,
+      "permission_status": "古籍公共领域文本；Internet Archive/CADAL浙江大学图书馆公开影印，具体阁本未核。保留必要三页图作本机核读，数字影印再发布许可未核。",
+      "status": "registered"
+    },
+    {
+      "id": "att_db9516270888bcac31b9cee7a34167ab211d0c90",
+      "original_filename": "宋定伯-完整条-定位摘录.txt",
+      "relative_path": "att_db9516270888bcac31b9cee7a34167ab211d0c90-e41bb2fbdd03182256bdddb0f7295e6119b8f6aad475d1b187571ad07efd0120.txt",
+      "sha256": "e41bb2fbdd03182256bdddb0f7295e6119b8f6aad475d1b187571ad07efd0120",
+      "mime_type": "text/plain",
+      "byte_length": 1008,
+      "permission_status": "公共领域古籍内容，摘录Kanripo文渊阁四库本数字转录卷16宋定伯完整条，保留来源行号；平台编辑/数字化许可与底本原页分别核查。",
       "status": "registered"
     }
   ]

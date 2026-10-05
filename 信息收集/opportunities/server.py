@@ -20,6 +20,7 @@ from .evidence import EvidenceManager
 from .searching import SearchService
 from . import works
 from .workspace import records, mutation_guard
+from .write_protocol import WriteConflict
 
 def make_server(store, port=8765, manager=None):
     manager = manager or UpdateManager(store)
@@ -231,14 +232,15 @@ def make_server(store, port=8765, manager=None):
                 validate_strings(body)
                 if not isinstance(body, dict):
                     raise ValueError("请求必须是JSON对象")
-                guarded = path in ('/api/review/confirm','/api/review/change','/api/evidence/import','/api/evidence/field','/api/saved-views','/api/saved-views/remove','/api/works/save','/api/works/delete','/api/applications/save','/api/applications/delete','/api/merge/confirm','/api/merge/undo')
+                guarded = path in ('/api/preference','/api/review/confirm','/api/review/change','/api/evidence/import','/api/evidence/field','/api/saved-views','/api/saved-views/remove','/api/works/save','/api/works/delete','/api/applications/save','/api/applications/delete','/api/merge/confirm','/api/merge/undo')
                 with mutation_guard(store) if guarded else nullcontext():
                     if path == "/api/update":
                         state, started = manager.start()
                         self.send(202 if state.get("running") else 200, {**state, "started": started})
                     elif path == "/api/preference":
-                        store.preference(body.get("id"), starred=body.get("starred"), note=body.get("note"))
-                        self.send(200, {"saved": True})
+                        if set(body) - {'id','starred','note','expectedPreferenceRevision','submissionId'}:
+                            raise ValueError('个人资料请求含未知字段')
+                        self.send(200, store.preference(body.get("id"), starred=body.get("starred"), note=body.get("note"), expected_revision=body.get('expectedPreferenceRevision'), submission_id=body.get('submissionId'), require_cas=True))
                     elif path == '/api/profile':
                         profile=save_profile(store,body)
                         self.send(200,{'saved':True,'work_profile':profile,'fits':{item['id']:evaluate_fit(item,profile) for item in store.items()}})
@@ -264,7 +266,9 @@ def make_server(store, port=8765, manager=None):
                             raise ValueError('移除视图需要明确确认')
                         self.send(200, searching.remove_view(body.get('id'),body.get('expected_revision')))
                     elif path == '/api/works/save':
-                        self.send(200, works.save_work(store,body))
+                        if 'revision' not in body:
+                            raise WriteConflict('作品页面版本已更新；请重新加载后核对并保存，草稿保留。', code='refresh_required')
+                        self.send(200, works.save_work(store,body,require_submission=True))
                     elif path == '/api/works/delete':
                         self.send(200, works.delete_work(store,body))
                     elif path == '/api/applications/save':
@@ -333,6 +337,8 @@ def make_server(store, port=8765, manager=None):
                         threading.Thread(target=self.server.shutdown, name="user-stop").start()
                     else:
                         self.send(404, {"error": "操作不存在"})
+            except WriteConflict as exc:
+                self.send(409, {'error': str(exc), **exc.details})
             except AlreadyRunning as exc:
                 self.send(409,{'error':str(exc)})
             except socket.timeout:

@@ -52,7 +52,7 @@
       "pk": 0
     }
   ],
-  "rowCount": 8,
+  "rowCount": 10,
   "rows": [
     {
       "id": "mat_5759b519-f594-428d-943c-b4fa1a9045df",
@@ -117,6 +117,22 @@
       "body_json": "{\"title\":\"测试案例｜科普短片：2024日食影子怎样扫过地球\",\"original\":{\"kind\":\"video\",\"text\":\"多类型测试·20261002：由AI按小陌的测试授权选择，非小陌兴趣原话。范围：NASA SVS完整官方说明＋49秒无声模拟的8/24/40秒三张定位图；未连续审看，不作为实际日食现场录像。\",\"url\":\"https://svs.gsfc.nasa.gov/5186/\",\"capturedAt\":\"2026-10-02T02:34:24.002273+00:00\",\"source\":{\"title\":\"Flying Around The 2024 Eclipse Shadow｜NASA SVS\",\"uri\":\"https://svs.gsfc.nasa.gov/5186/\",\"author\":\"\",\"publishedAt\":\"2023-11-13\",\"locator\":\"ID 5186；无旁白1080p30版本\"}},\"originalImpression\":\"\",\"currentImpression\":\"\",\"impressionHistory\":[],\"notes\":[],\"tags\":[\"多类型测试·20261002\",\"科普短片\",\"无声动画\",\"局部研究示范\"],\"segments\":[],\"attachmentIds\":[\"att_6e6df95308c8a774241234f25762dbe734ff71ef\",\"att_5ce7777a9b51094667a50d265518347345406ef9\",\"att_6031f653d5fbdac17c01ddbdf9ab5a4ad18ba1ac\"],\"source\":{\"title\":\"Flying Around The 2024 Eclipse Shadow｜NASA SVS\",\"uri\":\"https://svs.gsfc.nasa.gov/5186/\",\"author\":\"\",\"publishedAt\":\"2023-11-13\",\"locator\":\"ID 5186；无旁白1080p30版本\"},\"sourceHistory\":[],\"capabilities\":{\"saved\":true,\"access\":\"not_checked\",\"preview\":\"attachment_specific\",\"read\":\"not_read\",\"researched\":false}}",
       "created_at": "2026-10-02T04:59:46.954Z",
       "updated_at": "2026-10-02T04:59:46.954Z"
+    },
+    {
+      "id": "mat_df70761e-8a7d-4421-90d0-231f90d0f15a",
+      "revision": 1,
+      "status": "active",
+      "body_json": "{\"title\":\"深研实测｜唐葡萄花鸟纹银香囊\",\"original\":{\"kind\":\"link\",\"text\":\"唐代葡萄花鸟纹银香囊，陕西历史博物馆藏。先留馆藏链接，材料与用途待研究。\",\"url\":\"https://www.sxhm.com/collections/detail/9948.html\",\"source\":{\"title\":\"陕西历史博物馆·葡萄花鸟纹银香囊\",\"uri\":\"https://www.sxhm.com/collections/detail/9948.html\",\"author\":\"陕西历史博物馆\",\"publishedAt\":\"\",\"locator\":\"馆藏页名称、时代与图片\"}},\"originalImpression\":\"\",\"currentImpression\":\"\",\"impressionHistory\":[],\"notes\":[],\"tags\":[\"真实深研实测·20261002\",\"传统小物件\"],\"segments\":[],\"attachmentIds\":[],\"source\":{\"title\":\"陕西历史博物馆·葡萄花鸟纹银香囊\",\"uri\":\"https://www.sxhm.com/collections/detail/9948.html\",\"author\":\"陕西历史博物馆\",\"publishedAt\":\"\",\"locator\":\"馆藏页名称、时代与图片\"},\"sourceHistory\":[],\"capabilities\":{\"saved\":true,\"access\":\"not_checked\",\"preview\":\"text\",\"read\":\"not_read\",\"researched\":false}}",
+      "created_at": "2026-10-02T17:52:56.318Z",
+      "updated_at": "2026-10-02T17:52:56.318Z"
+    },
+    {
+      "id": "mat_c5afa305-85dc-4bdd-8652-e7778fc89104",
+      "revision": 1,
+      "status": "active",
+      "body_json": "{\"title\":\"深研实测｜宋定伯捉鬼\",\"original\":{\"kind\":\"link\",\"text\":\"宋定伯夜行逢鬼，与鬼同行后将其带入宛市。《搜神记》卷十六，原文与版本待研究。\",\"url\":\"https://github.com/kanripo/KR3l0099/blob/master/KR3l0099_016.txt\",\"source\":{\"title\":\"Kanripo《搜神记》卷十六·文渊阁四库本转录\",\"uri\":\"https://github.com/kanripo/KR3l0099/blob/master/KR3l0099_016.txt\",\"author\":\"题署晋干宝；Kanripo数字转录\",\"publishedAt\":\"\",\"locator\":\"KR3l0099_016.txt，WYG卷16叶8b末—9b前\"}},\"originalImpression\":\"\",\"currentImpression\":\"\",\"impressionHistory\":[],\"notes\":[],\"tags\":[\"真实深研实测·20261002\",\"传统故事\"],\"segments\":[],\"attachmentIds\":[],\"source\":{\"title\":\"Kanripo《搜神记》卷十六·文渊阁四库本转录\",\"uri\":\"https://github.com/kanripo/KR3l0099/blob/master/KR3l0099_016.txt\",\"author\":\"题署晋干宝；Kanripo数字转录\",\"publishedAt\":\"\",\"locator\":\"KR3l0099_016.txt，WYG卷16叶8b末—9b前\"},\"sourceHistory\":[],\"capabilities\":{\"saved\":true,\"access\":\"not_checked\",\"preview\":\"text\",\"read\":\"not_read\",\"researched\":false}}",
+      "created_at": "2026-10-02T17:52:56.328Z",
+      "updated_at": "2026-10-02T17:52:56.328Z"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # submissions
 
-源快照：`cloud-data/snapshots/素材观察室/data/observatory.sqlite3`；记录数：48。
+源快照：`cloud-data/snapshots/素材观察室/data/observatory.sqlite3`；记录数：62。
 
 这是字段原样目录，不是新研究结论。原话、个人笔记、来源、AI 分析和候选仍按原字段分开；完整字段见同名 JSON。
 
@@ -243,4 +243,74 @@
 
 - `submission_id`：six_production_f8a2f457-72db-4c2f-92ca-38e27914aba1
 - `created_at`：2026-10-02T04:59:46.974Z
+
+## 记录 49：d8afc7ee-1db8-4d71-985c-e20b150d9272
+
+- `submission_id`：d8afc7ee-1db8-4d71-985c-e20b150d9272
+- `created_at`：2026-10-02T17:52:56.318Z
+
+## 记录 50：66ce41ed-ab99-4a6d-9936-c4d25d40e3b0
+
+- `submission_id`：66ce41ed-ab99-4a6d-9936-c4d25d40e3b0
+- `created_at`：2026-10-02T17:52:56.328Z
+
+## 记录 51：webdraft_73d81782642c352be876c14e24617a07c99279d570bfe5f890557e05b53eabd1
+
+- `submission_id`：webdraft_73d81782642c352be876c14e24617a07c99279d570bfe5f890557e05b53eabd1
+- `created_at`：2026-10-02T17:54:44.718Z
+
+## 记录 52：webdraft_d4d3844d9262bf3b7d698920679fc08d7a6fdc79f10fe70cd907633356bbd8e4
+
+- `submission_id`：webdraft_d4d3844d9262bf3b7d698920679fc08d7a6fdc79f10fe70cd907633356bbd8e4
+- `created_at`：2026-10-02T17:54:45.334Z
+
+## 记录 53：1405b63b-9ad3-4254-af7c-23963528141c
+
+- `submission_id`：1405b63b-9ad3-4254-af7c-23963528141c
+- `created_at`：2026-10-02T18:07:11.354Z
+
+## 记录 54：ae8fe566-84c2-4300-a655-7079d7567159
+
+- `submission_id`：ae8fe566-84c2-4300-a655-7079d7567159
+- `created_at`：2026-10-02T18:07:11.580Z
+
+## 记录 55：8c59d92b-63c9-4308-bedf-584135228cdf
+
+- `submission_id`：8c59d92b-63c9-4308-bedf-584135228cdf
+- `created_at`：2026-10-02T18:07:11.966Z
+
+## 记录 56：1a207646-737c-4277-80e5-4461a69b867c
+
+- `submission_id`：1a207646-737c-4277-80e5-4461a69b867c
+- `created_at`：2026-10-02T18:07:12.264Z
+
+## 记录 57：d4839793-26ff-4c55-a033-9c76d858a190
+
+- `submission_id`：d4839793-26ff-4c55-a033-9c76d858a190
+- `created_at`：2026-10-02T18:07:12.714Z
+
+## 记录 58：07f309d1-10c7-46f3-9cf9-fb7264446360
+
+- `submission_id`：07f309d1-10c7-46f3-9cf9-fb7264446360
+- `created_at`：2026-10-02T18:07:12.744Z
+
+## 记录 59：b07c573a-8a24-410d-b44d-de3a5bae3154
+
+- `submission_id`：b07c573a-8a24-410d-b44d-de3a5bae3154
+- `created_at`：2026-10-02T18:07:35.038Z
+
+## 记录 60：c14254fc-ec28-44df-90d7-6b3fd6caa134
+
+- `submission_id`：c14254fc-ec28-44df-90d7-6b3fd6caa134
+- `created_at`：2026-10-02T18:07:35.181Z
+
+## 记录 61：e734c053-85cd-4f05-a08f-58eea9b5b734
+
+- `submission_id`：e734c053-85cd-4f05-a08f-58eea9b5b734
+- `created_at`：2026-10-02T18:17:40.243Z
+
+## 记录 62：2831d7c2-7025-463b-9b31-4c3016593bf2
+
+- `submission_id`：2831d7c2-7025-463b-9b31-4c3016593bf2
+- `created_at`：2026-10-02T18:17:41.773Z
 

@@ -1,6 +1,6 @@
 # runs
 
-源快照：`cloud-data/snapshots/信息收集/data/opportunities.sqlite3`；记录数：13。
+源快照：`cloud-data/snapshots/信息收集/data/opportunities.sqlite3`；记录数：14。
 
 这是字段原样目录，不是新研究结论。原话、个人笔记、来源、AI 分析和候选仍按原字段分开；完整字段见同名 JSON。
 
@@ -67,5 +67,10 @@
 ## 记录 13：54489b10a0a6427faf1a2b77b824eb07
 
 - `id`：54489b10a0a6427faf1a2b77b824eb07
+- `status`：finished
+
+## 记录 14：3cfce8818ff24034a30ce0012215f8db
+
+- `id`：3cfce8818ff24034a30ce0012215f8db
 - `status`：finished
 

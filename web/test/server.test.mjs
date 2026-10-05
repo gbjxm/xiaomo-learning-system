@@ -126,7 +126,7 @@ test('请求计划保存为待执行；重试不重复写入、也不再次请�
   assert.match(stage, /\*\*待执行/);
   assert.match(stage, /## 已采用的改进/);
   assert.match(first.body.reply, /独特尾句不应写入摘要/);
-  assert.doesNotMatch(record, /独特尾句不应写入摘要/);
+  assert.match(record, /独特尾句不应写入摘要/); // Activity stores the full AI response in its own layer.
   assert.match(stage, /独特尾句不应写入摘要/);
   assert.match(evidence, /目前尚无实际学习或练习证据/);
   const duplicate = await chat(appUrl);
@@ -215,7 +215,7 @@ test('进展状态栏位缺失时先报错，不追加活动；修复后同一�
   assert.equal((record.match(/learning-entry:complete/g) ?? []).length, 1);
 });
 
-test('部分保存失败会坦白；相同 requestId 可修复且不重复活动记录', async t => {
+test('保存准备失败不改业务记录；相同 requestId 修复后复用答复且不重复活动', async t => {
   const { root, appUrl, upstreamCalls } = await fixture(t);
   const stagePath = path.join(root, '运行记录/阶段安排.md');
   const originalStage = await readFile(stagePath, 'utf8');
@@ -224,11 +224,9 @@ test('部分保存失败会坦白；相同 requestId 可修复且不重复活动
   assert.equal(first.status, 500);
   assert.equal(first.body.saved, false);
   assert.match(first.body.reply, /保存没有完成/);
-  assert.match(first.body.saveError, /部分写入/);
+  assert.match(first.body.saveError, /保存准备未完成/);
   const recordPath = path.join(root, '运行记录/学习记录/2026-09-24.md');
-  const partial = await readFile(recordPath, 'utf8');
-  assert.equal((partial.match(/learning-entry:start/g) ?? []).length, 1);
-  assert.doesNotMatch(partial, /learning-entry:complete/);
+  await assert.rejects(readFile(recordPath, 'utf8'), { code: 'ENOENT' });
   await writeFile(stagePath, originalStage, 'utf8');
   const retry = await chat(appUrl, { requestId: 'request-0004' });
   assert.equal(retry.status, 200);

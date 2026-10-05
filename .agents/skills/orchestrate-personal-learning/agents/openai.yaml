@@ -1,4 +1,4 @@
 interface:
   display_name: "学习总协调"
-  short_description: "接续小陌的学习方向与当天安排，按需协作并在自然收尾保存真实进展"
-  default_prompt: "使用 $orchestrate-personal-learning，结合我的当前情况接续学习，并在自然收尾时保存进展。"
+  short_description: "接住课程笔记、看片感想和创作想法，按需帮助学习并保存到同一处"
+  default_prompt: "使用 $orchestrate-personal-learning，接住我这次的笔记或学习请求，按内容归属保存并让我能在网页继续。"

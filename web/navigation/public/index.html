@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>小陌的个人终端 · 领航桌</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%23e7ebda'/%3E%3Cpath d='M7 20 16 7 25 20 16 17Z' fill='none' stroke='%234b6a57' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/navigation/style.css">
+  <link rel="stylesheet" href="/terminal/shell.css">
+  <script src="/terminal/shell.js" defer></script>
+  <script src="/navigation/app.js" defer></script>
+</head>
+<body data-terminal-section="navigation">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <main id="main" tabindex="-1">
+    <nav class="return-links" aria-label="返回个人终端"><a href="/terminal/#home">← 回主岛</a><a href="/terminal/#cabin">回领航船 →</a></nav>
+    <section class="page-intro">
+      <div><p class="eyebrow">小陌的领航室</p><h1 id="pageTitle">记录一件事，或一起想一想。</h1><p id="pageDescription">生活、创作、关系与休息，都可以从一句话开始。</p></div>
+      <div class="connection"><span class="status-dot" aria-hidden="true"></span><span id="connectionStatus" role="status">正在连接本机记录…</span><button id="reloadButton" type="button" class="text-button">重新加载</button></div>
+    </section>
+    <div id="pageError" class="notice error" role="alert" hidden></div>
+    <div class="draft-recovery-entry"><button id="findDrafts" type="button" class="text-button" disabled>找回未发送草稿</button><span id="findDraftsStatus" class="field-help" role="status"></span></div>
+    <div id="deskProfile" class="desk-profile"><p id="profileBrief">已留下的背景、偏好和处境，可以在资料里补充。</p><a href="/navigation/?view=profile" data-view-link="profile">我的资料 →</a></div>
+    <nav id="deskModes" class="mode-nav" aria-label="领航桌的两种使用方式"><button type="button" data-view="journey" aria-current="page">随手记录<span>留下经历、感受或灵感</span></button><button type="button" data-view="chat">和领航师聊聊<span>聊眼前的事，也能自然回看</span></button></nav>
+
+    <section id="journeyView" class="view" aria-labelledby="journeyTitle">
+      <div class="journey-layout">
+        <section class="panel timeline-panel" aria-labelledby="timelineTitle"><div class="section-head"><p class="eyebrow">走过的小路</p><h2 id="timelineTitle">往日记录</h2><p id="journeyCount">读取已有记录…</p></div>
+          <details id="historyFilters" class="history-filters"><summary>查找记录</summary><form id="filterForm" class="filter-form"><label for="journeyQuery">关键词</label><div class="search-row"><input id="journeyQuery" type="search" placeholder="关键词、作品名、心情…"><button type="submit" class="secondary">查找</button></div><div class="field-row"><div><label for="filterSince">从哪天 <span class="optional">可不填</span></label><input id="filterSince" type="date"></div><div><label for="filterUntil">到哪天 <span class="optional">可不填</span></label><input id="filterUntil" type="date"></div></div><button id="resetFilter" class="text-button" type="button">显示全部记录</button></form></details>
+          <p id="listStatus" class="action-status" role="status"></p><div id="journeyList" class="journey-list" tabindex="0" role="region" aria-labelledby="timelineTitle" aria-describedby="historyScrollHint"></div><p id="historyScrollHint" class="field-help">在记录列表内滚动，点开阅读完整记录。</p>
+        </section>
+        <section class="panel record-panel"><div class="section-head"><p class="eyebrow">随手留下</p><h2 id="journeyTitle">想留下一点什么？</h2><p>想说时再记。不用凑成一天的总结。</p></div>
+          <form id="journeyForm">
+            <label for="journeyContent">你的原话</label><textarea id="journeyContent" name="content" rows="8" maxlength="64000" required placeholder="一件小事、一段感受，或突然冒出的想法……"></textarea>
+            <div class="record-date"><label for="journeyDate">经历日期</label><input id="journeyDate" name="date" type="date" required></div>
+            <details id="recordDetails" class="optional-details"><summary>标题和类型，想补再补</summary><label for="journeyTitleInput">标题 <span class="optional">可不填</span></label><input id="journeyTitleInput" name="title" maxlength="160" placeholder="给这段经历起个名字"><label for="journeyType">记录类型</label><select id="journeyType" name="type"><option value="life">生活旅程</option><option value="idea">创作灵感</option><option value="note">随手记</option></select></details>
+            <p id="draftStatus" class="field-help" role="status">草稿会留在这个浏览器，保存后进入本机旅程记录。</p>
+            <div class="button-row"><button id="saveJourney" class="primary" type="submit" disabled>保存这段记录</button><button id="copyDraft" type="button" class="secondary">复制原话</button></div>
+            <p id="saveStatus" class="action-status" role="status" aria-live="polite"></p>
+            <div id="saveRecovery" class="notice" hidden><p id="saveRecoveryText"></p><div class="button-row"><button id="checkSave" type="button" class="secondary">核对是否已保存</button><button id="retrySave" type="button" class="secondary">重试这次保存</button></div></div>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <section id="chatView" class="view" aria-labelledby="chatTitle" hidden>
+      <section class="panel chat-panel"><div class="section-head"><p class="eyebrow">一起看清</p><h2 id="chatTitle">小陌，现在想聊些什么？</h2><p>眼前的选择、最近的变化，或只是心里的事，都可以直接说。</p></div>
+        <p id="providerStatus" class="notice">正在读取领航状态…</p>
+        <p id="chatSessionStatus" class="field-help" role="status">主岛和船内会接着同一标签页的交流。需要正式留下时，再单独保存。</p>
+        <div id="reviewEntryNotice" class="gentle-note" hidden><p>回看也在这里聊。比如：“帮我看看这周发生了什么变化。”你可以改成自己想看的时间和问题。</p><button id="useReviewPrompt" type="button" class="text-button">把这句话放进输入框</button></div>
+        <details id="legacyReviewDraft" class="optional-details" hidden><summary>有一份以前的回看草稿</summary><p id="legacyReviewText" class="original-text"></p><div class="button-row"><button id="restoreReviewDraft" type="button" class="secondary">带进这次聊天</button><button id="copyReviewDraft" type="button" class="text-button">复制这份草稿</button></div><p id="legacyReviewStatus" class="field-help" role="status"></p></details>
+        <div id="conversation" class="conversation" role="log" aria-label="当前领航交流" aria-live="polite"><p class="empty-state">从你正在想的一件事开始。也可以直接说“回看这周”或“看看上个月”。</p></div>
+        <form id="chatForm"><label for="chatMessage">你现在的问题或想法</label><textarea id="chatMessage" rows="5" maxlength="16000" required placeholder="最近做了很多，却说不清变化。我们能一起看一下吗？"></textarea><p id="chatDraftStatus" class="field-help" role="status"></p><div class="button-row"><button id="sendChat" type="submit" class="primary" disabled>和领航师聊聊</button><button id="copyChatHandoff" type="button" class="secondary">带着背景去 Codex 聊</button></div><p id="chatStatus" class="action-status" role="status"></p></form>
+      </section>
+    </section>
+
+    <section id="profileView" class="view" aria-labelledby="profileTitle" hidden>
+      <div class="profile-return"><a href="/navigation/?view=chat" data-view-link="chat">← 回领航桌</a><p>这里放的是与你有关的背景、偏好和处境，不需要整理成完整档案。</p></div>
+      <h2 id="profileTitle" class="visually-hidden">我的资料</h2>
+      <p id="profileStatus" class="action-status" role="status"></p><div id="profileSections" class="profile-sections"></div>
+      <section class="panel profile-correction"><div class="section-head"><h2>补充或更正一句</h2><p>只改你点明的这一条；其他资料和以前的说法都会保留。</p></div>
+        <form id="profileForm"><label for="profileSection">放在哪一块</label><select id="profileSection"><option value="about">关于我</option><option value="values">我在意什么</option><option value="current">目前情况</option></select><div id="profileTarget" class="gentle-note" hidden><p id="profileTargetText"></p><button id="clearProfileTarget" type="button" class="text-button">改为补充这一类</button></div><label for="profileCorrection">你想补充或更正的原话</label><textarea id="profileCorrection" rows="3" maxlength="8000" required placeholder="例如：最近我的时间安排变了……"></textarea><p class="field-help">这句话按你的补充单独保存，不会变成 AI 对你的结论。</p><div class="button-row"><button id="saveProfile" type="submit" class="primary" disabled>保存这句补充</button><button id="copyProfileDraft" type="button" class="text-button">复制这句原话</button></div><p id="profileSaveStatus" class="action-status" role="status"></p><div id="profileRecovery" class="notice" hidden><p id="profileRecoveryText"></p><div class="button-row"><button id="checkProfileSave" type="button" class="secondary">核对是否已保存</button><button id="retryProfileSave" type="button" class="secondary">重试这次补充</button></div></div></form>
+      </section>
+    </section>
+
+    <details id="analysesShelf" class="panel analyses-shelf"><summary>以前保存的 AI 整理<span>解释可以接着讨论，也可以修正</span></summary><p id="analysesStatus" class="field-help" role="status">展开时读取，以前的原话仍在记录里。</p><div id="analysesList"></div><button id="reloadAnalyses" type="button" class="text-button">重新读取</button></details>
+    <footer class="page-footer">保留经历，也保留变化的余地。原话、个人补充与 AI 理解分别保存。</footer>
+  </main>
+  <dialog id="journeyDialog" aria-labelledby="detailTitle"><div class="dialog-header"><div><p id="detailMeta" class="eyebrow"></p><h2 id="detailTitle"></h2></div><button id="closeDetail" type="button" class="secondary" aria-label="关闭旅程全文">关闭</button></div><div id="detailContent" class="detail-content"></div></dialog>
+  <dialog id="copyDialog" aria-labelledby="copyTitle"><div class="dialog-header"><h2 id="copyTitle">可以手动复制</h2><button id="closeCopy" type="button" class="secondary">关闭</button></div><p>浏览器没有完成自动复制。选中下面的文字后复制，再粘贴到 Codex。</p><textarea id="copyText" rows="14" readonly aria-label="待复制的完整文本"></textarea></dialog>
+  <dialog id="draftsDialog" aria-labelledby="draftsTitle"><div class="dialog-header"><h2 id="draftsTitle">找回未发送草稿</h2><button id="closeDrafts" type="button" class="secondary">关闭</button></div><p class="field-help">旧分支与以前的回看草稿都保留。选择后才恢复；已有内容时可以先复制，聊天历史不会混入当前交流。</p><div id="otherDrafts"></div></dialog>
+</body>
+</html>

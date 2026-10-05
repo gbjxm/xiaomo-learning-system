@@ -1,0 +1,23 @@
+.workspace-overview{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;margin:12px auto 0;padding:24px 36px;max-width:1320px;border-top:1px solid #cbd5c6;border-bottom:1px solid #d8ddcf;background:#f5f5e9;color:#354c3e}
+.workspace-overview-title{margin:0 0 13px;font-size:17px;font-weight:620;letter-spacing:.01em}
+.workspace-overview-status{margin:10px 0;color:#536650;font-size:13px;line-height:1.6;overflow-wrap:anywhere}
+.workspace-search-label{display:block;margin-bottom:8px;font-size:13px;color:#52684e}
+.workspace-search-controls{display:flex;gap:9px}
+.workspace-search-input{flex:1;min-width:0;height:39px;padding:8px 12px;border:1px solid #9fac93;border-radius:7px;background:#fffdf4;color:#334b3a;font:inherit;font-size:14px}
+.workspace-search-submit,.workspace-retry{min-height:39px;padding:7px 17px;border:1px solid #819772;border-radius:7px;background:#e0e8cd;color:#314b34;font:inherit;font-size:14px;cursor:pointer}
+.workspace-retry{min-height:32px;margin-top:3px;padding:5px 11px;font-size:13px}
+.workspace-search-submit:hover,.workspace-retry:hover{background:#d3dfbc}
+.workspace-search-submit:disabled,.workspace-retry:disabled{cursor:wait;opacity:.6}
+.workspace-search-input:focus-visible,.workspace-search-submit:focus-visible,.workspace-retry:focus-visible,.workspace-item-title:focus-visible{outline:2px solid #466842;outline-offset:3px}
+.workspace-item-list{list-style:none;margin:0;padding:0}
+.workspace-item{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;padding:10px 0;border-bottom:1px solid #dce0d2}
+.workspace-item:last-child{border-bottom:0}
+.workspace-item-title{max-width:100%;color:#3e613e;font-size:14px;text-decoration-thickness:1px;text-underline-offset:3px;overflow-wrap:anywhere}
+.workspace-item-title:hover{color:#244d30}
+.workspace-item-detail{color:#62735b;font-size:12px}
+.workspace-item-unavailable{color:#686e60}
+.workspace-item-reason{flex-basis:100%;color:#746851;font-size:12px;line-height:1.5}
+.workspace-search-results{max-height:320px;overflow:auto;scrollbar-gutter:stable}
+.workspace-search-results .workspace-item{padding-right:10px}
+@media (max-width:1360px){.workspace-overview{margin-left:28px;margin-right:28px;padding:22px 26px;gap:32px}}
+@media (prefers-reduced-motion:reduce){.workspace-overview *{scroll-behavior:auto}}

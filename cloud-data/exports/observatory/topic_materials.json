@@ -20,7 +20,7 @@
       "pk": 2
     }
   ],
-  "rowCount": 8,
+  "rowCount": 10,
   "rows": [
     {
       "topic_id": "topic_9611264e-1653-46a1-83aa-8e9dcb12c39b",
@@ -53,6 +53,14 @@
     {
       "topic_id": "topic_200b024e-2206-458b-b245-150d0b43469e",
       "material_id": "mat_324d11e0-f160-4d21-8e59-6839aa37f4f5"
+    },
+    {
+      "topic_id": "topic_ecf5858c-d3db-42c2-9ed7-56854e7f93fa",
+      "material_id": "mat_df70761e-8a7d-4421-90d0-231f90d0f15a"
+    },
+    {
+      "topic_id": "topic_13617e30-a4f2-4e1e-b693-def92a386ef9",
+      "material_id": "mat_c5afa305-85dc-4bdd-8652-e7778fc89104"
     }
   ]
 }

@@ -105,6 +105,15 @@ class Stage2APITests(unittest.TestCase):
             conn.close()
 
     def call(self, path, body=None, status=200, **kwargs):
+        if status == 200 and body is not None and path == '/api/preference':
+            body = copy.deepcopy(body)
+            latest = self.call('/api/detail?' + urlencode({'id':body['id']}))
+            body.setdefault('expectedPreferenceRevision', latest['preference_revision'])
+            body.setdefault('submissionId', uuid.uuid4().hex)
+        elif status == 200 and body is not None and path == '/api/works/save' and body.get('id') is None:
+            body = copy.deepcopy(body)
+            body.setdefault('revision', 0)
+            body.setdefault('submissionId', uuid.uuid4().hex)
         code, result, _ = self.request(path, body, **kwargs)
         self.assertEqual(code, status, str(result)[:1200])
         return result

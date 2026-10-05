@@ -7,6 +7,7 @@ import threading
 import unittest
 import urllib.error
 import urllib.request
+import uuid
 import zipfile
 from contextlib import closing
 from datetime import datetime, timezone
@@ -123,6 +124,15 @@ class EnhancementApiTests(unittest.TestCase):
             return response.code, payload
 
     def ok(self, path, body=None):
+        if body is not None and path == '/api/preference':
+            body = copy.deepcopy(body)
+            latest = self.ok('/api/detail?' + urlencode({'id':body['id']}))
+            body.setdefault('expectedPreferenceRevision', latest['preference_revision'])
+            body.setdefault('submissionId', uuid.uuid4().hex)
+        elif body is not None and path == '/api/works/save' and body.get('id') is None:
+            body = copy.deepcopy(body)
+            body.setdefault('revision', 0)
+            body.setdefault('submissionId', uuid.uuid4().hex)
         status, payload = self.request(path, body)
         self.assertEqual(status, 200, payload)
         return payload

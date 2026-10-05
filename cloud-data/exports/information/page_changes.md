@@ -1,6 +1,6 @@
 # page_changes
 
-源快照：`cloud-data/snapshots/信息收集/data/opportunities.sqlite3`；记录数：21。
+源快照：`cloud-data/snapshots/信息收集/data/opportunities.sqlite3`；记录数：22。
 
 这是字段原样目录，不是新研究结论。原话、个人笔记、来源、AI 分析和候选仍按原字段分开；完整字段见同名 JSON。
 
@@ -108,4 +108,9 @@
 
 - `id`：21
 - `source_id`：minimax_blog_list
+
+## 记录 22：22
+
+- `id`：22
+- `source_id`：smg_seko_2026
 

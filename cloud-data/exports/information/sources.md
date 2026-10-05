@@ -197,12 +197,12 @@
 ## 记录 39：vidu_artist
 
 - `id`：vidu_artist
-- `status`：partial
+- `status`：failed
 
 ## 记录 40：vidu_earn
 
 - `id`：vidu_earn
-- `status`：partial
+- `status`：failed
 
 ## 记录 41：hailuo_life_2025
 

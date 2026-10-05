@@ -1,11 +1,14 @@
-/* The information workspace is enhanced only on the independent read-only host. */
+/* Layout decoration preserves the original business handlers in writable spaces. */
 (() => {
   'use strict';
   if (document.body.dataset.previewRegion !== 'information') return;
+  const spaceMode = ['production', 'isolated'].includes(document.body.dataset.spaceMode) ? document.body.dataset.spaceMode : 'readonly';
+  const isReadonly = spaceMode === 'readonly';
   const byId = id => document.getElementById(id);
   const listViews = new Set(['opportunities', 'starred', 'archive']);
   const touchedCards = new WeakSet();
   const touchedHeadings = new WeakSet();
+  const touchedChanges = new WeakSet();
   let queued = false;
   let feedbackTimer;
 
@@ -106,13 +109,13 @@
       context.setAttribute('role', 'note');
       document.querySelector('.page-heading')?.after(context);
     }
-    text(context, '只读浏览已保存资料 · 奖励口径、公开时间与个人资格分别核对。输入和筛选留在当前标签页，保存请到“正式使用”。');
+    text(context, isReadonly ? '只读浏览已保存资料 · 奖励口径、公开时间与个人资格分别核对。输入和筛选留在当前标签页，保存请到“正式使用”。' : spaceMode === 'isolated' ? '当前保存目标：隔离验证信息库 · 笔记、关注、作品与核验只写验证副本。奖励口径、公开时间与个人资格分别核对。' : '当前保存目标：正式信息库 · 笔记、关注、作品与核验保存到本机资料。检查更新须你手动执行，个人资格另核。');
     const update = byId('update');
-    if (update) {
+    if (update && isReadonly) {
       update.title = '预览不会启动采集；请在正式页面手动检查更新。';
       text(byId('update-label'), '正式页检查更新');
     }
-    if (profile && !profile.querySelector('.info-preview-note')) {
+    if (profile && isReadonly && !profile.querySelector('.info-preview-note')) {
       const details = profile.querySelector('details');
       details?.querySelector('summary')?.after(paragraph('info-preview-note', '这里可试填条件；未提交正式资料，列表适配仍依据已保存条件。'));
     }
@@ -138,10 +141,26 @@
       const star = card.querySelector('[data-star-id]');
       if (star) {
         text(star, item.starred ? '★ 已关注' : '☆ 关注');
-        star.title = '当前关注状态来自正式资料。预览不修改关注，请在正式页保存。';
+        star.title = isReadonly ? '当前关注状态来自正式资料。预览不修改关注，请在正式页保存。' : spaceMode === 'isolated' ? '关注保存到隔离验证副本。' : '关注保存到正式信息库。';
       }
       const caption = card.querySelector('.identity-caption');
       if (caption) caption.title ||= '图片用于辨识；活动状态和奖励以已核文字为准。';
+      const reviewedAt = item.public_review?.at || item.verified_at;
+      const pending = s.data.changes?.pages?.filter(page => page.linked_items?.some(link => link.id === item.id) && !page.latest_reviews?.some(review => review.item_id === item.id && review.state === 'reviewed')) || [];
+      if (reviewedAt || pending.length) {
+        const line = document.createElement('div');
+        line.className = 'info-verification-line';
+        if (reviewedAt) line.append(document.createTextNode('公开条款核验 ' + String(reviewedAt).slice(0, 10)));
+        if (pending.length) {
+          const action = document.createElement('button');
+          action.type = 'button';
+          action.className = 'text-button';
+          action.textContent = `正文变化 ${pending.length} 项待复核`;
+          action.addEventListener('click', () => { if (typeof setView === 'function') setView('changes'); });
+          line.append(action);
+        }
+        card.querySelector('.card-main')?.append(line);
+      }
     }
     for (const heading of document.querySelectorAll('#content > .priority-heading')) {
       if (touchedHeadings.has(heading)) continue;
@@ -161,20 +180,53 @@
     const dialog = byId('detail');
     const body = dialog?.querySelector('.dialog-body');
     if (!dialog?.open || !body || dialog.hasAttribute('aria-busy')) return;
-    if (!body.querySelector('.info-preview-note')) {
+    if (isReadonly && !body.querySelector('.info-preview-note')) {
       const note = paragraph('info-preview-note info-detail-readonly', '此处显示正式资料的只读副本。关注、作品准备与笔记保存需要到正式页；这里的试填不会提交。');
       body.querySelector('.detail-primary-actions')?.after(note);
     }
     const note = body.querySelector('.notes');
     const status = byId('note-status');
     const saved = s.data.items.find(item => item.id === s.detailId);
-    if (note && saved && status) {
+    if (isReadonly && note && saved && status) {
       const dirty = note.value !== saved.note;
       text(status, dirty ? '预览草稿未提交 · 此标签页关闭详情或刷新后可恢复；正式笔记未修改。' : '正在阅读正式资料中的已保存笔记 · 此预览不会修改资料。');
       const save = note.closest('.detail-section')?.querySelector('.save-button');
       text(save, dirty ? '保存请到正式页' : '显示已保存笔记');
       if (save) save.title = '此预览不提交笔记；当前输入仍保留在本标签页。';
     }
+  }
+  function enhanceChanges(s) {
+    if (s.view !== 'changes') return;
+    const cards = [...document.querySelectorAll('#content > .change-card')];
+    const pages = s.data.changes?.pages || [];
+    cards.forEach((card, index) => {
+      if (touchedChanges.has(card)) return;
+      touchedChanges.add(card);
+      const page = pages[index];
+      if (page) {
+        const linked = page.linked_items || [];
+        const reviews = page.latest_reviews || [];
+        const reviewed = linked.filter(item => reviews.some(review => review.item_id === item.id && review.state === 'reviewed')).length;
+        const status = card.querySelector('small');
+        if (linked.length && status) text(status, `${String(page.at).replace('T', ' ')} · 人工复核 ${reviewed}/${linked.length} 条已记录；网页变化仍需与适用规则核对。`);
+        const panel = document.createElement('div');
+        panel.className = 'info-change-review-links';
+        for (const item of linked) {
+          const review = reviews.find(value => value.item_id === item.id);
+          const action = document.createElement('button');
+          action.type = 'button';
+          action.className = 'text-button';
+          action.textContent = `${item.title} · ${item.edition} · ${review?.state === 'reviewed' ? '人工复核已记录' : '待复核'} →`;
+          action.addEventListener('click', () => { if (typeof openDetail === 'function') openDetail(item.id); });
+          panel.append(action);
+          if (review) panel.append(paragraph('info-change-review-note', '个人复核 ' + String(review.at).slice(0, 10) + '：' + review.note + '；此判断不自动核实或覆盖官方规则。'));
+        }
+        card.querySelector('pre')?.before(panel);
+      } else {
+        const version = s.data.changes?.versions?.[index - pages.length];
+        if (version?.important_fields?.length) card.querySelector('small')?.after(paragraph('info-change-review-note', '重要字段变化：' + version.important_fields.join('、') + ' · 请核对当前规则与作品准备。'));
+      }
+    });
   }
   function enhance() {
     const s = currentState();
@@ -183,6 +235,7 @@
     arrangeTools(s);
     enhanceList(s);
     enhanceDetail(s);
+    enhanceChanges(s);
   }
   function schedule() {
     if (queued) return;
@@ -190,6 +243,7 @@
     requestAnimationFrame(() => { queued = false; enhance(); });
   }
   document.addEventListener('click', event => {
+    if (!isReadonly) return;
     const control = event.target.closest('#update,#stop,[data-star-id],.save-button');
     if (!control || control.disabled) return;
     event.preventDefault();

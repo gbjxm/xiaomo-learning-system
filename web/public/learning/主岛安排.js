@@ -134,7 +134,7 @@
     if(!result.ok){error(result.error);$('timeEditor').open=true;notice(result.error);return false;}
     error('');
     const materialInput=$('materialName').value.trim();
-    const course=a?.title||materialInput||(state.timeSetup.taskType==='course'&&dest==='visual'?'老白的分镜课':state.timeSetup.taskType==='practice'?'手边的练习或作品':'这次想看的课程');
+    const course=a?.title||materialInput||(state.timeSetup.taskType==='course'?(knownCourses(dest)[0]?.name||'这次想看的课程'):'手边的练习或作品');
     const raw=$('lessonLength').value.trim();
     state.plan={timing:result,setup:clone(state.timeSetup),activityId:a?.id||null,dest,course,materialInput,lesson:raw===''?null:Number(raw),minutes:result.currentWindow?.minutes||0,buffer:result.budget?.reserve||0,kind:result.step.kind,step:result.step.title,reason:result.step.reason,intent,explicitInput,followupNotes:Object.fromEntries(state.timeSetup.windows.map(w=>[w.id,w.note||'']))};
     state.planAdopted=false;state.timeDirty=false;state.reentry=false;renderPlan();updateSummary();return true;
@@ -210,7 +210,7 @@
     if(!a&&owner&&owner.status!=='closed')a=owner;
     if(!p.timing.currentWindow&&!a){editDaySchedule();return;}
     const existed=!!a;
-    if(!a){a={id:'activity-'+Date.now(),island:p.dest,title:p.course,step:p.step,reason:p.reason,status:'ready',kind:p.kind,stop:'',draft:'',closeDraft:'',nextDraft:'',report:'paused'};state.activities[p.dest]=a;state.active=p.dest;}
+    if(!a){const known=knownCourses(p.dest).find(course=>course.name===p.course);a={id:'activity-'+Date.now(),island:p.dest,title:p.course,...(known?{courseId:known.courseId}:{}),step:p.step,reason:p.reason,status:'ready',kind:p.kind,stop:'',draft:'',closeDraft:'',nextDraft:'',report:'paused'};state.activities[p.dest]=a;state.active=p.dest;}
     // 保留原活动对象和全部事实/草稿字段；新安排单独记在 plan 上。
     if(p.timing.currentWindow){a.step=p.step;a.reason=p.reason;a.kind=p.kind;}
     a.dayIntent=p.intent;a.plan=p;state.active=a.island;

@@ -123,12 +123,14 @@ class Store:
         return json.loads(row[0]) if row else None
 
     def items(self):
+        from .write_protocol import preference_revision
         with self.connection() as conn:
             rows = conn.execute("SELECT * FROM opportunities").fetchall()
+            preference_revisions = {row["id"]: preference_revision(conn, row["id"]) for row in rows}
         result = []
         for row in rows:
             doc = decorate(json.loads(row["document"]), self.rules)
-            doc.update(version=row["version"], added_at=row["added_at"], changed_at=row["changed_at"], archived_at=row["archived_at"], starred=bool(row["starred"]), note=row["note"], last_observed_at=row["last_observed_at"])
+            doc.update(version=row["version"], added_at=row["added_at"], changed_at=row["changed_at"], archived_at=row["archived_at"], starred=bool(row["starred"]), note=row["note"], last_observed_at=row["last_observed_at"], preference_revision=preference_revisions[row["id"]])
             result.append(doc)
         return result
 
@@ -157,16 +159,47 @@ class Store:
             version["changes"] = json.loads(version["changes"])
         return item
 
-    def preference(self, item_id, starred=None, note=None):
+    def preference(self, item_id, starred=None, note=None, *, expected_revision=None, submission_id=None, require_cas=False):
+        from .write_protocol import (WriteConflict, binding, preference_state, receipt,
+                                     revision, save_receipt, set_preference_revision,
+                                     submission_id as validate_submission)
+        from .workspace import identifier
+        item_id = identifier(item_id)
+        if starred is not None and type(starred) is not bool:
+            raise ValueError("关注状态须为布尔值")
+        if note is not None and (not isinstance(note, str) or len(note) > 5000):
+            raise ValueError("笔记最多5000字")
+        if starred is None and note is None:
+            raise ValueError("没有要保存的个人资料")
+        guarded = require_cas or expected_revision is not None or submission_id is not None
+        request_binding = None
+        if guarded:
+            expected_revision = revision(expected_revision)
+            submission_id = validate_submission(submission_id)
+            request_binding = binding("preference", {"id": item_id, "starred": starred, "note": note, "expectedPreferenceRevision": expected_revision})
         with self.connection() as conn:
-            if not conn.execute("SELECT 1 FROM opportunities WHERE id=?", (item_id,)).fetchone():
-                raise ValueError("条目不存在")
+            conn.execute("BEGIN IMMEDIATE")
+            current = preference_state(conn, item_id)
+            if guarded:
+                previous = receipt(conn, submission_id, "preference", request_binding)
+                if previous:
+                    original = previous["result"].get("preference")
+                    if not isinstance(original, dict) or original.get("id") != item_id:
+                        raise ValueError("个人资料提交回执不完整；暂停写入")
+                    if current != original:
+                        raise WriteConflict("该次提交已完成，但之后个人资料又有变化；请重新读取核对，草稿保留。", code="completed_then_changed", committed=True, preference=current)
+                    return {**previous["result"], "already_completed": True}
+                if expected_revision != current["preference_revision"]:
+                    raise WriteConflict("个人资料已被另一页面修改；本次未保存，请重新读取核对，草稿保留。", code="revision_conflict", preference=current)
             if starred is not None:
                 conn.execute("UPDATE opportunities SET starred=? WHERE id=?", (int(bool(starred)), item_id))
             if note is not None:
-                if not isinstance(note, str) or len(note) > 5000:
-                    raise ValueError("笔记最多5000字")
                 conn.execute("UPDATE opportunities SET note=? WHERE id=?", (note, item_id))
+            set_preference_revision(conn, item_id, current["preference_revision"] + 1)
+            result = {"saved": True, "preference": preference_state(conn, item_id)}
+            if guarded:
+                save_receipt(conn, submission_id, "preference", request_binding, item_id, result)
+            return result
 
     def archive_expired(self, now=None):
         count = 0
@@ -254,12 +287,24 @@ class Store:
         return runs
 
     def changes(self):
+        from .review import FIELD_LABELS, IMPORTANT
+        from .workspace import records
         with self.connection() as conn:
             pages = [dict(row) for row in conn.execute("SELECT * FROM page_changes ORDER BY id DESC LIMIT 100")]
             versions = [dict(row) for row in conn.execute("SELECT v.opportunity_id,v.version,v.at,v.reason,v.changes,o.document FROM versions v JOIN opportunities o ON v.opportunity_id=o.id WHERE v.version>1 ORDER BY v.at DESC LIMIT 100")]
+            documents = [json.loads(row[0]) for row in conn.execute("SELECT document FROM opportunities")]
+            reviews = records(conn, "change_reviews")
+        latest = {}
+        for record in sorted(reviews, key=lambda value: (value["data"].get("sequence", 0), value["data"]["at"], value["id"])):
+            data = record["data"]
+            latest[(data["item_id"], data["change_id"])] = {**data, "review_id": record["id"]}
+        for page in pages:
+            page["linked_items"] = [{"id": doc["id"], "title": doc["title"], "edition": doc["edition"]} for doc in documents if doc["source_id"] == page["source_id"] and doc["official_url"] == page["url"]]
+            page["latest_reviews"] = [latest[(item["id"], page["id"])] for item in page["linked_items"] if (item["id"], page["id"]) in latest]
         for row in versions:
             row["title"] = json.loads(row.pop("document"))["title"]
             row["changes"] = json.loads(row["changes"])
+            row["important_fields"] = [FIELD_LABELS[name] for name in IMPORTANT if any(change.get("field", "").split(".")[0] == name for change in row["changes"])]
         return {"pages": pages, "versions": versions}
 
     def bootstrap(self):
@@ -269,7 +314,7 @@ class Store:
         items=self.items()
         for item in items:
             item['fit']=evaluate_fit(item,profile)
-        return {"items": items, "sources": self.sources(), "runs": self.runs(), "changes": self.changes(), "profile": self.rules, "work_profile":profile, "digest":summarize_run(self), "candidates": self.candidates()}
+        return {"items": items, "sources": self.sources(), "runs": self.runs(), "changes": self.changes(), "profile": self.rules, "work_profile":profile, "digest":summarize_run(self), "candidates": self.candidates(), "write_protocol_version": 1}
 
     def export(self):
         with self.connection() as conn:

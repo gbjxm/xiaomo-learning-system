@@ -1,6 +1,9 @@
 'use strict';
-(() => {
-  const key = 'xiaomo-exploration-preview-v1', $ = id => document.getElementById(id);
+(async () => {
+  const daily=['production','isolated'].includes(document.body.dataset.spaceMode);
+  const key = daily?'xiaomo-daily-navigation-v1':'xiaomo-exploration-preview-v1', $ = id => document.getElementById(id);
+  if(daily){try{const r=await fetch('/api/workspace/bootstrap',{cache:'no-store'}),b=await r.json();if(r.ok&&b.ok)sessionStorage.setItem(key,JSON.stringify(b.data.state));}catch{}}
+  function dailyURL(value){if(!daily)return value;const u=new URL(value,location.origin);u.searchParams.set('space','daily');return u.pathname+u.search+u.hash;}
   const names = {learning:'学习小岛', observatory:'素材观察室', information:'信息收集'};
   const places = {
     learning: {
@@ -20,6 +23,7 @@
       preparation: {title:'准备桌', text:'打开作品档案与机会准备清单。资格和材料由自己核对，这里不会执行投稿。', action:'打开作品与准备', url:'/information/?preview-view=works'}
     }
   };
+  if(daily)places.learning.practice.text='把所学试一小下，打开当前小岛的练习工坊。草稿保存在本机；实际学习进展仍以项目记录为准。';
   function read(){try{return JSON.parse(sessionStorage.getItem(key)||'{}');}catch{return{};}}
   function store(value){try{sessionStorage.setItem(key,JSON.stringify(value));}catch{}}
   function rememberScene(region, place='region') {
@@ -41,11 +45,11 @@
   reduced.addEventListener('change',motion);
   function regionURL(region){
     const destination=read().regions?.[region]?.url;
-    try{const url=new URL(destination||'/'+region+'/',location.origin);if(url.origin===location.origin&&url.pathname.startsWith('/'+region+'/'))return url.pathname+url.search+url.hash;}catch{}
-    return '/'+region+'/';
+    try{const url=new URL(destination||'/'+region+'/',location.origin);if(url.origin===location.origin&&url.pathname.startsWith('/'+region+'/'))return dailyURL(url.pathname+url.search+url.hash);}catch{}
+    return dailyURL('/'+region+'/');
   }
   function enter(region){if(!names[region])return;rememberScene(region);location.assign(regionURL(region));}
-  function enterPlace({region,place}){const item=places[region]?.[place];if(!item?.url)return;rememberScene(region,place);location.assign(item.url);}
+  function enterPlace({region,place}){const item=places[region]?.[place];if(!item?.url)return;rememberScene(region,place);location.assign(dailyURL(item.url));}
   let inspected=null, summary=null;
   function description(region,place,item){
     let prefix='';
@@ -61,7 +65,7 @@
     const dock=$('placePreview');dock.dataset.region=region;dock.dataset.place=place;
     $('placeRegion').textContent=names[region];$('placeTitle').textContent=item.title;
     $('placeDescription').textContent=description(region,place,item);
-    const link=$('placeOpen');link.hidden=false;link.textContent=item.action+' →';link.href=item.url||regionURL(region);
+    const link=$('placeOpen');link.hidden=false;link.textContent=item.action+' →';link.href=dailyURL(item.url||regionURL(region));
     link.dataset.destinationRegion=region;link.dataset.destinationPlace=place;
     const saved=read();saved.sceneInspect={region,place};store(saved);
   }
@@ -89,7 +93,7 @@
     const focus=saved.sceneFocus?document.getElementById(saved.sceneFocus):document.querySelector('a[data-region="'+saved.lastRegion+'"]');
     focus?.focus({preventScroll:true});
   });
-  fetch('/preview/api/summary',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('summary unavailable');return r.json();}).then(result=>{
+  fetch(daily?'/api/workspace/summary':'/preview/api/summary',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('summary unavailable');return r.json();}).then(result=>{
     summary=result;
     $('savedSummary').textContent=[Number.isInteger(result.materials)?'收藏 '+result.materials+' 条':null,Number.isInteger(result.opportunities)?'已保存机会 '+result.opportunities+' 条':null].filter(Boolean).join(' · ')||'正式资料在各自区域中保留';
     if(inspected)showInspect(inspected);

@@ -34,7 +34,7 @@ renderCourses=function(body){baseRenderCourses(body);const options=el('div',unde
 openTrace=function(record){
   if(!record.artifact){baseOpenTrace(record);return;}
   const box=el('div',undefined,'trace-detail');box.append(el('span',record.time+' · 本页练习草稿','source-label'),el('h3',record.title),el('p',record.note),el('p','来源：'+record.source,'note'),el('p','这是你在小岛里编辑的自有练习版本，未作专业评定，也不代表已经掌握。','note'));
-  box.append(button('打开这份草稿，接着试 →',()=>{closeDialog();visit(record.island);const current=life.drafts[record.island];if(current&&JSON.stringify(current)!==JSON.stringify(record.workshopDraft))life.previousDrafts[record.island]=structuredClone(current);life.drafts[record.island]=structuredClone(record.workshopDraft);openPlace('practice');},'primary'));openDialog('翻开一次尝试', [box]);
+  box.append(button('打开这份草稿，接着试 →',()=>{closeDialog();visit(record.island);const current=life.drafts[record.island];if(current&&JSON.stringify(current)!==JSON.stringify(record.workshopDraft))life.previousDrafts[record.island]=structuredClone(current);life.drafts[record.island]=structuredClone(record.workshopDraft);openPlace('practice',{legacy:true});},'primary'));openDialog('翻开一次尝试', [box]);
 };
 resumeTrace=function(record){baseResumeTrace(record);openPlace('desk');};
 
@@ -64,10 +64,11 @@ function mountWorkshop(){
   const island=state.current;
   life.workshop=LearningWorkshop.mount($('spaceBody'),{island,draft:life.drafts[island],onDraft:draft=>{life.drafts[island]=structuredClone(draft);},onSave:result=>{
     const record={id:'work-'+Date.now()+'-'+state.records.length,island,title:result.title,note:result.summary||'',report:'practice',reportLabel:'本页实际编辑 · 尚未评定',next:result.next||'打开这份练习草稿继续尝试。',source:result.source||'本页原创练习',artifact:structuredClone(result.artifact),workshopDraft:structuredClone(result.draft||life.drafts[island]||result.artifact),time:new Date().toLocaleDateString('zh-CN',{timeZone:'Asia/Shanghai'})};
+    const activity=active()?.island===island?active():null;for(const key of ['taskId','courseId','chapter'])if(activity?.[key])record[key]=activity[key];
     state.records.push(record);life.sceneKey='';syncLife();notice('这份练习草稿已留在本页岛上，点“痕迹”可以重新打开。正在保存到本机界面状态。');
   }});
   if(life.previousDrafts[island]){
-    const recovery=el('div',undefined,'draft-recovery');recovery.append(el('span','打开早前书签时，刚才的改动也留着。'),button('回到刚才的草稿',()=>{life.drafts[island]=structuredClone(life.previousDrafts[island]);delete life.previousDrafts[island];openPlace('practice');}));$('spaceBody').prepend(recovery);
+    const recovery=el('div',undefined,'draft-recovery');recovery.append(el('span','打开早前书签时，刚才的改动也留着。'),button('回到刚才的草稿',()=>{life.drafts[island]=structuredClone(life.previousDrafts[island]);delete life.previousDrafts[island];openPlace('practice',{legacy:true});}));$('spaceBody').prepend(recovery);
   }
 }
 function renderHomeDesk(body){
@@ -75,8 +76,8 @@ function renderHomeDesk(body){
   const days=el('div',undefined,'day-slices');[['先安顿','说说时间与状态','只问今天影响安排的缺口'],['去一个地方','围绕一块内容','保留完整看课与纸笔记录的空间'],['带一点回来','问题、尝试或书签','想聊时回来，休息不需要产出']].forEach(([a,b,c])=>{const x=el('div',undefined,'day-slice');x.append(el('small',a),el('strong',b),el('small',c));days.append(x);});body.append(days,button('聊聊今天的安排 →',()=>openPlace('plan'),'primary'),button('不安排，随便逛逛',closePlace,'text'));
 }
 function renderHomeCourses(body){
-  body.append(el('span','ON MY SHELF / 手边的材料','notebook-title'),el('h3','不急着把架子填满'),el('p','这里只放已知在学线索。分镜课的章节、时长和链接，仍等真正学习时再补。','notebook-intro'));
-  const book=button('',()=>{visit('visual');openPlace('courses');},'course-book');book.append(el('span','','book-spine'));const words=el('span');words.append(el('strong','老白的分镜课'),el('small','影像与 AI 创作岛 · 目前在学自述'),el('small','到那边的课程架看看 →'));book.append(words);body.append(book);
+  body.append(el('span','ON MY SHELF / 手边的材料','notebook-title'),el('h3','不急着把架子填满'));
+  renderCourses(body);
 }
 function renderAllTraces(body){
   body.append(el('span','POSTCARDS / 从各座岛带回来','notebook-title'),el('h3','一些问题，一些尝试'),el('p','这里汇合本页留下的书签，点开仍回到原来的岛。','notebook-intro'));
@@ -102,7 +103,7 @@ function renderRest(body){
 }
 function renderCat(body){
   const sayings=['你学你的，我在这里打个盹。','今天留下一点点，也算来过这里。','那边的树荫不错，要一起歇一会儿吗？','我不检查作业。你想说的时候，再来聊。'];
-  const card=el('div',undefined,'cat-postcard');card.innerHTML='<svg viewBox="0 0 160 125" aria-hidden="true"><ellipse cx="81" cy="112" rx="51" ry="8" fill="#dfd6bd"/><path d="M44 99q-8-34 15-49l-4-30 25 19 22-20 7 34q27 17 15 50z" fill="#e4c391" stroke="#a58c66" stroke-width="2"/><path d="M57 70q7-7 14 0m19 0q7-7 14 0m-26 12 5 3 5-3m-5 3v6m-5 2q5 4 10 0M118 102q27-9 17-28" fill="none" stroke="#8d785a" stroke-width="2.5" stroke-linecap="round"/></svg>';
+  const card=el('div',undefined,'cat-postcard');card.innerHTML=window.IslandScenes.catPortrait(state.current);
   card.append(el('h3','小猫在晒太阳'),el('p',sayings[life.pet%sayings.length]));const actions=el('div',undefined,'step-actions rest-actions');actions.append(button('轻轻摸一下',()=>{life.pet++;card.querySelector('p').textContent=sayings[life.pet%sayings.length];}),button('一起去海边坐坐',()=>openPlace('rest')));card.append(actions);body.append(card,el('p','小伙伴不会饥饿，不用打卡照顾，也不会因为几天没来而失落。','note'));
 }
 function enterQuiet(){closePlace();life.quiet=true;document.body.classList.add('quiet-view');$('quietExit').hidden=false;setPanel(false);syncLife();}

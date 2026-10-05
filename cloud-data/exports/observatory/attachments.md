@@ -1,6 +1,6 @@
 # attachments
 
-源快照：`cloud-data/snapshots/素材观察室/data/observatory.sqlite3`；记录数：20。
+源快照：`cloud-data/snapshots/素材观察室/data/observatory.sqlite3`；记录数：26。
 
 这是字段原样目录，不是新研究结论。原话、个人笔记、来源、AI 分析和候选仍按原字段分开；完整字段见同名 JSON。
 
@@ -102,5 +102,35 @@
 ## 记录 20：att_6031f653d5fbdac17c01ddbdf9ab5a4ad18ba1ac
 
 - `id`：att_6031f653d5fbdac17c01ddbdf9ab5a4ad18ba1ac
+- `status`：registered
+
+## 记录 21：att_052120bc91bc179d9ac8756c07015436061dc919
+
+- `id`：att_052120bc91bc179d9ac8756c07015436061dc919
+- `status`：registered
+
+## 记录 22：att_099fd1ab578131652e8a479c01c785e2e994955e
+
+- `id`：att_099fd1ab578131652e8a479c01c785e2e994955e
+- `status`：registered
+
+## 记录 23：att_8976cb5178e5cf1948e402f4b05834da4dfb0054
+
+- `id`：att_8976cb5178e5cf1948e402f4b05834da4dfb0054
+- `status`：registered
+
+## 记录 24：att_4c3183ce84c7afe58eb1fe42274cc54ab8adbf2e
+
+- `id`：att_4c3183ce84c7afe58eb1fe42274cc54ab8adbf2e
+- `status`：registered
+
+## 记录 25：att_9e0fdcad71918210f9ceda182be289a5d619362d
+
+- `id`：att_9e0fdcad71918210f9ceda182be289a5d619362d
+- `status`：registered
+
+## 记录 26：att_db9516270888bcac31b9cee7a34167ab211d0c90
+
+- `id`：att_db9516270888bcac31b9cee7a34167ab211d0c90
 - `status`：registered
 

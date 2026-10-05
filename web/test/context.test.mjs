@@ -69,7 +69,11 @@ test('模型上下文包含个人背景中段及本人报告的课程，不把�
   }
   const profile = await readFile(path.join(root, '运行记录/个人情况.md'), 'utf8');
   assert.ok(profile.length > 1800 && profile.length <= 12000);
-  assert.ok(context.includes(profile.trim()));
+  const purpose = profile.match(/## 希望获得的变化\r?\n([\s\S]*?)(?=\r?\n## |$)/)?.[1]?.trim();
+  const preferences = profile.match(/## 使用偏好\r?\n([\s\S]*?)(?=\r?\n## |$)/)?.[1]?.trim();
+  assert.ok(purpose && context.includes(purpose));
+  assert.ok(preferences && context.includes(preferences));
+  assert.match(context, /相关个人背景/);
   assert.match(context, /不代表.*掌握|不代表.*能力|分别判断/);
   await assert.rejects(readFile(path.join(root, '运行记录/学习记录/2026-09-30.md'), 'utf8'), { code: 'ENOENT' });
 });
@@ -102,8 +106,10 @@ test('超长个人资料和台账明确节选并保持各文件上下文预算',
   await writeFile(path.join(root, '运行记录/课程记录.md'), '课程开头' + '乙'.repeat(15000) + '课程结尾', 'utf8');
   await writeFile(path.join(root, '运行记录/观影记录.md'), '片单开头' + '丙'.repeat(15000) + '片单结尾', 'utf8');
   const context = await ask('context-cap-0001');
-  for (const [label, next, max] of [['个人情况', '当前状态', 12000], ['课程记录', '观影记录', 3500], ['观影记录', '总协调技能', 3500]]) {
-    const content = context.split(`### ${label}\n`)[1].split(`\n\n### ${next}\n`)[0];
+  for (const [label, max] of [['相关个人背景', 12000], ['课程记录', 3500], ['观影记录', 3500]]) {
+    const block = context.split(/(?=^### )/m).find(value => value.startsWith(`### ${label}\n`));
+    assert.ok(block, `${label}缺少实际读取内容`);
+    const content = block.slice(`### ${label}\n`.length).trimEnd();
     assert.ok(content.length <= max, `${label} 超出预算`);
     assert.match(content, /本次上下文节选/);
   }

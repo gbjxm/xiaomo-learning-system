@@ -1,0 +1,22 @@
+/* The terminal owns global navigation; these styles only arrange learning. */
+body[data-terminal-module="learning"] .prototype-band{padding:6px 24px;min-height:30px;font-size:11px}
+body[data-terminal-module="learning"] .prototype-band span{color:#748374}
+body[data-terminal-module="learning"] .topbar{height:auto;min-height:70px;padding-block:12px;flex-wrap:wrap}
+body[data-terminal-module="learning"] .topbar .nav{flex-wrap:wrap;gap:5px}
+body[data-terminal-module="learning"] .topbar .nav button{font-size:12px;padding:7px 10px}
+body[data-terminal-module="learning"] .shell{height:calc(100vh - var(--terminal-header-height,68px) - 104px)}
+.learning-personal-links{display:flex;flex-wrap:wrap;gap:7px 15px;margin:-5px 0 15px;font-size:12px}
+.learning-personal-links a{color:#54715e;text-decoration:none;text-underline-offset:3px}
+.learning-personal-links a:hover{text-decoration:underline}
+.learning-personal-links a:focus-visible{outline:2px solid #9c793e;outline-offset:4px;border-radius:3px}
+.learning-entry-status{font-size:12px;line-height:1.8;padding:10px 12px;border:1px solid #d9c8a3;border-radius:10px;background:#fff9e9;color:#725a33}
+.island-scenes .island-painting{pointer-events:none}
+.island-scenes .scene-hit{pointer-events:all}
+.island-scenes .scene-place:hover .scene-hit,.island-scenes .scene-place:focus-visible .scene-hit{fill:#fff8da12;stroke:#74936a;stroke-opacity:.65;stroke-dasharray:5 5}
+.island-scenes .scene-cat .scene-hit{rx:30}
+.scene-image-error{position:absolute;left:12px;right:12px;bottom:4px;text-align:center;border-radius:10px;padding:7px;background:#fff9e9;color:#785b31;font-size:12px}
+.cat-postcard svg.island-cat-portrait{width:170px;height:155px;border-radius:22px;overflow:hidden;background:#e8ecd9}
+.world-svg .island image{transition:filter .2s ease}
+.world-svg .island:hover image,.world-svg .island:focus-visible image{filter:drop-shadow(0 0 9px #5d775e66)}
+@media(max-width:1000px){body[data-terminal-module="learning"] .prototype-band span{display:none}body[data-terminal-module="learning"] .topbar{padding-inline:18px}.learning-personal-links{gap:8px}}
+@media(prefers-reduced-motion:reduce){.world-svg .island image{transition:none}}

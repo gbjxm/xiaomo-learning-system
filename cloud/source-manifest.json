@@ -1,7 +1,7 @@
 {
   "format": "xiaomo-learning-cloud-source-manifest",
   "version": 1,
-  "createdAtUtc": "2026-10-02T15:51:19.126151+00:00",
+  "createdAtUtc": "2026-10-05T16:44:14.811635+00:00",
   "sourceRoots": {
     "learning-system": {
       "absolutePathStoredInLocalSidecarOnly": true
@@ -11,37 +11,37 @@
   "databases": {
     "observatory": {
       "snapshot": "cloud-data/snapshots/素材观察室/data/observatory.sqlite3",
+      "journalMode": "delete",
+      "immutableReadVerificationRequired": true,
       "integrityCheck": "ok",
       "foreignKeyViolations": 0,
       "tables": {
-        "attachments": 20,
-        "materials": 8,
-        "stage_records": 12,
+        "attachments": 26,
+        "materials": 10,
+        "stage_records": 16,
         "store_meta": 1,
-        "submissions": 48,
-        "topic_materials": 8,
-        "topics": 8
-      },
-      "journalMode": "delete",
-      "immutableReadVerificationRequired": true
+        "submissions": 62,
+        "topic_materials": 10,
+        "topics": 10
+      }
     },
     "information": {
       "snapshot": "cloud-data/snapshots/信息收集/data/opportunities.sqlite3",
+      "journalMode": "delete",
+      "immutableReadVerificationRequired": true,
       "integrityCheck": "ok",
       "foreignKeyViolations": 0,
       "tables": {
-        "attempts": 177,
+        "attempts": 226,
         "discovery_candidates": 16,
-        "observations": 87,
+        "observations": 88,
         "opportunities": 46,
-        "page_changes": 21,
-        "runs": 13,
+        "page_changes": 22,
+        "runs": 14,
         "settings": 1,
         "sources": 49,
         "versions": 93
-      },
-      "journalMode": "delete",
-      "immutableReadVerificationRequired": true
+      }
     }
   },
   "files": [
@@ -83,14 +83,14 @@
     },
     {
       "path": ".agents/skills/assess-learning-progress/SKILL.md",
-      "bytes": 6194,
-      "sha256": "636bd4f385416cf09b05860e947e0537817e1d42006cf652b5ad97482295d4fc",
+      "bytes": 6675,
+      "sha256": "12c49c3a92a46cd9592f0a4a03c042879f7bfe5844a10dafd05180f60299c2a7",
       "category": "project-skill",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": ".agents/skills/assess-learning-progress/SKILL.md"
       },
-      "sourceSha256": "636bd4f385416cf09b05860e947e0537817e1d42006cf652b5ad97482295d4fc",
+      "sourceSha256": "12c49c3a92a46cd9592f0a4a03c042879f7bfe5844a10dafd05180f60299c2a7",
       "transformation": "byte-identical-copy"
     },
     {
@@ -107,14 +107,14 @@
     },
     {
       "path": ".agents/skills/design-learning-path/SKILL.md",
-      "bytes": 5185,
-      "sha256": "77ab8645d0d45c4cda6188266d3eb438683f3ec8c0900ef9f6dd6b67a601524f",
+      "bytes": 5609,
+      "sha256": "c84816894b34140ca3d07cbccbe82eb27dc00f2de29999871e0d1881c39acf96",
       "category": "project-skill",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": ".agents/skills/design-learning-path/SKILL.md"
       },
-      "sourceSha256": "77ab8645d0d45c4cda6188266d3eb438683f3ec8c0900ef9f6dd6b67a601524f",
+      "sourceSha256": "c84816894b34140ca3d07cbccbe82eb27dc00f2de29999871e0d1881c39acf96",
       "transformation": "byte-identical-copy"
     },
     {
@@ -131,14 +131,14 @@
     },
     {
       "path": ".agents/skills/design-learning-practice/SKILL.md",
-      "bytes": 6626,
-      "sha256": "1231e5b655934500579424e36ac16a33d58e3ec2743c4413df9021063ac33abb",
+      "bytes": 7420,
+      "sha256": "d668503018dd8b5dc06b452c73e2d111cff04f00559189a6851409637738d302",
       "category": "project-skill",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": ".agents/skills/design-learning-practice/SKILL.md"
       },
-      "sourceSha256": "1231e5b655934500579424e36ac16a33d58e3ec2743c4413df9021063ac33abb",
+      "sourceSha256": "d668503018dd8b5dc06b452c73e2d111cff04f00559189a6851409637738d302",
       "transformation": "byte-identical-copy"
     },
     {
@@ -155,14 +155,14 @@
     },
     {
       "path": ".agents/skills/explain-learning-material/SKILL.md",
-      "bytes": 4452,
-      "sha256": "872d958a8acd4b04620156c7f8331dc6ef73f3715ad4eb0cf6a85a915d64171b",
+      "bytes": 5244,
+      "sha256": "2af309b632f2643ebacd8b60fb31acf96277af4ffd5f687038bd08889369fcf8",
       "category": "project-skill",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": ".agents/skills/explain-learning-material/SKILL.md"
       },
-      "sourceSha256": "872d958a8acd4b04620156c7f8331dc6ef73f3715ad4eb0cf6a85a915d64171b",
+      "sourceSha256": "2af309b632f2643ebacd8b60fb31acf96277af4ffd5f687038bd08889369fcf8",
       "transformation": "byte-identical-copy"
     },
     {
@@ -251,38 +251,62 @@
     },
     {
       "path": ".agents/skills/orchestrate-personal-learning/SKILL.md",
-      "bytes": 6507,
-      "sha256": "b590e3d498a9b4068ce10725632bcf7a41d2487715a7dc11f4365001c749ced4",
+      "bytes": 9272,
+      "sha256": "eb82b1c3a00671555d8e4958e452dca23db44b73f9f7b601a5c370c08ed83736",
       "category": "project-skill",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": ".agents/skills/orchestrate-personal-learning/SKILL.md"
       },
-      "sourceSha256": "b590e3d498a9b4068ce10725632bcf7a41d2487715a7dc11f4365001c749ced4",
+      "sourceSha256": "eb82b1c3a00671555d8e4958e452dca23db44b73f9f7b601a5c370c08ed83736",
       "transformation": "byte-identical-copy"
     },
     {
       "path": ".agents/skills/orchestrate-personal-learning/agents/openai.yaml",
-      "bytes": 298,
-      "sha256": "c5cbd64b548d857e7a9fda89d8bb4760b8ade5763790c35856865b85f0e1217a",
+      "bytes": 313,
+      "sha256": "1d686f45ec85b79c73925f13668b9c917f8a7908d0eefe2085a8d0b1ea4d99c2",
       "category": "project-skill",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": ".agents/skills/orchestrate-personal-learning/agents/openai.yaml"
       },
-      "sourceSha256": "c5cbd64b548d857e7a9fda89d8bb4760b8ade5763790c35856865b85f0e1217a",
+      "sourceSha256": "1d686f45ec85b79c73925f13668b9c917f8a7908d0eefe2085a8d0b1ea4d99c2",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": ".agents/skills/orchestrate-personal-learning/references/natural-recording.md",
+      "bytes": 6354,
+      "sha256": "2335e02539d8defe37d2d35ed2bfa0b0c68a3766eac8389eb383dfa112067408",
+      "category": "project-skill",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": ".agents/skills/orchestrate-personal-learning/references/natural-recording.md"
+      },
+      "sourceSha256": "2335e02539d8defe37d2d35ed2bfa0b0c68a3766eac8389eb383dfa112067408",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": ".agents/skills/orchestrate-personal-learning/references/navigation-learning-context.md",
+      "bytes": 3125,
+      "sha256": "d5dbc1e0f8d1a4929832731995ff2ae5a82fd438236371d23ff10035d30db02e",
+      "category": "project-skill",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": ".agents/skills/orchestrate-personal-learning/references/navigation-learning-context.md"
+      },
+      "sourceSha256": "d5dbc1e0f8d1a4929832731995ff2ae5a82fd438236371d23ff10035d30db02e",
       "transformation": "byte-identical-copy"
     },
     {
       "path": ".agents/skills/plan-learning-time/SKILL.md",
-      "bytes": 5038,
-      "sha256": "1ce6c40f5c6bdd896af8aa86924e612a448185f6e0bc354a9c5531a4698cdd79",
+      "bytes": 6066,
+      "sha256": "0dfe98255c1fed935d02f4d0986c129e7966c0b894ad6b115f173a029d8e7693",
       "category": "project-skill",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": ".agents/skills/plan-learning-time/SKILL.md"
       },
-      "sourceSha256": "1ce6c40f5c6bdd896af8aa86924e612a448185f6e0bc354a9c5531a4698cdd79",
+      "sourceSha256": "0dfe98255c1fed935d02f4d0986c129e7966c0b894ad6b115f173a029d8e7693",
       "transformation": "byte-identical-copy"
     },
     {
@@ -335,14 +359,14 @@
     },
     {
       "path": ".agents/skills/review-learning-cycle/SKILL.md",
-      "bytes": 5179,
-      "sha256": "69cb15fed1c359e28edd497442750259a9bc1d6b3f96970313e8bf81c2ca940f",
+      "bytes": 5619,
+      "sha256": "8a69ae4718e3bbb36b9ff2be61fa3f680c51a0ded5aa16480c4b5bdb82b3c37d",
       "category": "project-skill",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": ".agents/skills/review-learning-cycle/SKILL.md"
       },
-      "sourceSha256": "69cb15fed1c359e28edd497442750259a9bc1d6b3f96970313e8bf81c2ca940f",
+      "sourceSha256": "8a69ae4718e3bbb36b9ff2be61fa3f680c51a0ded5aa16480c4b5bdb82b3c37d",
       "transformation": "byte-identical-copy"
     },
     {
@@ -359,8 +383,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 530,
-      "sha256": "6fa45d36cbb9d9da92973405ca30e3e8ee22b90a60fb4aa7aa5fc473eff8a8cd",
+      "bytes": 566,
+      "sha256": "64cbfdf9cc00a3bf5267cfe8099106daab1a5b3ac58006682bbbe055bd48b9c0",
       "category": "generated-cloud-entry",
       "source": null,
       "sourceSha256": null,
@@ -386,38 +410,38 @@
     },
     {
       "path": "cloud-data/exports/information/attempts.json",
-      "bytes": 248580,
-      "sha256": "7d1340e197db2ed5589439dc2e07b5b5c6b89fc1a4c333237ae031c8292414b1",
+      "bytes": 353270,
+      "sha256": "564881e93a359003db1cd9fb07a39e13ebca936292733d74b6776588d6a45c49",
       "category": "derived-full-table-json",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
       "path": "cloud-data/exports/information/attempts.md",
-      "bytes": 15955,
-      "sha256": "5e2428592492d543fc35019986f728dc297f4d3c45d3697e7eafdb0b0d05d2d1",
+      "bytes": 20425,
+      "sha256": "150991ee78b06b6f894da872460c98cc3ecb3198ccc7e84b8c46ec4e297b7c67",
       "category": "derived-readable-table-directory",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
       "path": "cloud-data/exports/information/discovery_candidates.json",
-      "bytes": 188357,
-      "sha256": "d8121d2b6440b62966c076220ed7cc0824ed3c4f91eb3b6c74b275b2733d56d6",
+      "bytes": 189940,
+      "sha256": "b79b2460ba5224c7d582d10fd683e077e209ff0a9d1050fbdd54b4a013d8b245",
       "category": "derived-full-table-json",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
@@ -429,55 +453,55 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
       "path": "cloud-data/exports/information/index.md",
       "bytes": 973,
-      "sha256": "21071a83bcfb3a3d28a1c64ff2728b55077f2fa250532d9d6ce365b2f0f42134",
+      "sha256": "5c61134432b6b19689b02b00ecf0cf28838925d380418b70fc48424cb6d94559",
       "category": "derived-database-reading-index",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "database-table-index"
     },
     {
       "path": "cloud-data/exports/information/observations.json",
-      "bytes": 704920,
-      "sha256": "be3044b033d65ef9f8a31c891781ddf5753e30b16e5d5849cfd7e3615eeb0642",
+      "bytes": 711903,
+      "sha256": "140ba2516a7e302f1c6949485c250c9aa87eda6d1e149f2198530cdbb628d75b",
       "category": "derived-full-table-json",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
       "path": "cloud-data/exports/information/observations.md",
-      "bytes": 541171,
-      "sha256": "7d150e5bfd2ef6858b50e0bd794e77947f31581f96c1a9174fe71618f80ef3f1",
+      "bytes": 546850,
+      "sha256": "eb4833d7eb54fdb5d8ac627a9a5c7c10d200f55f0526e05c1022c47852b615da",
       "category": "derived-readable-table-directory",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
       "path": "cloud-data/exports/information/opportunities.json",
       "bytes": 195406,
-      "sha256": "460db954839624fbbd6e15fbaafaecd7b0e3c96c1a2652c1628af6ee8a521e96",
+      "sha256": "0b89a03e521dd8217311f2c30ada983f991c820b9af679ba4ec72d053260ac67",
       "category": "derived-full-table-json",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
@@ -489,55 +513,55 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
       "path": "cloud-data/exports/information/page_changes.json",
-      "bytes": 91924,
-      "sha256": "538e4af5e9a5c2d4fc75fa8abc40dceee8f20f8141272b02b14c3ca2e5af734d",
+      "bytes": 92969,
+      "sha256": "b63b829b7e904fdbc3a6f25026ea1943b1262e9f11ee9ebeaa835e4ecce09070",
       "category": "derived-full-table-json",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
       "path": "cloud-data/exports/information/page_changes.md",
-      "bytes": 1637,
-      "sha256": "542e8b4c15da08124a7bec061d539ee5fa9c2b3b61005521bd8a1b510e0bc988",
+      "bytes": 1704,
+      "sha256": "c1a719251c1331840c6fe1519b2b3bac928777d2638ee44325f221b7b5f203ad",
       "category": "derived-readable-table-directory",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
       "path": "cloud-data/exports/information/runs.json",
-      "bytes": 278337,
-      "sha256": "c2f465f5dd37a8d9fad90aa4ac4e37e60d657a9f5e11ea2202d959bc54f2668f",
+      "bytes": 384990,
+      "sha256": "a7746f7b2c05f9843994e0f01323131313ef21ed38595b6cfcaea6bacad34abd",
       "category": "derived-full-table-json",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
       "path": "cloud-data/exports/information/runs.md",
-      "bytes": 1831,
-      "sha256": "2d5e1be6c99e6cd8515ec91d6f5ea6ba3c8ca53e97541327ead7a04a2713be8a",
+      "bytes": 1950,
+      "sha256": "c9b930e2d2066708fdf16810c2fa0f3fdbe0c2a6c2bbd3d806ea79122dfa01e9",
       "category": "derived-readable-table-directory",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
@@ -549,7 +573,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
@@ -561,31 +585,31 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
       "path": "cloud-data/exports/information/sources.json",
-      "bytes": 129762,
-      "sha256": "3657294768597d68f7050e2db8e12dcc6b5419c3244f8930e88e5e354ba0d262",
+      "bytes": 129585,
+      "sha256": "80bc21c00a99f9449f3d176be5ac986d6e3a30d4ebf0c2c5f2bbc2510f4b3a60",
       "category": "derived-full-table-json",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
       "path": "cloud-data/exports/information/sources.md",
-      "bytes": 4118,
-      "sha256": "ffd319087aa9b98a830eb29b1ca730d35552067a5f7e554bb7f0e58d9cd682be",
+      "bytes": 4116,
+      "sha256": "098196ef229791f2d740d4c7d061b9923e03afedba8c983bc3ebe2d67e000a82",
       "category": "derived-readable-table-directory",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
@@ -597,7 +621,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
@@ -609,91 +633,91 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
       "path": "cloud-data/exports/observatory/attachments.json",
-      "bytes": 14720,
-      "sha256": "692957c82f8a15f7b8ecd2ff4c0789e988e5a876ea79400860f23d7d8035ccd0",
+      "bytes": 18757,
+      "sha256": "ac55ab2e54e1865c73be746954280f69347da0db3fcc2f59d6ded0333a2ae000",
       "category": "derived-full-table-json",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/data/observatory.sqlite3"
       },
-      "sourceSha256": "160f42f0d6037d70dbf6535e2c0b631827e7a6f8a6497177fa922d0f4d576eda",
+      "sourceSha256": "634d598f9c56b45a85559e3c1a4829c18575c2dda1c9e019ecae9c1574529b48",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
       "path": "cloud-data/exports/observatory/attachments.md",
-      "bytes": 3166,
-      "sha256": "20921654bf15463a3a726c240c60e808be090ea1fe8408724c3d981920da85f6",
+      "bytes": 4036,
+      "sha256": "12e368ef24165b74e87d288b6bec637a41705a75c97e438eb409f750578a800e",
       "category": "derived-readable-table-directory",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/data/observatory.sqlite3"
       },
-      "sourceSha256": "160f42f0d6037d70dbf6535e2c0b631827e7a6f8a6497177fa922d0f4d576eda",
+      "sourceSha256": "634d598f9c56b45a85559e3c1a4829c18575c2dda1c9e019ecae9c1574529b48",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
       "path": "cloud-data/exports/observatory/index.md",
-      "bytes": 817,
-      "sha256": "bf68979e97c9abab9e89b9afc38ae2734b9cc229629aa7a225c594bef1b77b29",
+      "bytes": 820,
+      "sha256": "f93908e741e71e4d4c2ffcdaf46ee8dc95b5561a7496e37902467838117ec847",
       "category": "derived-database-reading-index",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/data/observatory.sqlite3"
       },
-      "sourceSha256": "160f42f0d6037d70dbf6535e2c0b631827e7a6f8a6497177fa922d0f4d576eda",
+      "sourceSha256": "634d598f9c56b45a85559e3c1a4829c18575c2dda1c9e019ecae9c1574529b48",
       "transformation": "database-table-index"
     },
     {
       "path": "cloud-data/exports/observatory/materials.json",
-      "bytes": 15641,
-      "sha256": "c4cad0244f32c6aaf5ec455ccf90eb1c7ed25499861ea0ada8059ed67622f828",
+      "bytes": 18444,
+      "sha256": "b31129fd689fed89cd36c40cc645cc3aedca7630bcbb5e2d9589eaf7794880ac",
       "category": "derived-full-table-json",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/data/observatory.sqlite3"
       },
-      "sourceSha256": "160f42f0d6037d70dbf6535e2c0b631827e7a6f8a6497177fa922d0f4d576eda",
+      "sourceSha256": "634d598f9c56b45a85559e3c1a4829c18575c2dda1c9e019ecae9c1574529b48",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
       "path": "cloud-data/exports/observatory/materials.md",
-      "bytes": 16501,
-      "sha256": "7c92f661d2a1fd24c89dd6c09818e320dedc5669b588a6ee59f50b9808efe6e5",
+      "bytes": 19665,
+      "sha256": "563eb947b7dd2ddadba2651f73d66b966d74b7cbc64bc1dda2468cbc84055bb3",
       "category": "derived-readable-table-directory",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/data/observatory.sqlite3"
       },
-      "sourceSha256": "160f42f0d6037d70dbf6535e2c0b631827e7a6f8a6497177fa922d0f4d576eda",
+      "sourceSha256": "634d598f9c56b45a85559e3c1a4829c18575c2dda1c9e019ecae9c1574529b48",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
       "path": "cloud-data/exports/observatory/stage_records.json",
-      "bytes": 223121,
-      "sha256": "0216d646406773549bfceb50fc34855cbe10a8306479dd8dd4fe327d6b4e37ce",
+      "bytes": 331426,
+      "sha256": "0ce171a05d43c2814d3c225831e73d37a8229fb5dd94ff61d60c1d1451ce11e6",
       "category": "derived-full-table-json",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/data/observatory.sqlite3"
       },
-      "sourceSha256": "160f42f0d6037d70dbf6535e2c0b631827e7a6f8a6497177fa922d0f4d576eda",
+      "sourceSha256": "634d598f9c56b45a85559e3c1a4829c18575c2dda1c9e019ecae9c1574529b48",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
       "path": "cloud-data/exports/observatory/stage_records.md",
-      "bytes": 248709,
-      "sha256": "315437b01ef94d362aec2d05386fb19c701bc6ab581253c589d36de698536775",
+      "bytes": 368231,
+      "sha256": "ea16f007c175a89b093a3961627721ebbb408403dd2c0c2f68cf0b21add98941",
       "category": "derived-readable-table-directory",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/data/observatory.sqlite3"
       },
-      "sourceSha256": "160f42f0d6037d70dbf6535e2c0b631827e7a6f8a6497177fa922d0f4d576eda",
+      "sourceSha256": "634d598f9c56b45a85559e3c1a4829c18575c2dda1c9e019ecae9c1574529b48",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
@@ -705,7 +729,7 @@
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/data/observatory.sqlite3"
       },
-      "sourceSha256": "160f42f0d6037d70dbf6535e2c0b631827e7a6f8a6497177fa922d0f4d576eda",
+      "sourceSha256": "634d598f9c56b45a85559e3c1a4829c18575c2dda1c9e019ecae9c1574529b48",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
@@ -717,121 +741,121 @@
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/data/observatory.sqlite3"
       },
-      "sourceSha256": "160f42f0d6037d70dbf6535e2c0b631827e7a6f8a6497177fa922d0f4d576eda",
+      "sourceSha256": "634d598f9c56b45a85559e3c1a4829c18575c2dda1c9e019ecae9c1574529b48",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
       "path": "cloud-data/exports/observatory/submissions.json",
-      "bytes": 432798,
-      "sha256": "cd7fe9ed3e2f5f2143ba667b5b697b802d16e0c8c8ea9e65a5d819170a11e6a8",
+      "bytes": 617392,
+      "sha256": "daf4ae0abd4e0d6097813e16b9361d910cca6f9b5e1b2bcc079edd4ec0d1ac04",
       "category": "derived-full-table-json",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/data/observatory.sqlite3"
       },
-      "sourceSha256": "160f42f0d6037d70dbf6535e2c0b631827e7a6f8a6497177fa922d0f4d576eda",
+      "sourceSha256": "634d598f9c56b45a85559e3c1a4829c18575c2dda1c9e019ecae9c1574529b48",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
       "path": "cloud-data/exports/observatory/submissions.md",
-      "bytes": 8812,
-      "sha256": "8eda1832462d5b1481b85d08e6e9e3eec6f125585eb8440c9052836fc5c567e9",
+      "bytes": 11172,
+      "sha256": "9e43fba48c07b970ac6b9209cecfb7da306a3d0226ef80f578a6a52664b510f5",
       "category": "derived-readable-table-directory",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/data/observatory.sqlite3"
       },
-      "sourceSha256": "160f42f0d6037d70dbf6535e2c0b631827e7a6f8a6497177fa922d0f4d576eda",
+      "sourceSha256": "634d598f9c56b45a85559e3c1a4829c18575c2dda1c9e019ecae9c1574529b48",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
       "path": "cloud-data/exports/observatory/topic_materials.json",
-      "bytes": 1671,
-      "sha256": "96b3052c9d02ec7d7ae090ac9e553d5812bd59c27c7096084cd9696244b045f5",
+      "bytes": 1962,
+      "sha256": "858ed43f45d3dc3c3575c376b49ef114ba8a19dec13133fc74c5c086ea1e5855",
       "category": "derived-full-table-json",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/data/observatory.sqlite3"
       },
-      "sourceSha256": "160f42f0d6037d70dbf6535e2c0b631827e7a6f8a6497177fa922d0f4d576eda",
+      "sourceSha256": "634d598f9c56b45a85559e3c1a4829c18575c2dda1c9e019ecae9c1574529b48",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
       "path": "cloud-data/exports/observatory/topic_materials.md",
-      "bytes": 1398,
-      "sha256": "67089389527ced8b9140f1c199ca1dff329df4c1824d894b3866238d5fb53ee2",
+      "bytes": 1681,
+      "sha256": "458b3e838d6713da88d7231a720f1029a843dcb2d028dd6d893ef1e1aadbe051",
       "category": "derived-readable-table-directory",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/data/observatory.sqlite3"
       },
-      "sourceSha256": "160f42f0d6037d70dbf6535e2c0b631827e7a6f8a6497177fa922d0f4d576eda",
+      "sourceSha256": "634d598f9c56b45a85559e3c1a4829c18575c2dda1c9e019ecae9c1574529b48",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
       "path": "cloud-data/exports/observatory/topics.json",
-      "bytes": 6435,
-      "sha256": "e4f8cd7bcae84fe5de4dfae7d3e156d043057e2df7b5e8f1fa05528c043cd84e",
+      "bytes": 7950,
+      "sha256": "e7931ad9b9a4f7b73025339e6814885fcf27914fbea5e9e664a192817869a006",
       "category": "derived-full-table-json",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/data/observatory.sqlite3"
       },
-      "sourceSha256": "160f42f0d6037d70dbf6535e2c0b631827e7a6f8a6497177fa922d0f4d576eda",
+      "sourceSha256": "634d598f9c56b45a85559e3c1a4829c18575c2dda1c9e019ecae9c1574529b48",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
       "path": "cloud-data/exports/observatory/topics.md",
-      "bytes": 6041,
-      "sha256": "001334a5b07a9c3235580b3681a339b254607fc6a5289c0a4d1a211218319908",
+      "bytes": 7661,
+      "sha256": "078a88c7027bf2cc5ebc36c0cc29a13e6f2f8744a9fb5a71f192645368495ac3",
       "category": "derived-readable-table-directory",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/data/observatory.sqlite3"
       },
-      "sourceSha256": "160f42f0d6037d70dbf6535e2c0b631827e7a6f8a6497177fa922d0f4d576eda",
+      "sourceSha256": "634d598f9c56b45a85559e3c1a4829c18575c2dda1c9e019ecae9c1574529b48",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
       "path": "cloud-data/snapshots/信息收集/data/opportunities.sqlite3",
-      "bytes": 2510848,
-      "sha256": "cead3e7ae54a1499e1941b14131e15f77871e9438966a3799a42e420ec32e278",
+      "bytes": 2727936,
+      "sha256": "117b92963c3c96161e2f95de6d66f1c080532215a3246bfab1d9a67d24bb6e63",
       "category": "authoritative-database-consistent-snapshot",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "90fe4650fd1440cd18f68985e1aa22568a55c3b310a6a57ae7208f8bd0da2223",
-      "transformation": "SQLite Connection.backup from mode=ro source; output-only journal_mode=DELETE"
+      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "transformation": "SQLite Connection.backup from mode=ro source"
     },
     {
       "path": "cloud-data/snapshots/素材观察室/data/observatory.sqlite3",
-      "bytes": 753664,
-      "sha256": "265b483ab64ebce6f8d7972863aebc8245eb2393544f5d4eed1adeee5b94b5b6",
+      "bytes": 1048576,
+      "sha256": "6c0e12669577ea60b06ff90d7e01eef9d77380181c9b810a2bd560f2360dd269",
       "category": "authoritative-database-consistent-snapshot",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/data/observatory.sqlite3"
       },
-      "sourceSha256": "160f42f0d6037d70dbf6535e2c0b631827e7a6f8a6497177fa922d0f4d576eda",
-      "transformation": "SQLite Connection.backup from mode=ro source; output-only journal_mode=DELETE"
+      "sourceSha256": "634d598f9c56b45a85559e3c1a4829c18575c2dda1c9e019ecae9c1574529b48",
+      "transformation": "SQLite Connection.backup from mode=ro source"
     },
     {
       "path": "cloud-data/ui/学习小岛/data/ui-state.json",
-      "bytes": 1610,
-      "sha256": "85e3e7e4081881329d2acefed744101b70c4220c96a293c1bf95521149812c33",
+      "bytes": 14629,
+      "sha256": "1dc2f0eb9e447d1c851641ec646d8c9d7cdac6219d5aa89e788b469783ecce5e",
       "category": "ui-state-snapshot",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "学习小岛/data/ui-state.json"
       },
-      "sourceSha256": "85e3e7e4081881329d2acefed744101b70c4220c96a293c1bf95521149812c33",
+      "sourceSha256": "1dc2f0eb9e447d1c851641ec646d8c9d7cdac6219d5aa89e788b469783ecce5e",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "cloud/README.md",
       "bytes": 4173,
-      "sha256": "92984cdfdd9e706bc9de091010dc599d7b4d058807003d8a1839dd4e734bbb65",
+      "sha256": "b737abe156e498ccd1561f1b2d8cc4d5b756fa2c2d8a5941f3c110a91c8805fc",
       "category": "generated-cloud-entry",
       "source": null,
       "sourceSha256": null,
@@ -839,14 +863,14 @@
     },
     {
       "path": "cloud/local-AGENTS.source.md",
-      "bytes": 4753,
-      "sha256": "e831eb445fc2f9ce16e59f907964b3212d48652017c9f1537d07f5d97976156b",
+      "bytes": 7648,
+      "sha256": "2c8ce69a575933f28dc5e58dc444a2d1e66e699b16e91f533e4e23052ad937b2",
       "category": "original-local-agents-for-reference",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "AGENTS.md"
       },
-      "sourceSha256": "e831eb445fc2f9ce16e59f907964b3212d48652017c9f1537d07f5d97976156b",
+      "sourceSha256": "2c8ce69a575933f28dc5e58dc444a2d1e66e699b16e91f533e4e23052ad937b2",
       "transformation": "byte-identical-copy"
     },
     {
@@ -884,38 +908,50 @@
     },
     {
       "path": "web/Backup-PersonalSystem.ps1",
-      "bytes": 345,
-      "sha256": "2e96b8ecaf938fa41718579fb7ba02f6fd932dbd43c8e30a6e7c66af5066b5a2",
+      "bytes": 353,
+      "sha256": "e7a44075e945e08648bc07e1842a7c2928e2ba5375657c095b1921d82fd9e822",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/Backup-PersonalSystem.ps1"
       },
-      "sourceSha256": "2e96b8ecaf938fa41718579fb7ba02f6fd932dbd43c8e30a6e7c66af5066b5a2",
+      "sourceSha256": "e7a44075e945e08648bc07e1842a7c2928e2ba5375657c095b1921d82fd9e822",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/Open-PersonalTerminal.ps1",
+      "bytes": 4913,
+      "sha256": "35ba428d1246be1cbe906bd22e02f2e5e37f5af6b06bdb338beeeab2e81472db",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/Open-PersonalTerminal.ps1"
+      },
+      "sourceSha256": "35ba428d1246be1cbe906bd22e02f2e5e37f5af6b06bdb338beeeab2e81472db",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/README.md",
-      "bytes": 7348,
-      "sha256": "e9a7de55645d107cb913ebc9a420a2b5c13007ebc2227d1cfc9bcc5e7fcc46bf",
+      "bytes": 7720,
+      "sha256": "c0b307a25aa0c2a341e71078c1547735a78635f83e2011bc05d611fc4edf2207",
       "category": "source-document",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/README.md"
       },
-      "sourceSha256": "e9a7de55645d107cb913ebc9a420a2b5c13007ebc2227d1cfc9bcc5e7fcc46bf",
+      "sourceSha256": "c0b307a25aa0c2a341e71078c1547735a78635f83e2011bc05d611fc4edf2207",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/Start-LearningTerminal.ps1",
-      "bytes": 841,
-      "sha256": "92e18a64af97ab7e63f1ca0f17a032d0332ea66f6f962725390279f83746ae99",
+      "bytes": 852,
+      "sha256": "efbc9da2ed045ae65bf84eb986622be7095c2e5fdc976c39a010992a2c251b59",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/Start-LearningTerminal.ps1"
       },
-      "sourceSha256": "92e18a64af97ab7e63f1ca0f17a032d0332ea66f6f962725390279f83746ae99",
+      "sourceSha256": "efbc9da2ed045ae65bf84eb986622be7095c2e5fdc976c39a010992a2c251b59",
       "transformation": "byte-identical-copy"
     },
     {
@@ -928,6 +964,402 @@
         "relativePath": "web/Stop-LearningTerminal.ps1"
       },
       "sourceSha256": "2289e22c033415a8cbfe9315194aaf2bf98921b9742148079e6e9e0bc0808d00",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/content/README.md",
+      "bytes": 3732,
+      "sha256": "153d7af84894a0916343174f5323ed074f980f48256590471381bc6f03188c28",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/content/README.md"
+      },
+      "sourceSha256": "153d7af84894a0916343174f5323ed074f980f48256590471381bc6f03188c28",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/content/cli.mjs",
+      "bytes": 2684,
+      "sha256": "d82615bbd0fd21f9bbe6bc50eda04db42e5b09dbd1cc04c4edfb8e26afc1a611",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/content/cli.mjs"
+      },
+      "sourceSha256": "d82615bbd0fd21f9bbe6bc50eda04db42e5b09dbd1cc04c4edfb8e26afc1a611",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/content/content.test.mjs",
+      "bytes": 12820,
+      "sha256": "65ecf7fe108f13e06cb96610a239c6e2bc3020d426982c7e67be97653c6330cd",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/content/content.test.mjs"
+      },
+      "sourceSha256": "65ecf7fe108f13e06cb96610a239c6e2bc3020d426982c7e67be97653c6330cd",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/content/http.mjs",
+      "bytes": 2774,
+      "sha256": "660ffe9e7f5a7548bb55f9c732fa433667600f122ea203a770f4556cd1885da9",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/content/http.mjs"
+      },
+      "sourceSha256": "660ffe9e7f5a7548bb55f9c732fa433667600f122ea203a770f4556cd1885da9",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/content/natural-content.test.mjs",
+      "bytes": 6064,
+      "sha256": "8d4c702376c90eed25c70c886a8e84e1eaa8a586fa5e51c1e2d425c256bb1524",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/content/natural-content.test.mjs"
+      },
+      "sourceSha256": "8d4c702376c90eed25c70c886a8e84e1eaa8a586fa5e51c1e2d425c256bb1524",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/content/store.mjs",
+      "bytes": 25893,
+      "sha256": "6486f542e2b40ba8ac1f18be493fe67bca455c0f62aedd87e56b8551f6c135f9",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/content/store.mjs"
+      },
+      "sourceSha256": "6486f542e2b40ba8ac1f18be493fe67bca455c0f62aedd87e56b8551f6c135f9",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/learning/cli.mjs",
+      "bytes": 6954,
+      "sha256": "eeaed38426c384d57e3a440477b864248ffc2e6705daf36b6500b0c7f9e33d55",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/learning/cli.mjs"
+      },
+      "sourceSha256": "eeaed38426c384d57e3a440477b864248ffc2e6705daf36b6500b0c7f9e33d55",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/learning/commit.mjs",
+      "bytes": 49564,
+      "sha256": "de8f6cbbc21ae5678948ac145d7bf554994dd49dc526a51bc27124209ca52c55",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/learning/commit.mjs"
+      },
+      "sourceSha256": "de8f6cbbc21ae5678948ac145d7bf554994dd49dc526a51bc27124209ca52c55",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/learning/content-sources.mjs",
+      "bytes": 2891,
+      "sha256": "382c3d774fe3264d88e5c4e9c4fffbdbd0ad268980dfea704d0bcaf90dd74d93",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/learning/content-sources.mjs"
+      },
+      "sourceSha256": "382c3d774fe3264d88e5c4e9c4fffbdbd0ad268980dfea704d0bcaf90dd74d93",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/learning/context.mjs",
+      "bytes": 23119,
+      "sha256": "7b1868fe9fc17bee454ef4234df8dad27a74568fd0d77b8e99ffc3a551fe2f3f",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/learning/context.mjs"
+      },
+      "sourceSha256": "7b1868fe9fc17bee454ef4234df8dad27a74568fd0d77b8e99ffc3a551fe2f3f",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/learning/coordinator.mjs",
+      "bytes": 17871,
+      "sha256": "b505844411d8651b43d4f31422cebf5c94b4f4de71eb88de397a4010e56f285c",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/learning/coordinator.mjs"
+      },
+      "sourceSha256": "b505844411d8651b43d4f31422cebf5c94b4f4de71eb88de397a4010e56f285c",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/learning/intake-cli.mjs",
+      "bytes": 2535,
+      "sha256": "90181cd50429f45bdc29fcc23cf15f2086a188d95a806a5dc36df0747c9d3611",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/learning/intake-cli.mjs"
+      },
+      "sourceSha256": "90181cd50429f45bdc29fcc23cf15f2086a188d95a806a5dc36df0747c9d3611",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/learning/intake.mjs",
+      "bytes": 37780,
+      "sha256": "1827ad34dce6dce1b37f0864a08c84b6c4b565b7f42c20ee0a4e9cb6e24422fd",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/learning/intake.mjs"
+      },
+      "sourceSha256": "1827ad34dce6dce1b37f0864a08c84b6c4b565b7f42c20ee0a4e9cb6e24422fd",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/learning/navigation-context.mjs",
+      "bytes": 14951,
+      "sha256": "22f25aaf2647cac296d285018a971e0e1119c01aa16b086d25c29a023047faef",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/learning/navigation-context.mjs"
+      },
+      "sourceSha256": "22f25aaf2647cac296d285018a971e0e1119c01aa16b086d25c29a023047faef",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/learning/protocol.mjs",
+      "bytes": 17330,
+      "sha256": "90cbf25a864e7664a6a943a129239fac78a99f1714d9fd323102c5ed3667fcb7",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/learning/protocol.mjs"
+      },
+      "sourceSha256": "90cbf25a864e7664a6a943a129239fac78a99f1714d9fd323102c5ed3667fcb7",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/learning/records.mjs",
+      "bytes": 21527,
+      "sha256": "ccf44e3c62c54cf226461be0c8d562d763bc9ae7548e60c7431bd47751e0e08c",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/learning/records.mjs"
+      },
+      "sourceSha256": "ccf44e3c62c54cf226461be0c8d562d763bc9ae7548e60c7431bd47751e0e08c",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/learning/save-intent.mjs",
+      "bytes": 828,
+      "sha256": "fa9744819e5100a9be8e5cba30b45b1ea63e2ae294b09d71a1b695aa13d9758c",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/learning/save-intent.mjs"
+      },
+      "sourceSha256": "fa9744819e5100a9be8e5cba30b45b1ea63e2ae294b09d71a1b695aa13d9758c",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/learning/sources.mjs",
+      "bytes": 18554,
+      "sha256": "b3288ac7287e47160490b637dde1650112c66c6c534334f268132896ae92aa2e",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/learning/sources.mjs"
+      },
+      "sourceSha256": "b3288ac7287e47160490b637dde1650112c66c6c534334f268132896ae92aa2e",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/navigation/.repair-backup-20261004-journey-document/navigation.test.mjs",
+      "bytes": 13504,
+      "sha256": "d637ecd64c62b0074f828aadac353ae9a390ff748820dc3ea36c5413b06ee603",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/navigation/.repair-backup-20261004-journey-document/navigation.test.mjs"
+      },
+      "sourceSha256": "d637ecd64c62b0074f828aadac353ae9a390ff748820dc3ea36c5413b06ee603",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/navigation/.repair-backup-20261004-journey-document/worker.py",
+      "bytes": 22729,
+      "sha256": "6dfcded66b5d86c33a4a4ad90b25df6e8b90a65e938cfb803b0c66568ecaad6e",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/navigation/.repair-backup-20261004-journey-document/worker.py"
+      },
+      "sourceSha256": "6dfcded66b5d86c33a4a4ad90b25df6e8b90a65e938cfb803b0c66568ecaad6e",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/navigation/README.md",
+      "bytes": 5614,
+      "sha256": "1be1da1c8cf58b160bce866d685696dcac2bb9424b2539db02e23e30ebd773c9",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/navigation/README.md"
+      },
+      "sourceSha256": "1be1da1c8cf58b160bce866d685696dcac2bb9424b2539db02e23e30ebd773c9",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/navigation/bridge.mjs",
+      "bytes": 5807,
+      "sha256": "456ace84ab3421ac704bcfbb6278812c490041aff36b00a1a0989d8a8de2f32a",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/navigation/bridge.mjs"
+      },
+      "sourceSha256": "456ace84ab3421ac704bcfbb6278812c490041aff36b00a1a0989d8a8de2f32a",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/navigation/http-period.test.mjs",
+      "bytes": 9663,
+      "sha256": "6d28ba08b6dc078a396ad4af89905968d0965dab1810605067fc91a7667a79bb",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/navigation/http-period.test.mjs"
+      },
+      "sourceSha256": "6d28ba08b6dc078a396ad4af89905968d0965dab1810605067fc91a7667a79bb",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/navigation/http.mjs",
+      "bytes": 17881,
+      "sha256": "ac75d85057a442312f8c557f17371c34d4a118bb8bb290048598fec075a49ac0",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/navigation/http.mjs"
+      },
+      "sourceSha256": "ac75d85057a442312f8c557f17371c34d4a118bb8bb290048598fec075a49ac0",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/navigation/navigation.test.mjs",
+      "bytes": 22848,
+      "sha256": "4c9db7f5c8c7853483bd7edfb3c8d0971c0500e73c8ea26e52f586a378c492ff",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/navigation/navigation.test.mjs"
+      },
+      "sourceSha256": "4c9db7f5c8c7853483bd7edfb3c8d0971c0500e73c8ea26e52f586a378c492ff",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/navigation/period.mjs",
+      "bytes": 11126,
+      "sha256": "056b00747e06b90b8749f65aea3667fb2f49ee31deb25aeb702644c1b39b95d2",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/navigation/period.mjs"
+      },
+      "sourceSha256": "056b00747e06b90b8749f65aea3667fb2f49ee31deb25aeb702644c1b39b95d2",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/navigation/period.test.mjs",
+      "bytes": 4656,
+      "sha256": "77ed631e85c4f5197898325c2fe942873792eb7340613d98d06a0250d68bfe83",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/navigation/period.test.mjs"
+      },
+      "sourceSha256": "77ed631e85c4f5197898325c2fe942873792eb7340613d98d06a0250d68bfe83",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/navigation/profile.test.mjs",
+      "bytes": 18969,
+      "sha256": "af7f73b3783def4b82a31f842897016f237ef7a9bc7ff5dba704dc3393bbc21c",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/navigation/profile.test.mjs"
+      },
+      "sourceSha256": "af7f73b3783def4b82a31f842897016f237ef7a9bc7ff5dba704dc3393bbc21c",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/navigation/profile_view.py",
+      "bytes": 14653,
+      "sha256": "ffd63d84b845e0fa60cd37dc5817f42ab2ba07ef2a60afb18d110a5774bec2b7",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/navigation/profile_view.py"
+      },
+      "sourceSha256": "ffd63d84b845e0fa60cd37dc5817f42ab2ba07ef2a60afb18d110a5774bec2b7",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/navigation/public/app.js",
+      "bytes": 56823,
+      "sha256": "e788b845f143281f6761594ae90dc2a24a95e9bba0496bde14c5972a254aa5a4",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/navigation/public/app.js"
+      },
+      "sourceSha256": "e788b845f143281f6761594ae90dc2a24a95e9bba0496bde14c5972a254aa5a4",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/navigation/public/index.html",
+      "bytes": 11681,
+      "sha256": "c9a8ae2638d2e98e11caf9e376fda7b0b827b92e21f071d718011fd221d5582e",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/navigation/public/index.html"
+      },
+      "sourceSha256": "c9a8ae2638d2e98e11caf9e376fda7b0b827b92e21f071d718011fd221d5582e",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/navigation/public/style.css",
+      "bytes": 17442,
+      "sha256": "4c5472f9ccaf33ec9ee467b6dee9ab34f8cf4b6b794832321d501d1f67adb307",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/navigation/public/style.css"
+      },
+      "sourceSha256": "4c5472f9ccaf33ec9ee467b6dee9ab34f8cf4b6b794832321d501d1f67adb307",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/navigation/worker.py",
+      "bytes": 35110,
+      "sha256": "17de495f145559c5c0dafa9412c667b17371c6c6f3e6aa3eb7f647d597a5792d",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/navigation/worker.py"
+      },
+      "sourceSha256": "17de495f145559c5c0dafa9412c667b17371c6c6f3e6aa3eb7f647d597a5792d",
       "transformation": "byte-identical-copy"
     },
     {
@@ -956,14 +1388,14 @@
     },
     {
       "path": "web/observatory/cli.mjs",
-      "bytes": 16438,
-      "sha256": "63a3e2afbe6d332d5cee126c37337abc3080f11d7ec63f7cdae61592912b8ad9",
+      "bytes": 16666,
+      "sha256": "e2303a1cc37f272101798a8ac6208ba903271105a29bf1438e23b32861753162",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/observatory/cli.mjs"
       },
-      "sourceSha256": "63a3e2afbe6d332d5cee126c37337abc3080f11d7ec63f7cdae61592912b8ad9",
+      "sourceSha256": "e2303a1cc37f272101798a8ac6208ba903271105a29bf1438e23b32861753162",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1136,26 +1568,26 @@
     },
     {
       "path": "web/preview/public/app.js",
-      "bytes": 7482,
-      "sha256": "4eb577f69c56e263a5e210f6e4bc786f055f8e2eec1d041f6c63759fc9c33ba3",
+      "bytes": 8294,
+      "sha256": "97ded4e55eec0d50c1c51868cfa7ec3699e50261984b1ab85b8a6875ae78d030",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/preview/public/app.js"
       },
-      "sourceSha256": "4eb577f69c56e263a5e210f6e4bc786f055f8e2eec1d041f6c63759fc9c33ba3",
+      "sourceSha256": "97ded4e55eec0d50c1c51868cfa7ec3699e50261984b1ab85b8a6875ae78d030",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/preview/public/bridge.js",
-      "bytes": 15516,
-      "sha256": "040e8e5ba1fa1273ccb3f87f5acfd83a1ef0560191755a7195517a4fd8fb564a",
+      "bytes": 30256,
+      "sha256": "3f24c06edfe1d30b11cf2e13fc35e06fec36df8454662c1c352c2dc7e72462ba",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/preview/public/bridge.js"
       },
-      "sourceSha256": "040e8e5ba1fa1273ccb3f87f5acfd83a1ef0560191755a7195517a4fd8fb564a",
+      "sourceSha256": "3f24c06edfe1d30b11cf2e13fc35e06fec36df8454662c1c352c2dc7e72462ba",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1172,26 +1604,26 @@
     },
     {
       "path": "web/preview/public/information-polish.css",
-      "bytes": 24870,
-      "sha256": "675ff13180cbf86648d9b7c37d09eb7bd84784805854c697297b238b5738fa8f",
+      "bytes": 26012,
+      "sha256": "05f68d41756d6ae3b9a0fbc11c8077e84a4e3dac470c33a97b9a1e81d6871acb",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/preview/public/information-polish.css"
       },
-      "sourceSha256": "675ff13180cbf86648d9b7c37d09eb7bd84784805854c697297b238b5738fa8f",
+      "sourceSha256": "05f68d41756d6ae3b9a0fbc11c8077e84a4e3dac470c33a97b9a1e81d6871acb",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/preview/public/information-polish.js",
-      "bytes": 10343,
-      "sha256": "198bf9f87398ac66ef284d9f523a63ec743632a70e9639d4b493c8443a57bca0",
+      "bytes": 14258,
+      "sha256": "40eca933e59d39490e13d0cd5e6c2c869f1618d54031b622ead9158a9c752d47",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/preview/public/information-polish.js"
       },
-      "sourceSha256": "198bf9f87398ac66ef284d9f523a63ec743632a70e9639d4b493c8443a57bca0",
+      "sourceSha256": "40eca933e59d39490e13d0cd5e6c2c869f1618d54031b622ead9158a9c752d47",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1208,14 +1640,14 @@
     },
     {
       "path": "web/preview/public/observatory-polish.js",
-      "bytes": 16109,
-      "sha256": "fed82839d7bdb51ef560a8e71d9fee739060598061a02d3c65a6cee068f17c66",
+      "bytes": 18952,
+      "sha256": "2db8a1519db92b1a1c224cb65b260d55dfbd79d848532c35dbbcf5d2d9190e76",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/preview/public/observatory-polish.js"
       },
-      "sourceSha256": "fed82839d7bdb51ef560a8e71d9fee739060598061a02d3c65a6cee068f17c66",
+      "sourceSha256": "2db8a1519db92b1a1c224cb65b260d55dfbd79d848532c35dbbcf5d2d9190e76",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1244,14 +1676,14 @@
     },
     {
       "path": "web/preview/server.mjs",
-      "bytes": 8175,
-      "sha256": "b1c285e8cf4ded2b092c0f2e30f87a1bd8242fdf4e5042ab66f808acb72fcd63",
+      "bytes": 8202,
+      "sha256": "d5a55bd7991c4a741703aadb4f3b89dc918ff76377a1811310b6dc12a501df18",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/preview/server.mjs"
       },
-      "sourceSha256": "b1c285e8cf4ded2b092c0f2e30f87a1bd8242fdf4e5042ab66f808acb72fcd63",
+      "sourceSha256": "d5a55bd7991c4a741703aadb4f3b89dc918ff76377a1811310b6dc12a501df18",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1327,39 +1759,99 @@
       "transformation": "byte-identical-copy"
     },
     {
+      "path": "web/public/learning/content/app.js",
+      "bytes": 33957,
+      "sha256": "ebdd11eb5ca679f5e3f09e6646c599e2b4ae39659a620781a95cb05d3ea8a05b",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/learning/content/app.js"
+      },
+      "sourceSha256": "ebdd11eb5ca679f5e3f09e6646c599e2b4ae39659a620781a95cb05d3ea8a05b",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/learning/content/index.html",
+      "bytes": 3256,
+      "sha256": "c55c21bd05bb325e887b9c516a2ac1f328531c6c39467ab0827b4191450bd557",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/learning/content/index.html"
+      },
+      "sourceSha256": "c55c21bd05bb325e887b9c516a2ac1f328531c6c39467ab0827b4191450bd557",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/learning/content/style.css",
+      "bytes": 10353,
+      "sha256": "d93a5afd333050b931a06ec2e5cd3804e4b210d2ae83e3aa2e5d3d77f5036ec3",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/learning/content/style.css"
+      },
+      "sourceSha256": "d93a5afd333050b931a06ec2e5cd3804e4b210d2ae83e3aa2e5d3d77f5036ec3",
+      "transformation": "byte-identical-copy"
+    },
+    {
       "path": "web/public/learning/index.html",
-      "bytes": 14973,
-      "sha256": "15ff76990b849e848a03ec66f00087f12d7ddae2b8a07ac14018c3f12477040f",
+      "bytes": 15561,
+      "sha256": "7bef163f7f8ac1a61c2725d47278f9476d8cdfd06d3e4ecd995b009400368377",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/public/learning/index.html"
       },
-      "sourceSha256": "15ff76990b849e848a03ec66f00087f12d7ddae2b8a07ac14018c3f12477040f",
+      "sourceSha256": "7bef163f7f8ac1a61c2725d47278f9476d8cdfd06d3e4ecd995b009400368377",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/public/learning/integration.css",
-      "bytes": 3984,
-      "sha256": "dfec5c93ef493584750533ba8905bc150d04966bba52376e16838713b32e8693",
+      "bytes": 4892,
+      "sha256": "072947e0238faa66750a6c4d56b82946665d5f9e82a84b35931975374df0356b",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/public/learning/integration.css"
       },
-      "sourceSha256": "dfec5c93ef493584750533ba8905bc150d04966bba52376e16838713b32e8693",
+      "sourceSha256": "072947e0238faa66750a6c4d56b82946665d5f9e82a84b35931975374df0356b",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/public/learning/integration.js",
-      "bytes": 24465,
-      "sha256": "e8d9d224c5fdfc4786fc1751387a36ece45d97c4a3cbeccfaf04d36603ed82c8",
+      "bytes": 58402,
+      "sha256": "a20de80cf091e3facedb386278d5f153053ef713003c08b4c06a2466764fa5b2",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/public/learning/integration.js"
       },
-      "sourceSha256": "e8d9d224c5fdfc4786fc1751387a36ece45d97c4a3cbeccfaf04d36603ed82c8",
+      "sourceSha256": "a20de80cf091e3facedb386278d5f153053ef713003c08b4c06a2466764fa5b2",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/learning/terminal-learning.css",
+      "bytes": 2184,
+      "sha256": "87cfe093650b03407ea405d9c2c69ca2fe2e6744f62594bbc21ae502c0a6faac",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/learning/terminal-learning.css"
+      },
+      "sourceSha256": "87cfe093650b03407ea405d9c2c69ca2fe2e6744f62594bbc21ae502c0a6faac",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/learning/terminal-learning.js",
+      "bytes": 7838,
+      "sha256": "b85a8d833731cd929af8bae133a8399ce21d7ca2cb6bc4132de78e07f51b64f0",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/learning/terminal-learning.js"
+      },
+      "sourceSha256": "b85a8d833731cd929af8bae133a8399ce21d7ca2cb6bc4132de78e07f51b64f0",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1376,14 +1868,14 @@
     },
     {
       "path": "web/public/learning/主岛安排.js",
-      "bytes": 24684,
-      "sha256": "e5a037c2b2369e454e1dc4757e979a470906e4e1295c0dd2146f410321259ecd",
+      "bytes": 24749,
+      "sha256": "7d2a202da914cb2adc4258e3080aeeffb265bc85e9b12d6cd8233a5f38cd3071",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/public/learning/主岛安排.js"
       },
-      "sourceSha256": "e5a037c2b2369e454e1dc4757e979a470906e4e1295c0dd2146f410321259ecd",
+      "sourceSha256": "7d2a202da914cb2adc4258e3080aeeffb265bc85e9b12d6cd8233a5f38cd3071",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1400,14 +1892,14 @@
     },
     {
       "path": "web/public/learning/体验流程.js",
-      "bytes": 30507,
-      "sha256": "a0f3b8b2ec812e07441ec90ca2ecdc9e9b319bc78f01a663086f083894a95794",
+      "bytes": 31840,
+      "sha256": "3f02dea58ad74e4d53228399a0d794fe100785267e3a4445524c807cc59307a8",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/public/learning/体验流程.js"
       },
-      "sourceSha256": "a0f3b8b2ec812e07441ec90ca2ecdc9e9b319bc78f01a663086f083894a95794",
+      "sourceSha256": "3f02dea58ad74e4d53228399a0d794fe100785267e3a4445524c807cc59307a8",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1448,14 +1940,14 @@
     },
     {
       "path": "web/public/learning/岛屿场景.js",
-      "bytes": 18346,
-      "sha256": "c867f9bb948cb74cb2add909e634fe579d72ae36fe3664142a0a546f676a0fd5",
+      "bytes": 21015,
+      "sha256": "fbc14c1af125cd4664fc2bd0ce027fc188e7b9b512f1aaba3d3fec619300f2e0",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/public/learning/岛屿场景.js"
       },
-      "sourceSha256": "c867f9bb948cb74cb2add909e634fe579d72ae36fe3664142a0a546f676a0fd5",
+      "sourceSha256": "fbc14c1af125cd4664fc2bd0ce027fc188e7b9b512f1aaba3d3fec619300f2e0",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1484,14 +1976,14 @@
     },
     {
       "path": "web/public/learning/海岛生活.js",
-      "bytes": 18376,
-      "sha256": "6d6159f88b4c1d96e66aec23d926abb6ceea31121509fbdb5c83d2185bd689b5",
+      "bytes": 17769,
+      "sha256": "906c167ddde85d3fb545ecd994591979a0dd3ab903f563f647d2e93e71f65ae7",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/public/learning/海岛生活.js"
       },
-      "sourceSha256": "6d6159f88b4c1d96e66aec23d926abb6ceea31121509fbdb5c83d2185bd689b5",
+      "sourceSha256": "906c167ddde85d3fb545ecd994591979a0dd3ab903f563f647d2e93e71f65ae7",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1508,14 +2000,14 @@
     },
     {
       "path": "web/public/observatory/app.js",
-      "bytes": 108846,
-      "sha256": "582ea63802b878d8c1b8d2a70ec121a3bc313663daeefdc378da18c865aae561",
+      "bytes": 110855,
+      "sha256": "622fe4b7d542bd6371d674fcf5be93d9b8a746cccb9af903a9ddfd1872350b1c",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/public/observatory/app.js"
       },
-      "sourceSha256": "582ea63802b878d8c1b8d2a70ec121a3bc313663daeefdc378da18c865aae561",
+      "sourceSha256": "622fe4b7d542bd6371d674fcf5be93d9b8a746cccb9af903a9ddfd1872350b1c",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1532,14 +2024,14 @@
     },
     {
       "path": "web/public/observatory/index.html",
-      "bytes": 9057,
-      "sha256": "0d8632ddf53b7eee62b77294fcb30125d4b30273724bbc9e3557e878f4dab87b",
+      "bytes": 9583,
+      "sha256": "f9155547af6ee10e3a17c8dd51178e13421ff7e7d20c406547aae202b40b4b8e",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/public/observatory/index.html"
       },
-      "sourceSha256": "0d8632ddf53b7eee62b77294fcb30125d4b30273724bbc9e3557e878f4dab87b",
+      "sourceSha256": "f9155547af6ee10e3a17c8dd51178e13421ff7e7d20c406547aae202b40b4b8e",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1567,63 +2059,459 @@
       "transformation": "byte-identical-copy"
     },
     {
+      "path": "web/public/terminal/app.css",
+      "bytes": 19015,
+      "sha256": "f765d26b3e81add0683d930eb646dfe3e9e8103cfd43ba8a93beffc79bd95f9b",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/app.css"
+      },
+      "sourceSha256": "f765d26b3e81add0683d930eb646dfe3e9e8103cfd43ba8a93beffc79bd95f9b",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/app.js",
+      "bytes": 10671,
+      "sha256": "702ae0803379c529032b61a29a5e0a2d3d33291cea86d2ecff35180795e3ee56",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/app.js"
+      },
+      "sourceSha256": "702ae0803379c529032b61a29a5e0a2d3d33291cea86d2ecff35180795e3ee56",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/assets/home.png",
+      "bytes": 1836400,
+      "sha256": "537fa104870cd267b90781f89c5a7c269b2cd2d016804e6cbe28e47a9d40b63d",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/assets/home.png"
+      },
+      "sourceSha256": "537fa104870cd267b90781f89c5a7c269b2cd2d016804e6cbe28e47a9d40b63d",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/assets/home.svg",
+      "bytes": 3675,
+      "sha256": "1ef551e9173ae46b385be8cecb2d7dd1fc10de67d4f5189ccd0a3ecb4453c410",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/assets/home.svg"
+      },
+      "sourceSha256": "1ef551e9173ae46b385be8cecb2d7dd1fc10de67d4f5189ccd0a3ecb4453c410",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/assets/islands.css",
+      "bytes": 2577,
+      "sha256": "cc803bfb2e09345f43a9b88d034eb76c16698f5e58d156df6f6e163d17c80822",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/assets/islands.css"
+      },
+      "sourceSha256": "cc803bfb2e09345f43a9b88d034eb76c16698f5e58d156df6f6e163d17c80822",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/assets/ocean.svg",
+      "bytes": 2652,
+      "sha256": "6a02c17df5853c2c2cdcdcf6199fb11703ae4e19edd2f215293ffeb40f599e46",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/assets/ocean.svg"
+      },
+      "sourceSha256": "6a02c17df5853c2c2cdcdcf6199fb11703ae4e19edd2f215293ffeb40f599e46",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/assets/post.png",
+      "bytes": 1861446,
+      "sha256": "6aae9775909d5d5b32ce29f9bba954703dd570ad710451e9cf0b3204e6cf9388",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/assets/post.png"
+      },
+      "sourceSha256": "6aae9775909d5d5b32ce29f9bba954703dd570ad710451e9cf0b3204e6cf9388",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/assets/post.svg",
+      "bytes": 3731,
+      "sha256": "ecbce8f812bf83acbbb0a3f0d8fa23e327b4e84815b01975ba730ba8e538a4ad",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/assets/post.svg"
+      },
+      "sourceSha256": "ecbce8f812bf83acbbb0a3f0d8fa23e327b4e84815b01975ba730ba8e538a4ad",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/assets/ship.png",
+      "bytes": 1472637,
+      "sha256": "643284770d1fb04eedb9f2d91751e24d5840021c81d657125f3f21e60cbcf7d2",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/assets/ship.png"
+      },
+      "sourceSha256": "643284770d1fb04eedb9f2d91751e24d5840021c81d657125f3f21e60cbcf7d2",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/assets/story.png",
+      "bytes": 1930230,
+      "sha256": "2aa8dee8996d3d4081a8264d1923f360f7c9f84f6baad1e0298455484f4f262b",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/assets/story.png"
+      },
+      "sourceSha256": "2aa8dee8996d3d4081a8264d1923f360f7c9f84f6baad1e0298455484f4f262b",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/assets/story.svg",
+      "bytes": 3682,
+      "sha256": "db9b9da0b527b4911ff7b263a4f4359ac62019f59cd35d304ea7f548214ab93d",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/assets/story.svg"
+      },
+      "sourceSha256": "db9b9da0b527b4911ff7b263a4f4359ac62019f59cd35d304ea7f548214ab93d",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/assets/visual.png",
+      "bytes": 1717471,
+      "sha256": "72260965d85d0baba718d710ae0db350c3a9d9e0045b030ff18849cdf9ebafe8",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/assets/visual.png"
+      },
+      "sourceSha256": "72260965d85d0baba718d710ae0db350c3a9d9e0045b030ff18849cdf9ebafe8",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/assets/visual.svg",
+      "bytes": 3738,
+      "sha256": "c1c14df7336e36aed1adf70771ad60488cca3744ca34ef9c20a37278be6c6f05",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/assets/visual.svg"
+      },
+      "sourceSha256": "c1c14df7336e36aed1adf70771ad60488cca3744ca34ef9c20a37278be6c6f05",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/build-terminal.py",
+      "bytes": 9552,
+      "sha256": "a50a1799284513dba86bd5dbf77bb87b84d32591ca9fc44f96cfc9586e2f8fc1",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/build-terminal.py"
+      },
+      "sourceSha256": "a50a1799284513dba86bd5dbf77bb87b84d32591ca9fc44f96cfc9586e2f8fc1",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/index.html",
+      "bytes": 39257,
+      "sha256": "d4401a8935548619157bd27f6fdd0ae96af062b39b68a49e71c114fa54973ab7",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/index.html"
+      },
+      "sourceSha256": "d4401a8935548619157bd27f6fdd0ae96af062b39b68a49e71c114fa54973ab7",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/shell.css",
+      "bytes": 2593,
+      "sha256": "81f484de0f5ef10d9baf4f8366fa777f189dc63dca2a9a980a4b315da0649244",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/shell.css"
+      },
+      "sourceSha256": "81f484de0f5ef10d9baf4f8366fa777f189dc63dca2a9a980a4b315da0649244",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/shell.js",
+      "bytes": 4012,
+      "sha256": "1657dd52263503e0b145a4499c7d9f7ff22d0a9e3a52740de97a708c0c739dba",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/shell.js"
+      },
+      "sourceSha256": "1657dd52263503e0b145a4499c7d9f7ff22d0a9e3a52740de97a708c0c739dba",
+      "transformation": "byte-identical-copy"
+    },
+    {
       "path": "web/server.mjs",
-      "bytes": 34117,
-      "sha256": "db4d007789cf9438ee73689634c498c7e5e83be1a641c7cd07791af8adf9bfa1",
+      "bytes": 23508,
+      "sha256": "5a15d06c21ce6ac58a4b3e8039b93d4803da3469d02c5a9df9e178a24b6538a6",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/server.mjs"
       },
-      "sourceSha256": "db4d007789cf9438ee73689634c498c7e5e83be1a641c7cd07791af8adf9bfa1",
+      "sourceSha256": "5a15d06c21ce6ac58a4b3e8039b93d4803da3469d02c5a9df9e178a24b6538a6",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/test/content-entry.test.mjs",
+      "bytes": 4808,
+      "sha256": "0c6f27d5d9b55243a13e83816d9d5cb3eab8055ad49744b617f8fb21e1781eb5",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/test/content-entry.test.mjs"
+      },
+      "sourceSha256": "0c6f27d5d9b55243a13e83816d9d5cb3eab8055ad49744b617f8fb21e1781eb5",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/test/content-integration.test.mjs",
+      "bytes": 13651,
+      "sha256": "f86a247fb593de4c0c1ef4f8066e7aa63522c92ed656456f8456a9c4ddf64ffe",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/test/content-integration.test.mjs"
+      },
+      "sourceSha256": "f86a247fb593de4c0c1ef4f8066e7aa63522c92ed656456f8456a9c4ddf64ffe",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/test/context.test.mjs",
-      "bytes": 6134,
-      "sha256": "6952510439efeeced8741384af2dfd88e20281da07d8062571e230eba8865e77",
+      "bytes": 6531,
+      "sha256": "250c9466cb7d9ebb41ecbb624c8800d4d1fdcd1ac3dff1fd33ebfa53464f1115",
       "category": "regression-source",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/test/context.test.mjs"
       },
-      "sourceSha256": "6952510439efeeced8741384af2dfd88e20281da07d8062571e230eba8865e77",
+      "sourceSha256": "250c9466cb7d9ebb41ecbb624c8800d4d1fdcd1ac3dff1fd33ebfa53464f1115",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/test/learning-commit.test.mjs",
+      "bytes": 31594,
+      "sha256": "5f5884eb5f97adeee229367289470ee91a39a8c28667b7ba34553ac4700adffb",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/test/learning-commit.test.mjs"
+      },
+      "sourceSha256": "5f5884eb5f97adeee229367289470ee91a39a8c28667b7ba34553ac4700adffb",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/test/learning-context.test.mjs",
+      "bytes": 20081,
+      "sha256": "81387c05f2cbdc24755f4fbf767a1084eb58d6de65d94acfeea8a95fa779f2c1",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/test/learning-context.test.mjs"
+      },
+      "sourceSha256": "81387c05f2cbdc24755f4fbf767a1084eb58d6de65d94acfeea8a95fa779f2c1",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/test/learning-integration.test.mjs",
+      "bytes": 8174,
+      "sha256": "ca677c45abe452685a129dc0be8d634ac8eb431fd2c878c03fb7297a78ba19f8",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/test/learning-integration.test.mjs"
+      },
+      "sourceSha256": "ca677c45abe452685a129dc0be8d634ac8eb431fd2c878c03fb7297a78ba19f8",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/test/learning-notes.test.mjs",
+      "bytes": 15843,
+      "sha256": "69e5b06ae304c7a7aef06eeb73abe09838813adb917d65141008f66febe5daf4",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/test/learning-notes.test.mjs"
+      },
+      "sourceSha256": "69e5b06ae304c7a7aef06eeb73abe09838813adb917d65141008f66febe5daf4",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/test/learning-protocol.test.mjs",
+      "bytes": 10994,
+      "sha256": "1d381dd6ed1d6837ea4efb27ed21eb0e2dda6130b671dcdc746a8557be09c9cc",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/test/learning-protocol.test.mjs"
+      },
+      "sourceSha256": "1d381dd6ed1d6837ea4efb27ed21eb0e2dda6130b671dcdc746a8557be09c9cc",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/test/learning-records.test.mjs",
+      "bytes": 7497,
+      "sha256": "c029a9bad1d20134948949228dfd907ff7523cc32156d0ae44e5bb5d758f5dc4",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/test/learning-records.test.mjs"
+      },
+      "sourceSha256": "c029a9bad1d20134948949228dfd907ff7523cc32156d0ae44e5bb5d758f5dc4",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/test/learning-sources.test.mjs",
+      "bytes": 11157,
+      "sha256": "ddf08464d727214854f4d4ad1920abb7e90da9d7169b93f2610c4c3f9a45333f",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/test/learning-sources.test.mjs"
+      },
+      "sourceSha256": "ddf08464d727214854f4d4ad1920abb7e90da9d7169b93f2610c4c3f9a45333f",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/test/natural-content-entry.test.mjs",
+      "bytes": 3167,
+      "sha256": "be1358550877bc6934fb3efd72631fa66e632f94327245c1b227933e97e5ea6e",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/test/natural-content-entry.test.mjs"
+      },
+      "sourceSha256": "be1358550877bc6934fb3efd72631fa66e632f94327245c1b227933e97e5ea6e",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/test/natural-intake.test.mjs",
+      "bytes": 21243,
+      "sha256": "e72409a6b4532bbe2cc2cf4d35ca8f9a71d51f55a2bfddb30ede1f47b5b9b558",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/test/natural-intake.test.mjs"
+      },
+      "sourceSha256": "e72409a6b4532bbe2cc2cf4d35ca8f9a71d51f55a2bfddb30ede1f47b5b9b558",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/test/navigation-integration.test.mjs",
+      "bytes": 26856,
+      "sha256": "ab9c2786eb33d26ee1d77483e5527ab1291ff9eda31eff6d1ce06f1b652d6668",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/test/navigation-integration.test.mjs"
+      },
+      "sourceSha256": "ab9c2786eb33d26ee1d77483e5527ab1291ff9eda31eff6d1ce06f1b652d6668",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/test/navigation-learning-context.test.mjs",
+      "bytes": 14234,
+      "sha256": "db1c751ade12c08322d2a936582f028d41a0530efade39e8d752dbd40d353728",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/test/navigation-learning-context.test.mjs"
+      },
+      "sourceSha256": "db1c751ade12c08322d2a936582f028d41a0530efade39e8d752dbd40d353728",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/test/navigation-learning-integration.test.mjs",
+      "bytes": 7769,
+      "sha256": "916bd95ccf1a75738ab79a8b0db55cc0e75d7184950b4f46c86583ed463f7cb2",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/test/navigation-learning-integration.test.mjs"
+      },
+      "sourceSha256": "916bd95ccf1a75738ab79a8b0db55cc0e75d7184950b4f46c86583ed463f7cb2",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/test/server.test.mjs",
-      "bytes": 24941,
-      "sha256": "c26b72665b8c8434bf0cfeec9cc839a8badd9ac373ec88f03c7c8a41d19fe4c6",
+      "bytes": 24903,
+      "sha256": "934e1ba6f6520c7d2cb14d0a790c96038c0c32088931266ee0fedbeb003d4790",
       "category": "regression-source",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/test/server.test.mjs"
       },
-      "sourceSha256": "c26b72665b8c8434bf0cfeec9cc839a8badd9ac373ec88f03c7c8a41d19fe4c6",
+      "sourceSha256": "934e1ba6f6520c7d2cb14d0a790c96038c0c32088931266ee0fedbeb003d4790",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/unified/backup-rehearsal.mjs",
+      "bytes": 12238,
+      "sha256": "8f3587db6693c9694dd94181b889d38b29e842543e4ea4aee1f6c104b74cd624",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/unified/backup-rehearsal.mjs"
+      },
+      "sourceSha256": "8f3587db6693c9694dd94181b889d38b29e842543e4ea4aee1f6c104b74cd624",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/unified/backup.py",
-      "bytes": 15308,
-      "sha256": "9f3f986cb6ef220e7062b22b12cecb89c2884ef515d4b3e2a21fda9af67e8780",
+      "bytes": 24916,
+      "sha256": "ab5b0afe8f9d872eadf3151910c8f8a93bf15924ea3bf85e1dc0d3d35f68a8f3",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/unified/backup.py"
       },
-      "sourceSha256": "9f3f986cb6ef220e7062b22b12cecb89c2884ef515d4b3e2a21fda9af67e8780",
+      "sourceSha256": "ab5b0afe8f9d872eadf3151910c8f8a93bf15924ea3bf85e1dc0d3d35f68a8f3",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/unified/backup_scope.py",
+      "bytes": 10460,
+      "sha256": "aa704faa323c7d546e8edf9ff7ca7544bec40781e19d31bf80f6d3acef76ec97",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/unified/backup_scope.py"
+      },
+      "sourceSha256": "aa704faa323c7d546e8edf9ff7ca7544bec40781e19d31bf80f6d3acef76ec97",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/unified/http.mjs",
-      "bytes": 5455,
-      "sha256": "9171dd6d17b73b4b54272a92a8a57fab56afe5108e6db9a7b4e41085505145e4",
+      "bytes": 9372,
+      "sha256": "df0faaf66fc4786ee9259f6895ffb37244ab47b69a71ec2cd479200e0f05b6bc",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/unified/http.mjs"
       },
-      "sourceSha256": "9171dd6d17b73b4b54272a92a8a57fab56afe5108e6db9a7b4e41085505145e4",
+      "sourceSha256": "df0faaf66fc4786ee9259f6895ffb37244ab47b69a71ec2cd479200e0f05b6bc",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1640,14 +2528,26 @@
     },
     {
       "path": "web/unified/information.mjs",
-      "bytes": 9313,
-      "sha256": "ee53230325e001c829c01d470b7c2b33bb84ab81852f1a3b465a98c5f593e903",
+      "bytes": 9706,
+      "sha256": "2c099123723b5446688b733a942a6b47480a0abfa5a5aaaa2a5dbeed21e707b3",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/unified/information.mjs"
       },
-      "sourceSha256": "ee53230325e001c829c01d470b7c2b33bb84ab81852f1a3b465a98c5f593e903",
+      "sourceSha256": "2c099123723b5446688b733a942a6b47480a0abfa5a5aaaa2a5dbeed21e707b3",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/unified/test_backup.py",
+      "bytes": 14347,
+      "sha256": "71bda1c4a56e99da5acfe99d7fcd197cfafd4d33e2d5dac3770e68fdcadc5d2c",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/unified/test_backup.py"
+      },
+      "sourceSha256": "71bda1c4a56e99da5acfe99d7fcd197cfafd4d33e2d5dac3770e68fdcadc5d2c",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1660,6 +2560,126 @@
         "relativePath": "web/unified/ui-state.mjs"
       },
       "sourceSha256": "2775efc6035113b5036250cd94083e9dc305570963b42336ad1969eed135ad95",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/workspace/cli.mjs",
+      "bytes": 2706,
+      "sha256": "450e32378a15257163b618274614dabf0ba53f8e539164a051c76a685850618b",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/workspace/cli.mjs"
+      },
+      "sourceSha256": "450e32378a15257163b618274614dabf0ba53f8e539164a051c76a685850618b",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/workspace/entities.mjs",
+      "bytes": 4933,
+      "sha256": "a190688b6ce2507bbb6d3c5f852ff3ae67a2552a8f7522b5647ceb10c9088f84",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/workspace/entities.mjs"
+      },
+      "sourceSha256": "a190688b6ce2507bbb6d3c5f852ff3ae67a2552a8f7522b5647ceb10c9088f84",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/workspace/http.mjs",
+      "bytes": 8580,
+      "sha256": "466871a741b0df83a3a0799cca6888633bbbec4d837cc7b01dbd0de6c7d376a3",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/workspace/http.mjs"
+      },
+      "sourceSha256": "466871a741b0df83a3a0799cca6888633bbbec4d837cc7b01dbd0de6c7d376a3",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/workspace/isolation-path.test.mjs",
+      "bytes": 2047,
+      "sha256": "2db02c5688e4cf15cfccc7be0493e1c8a32d7e126d99737a482f75906930d9eb",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/workspace/isolation-path.test.mjs"
+      },
+      "sourceSha256": "2db02c5688e4cf15cfccc7be0493e1c8a32d7e126d99737a482f75906930d9eb",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/workspace/public/overview.css",
+      "bytes": 2317,
+      "sha256": "20bd624998ec66f3048bf2347a479a92e2a3738bde1a925be508fdce2c469991",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/workspace/public/overview.css"
+      },
+      "sourceSha256": "20bd624998ec66f3048bf2347a479a92e2a3738bde1a925be508fdce2c469991",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/workspace/public/overview.js",
+      "bytes": 8052,
+      "sha256": "f5cdedc2ff2950d98be5f00ba2c603d82b8321b7459374483bee7b3690453314",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/workspace/public/overview.js"
+      },
+      "sourceSha256": "f5cdedc2ff2950d98be5f00ba2c603d82b8321b7459374483bee7b3690453314",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/workspace/public/relations.css",
+      "bytes": 7776,
+      "sha256": "5d99fb9aac7876b20a7796380fb8b12438a49bbe0ed195e3b0da9eb6dd66f114",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/workspace/public/relations.css"
+      },
+      "sourceSha256": "5d99fb9aac7876b20a7796380fb8b12438a49bbe0ed195e3b0da9eb6dd66f114",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/workspace/public/relations.js",
+      "bytes": 21545,
+      "sha256": "f40bc1544ec7c6acea7bf6a9c10b8edc83b0846f11138f1176232b11029b4414",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/workspace/public/relations.js"
+      },
+      "sourceSha256": "f40bc1544ec7c6acea7bf6a9c10b8edc83b0846f11138f1176232b11029b4414",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/workspace/store.mjs",
+      "bytes": 26031,
+      "sha256": "725b509b44dd5a9baa8ed3a0100d629ccbf0a032b73cf06d9b89fe1c07506f7b",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/workspace/store.mjs"
+      },
+      "sourceSha256": "725b509b44dd5a9baa8ed3a0100d629ccbf0a032b73cf06d9b89fe1c07506f7b",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/workspace/store.test.mjs",
+      "bytes": 17919,
+      "sha256": "d9164e94574909ff8992cf6075275b368f763c9aba4842061d55a708bc1b999b",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/workspace/store.test.mjs"
+      },
+      "sourceSha256": "d9164e94574909ff8992cf6075275b368f763c9aba4842061d55a708bc1b999b",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1832,14 +2852,14 @@
     },
     {
       "path": "三系统整合.md",
-      "bytes": 9444,
-      "sha256": "499ebc3940018a6be816fdfbf94f98749b1a131ba8fe22aa1fe454e5dbadc79e",
+      "bytes": 12586,
+      "sha256": "18e4b7b86f3fcb558c3b77957ae6e1953841a186b498e2b39b063ddc65c52319",
       "category": "source-document",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "三系统整合.md"
       },
-      "sourceSha256": "499ebc3940018a6be816fdfbf94f98749b1a131ba8fe22aa1fe454e5dbadc79e",
+      "sourceSha256": "18e4b7b86f3fcb558c3b77957ae6e1953841a186b498e2b39b063ddc65c52319",
       "transformation": "byte-identical-copy"
     },
     {
@@ -2360,26 +3380,26 @@
     },
     {
       "path": "信息收集/opportunities/server.py",
-      "bytes": 22783,
-      "sha256": "9bd2eece88b7507769fcb47011549b9b4e877286e309ee4a5fa302eaa27bd71b",
+      "bytes": 23442,
+      "sha256": "c2ff30ecb0b79ff84fe86c4ff933836162ec011c0e1c8e4a4ecd1dd41932f5a4",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/opportunities/server.py"
       },
-      "sourceSha256": "9bd2eece88b7507769fcb47011549b9b4e877286e309ee4a5fa302eaa27bd71b",
+      "sourceSha256": "c2ff30ecb0b79ff84fe86c4ff933836162ec011c0e1c8e4a4ecd1dd41932f5a4",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "信息收集/opportunities/storage.py",
-      "bytes": 21842,
-      "sha256": "fcb2e41a7b1954758ee8c10929b072e22528791bc1365a648368abc2d83a9a03",
+      "bytes": 25448,
+      "sha256": "6ce74642600fb7e5d6bfb3a519f7c2004084049f4ea5d813ef692a0718ab82a6",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/opportunities/storage.py"
       },
-      "sourceSha256": "fcb2e41a7b1954758ee8c10929b072e22528791bc1365a648368abc2d83a9a03",
+      "sourceSha256": "6ce74642600fb7e5d6bfb3a519f7c2004084049f4ea5d813ef692a0718ab82a6",
       "transformation": "byte-identical-copy"
     },
     {
@@ -2396,14 +3416,14 @@
     },
     {
       "path": "信息收集/opportunities/works.py",
-      "bytes": 14760,
-      "sha256": "0253e04adff04bfaff0e98f3557d3c81fdef6595f002ee834c0a18ad52ab53bb",
+      "bytes": 16174,
+      "sha256": "7709c4b0aa595fc881649a06ded5353b25c62401460bcebcb5e09afb63e43401",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/opportunities/works.py"
       },
-      "sourceSha256": "0253e04adff04bfaff0e98f3557d3c81fdef6595f002ee834c0a18ad52ab53bb",
+      "sourceSha256": "7709c4b0aa595fc881649a06ded5353b25c62401460bcebcb5e09afb63e43401",
       "transformation": "byte-identical-copy"
     },
     {
@@ -2419,15 +3439,27 @@
       "transformation": "byte-identical-copy"
     },
     {
+      "path": "信息收集/opportunities/write_protocol.py",
+      "bytes": 4900,
+      "sha256": "296d0ff4b7ee4c72554ac93c5ead2708bea3d501b1432175074c9fdc0f9d8277",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "信息收集/opportunities/write_protocol.py"
+      },
+      "sourceSha256": "296d0ff4b7ee4c72554ac93c5ead2708bea3d501b1432175074c9fdc0f9d8277",
+      "transformation": "byte-identical-copy"
+    },
+    {
       "path": "信息收集/static/app.js",
-      "bytes": 61043,
-      "sha256": "9f9dfdf643c2ac7020fbd900b7ba85720460e046cd8e84744634e4c74fee922d",
+      "bytes": 67715,
+      "sha256": "7b1c086f0ec2ef70ad8d4c73602bac0eb6d8ef3ce0dae192ab9e51861da506e2",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/static/app.js"
       },
-      "sourceSha256": "9f9dfdf643c2ac7020fbd900b7ba85720460e046cd8e84744634e4c74fee922d",
+      "sourceSha256": "7b1c086f0ec2ef70ad8d4c73602bac0eb6d8ef3ce0dae192ab9e51861da506e2",
       "transformation": "byte-identical-copy"
     },
     {
@@ -3044,14 +4076,14 @@
     },
     {
       "path": "信息收集/static/works-ui.js",
-      "bytes": 28025,
-      "sha256": "be9ee1f017315b153df55ebc1e573cc161fd03c21563bc76d49c38cc01bc0435",
+      "bytes": 32341,
+      "sha256": "f8387ea49ea7a4f0e1ccdcd2cd075789f8cd174ab6cb5ffd8e08c1cb15dfc668",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/static/works-ui.js"
       },
-      "sourceSha256": "be9ee1f017315b153df55ebc1e573cc161fd03c21563bc76d49c38cc01bc0435",
+      "sourceSha256": "f8387ea49ea7a4f0e1ccdcd2cd075789f8cd174ab6cb5ffd8e08c1cb15dfc668",
       "transformation": "byte-identical-copy"
     },
     {
@@ -3200,14 +4232,14 @@
     },
     {
       "path": "信息收集/tests/test_enhancement_api.py",
-      "bytes": 23843,
-      "sha256": "33e10f549657ba1d384f6958db6c16f65c8a1acb1b7cdf02007cde002665ce53",
+      "bytes": 24412,
+      "sha256": "de4e93df61a18e3d9762d35219cfc9980ffc54ac69666c48df39011a70af135c",
       "category": "regression-source",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/tests/test_enhancement_api.py"
       },
-      "sourceSha256": "33e10f549657ba1d384f6958db6c16f65c8a1acb1b7cdf02007cde002665ce53",
+      "sourceSha256": "de4e93df61a18e3d9762d35219cfc9980ffc54ac69666c48df39011a70af135c",
       "transformation": "byte-identical-copy"
     },
     {
@@ -3248,26 +4280,26 @@
     },
     {
       "path": "信息收集/tests/test_server.py",
-      "bytes": 5313,
-      "sha256": "df6b793fc5e3fa7ea6bf684ab96eb0fe74d59aff43daae7f3dbba55d6c6d7af8",
+      "bytes": 6307,
+      "sha256": "0bbedb0bfe6d6ffffa3d8645189d792f4b49c14452260c23bab3c28826d493c9",
       "category": "regression-source",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/tests/test_server.py"
       },
-      "sourceSha256": "df6b793fc5e3fa7ea6bf684ab96eb0fe74d59aff43daae7f3dbba55d6c6d7af8",
+      "sourceSha256": "0bbedb0bfe6d6ffffa3d8645189d792f4b49c14452260c23bab3c28826d493c9",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "信息收集/tests/test_stage2_api.py",
-      "bytes": 23324,
-      "sha256": "4070ee1b76ce2cb8cc43837a5882b30bd5b5b7db913b32b500dee2639595d8d7",
+      "bytes": 23919,
+      "sha256": "f61c753fb7bd123462b727af68decfb220a7d44596e33ba7707c6a41f019585e",
       "category": "regression-source",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "信息收集/tests/test_stage2_api.py"
       },
-      "sourceSha256": "4070ee1b76ce2cb8cc43837a5882b30bd5b5b7db913b32b500dee2639595d8d7",
+      "sourceSha256": "f61c753fb7bd123462b727af68decfb220a7d44596e33ba7707c6a41f019585e",
       "transformation": "byte-identical-copy"
     },
     {
@@ -3367,6 +4399,18 @@
       "transformation": "byte-identical-copy"
     },
     {
+      "path": "信息收集/tests/test_write_protocol.py",
+      "bytes": 9805,
+      "sha256": "fbf5f4b1e0f7f78042e8ce142b1b5275bf36eef1711b4f4770287d20d379217e",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "信息收集/tests/test_write_protocol.py"
+      },
+      "sourceSha256": "fbf5f4b1e0f7f78042e8ce142b1b5275bf36eef1711b4f4770287d20d379217e",
+      "transformation": "byte-identical-copy"
+    },
+    {
       "path": "信息收集/信息收集交接说明.md",
       "bytes": 5403,
       "sha256": "8d3c1d67237d161e066e9ccebd6542c42776511c7e291f50e57d2a9db2710e6f",
@@ -3439,15 +4483,39 @@
       "transformation": "byte-identical-copy"
     },
     {
+      "path": "启动说明.md",
+      "bytes": 1606,
+      "sha256": "077a8700668478a8745cdd76dddafba28e5977f10f5c92f24b60bb7fc6564b01",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "启动说明.md"
+      },
+      "sourceSha256": "077a8700668478a8745cdd76dddafba28e5977f10f5c92f24b60bb7fc6564b01",
+      "transformation": "byte-identical-copy"
+    },
+    {
       "path": "学习小岛/README.md",
-      "bytes": 3052,
-      "sha256": "c0b473e44e5b652cb26b64692c38962b157940f1e31f73db6061b5ca2c626f1d",
+      "bytes": 5041,
+      "sha256": "453ccc71552d9f2418a3e1a0c8eb4df64084f27fdbf26ce484961ab05c835555",
       "category": "source-document",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "学习小岛/README.md"
       },
-      "sourceSha256": "c0b473e44e5b652cb26b64692c38962b157940f1e31f73db6061b5ca2c626f1d",
+      "sourceSha256": "453ccc71552d9f2418a3e1a0c8eb4df64084f27fdbf26ce484961ab05c835555",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "学习小岛/深层优化交付.md",
+      "bytes": 8707,
+      "sha256": "f957d34f4220b5932bbf5cf93b09f9f287835cd09536212339e4b804879fbcfb",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "学习小岛/深层优化交付.md"
+      },
+      "sourceSha256": "f957d34f4220b5932bbf5cf93b09f9f287835cd09536212339e4b804879fbcfb",
       "transformation": "byte-identical-copy"
     },
     {
@@ -3476,14 +4544,14 @@
     },
     {
       "path": "开始这里.md",
-      "bytes": 6698,
-      "sha256": "65d041a6e0b46186c52146cab90b045456983503ac40f7e7b07504c97e3c1705",
+      "bytes": 10815,
+      "sha256": "1ffdedb1550ceb42e8e713f1856ecf1ed84001dba8435513f1f1fd62908b6ae1",
       "category": "source-document",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "开始这里.md"
       },
-      "sourceSha256": "65d041a6e0b46186c52146cab90b045456983503ac40f7e7b07504c97e3c1705",
+      "sourceSha256": "1ffdedb1550ceb42e8e713f1856ecf1ed84001dba8435513f1f1fd62908b6ae1",
       "transformation": "byte-identical-copy"
     },
     {
@@ -3496,6 +4564,30 @@
         "relativePath": "素材观察室/README.md"
       },
       "sourceSha256": "3fc1fa44c80d89b611e1c60d3470d971ef0c042f692442c6bb191b3bea4899ba",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "素材观察室/attachments/att_052120bc91bc179d9ac8756c07015436061dc919-b0171d1ca6cd29da5082c4e0858c5d0ce3cde2a755259862ebb704d414b71b28.jpg",
+      "bytes": 1468223,
+      "sha256": "b0171d1ca6cd29da5082c4e0858c5d0ce3cde2a755259862ebb704d414b71b28",
+      "category": "original-attachment-or-image",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "素材观察室/attachments/att_052120bc91bc179d9ac8756c07015436061dc919-b0171d1ca6cd29da5082c4e0858c5d0ce3cde2a755259862ebb704d414b71b28.jpg"
+      },
+      "sourceSha256": "b0171d1ca6cd29da5082c4e0858c5d0ce3cde2a755259862ebb704d414b71b28",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "素材观察室/attachments/att_099fd1ab578131652e8a479c01c785e2e994955e-7c40eea81184038f2d25a7af62f1da38785e37279d4566aefa4a109bcacbd365.jpg",
+      "bytes": 33297,
+      "sha256": "7c40eea81184038f2d25a7af62f1da38785e37279d4566aefa4a109bcacbd365",
+      "category": "original-attachment-or-image",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "素材观察室/attachments/att_099fd1ab578131652e8a479c01c785e2e994955e-7c40eea81184038f2d25a7af62f1da38785e37279d4566aefa4a109bcacbd365.jpg"
+      },
+      "sourceSha256": "7c40eea81184038f2d25a7af62f1da38785e37279d4566aefa4a109bcacbd365",
       "transformation": "byte-identical-copy"
     },
     {
@@ -3520,6 +4612,18 @@
         "relativePath": "素材观察室/attachments/att_32bda614670723b899edd7154bdf2b6d38321bbf-d2d2b076551c978c2ef834a6e363a48c642dc333f2656a32f8d689d05c6593dd.png"
       },
       "sourceSha256": "d2d2b076551c978c2ef834a6e363a48c642dc333f2656a32f8d689d05c6593dd",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "素材观察室/attachments/att_4c3183ce84c7afe58eb1fe42274cc54ab8adbf2e-993bab7448e77ccf055b0bf3281c5dc21c1639b28a06ee7f35bbc632a3dee248.png",
+      "bytes": 362669,
+      "sha256": "993bab7448e77ccf055b0bf3281c5dc21c1639b28a06ee7f35bbc632a3dee248",
+      "category": "original-attachment-or-image",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "素材观察室/attachments/att_4c3183ce84c7afe58eb1fe42274cc54ab8adbf2e-993bab7448e77ccf055b0bf3281c5dc21c1639b28a06ee7f35bbc632a3dee248.png"
+      },
+      "sourceSha256": "993bab7448e77ccf055b0bf3281c5dc21c1639b28a06ee7f35bbc632a3dee248",
       "transformation": "byte-identical-copy"
     },
     {
@@ -3595,6 +4699,18 @@
       "transformation": "byte-identical-copy"
     },
     {
+      "path": "素材观察室/attachments/att_8976cb5178e5cf1948e402f4b05834da4dfb0054-ee5458d5969951932a2ff617fc0cfc4338e659f954a3adedfa63024a526f77f9.png",
+      "bytes": 321317,
+      "sha256": "ee5458d5969951932a2ff617fc0cfc4338e659f954a3adedfa63024a526f77f9",
+      "category": "original-attachment-or-image",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "素材观察室/attachments/att_8976cb5178e5cf1948e402f4b05834da4dfb0054-ee5458d5969951932a2ff617fc0cfc4338e659f954a3adedfa63024a526f77f9.png"
+      },
+      "sourceSha256": "ee5458d5969951932a2ff617fc0cfc4338e659f954a3adedfa63024a526f77f9",
+      "transformation": "byte-identical-copy"
+    },
+    {
       "path": "素材观察室/attachments/att_8aaadf5c4ef7453e8904b6ccdae2353a88dd630e-25f4343a0369c3eb47cbd7027fe4226daf493ae0391e7ca442aab8ce615db242.txt",
       "bytes": 11778,
       "sha256": "25f4343a0369c3eb47cbd7027fe4226daf493ae0391e7ca442aab8ce615db242",
@@ -3640,6 +4756,18 @@
         "relativePath": "素材观察室/attachments/att_99e3401e863bca41f57a050940a86623ab709880-a97a9fccf0141920dddcea1c7daac625e523ae796b9d4b2d54b55a663d43c50c.png"
       },
       "sourceSha256": "a97a9fccf0141920dddcea1c7daac625e523ae796b9d4b2d54b55a663d43c50c",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "素材观察室/attachments/att_9e0fdcad71918210f9ceda182be289a5d619362d-0c6ee9f9ffb6e98ac74e50a90cfb00f24f149c4b73ffa7cf71bd93ab403337d2.png",
+      "bytes": 357854,
+      "sha256": "0c6ee9f9ffb6e98ac74e50a90cfb00f24f149c4b73ffa7cf71bd93ab403337d2",
+      "category": "original-attachment-or-image",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "素材观察室/attachments/att_9e0fdcad71918210f9ceda182be289a5d619362d-0c6ee9f9ffb6e98ac74e50a90cfb00f24f149c4b73ffa7cf71bd93ab403337d2.png"
+      },
+      "sourceSha256": "0c6ee9f9ffb6e98ac74e50a90cfb00f24f149c4b73ffa7cf71bd93ab403337d2",
       "transformation": "byte-identical-copy"
     },
     {
@@ -3703,6 +4831,18 @@
       "transformation": "byte-identical-copy"
     },
     {
+      "path": "素材观察室/attachments/att_db9516270888bcac31b9cee7a34167ab211d0c90-e41bb2fbdd03182256bdddb0f7295e6119b8f6aad475d1b187571ad07efd0120.txt",
+      "bytes": 1008,
+      "sha256": "e41bb2fbdd03182256bdddb0f7295e6119b8f6aad475d1b187571ad07efd0120",
+      "category": "original-attachment-or-image",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "素材观察室/attachments/att_db9516270888bcac31b9cee7a34167ab211d0c90-e41bb2fbdd03182256bdddb0f7295e6119b8f6aad475d1b187571ad07efd0120.txt"
+      },
+      "sourceSha256": "e41bb2fbdd03182256bdddb0f7295e6119b8f6aad475d1b187571ad07efd0120",
+      "transformation": "byte-identical-copy"
+    },
+    {
       "path": "素材观察室/attachments/att_dfdd2cf464ed94f2aabf295ace98df7e129ffe75-4159144b6c9716cf895eb1414deb9c2401ea99c0bcaef5084e11c0b7de9c1b33.png",
       "bytes": 430696,
       "sha256": "4159144b6c9716cf895eb1414deb9c2401ea99c0bcaef5084e11c0b7de9c1b33",
@@ -3752,26 +4892,26 @@
     },
     {
       "path": "素材观察室/当前交接.md",
-      "bytes": 10496,
-      "sha256": "97b0774d2cf97a11271c9ee131f4337de15b177f7389a9c55d0746d97edfc3e1",
+      "bytes": 12220,
+      "sha256": "f255c48844393986bf62947140ac75f48d21614406c60f2e8bd2485e58d5ef0b",
       "category": "source-document",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/当前交接.md"
       },
-      "sourceSha256": "97b0774d2cf97a11271c9ee131f4337de15b177f7389a9c55d0746d97edfc3e1",
+      "sourceSha256": "f255c48844393986bf62947140ac75f48d21614406c60f2e8bd2485e58d5ef0b",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "素材观察室/深研使用说明.md",
-      "bytes": 10926,
-      "sha256": "5dd2222703a97b9c3b9aba179f0e7852134e39c11c0429145fa6575fac8214e8",
+      "bytes": 13143,
+      "sha256": "58713fea7d8309a276ef7f78884b756ab68ec282a5a054dded4094cb2608a53e",
       "category": "source-document",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "素材观察室/深研使用说明.md"
       },
-      "sourceSha256": "5dd2222703a97b9c3b9aba179f0e7852134e39c11c0429145fa6575fac8214e8",
+      "sourceSha256": "58713fea7d8309a276ef7f78884b756ab68ec282a5a054dded4094cb2608a53e",
       "transformation": "byte-identical-copy"
     },
     {
@@ -3824,14 +4964,14 @@
     },
     {
       "path": "运行约定.md",
-      "bytes": 13812,
-      "sha256": "5ebd34193a55153cee5df95cd1ab351bc118ad0cde6a514b6fab1211df350d6d",
+      "bytes": 21230,
+      "sha256": "d0a27161262eda498e6682e7cce10d7a15cb6c12875694e147ec0ad0885a9d2d",
       "category": "source-document",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "运行约定.md"
       },
-      "sourceSha256": "5ebd34193a55153cee5df95cd1ab351bc118ad0cde6a514b6fab1211df350d6d",
+      "sourceSha256": "d0a27161262eda498e6682e7cce10d7a15cb6c12875694e147ec0ad0885a9d2d",
       "transformation": "byte-identical-copy"
     },
     {
@@ -4046,12 +5186,5 @@
     "reviewedSyntheticTestPatternCount": 2,
     "reviewFileLocalOnly": true,
     "valuesNeverLogged": true
-  },
-  "outputSnapshotNormalization": {
-    "atUtc": "2026-10-02T16:03:55.821399+00:00",
-    "journalMode": "delete",
-    "logicalDataAndSchemaUnchanged": true,
-    "verification": "mode=ro&immutable=1",
-    "authoritativeSourcesOpened": false
   }
 }
