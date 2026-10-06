@@ -1,6 +1,6 @@
 {
   "schema": "xiaomo.cloud-readable-release/v1",
-  "created_at": "2026-10-06T16:17:43.131401+00:00",
+  "created_at": "2026-10-06T16:26:28.986505+00:00",
   "system": "learning",
   "formal_source_unchanged": true,
   "cloud_candidates_are_formally_adopted": false,
@@ -178,12 +178,12 @@
     {
       "path": "cloud/README.md",
       "bytes": 5066,
-      "sha256": "ca44ce36baf4c6a916992ef26e74e9cc648f0a9fdda06e69baf006b95b33ae43"
+      "sha256": "15a6a1ceb508ac856958747c66b2a5e30d5a3ddc9a394f7e3796d86aead8bc66"
     },
     {
       "path": "cloud/source-manifest.json",
       "bytes": 254648,
-      "sha256": "8419df42fab846a0b6c3a55c607444320ebb766eca250e303be58c631988953b"
+      "sha256": "653c28d6935cfb1a99c6de44d900f06732f682ee327a819c2d362e8ada5fcceb"
     },
     {
       "path": "cloud/systems.json",
