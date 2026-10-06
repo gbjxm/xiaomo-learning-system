@@ -1,0 +1,25 @@
+/* Quiet water detail for the sea overview; all islands remain above this layer. */
+#sea.map {
+  background: radial-gradient(ellipse at 83% 15%, #cfe2db66, transparent 55%),
+    radial-gradient(ellipse at 41% 83%, #d3e5df77, transparent 57%), var(--sea);
+}
+#sea.map::before {
+  inset: 0;
+  border: 0;
+  border-radius: 0;
+  transform: none;
+  background: linear-gradient(158deg, #f4f7eb33, transparent 38%, #b7d3c81a 70%, transparent);
+}
+#sea .map-waves { opacity: 1; z-index: 0; pointer-events: none; }
+#sea .sea-swell { fill: none; stroke: url(#map-sea-current); stroke-width: 1.25; stroke-linecap: round; }
+#sea .sea-swell--echo { stroke-width: .85; opacity: .52; }
+#sea .sea-ripples { fill: none; stroke: #96b7aa; stroke-width: 1.15; stroke-linecap: round; opacity: .42; }
+#sea .sea-ripples--light { stroke: #fcfcf1; stroke-width: 1.5; opacity: .56; }
+#sea .map-waves path { vector-effect: non-scaling-stroke; }
+#sea .sea-drift { animation: map-sea-drift 34s ease-in-out infinite alternate; }
+#sea .sea-drift--near { animation-duration: 43s; animation-delay: -18s; }
+@keyframes map-sea-drift { from { transform: translate(-3px, 0); } to { transform: translate(4px, 1px); } }
+/* Retain the existing pause button and the system's reduced-motion preference. */
+.is-still #sea .sea-drift { animation: none !important; }
+@media (prefers-reduced-motion: reduce) { #sea .sea-drift { animation: none !important; } }
+@media (max-width: 850px) { #sea .sea-swell { opacity: .64; } #sea .sea-ripples { opacity: .32; } }

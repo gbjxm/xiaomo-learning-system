@@ -142,7 +142,9 @@
     host.className = `island-scenes scene-${island}`;
     const titleId = `island-scene-title-${++serial}`;
     host.innerHTML = `<svg viewBox="0 0 900 650" preserveAspectRatio="xMidYMid meet" role="group" aria-labelledby="${titleId}"><title id="${titleId}">${names[island]}，六处可探索的地点与一只小猫</title>${waves()}${views[island](count)}</svg>`;
-    useSelectedPainting(host,island);
+    // Detached overview renderers can reuse the original SVG props; normal
+    // island mounts continue to show the selected painting and current routes.
+    if (options.artOnly !== true) useSelectedPainting(host,island);
     function activate(event) {
       const target = event.target.closest('[data-place]');
       if (!target || !host.contains(target)) return;

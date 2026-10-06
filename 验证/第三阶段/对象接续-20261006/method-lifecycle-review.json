@@ -1,0 +1,63 @@
+{
+  "schema": "stage3-method-lifecycle-review/v1",
+  "createdAt": "2026-10-06T14:38:25.461Z",
+  "candidate": "D:\\codex\\小陌的学习系统\\验证\\第三阶段\\对象接续-20261006\\candidate",
+  "scope": "candidate_only",
+  "changes": [
+    {
+      "relative": "web/learning/commit.mjs",
+      "sha256": "f3079dbe903475e49181372c2b4ff2cb2472a741ec638c0c01471bbe2e2bbb42"
+    },
+    {
+      "relative": "web/learning/protocol.mjs",
+      "sha256": "54e4f53b961eaf9c586bd7a6fd155197f2b329a86d506654e32d426f4e1943cd"
+    },
+    {
+      "relative": "web/learning/context.mjs",
+      "sha256": "e645eb7aa9438033f2441aee38c72ffaf07c3994e3407967a97f47f3eb910839"
+    },
+    {
+      "relative": "web/learning/coordinator.mjs",
+      "sha256": "ff04e5ac32270785fbd30499dab87c9d751f20261907ee40e36fc777d12e3de2"
+    },
+    {
+      "relative": "web/learning/cli.mjs",
+      "sha256": "f1875bee602436b584eeca59d4412750e35be69443643e2eb7c2292684087f5d"
+    },
+    {
+      "relative": "web/test/learning-method-lifecycle.test.mjs",
+      "sha256": "6b24262f1efd27e974b64d884d51f6493a5265c65a5cffa51b3580711e1cb3bd"
+    }
+  ],
+  "baselineEvidence": "method-lifecycle-before.txt",
+  "finalEvidence": {
+    "log": "method-final-spec.txt",
+    "junit": "method-final-junit.xml",
+    "tests": 65,
+    "passed": 65,
+    "failed": 0
+  },
+  "validation": "isolated synthetic fixtures; no real model or personal learning performance",
+  "productionWrites": 0,
+  "status": "ready_for_root_review_and_guarded_activation",
+  "behaviors": [
+    "old method metadata without status remains active",
+    "pause/resume binds current exact words, same task and existing method ID",
+    "single method allows explicit demonstrative reference; multiple methods do not guess",
+    "paused reason remains visible; method/task/value/status IDs are plaintext in context",
+    "original adoption and activity history remain preserved",
+    "current-only unsuitable conditions do not permanently pause",
+    "ordinary explanation does not request extra practice",
+    "web natural chat and CLI use identical lifecycle decisions",
+    "no-save wins"
+  ],
+  "temporaryCleanup": {
+    "status": "automatic_review_rejected_optional_recursive_cleanup; stopped",
+    "leftoverFixtures": [
+      "D:/PROGRA~3/UserTemp/23513/learning-method-lifecycle-ED8ywq",
+      "D:/PROGRA~3/UserTemp/23513/learning-method-lifecycle-JseYEF",
+      "D:/PROGRA~3/UserTemp/23513/learning-method-lifecycle-JPg5g5"
+    ],
+    "note": "Initial missing fixture dependency only; corrected fixtures now register cleanup before setup."
+  }
+}

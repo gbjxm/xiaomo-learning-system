@@ -1,6 +1,6 @@
 {
   "schema": "xiaomo.cloud-readable-release/v1",
-  "created_at": "2026-10-05T16:44:34.680487+00:00",
+  "created_at": "2026-10-06T15:33:08.504196+00:00",
   "system": "learning",
   "formal_source_unchanged": true,
   "cloud_candidates_are_formally_adopted": false,
@@ -147,13 +147,13 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 566,
-      "sha256": "64cbfdf9cc00a3bf5267cfe8099106daab1a5b3ac58006682bbbe055bd48b9c0"
+      "bytes": 613,
+      "sha256": "902647387c6c936190470773f97ce8e8092615ddb94deb8c879084b07711f5f4"
     },
     {
       "path": "AGENTS.md",
-      "bytes": 1600,
-      "sha256": "bbe45e9a741920ff0e68f120b25a341b94a853527254efe07f3b3bdd4ab0c8b1"
+      "bytes": 1656,
+      "sha256": "a18f60b94b01bc928c17b9de5faf7c77513444d000449268f9fe243e5495dd07"
     },
     {
       "path": "cloud/drafts/README.md",
@@ -162,8 +162,8 @@
     },
     {
       "path": "cloud/ENVIRONMENT-SETUP.md",
-      "bytes": 1961,
-      "sha256": "72beee99f0a6ddc62c653ced4b4ab67302c57d1e03ee77c6216411d4c2bc6785"
+      "bytes": 2063,
+      "sha256": "2ea55ce05afdfb308c8f293ccb23a99e01748cf428773fd47b5608d03156aa27"
     },
     {
       "path": "cloud/local-AGENTS.source.md",
@@ -177,13 +177,13 @@
     },
     {
       "path": "cloud/README.md",
-      "bytes": 4173,
-      "sha256": "b737abe156e498ccd1561f1b2d8cc4d5b756fa2c2d8a5941f3c110a91c8805fc"
+      "bytes": 5066,
+      "sha256": "b49ea8b1ae53179c64f55bfc4a565c095d0dbd36ffb116d60e367f353f64b93a"
     },
     {
       "path": "cloud/source-manifest.json",
-      "bytes": 226571,
-      "sha256": "dad7781e584e6d9c7a183d03ccbc32f56d503d7f51dbf507b1ed4d2127f094ea"
+      "bytes": 254648,
+      "sha256": "7f721b36e814ff87817d6d3407118623ef2eaa4b90686db0a1f06f0de661fc6f"
     },
     {
       "path": "cloud/systems.json",
@@ -371,14 +371,24 @@
       "sha256": "6c0e12669577ea60b06ff90d7e01eef9d77380181c9b810a2bd560f2360dd269"
     },
     {
+      "path": "cloud-data/ui/三系统工作台/data/workspace-state.json",
+      "bytes": 29678,
+      "sha256": "fcbd1e22044c7049a4494f1b2ce81b50e87423b7c9c29f7e6e61fb23557ea178"
+    },
+    {
       "path": "cloud-data/ui/学习小岛/data/ui-state.json",
-      "bytes": 14629,
-      "sha256": "1dc2f0eb9e447d1c851641ec646d8c9d7cdac6219d5aa89e788b469783ecce5e"
+      "bytes": 15599,
+      "sha256": "201658b3d4aa36d840611c8e4244a65e89c7d3bb3204b037fdc834833a96cbb4"
     },
     {
       "path": "CLOUD-START.md",
-      "bytes": 924,
-      "sha256": "940368991cff32cd8f2d1aceeb162e1d7fa394ea08dadbcdfe1e15e23c66d0a5"
+      "bytes": 1169,
+      "sha256": "3cd80494565f685eaeaf8e98c313c2d5b52a2c76542ece7e64054f0d428e9697"
+    },
+    {
+      "path": "navigation-connection.json",
+      "bytes": 104,
+      "sha256": "98c51a531daf69e8e7d9083660d96d3fe02dbbf70825de2a766373aa48d4630a"
     },
     {
       "path": "web/.env.example",
@@ -422,33 +432,33 @@
     },
     {
       "path": "web/content/store.mjs",
-      "bytes": 25893,
-      "sha256": "6486f542e2b40ba8ac1f18be493fe67bca455c0f62aedd87e56b8551f6c135f9"
+      "bytes": 26676,
+      "sha256": "96d349e1a1a6e5afeeef89483f8fdd728c3331ac1b428e732645f4b858dfda9b"
     },
     {
       "path": "web/learning/cli.mjs",
-      "bytes": 6954,
-      "sha256": "eeaed38426c384d57e3a440477b864248ffc2e6705daf36b6500b0c7f9e33d55"
+      "bytes": 6985,
+      "sha256": "f1875bee602436b584eeca59d4412750e35be69443643e2eb7c2292684087f5d"
     },
     {
       "path": "web/learning/commit.mjs",
-      "bytes": 49564,
-      "sha256": "de8f6cbbc21ae5678948ac145d7bf554994dd49dc526a51bc27124209ca52c55"
+      "bytes": 50431,
+      "sha256": "f3079dbe903475e49181372c2b4ff2cb2472a741ec638c0c01471bbe2e2bbb42"
     },
     {
       "path": "web/learning/content-sources.mjs",
-      "bytes": 2891,
-      "sha256": "382c3d774fe3264d88e5c4e9c4fffbdbd0ad268980dfea704d0bcaf90dd74d93"
+      "bytes": 2908,
+      "sha256": "182faadc52af4a18616b0672cf46a7ab36b0d3a8d841cb53cc1c4338e101874d"
     },
     {
       "path": "web/learning/context.mjs",
-      "bytes": 23119,
-      "sha256": "7b1868fe9fc17bee454ef4234df8dad27a74568fd0d77b8e99ffc3a551fe2f3f"
+      "bytes": 24790,
+      "sha256": "e645eb7aa9438033f2441aee38c72ffaf07c3994e3407967a97f47f3eb910839"
     },
     {
       "path": "web/learning/coordinator.mjs",
-      "bytes": 17871,
-      "sha256": "b505844411d8651b43d4f31422cebf5c94b4f4de71eb88de397a4010e56f285c"
+      "bytes": 18073,
+      "sha256": "ff04e5ac32270785fbd30499dab87c9d751f20261907ee40e36fc777d12e3de2"
     },
     {
       "path": "web/learning/intake-cli.mjs",
@@ -457,8 +467,8 @@
     },
     {
       "path": "web/learning/intake.mjs",
-      "bytes": 37780,
-      "sha256": "1827ad34dce6dce1b37f0864a08c84b6c4b565b7f42c20ee0a4e9cb6e24422fd"
+      "bytes": 37781,
+      "sha256": "43b2a716e54e160c0e6e5196edbd88d1508f1fec5f71a22f9603844dc4f07375"
     },
     {
       "path": "web/learning/navigation-context.mjs",
@@ -467,8 +477,8 @@
     },
     {
       "path": "web/learning/protocol.mjs",
-      "bytes": 17330,
-      "sha256": "90cbf25a864e7664a6a943a129239fac78a99f1714d9fd323102c5ed3667fcb7"
+      "bytes": 21892,
+      "sha256": "54e4f53b961eaf9c586bd7a6fd155197f2b329a86d506654e32d426f4e1943cd"
     },
     {
       "path": "web/learning/records.mjs",
@@ -482,18 +492,8 @@
     },
     {
       "path": "web/learning/sources.mjs",
-      "bytes": 18554,
-      "sha256": "b3288ac7287e47160490b637dde1650112c66c6c534334f268132896ae92aa2e"
-    },
-    {
-      "path": "web/navigation/.repair-backup-20261004-journey-document/navigation.test.mjs",
-      "bytes": 13504,
-      "sha256": "d637ecd64c62b0074f828aadac353ae9a390ff748820dc3ea36c5413b06ee603"
-    },
-    {
-      "path": "web/navigation/.repair-backup-20261004-journey-document/worker.py",
-      "bytes": 22729,
-      "sha256": "6dfcded66b5d86c33a4a4ad90b25df6e8b90a65e938cfb803b0c66568ecaad6e"
+      "bytes": 19772,
+      "sha256": "a46f323b3164ff1b9ebe1e36c0ff571e52e540506c63eaf1454a4d0844766b15"
     },
     {
       "path": "web/navigation/bridge.mjs",
@@ -672,8 +672,8 @@
     },
     {
       "path": "web/preview/public/scene.js",
-      "bytes": 19510,
-      "sha256": "4c30dae57081b4c861687ba8ea0e124119cb587828df1a3f6914378d9eb69c4c"
+      "bytes": 19540,
+      "sha256": "ef3de354711202a9710cdcb4d137644a8b878ff26c0ef039c123ba970ba7ac16"
     },
     {
       "path": "web/preview/public/style.css",
@@ -684,6 +684,11 @@
       "path": "web/preview/README.md",
       "bytes": 4212,
       "sha256": "a6fa65bf68397a9440d6646f3acc0bd77eb7ad1ea27f182b076ebc4d8862c354"
+    },
+    {
+      "path": "web/preview/scene.test.mjs",
+      "bytes": 4178,
+      "sha256": "9e4b32b597dc737a88f849758db1cf49592472cc6e9504a46a1c09efb48ea869"
     },
     {
       "path": "web/preview/server.mjs",
@@ -732,18 +737,18 @@
     },
     {
       "path": "web/public/learning/content/app.js",
-      "bytes": 33957,
-      "sha256": "ebdd11eb5ca679f5e3f09e6646c599e2b4ae39659a620781a95cb05d3ea8a05b"
+      "bytes": 39000,
+      "sha256": "882af789a0d5c4eccb7aa833b2791c4e2273c2b0ecdfddc3e1412859ccb51a17"
     },
     {
       "path": "web/public/learning/content/index.html",
-      "bytes": 3256,
-      "sha256": "c55c21bd05bb325e887b9c516a2ac1f328531c6c39467ab0827b4191450bd557"
+      "bytes": 3370,
+      "sha256": "cec60ca028c1e116796d68c2c40db304b7097f4ea3f5665458708742fd553969"
     },
     {
       "path": "web/public/learning/content/style.css",
-      "bytes": 10353,
-      "sha256": "d93a5afd333050b931a06ec2e5cd3804e4b210d2ae83e3aa2e5d3d77f5036ec3"
+      "bytes": 10499,
+      "sha256": "d8c4eaf4ebfb472e6b3acd0947c265d6f74951bf38a2a6d3a54d195857c2b7df"
     },
     {
       "path": "web/public/learning/index.html",
@@ -807,8 +812,8 @@
     },
     {
       "path": "web/public/learning/岛屿场景.js",
-      "bytes": 21015,
-      "sha256": "fbc14c1af125cd4664fc2bd0ce027fc188e7b9b512f1aaba3d3fec619300f2e0"
+      "bytes": 21201,
+      "sha256": "25d93c2029b2f05df71162473a0d78f9ffdc01ee6b8b68bc58fe8bdae39126cc"
     },
     {
       "path": "web/public/learning/时间安排核心.js",
@@ -922,13 +927,23 @@
     },
     {
       "path": "web/public/terminal/build-terminal.py",
-      "bytes": 9552,
-      "sha256": "a50a1799284513dba86bd5dbf77bb87b84d32591ca9fc44f96cfc9586e2f8fc1"
+      "bytes": 10122,
+      "sha256": "c6c94636fcaa6b731d4aeecac58a607a0e50cb7416fddd92f80649fa1ebb9526"
     },
     {
       "path": "web/public/terminal/index.html",
-      "bytes": 39257,
-      "sha256": "d4401a8935548619157bd27f6fdd0ae96af062b39b68a49e71c114fa54973ab7"
+      "bytes": 41742,
+      "sha256": "25ac7cef3a6a450a0a762c659c19084e70519f5ce268c68f13a21df208f2056d"
+    },
+    {
+      "path": "web/public/terminal/sea-surface.css",
+      "bytes": 1511,
+      "sha256": "e0af754e4a54cbb278e5377117079758c9243e549a262571a398763264b0d3af"
+    },
+    {
+      "path": "web/public/terminal/sea-surface.svg",
+      "bytes": 2894,
+      "sha256": "6767143f08fc09a18317d7d04d4df99c8dd79b4ab2c616cc4661982379c955a2"
     },
     {
       "path": "web/public/terminal/shell.css",
@@ -952,8 +967,8 @@
     },
     {
       "path": "web/Start-LearningTerminal.ps1",
-      "bytes": 852,
-      "sha256": "efbc9da2ed045ae65bf84eb986622be7095c2e5fdc976c39a010992a2c251b59"
+      "bytes": 855,
+      "sha256": "469964981b863ddc05a4353a84e577591b32bc03249e3d304c86679f9e07d651"
     },
     {
       "path": "web/Stop-LearningTerminal.ps1",
@@ -971,6 +986,11 @@
       "sha256": "f86a247fb593de4c0c1ef4f8066e7aa63522c92ed656456f8456a9c4ddf64ffe"
     },
     {
+      "path": "web/test/content-workspace-ui.test.mjs",
+      "bytes": 14049,
+      "sha256": "8a0381cc29b0043fe18db61caca8d78516d71111483afe9d83b4431f114ea996"
+    },
+    {
       "path": "web/test/context.test.mjs",
       "bytes": 6531,
       "sha256": "250c9466cb7d9ebb41ecbb624c8800d4d1fdcd1ac3dff1fd33ebfa53464f1115"
@@ -982,13 +1002,18 @@
     },
     {
       "path": "web/test/learning-context.test.mjs",
-      "bytes": 20081,
-      "sha256": "81387c05f2cbdc24755f4fbf767a1084eb58d6de65d94acfeea8a95fa779f2c1"
+      "bytes": 22160,
+      "sha256": "b7877e2327423282371608926d3de65d36038f01f3540d9a2a1e6429a2f89cd8"
     },
     {
       "path": "web/test/learning-integration.test.mjs",
       "bytes": 8174,
       "sha256": "ca677c45abe452685a129dc0be8d634ac8eb431fd2c878c03fb7297a78ba19f8"
+    },
+    {
+      "path": "web/test/learning-method-lifecycle.test.mjs",
+      "bytes": 11342,
+      "sha256": "6b24262f1efd27e974b64d884d51f6493a5265c65a5cffa51b3580711e1cb3bd"
     },
     {
       "path": "web/test/learning-notes.test.mjs",
@@ -1007,8 +1032,8 @@
     },
     {
       "path": "web/test/learning-sources.test.mjs",
-      "bytes": 11157,
-      "sha256": "ddf08464d727214854f4d4ad1920abb7e90da9d7169b93f2610c4c3f9a45333f"
+      "bytes": 13259,
+      "sha256": "b520e12d1b15867528075eb29c0ab936c1ecd22436a9713927c1e02c263e7235"
     },
     {
       "path": "web/test/natural-content-entry.test.mjs",
@@ -1017,8 +1042,8 @@
     },
     {
       "path": "web/test/natural-intake.test.mjs",
-      "bytes": 21243,
-      "sha256": "e72409a6b4532bbe2cc2cf4d35ca8f9a71d51f55a2bfddb30ede1f47b5b9b558"
+      "bytes": 23417,
+      "sha256": "06d25fcb40866b00b52d64d59239073bbaf6c24940ea7341dc5679722be2ee1e"
     },
     {
       "path": "web/test/navigation-integration.test.mjs",
@@ -1087,13 +1112,18 @@
     },
     {
       "path": "web/workspace/entities.mjs",
-      "bytes": 4933,
-      "sha256": "a190688b6ce2507bbb6d3c5f852ff3ae67a2552a8f7522b5647ceb10c9088f84"
+      "bytes": 6604,
+      "sha256": "39062bab5c948a29b87acf383bd30f919161bfb638e865f071bfec2ab349b660"
+    },
+    {
+      "path": "web/workspace/entities.test.mjs",
+      "bytes": 11353,
+      "sha256": "71dfea46455aeb1046d91b7ebdc5288953dc27c7b44cd333070a05a8b20ad3fd"
     },
     {
       "path": "web/workspace/http.mjs",
-      "bytes": 8580,
-      "sha256": "466871a741b0df83a3a0799cca6888633bbbec4d837cc7b01dbd0de6c7d376a3"
+      "bytes": 8592,
+      "sha256": "379e8f81cde9a91f63ba16a5ca9ea431d89ceb4037f378ff3b73a608264c14a3"
     },
     {
       "path": "web/workspace/isolation-path.test.mjs",
@@ -1117,18 +1147,93 @@
     },
     {
       "path": "web/workspace/public/relations.js",
-      "bytes": 21545,
-      "sha256": "f40bc1544ec7c6acea7bf6a9c10b8edc83b0846f11138f1176232b11029b4414"
+      "bytes": 21709,
+      "sha256": "cab292f97d5a2b3d22e0ae8104ff46c13daf08ceafcc1b6a07094a38a78196d6"
     },
     {
       "path": "web/workspace/store.mjs",
-      "bytes": 26031,
-      "sha256": "725b509b44dd5a9baa8ed3a0100d629ccbf0a032b73cf06d9b89fe1c07506f7b"
+      "bytes": 26368,
+      "sha256": "95e071f0861a3d74ac52280b1671c58786a089041485fce1af684781da28fdeb"
     },
     {
       "path": "web/workspace/store.test.mjs",
       "bytes": 17919,
       "sha256": "d9164e94574909ff8992cf6075275b368f763c9aba4842061d55a708bc1b999b"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/home.png",
+      "bytes": 1836400,
+      "sha256": "537fa104870cd267b90781f89c5a7c269b2cd2d016804e6cbe28e47a9d40b63d"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/home.svg",
+      "bytes": 3675,
+      "sha256": "1ef551e9173ae46b385be8cecb2d7dd1fc10de67d4f5189ccd0a3ecb4453c410"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/islands.css",
+      "bytes": 2577,
+      "sha256": "cc803bfb2e09345f43a9b88d034eb76c16698f5e58d156df6f6e163d17c80822"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/ocean.svg",
+      "bytes": 2652,
+      "sha256": "6a02c17df5853c2c2cdcdcf6199fb11703ae4e19edd2f215293ffeb40f599e46"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/post.png",
+      "bytes": 1861446,
+      "sha256": "6aae9775909d5d5b32ce29f9bba954703dd570ad710451e9cf0b3204e6cf9388"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/post.svg",
+      "bytes": 3731,
+      "sha256": "ecbce8f812bf83acbbb0a3f0d8fa23e327b4e84815b01975ba730ba8e538a4ad"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/ship.png",
+      "bytes": 1472637,
+      "sha256": "643284770d1fb04eedb9f2d91751e24d5840021c81d657125f3f21e60cbcf7d2"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/story.png",
+      "bytes": 1930230,
+      "sha256": "2aa8dee8996d3d4081a8264d1923f360f7c9f84f6baad1e0298455484f4f262b"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/story.svg",
+      "bytes": 3682,
+      "sha256": "db9b9da0b527b4911ff7b263a4f4359ac62019f59cd35d304ea7f548214ab93d"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/visual.png",
+      "bytes": 1717471,
+      "sha256": "72260965d85d0baba718d710ae0db350c3a9d9e0045b030ff18849cdf9ebafe8"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/visual.svg",
+      "bytes": 3738,
+      "sha256": "c1c14df7336e36aed1adf70771ad60488cca3744ca34ef9c20a37278be6c6f05"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/direction-approved.md",
+      "bytes": 2402,
+      "sha256": "0eb5b4680654056c761c6f7554ddac31744d8dd2749e31b848af6f0d1fc87dc7"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/implementation-spec.md",
+      "bytes": 1915,
+      "sha256": "fbad1272998e564b861dd830a0e1396e45d7fcb9b8c8b69779bc53473fcfee06"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/index.html",
+      "bytes": 2026873,
+      "sha256": "c93d679d8a6bdc4c8966f37d34e88587c558b0ea90ea2657bc6b162411bce0e3"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/README.md",
+      "bytes": 1717,
+      "sha256": "8a19fd28e8bb4f04166ce628e7e8e272a9cd2e17624ecd1618a03ba8fcf083de"
     },
     {
       "path": "web/设计提案/结构层-v1/主岛安排.css",
@@ -1199,6 +1304,71 @@
       "path": "web/验证/V1_网页验收.md",
       "bytes": 1560,
       "sha256": "0e61c9d84e32f6f9fc4aeec08704b58aa022b57c6de55dbe74d9fb1361e8bade"
+    },
+    {
+      "path": "三系统工作台/README.md",
+      "bytes": 1617,
+      "sha256": "290b25db1371bad635e49c95c23db1497e4b5abe4cbb5aee4f679a3513937b87"
+    },
+    {
+      "path": "三系统工作台/个人终端接入交付.md",
+      "bytes": 5635,
+      "sha256": "28e5bcaa865d4c93f3c2d2633fe0030749e425a1b5131bf361a2d4dd4fb38d30"
+    },
+    {
+      "path": "三系统工作台/个人终端接入说明.md",
+      "bytes": 9539,
+      "sha256": "e83377b82ef37203ac5a06692f6a18f7b651b5542d461e9595f1ddf9b6134600"
+    },
+    {
+      "path": "三系统工作台/任务可用性验收目标-20261003.md",
+      "bytes": 5669,
+      "sha256": "009204f1ff1b6699d2de7f7ac6e5c11d65d5b9200c7a7cced0703a5566cbcf01"
+    },
+    {
+      "path": "三系统工作台/四岛内容整合交付记录.md",
+      "bytes": 5111,
+      "sha256": "2d4b0b0b1b19266285b05b0696e529fa63a8e11edb7d0da1dcb2d8adcbd95272"
+    },
+    {
+      "path": "三系统工作台/四系统备份与恢复.md",
+      "bytes": 5974,
+      "sha256": "4decae65545379a93c173bef084c5c16d0a0170b2a17ee95a701ce8e93d4c00f"
+    },
+    {
+      "path": "三系统工作台/日常体验交付.md",
+      "bytes": 5216,
+      "sha256": "93348d63c2097395dac104348e1b77ec8571381dd653d2dfbdebc1a583bb114a"
+    },
+    {
+      "path": "三系统工作台/真实任务可用性交付-20261003.md",
+      "bytes": 5414,
+      "sha256": "de59f28e92853ef094c2c3356904b7cba87497dce4f410d8a15290540d7ab88e"
+    },
+    {
+      "path": "三系统工作台/自然学习记录交付记录.md",
+      "bytes": 5344,
+      "sha256": "57744602e2a0918983be9d30c63e63e4b9542d41e3c75990acee2509f70124f6"
+    },
+    {
+      "path": "三系统工作台/阶段收尾与领航学习接续交付.md",
+      "bytes": 5192,
+      "sha256": "d68e1b32856072ec5879fbeba56f48bfb99b7f8d301189b2aac59ef33c058600"
+    },
+    {
+      "path": "三系统工作台/领航减负交付记录.md",
+      "bytes": 4178,
+      "sha256": "b92802dadc1f249b68b136fcff7f169d3a3307bd8bfcb5fbb3cbb083ddc0e30b"
+    },
+    {
+      "path": "三系统工作台/领航室接入交付.md",
+      "bytes": 3871,
+      "sha256": "9f6c8c021c11807cabe40868e89ffb7c93230bc931002a309ef9350e24224c5f"
+    },
+    {
+      "path": "三系统工作台/领航室接入说明.md",
+      "bytes": 3446,
+      "sha256": "3d50621690e43e3da7a050ea993923fedfa9ecfe6a40e8a8cd655c7abf34145e"
     },
     {
       "path": "三系统整合.md",
@@ -1871,6 +2041,11 @@
       "sha256": "15c97b9e43343e670ea112860d4195fce8d402097df110b6192d7a11b5af5900"
     },
     {
+      "path": "停止个人终端.cmd",
+      "bytes": 479,
+      "sha256": "05af6ee773d202d7e0b60a0121ed5f3f66ba6ae807bd4fc6222698edbca3e1e0"
+    },
+    {
       "path": "功能设定与缺口清单_v1.md",
       "bytes": 8368,
       "sha256": "6b40397eaa9c8aa8c8101cd84681880cb0a7a35949d76e608d3e748b7d7ef5be"
@@ -1881,9 +2056,14 @@
       "sha256": "6f59768954653bb4db9bd79810b493f11b938b50212bd7a4123add8332b7c10b"
     },
     {
+      "path": "启动个人终端.cmd",
+      "bytes": 479,
+      "sha256": "d3890eb98e7dc4740507adfc9b2a30e5450c532912fb2efd755b3876c6d01e2a"
+    },
+    {
       "path": "启动说明.md",
-      "bytes": 1606,
-      "sha256": "077a8700668478a8745cdd76dddafba28e5977f10f5c92f24b60bb7fc6564b01"
+      "bytes": 1901,
+      "sha256": "443a86cbf335ca481b5acbb8f0758ea82331cb7c899d253ed53df23ec56403a2"
     },
     {
       "path": "学习小岛/README.md",
@@ -1906,9 +2086,39 @@
       "sha256": "ff904bd555b4716c13b59bd5137a255bfbb6a0ad98ad96df324cbacdbbb047c6"
     },
     {
+      "path": "建设方案/个人终端分阶段建设方案.md",
+      "bytes": 26330,
+      "sha256": "30590ec4ac1b763716d17aa16b4d9d86eeefee8a0579f93b9fbe4e196ee2f4dc"
+    },
+    {
+      "path": "建设方案/四岛内容整合.md",
+      "bytes": 3222,
+      "sha256": "138a570937b4e271f41fa79b40d6f0bb50894eecc4b479ced4aad1a6a216123c"
+    },
+    {
+      "path": "建设方案/学习判断契约.md",
+      "bytes": 7672,
+      "sha256": "f48dede8a7d24be7378b13bd92106a61072ec4f891c82b0df7b5cd22e9c034fb"
+    },
+    {
+      "path": "建设方案/学习模块深层优化.md",
+      "bytes": 10806,
+      "sha256": "811adc8ed96c63d4dc5d71652c64d37174a03e2ee6de6a1c79616595e4a0fe0e"
+    },
+    {
+      "path": "建设方案/素材观察室深层优化.md",
+      "bytes": 17549,
+      "sha256": "fc75b52416a6560c5b1967cfebc917361ecccf9a0421d78134dce13bcbc2a789"
+    },
+    {
+      "path": "建设方案/自然学习记录方案.md",
+      "bytes": 4955,
+      "sha256": "80fd34575af32ec93a59c47d438e5c4608f389561b99e75ba3fd7230642047ab"
+    },
+    {
       "path": "开始这里.md",
-      "bytes": 10815,
-      "sha256": "1ffdedb1550ceb42e8e713f1856ecf1ed84001dba8435513f1f1fd62908b6ae1"
+      "bytes": 12205,
+      "sha256": "dd36965faafa5bebfdd9ec29c6bc3c747dfe7c100e507360fab4e68a71bad1d7"
     },
     {
       "path": "素材观察室/attachments/att_052120bc91bc179d9ac8756c07015436061dc919-b0171d1ca6cd29da5082c4e0858c5d0ce3cde2a755259862ebb704d414b71b28.jpg",
@@ -2124,6 +2334,61 @@
       "path": "验证/三系统整合/backup-test.py",
       "bytes": 4528,
       "sha256": "d4aa8a4fb3d93062f11c73064315f35d793948580a285e904adcb223a0b409fb"
+    },
+    {
+      "path": "验证/启动入口修复-20261006/project-changes.json",
+      "bytes": 432,
+      "sha256": "d1caf624fbd7812e17df8ac3f7d10da4ebcd9eeab0419397c19bac3e096761d1"
+    },
+    {
+      "path": "验证/启动入口修复-20261006/verification.json",
+      "bytes": 807,
+      "sha256": "349a597de0e824888f4d3072bf06d0f87325b8bd7ce7b9ff955ca279605f8126"
+    },
+    {
+      "path": "验证/海面微调-20261006/build-verification.json",
+      "bytes": 220,
+      "sha256": "9118cc67673109fd01ed1df30ab36a6e3a37832c10890ad5859f97b56bd91dd3"
+    },
+    {
+      "path": "验证/海面微调-20261006/enabled.json",
+      "bytes": 851,
+      "sha256": "e61b84524edc1f4970dd4ca36477ab37259854efe49070b3430422f22e318f02"
+    },
+    {
+      "path": "验证/第三阶段/复习准备-20261006/enabled.json",
+      "bytes": 1948,
+      "sha256": "6108e960a8f4943b67c4ee7ece30e8c28c82a107e2d91215b78c605069368610"
+    },
+    {
+      "path": "验证/第三阶段/复习准备-20261006/evidence.json",
+      "bytes": 11668,
+      "sha256": "72bda85304e7202ebfe5b2858f42d84ffce25cc93cd0ebf0e44112e510b818d1"
+    },
+    {
+      "path": "验证/第三阶段/对象接续-20261006/browser-verification.json",
+      "bytes": 618,
+      "sha256": "22300d6a70bf99e8ee89b8977186c65a815f16a95caf8e4bb3c80765079cd9c4"
+    },
+    {
+      "path": "验证/第三阶段/对象接续-20261006/enabled.json",
+      "bytes": 4984,
+      "sha256": "d36e1b53941a30a8bc0a8c6c48060cf8b5f7ed87e4e009c3b848477af63fb1fa"
+    },
+    {
+      "path": "验证/第三阶段/对象接续-20261006/final-verification.json",
+      "bytes": 2083,
+      "sha256": "ee1a3287c183d2545a5974cffc1b7580586b4a30ffb56903c6c376be752ec575"
+    },
+    {
+      "path": "验证/第三阶段/对象接续-20261006/method-lifecycle-review.json",
+      "bytes": 2580,
+      "sha256": "6669fd4d5fc2638902286c5e3c12479b3a4107fab625779a424ebc13a07833b8"
+    },
+    {
+      "path": "验证/第三阶段/执行方案-20261006/本轮结果.json",
+      "bytes": 355,
+      "sha256": "35af99c0d4de6b74229ee7957307a76a30cb286beaa60bfcda8323f9423e8aba"
     },
     {
       "path": "验证/素材观察室/深研技能-20261001-34952ac7/handoff-inline.test.mjs",

@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-06",
+  "files": [
+    {
+      "path": "web/learning/sources.mjs",
+      "beforeSha256": "b3288ac7287e47160490b637dde1650112c66c6c534334f268132896ae92aa2e",
+      "formalUnchanged": true,
+      "protectedMatches": true,
+      "candidateSha256": "a46f323b3164ff1b9ebe1e36c0ff571e52e540506c63eaf1454a4d0844766b15"
+    },
+    {
+      "path": "web/learning/context.mjs",
+      "beforeSha256": "7b1868fe9fc17bee454ef4234df8dad27a74568fd0d77b8e99ffc3a551fe2f3f",
+      "formalUnchanged": true,
+      "protectedMatches": true,
+      "candidateSha256": "b2e31ba96d03519a1b3dd0972f4897cb51383197945b0a4fe6b8aa571d38e659"
+    },
+    {
+      "path": "web/test/learning-sources.test.mjs",
+      "beforeSha256": "ddf08464d727214854f4d4ad1920abb7e90da9d7169b93f2610c4c3f9a45333f",
+      "formalUnchanged": true,
+      "protectedMatches": true,
+      "candidateSha256": "b520e12d1b15867528075eb29c0ab936c1ecd22436a9713927c1e02c263e7235"
+    },
+    {
+      "path": "web/test/learning-context.test.mjs",
+      "beforeSha256": "81387c05f2cbdc24755f4fbf767a1084eb58d6de65d94acfeea8a95fa779f2c1",
+      "formalUnchanged": true,
+      "protectedMatches": true,
+      "candidateSha256": "b7877e2327423282371608926d3de65d36038f01f3540d9a2a1e6429a2f89cd8"
+    },
+    {
+      "path": "web/learning/intake.mjs",
+      "beforeSha256": "1827ad34dce6dce1b37f0864a08c84b6c4b565b7f42c20ee0a4e9cb6e24422fd",
+      "formalUnchanged": true,
+      "protectedMatches": true,
+      "candidateSha256": "43b2a716e54e160c0e6e5196edbd88d1508f1fec5f71a22f9603844dc4f07375"
+    },
+    {
+      "path": "web/test/natural-intake.test.mjs",
+      "beforeSha256": "e72409a6b4532bbe2cc2cf4d35ca8f9a71d51f55a2bfddb30ede1f47b5b9b558",
+      "formalUnchanged": true,
+      "protectedMatches": true,
+      "candidateSha256": "06d25fcb40866b00b52d64d59239073bbaf6c24940ea7341dc5679722be2ee1e"
+    }
+  ],
+  "personalDataCopied": false
+}

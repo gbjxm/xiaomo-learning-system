@@ -5,7 +5,7 @@ JSON version必须是1；saveReason只能为none/plan/progress/wrap/review。可
 task可包含taskId/title/purpose/courseId/allowedHelp/observationPoints/knownPerformance/stopPoint/nextStep/status/evidenceRefs/candidates。已有任务保留同一taskId，改变时间不改变目标。
 facts仅含kind(course_progress/viewing/user_report)、courseId、quote、turnId、value；quote必须逐字引用小陌本轮原话。只有明确引用用户history turn时才使用其turnId。保留否定、条件、假设和第六或第七节、十几节等不确定性；模型讲解不是用户已经学会。
 observations仅含text/evidenceIds/helpLevel，必须引用实际提供的用户回答或文字产物证据ID，说明帮助条件；不能用AI生成的内容认证小陌掌握，也不以课程时长作能力认证。
-adoptedChanges仅含kind(goal/method)、quote、value、taskId；需要用户明确说出的采用或目标变更及原话。你的新建议只放candidates。明确请求安排可存待执行，无须再问采用；不保存时saveReason为none。知识版本和材料未核实保持未知。
+adoptedChanges含kind(goal/method)、quote、value、taskId。method可另含action(adopt/pause/resume，省略为adopt)、methodId；暂停或恢复必须引用当前上下文中同任务的准确methodId及原value，并逐字引用本轮用户明确决定。仅反馈无效或本次条件不适用不自动暂停，已暂停条目须明确恢复才重新进入安排。不得从否定、假设、他人意见或旧历史中提取本轮采用。你的新建议只放candidates。明确请求安排可存待执行，无须再问采用；不保存时saveReason为none。知识版本和材料未核实保持未知。
 一个合规尾块示例：<learning_updates>{"version":1,"saveReason":"none","facts":[],"observations":[],"candidates":[],"adoptedChanges":[]}</learning_updates>`;
 
 const ROOT_KEYS = ['version', 'saveReason', 'task', 'facts', 'observations', 'candidates', 'adoptedChanges', 'nextStep'];
@@ -65,7 +65,31 @@ function binding(item, payload) {
   return { turnId: turnId ?? 'current', quote: item.quote, sentence: sentenceAround(input, index, item.quote.length), clause: sentenceAround(input, index, item.quote.length, true) };
 }
 
-export function validateUpdates(updates, { payload = {}, task = null, sources = [] } = {}) {
+/** Existing Markdown remains authoritative; legacy v1 methods default to active. */
+export function adoptedMethodBlocks(markdown) {
+  const section = /^## 已采用的改进\r?\n([\s\S]*?)(?=^## |$(?![\s\S]))/m.exec(String(markdown ?? ''));
+  if (!section) return [];
+  const result = [];
+  for (const match of section[1].matchAll(/<!-- learning-method:start id=([a-f0-9]{64}) -->([\s\S]*?)<!-- learning-method:end id=\1 -->/g)) {
+    const encoded = match[2].match(/<!-- learning-method:v1 ([A-Za-z0-9+/=]+) -->/), block = { id: match[1], full: match[0], data: null };
+    try {
+      const data = JSON.parse(Buffer.from(encoded?.[1] ?? '', 'base64').toString('utf8'));
+      if (data.version === 1 && data.methodId === block.id && typeof data.value === 'string' && (data.taskId === null || validId(data.taskId)) && (data.status === undefined || ['active', 'paused'].includes(data.status))) block.data = { ...data, status: data.status ?? 'active' };
+    } catch {}
+    result.push(block);
+  }
+  return result;
+}
+
+function methodDecisionIsExplicit(action, sentence) {
+  if (hypothetical(sentence) || /还没决定|尚未决定|没决定|未决定|(?:别人|有人|老师|朋友|你|AI)(?:说|建议)|(?:举例|示例)|^[“「『"]/.test(sentence)) return false;
+  if (action === 'pause') return /停用|暂停|停止(?:使用|采用)|不再(?:采用|使用|用)|(?:先)?(?:放下|搁置)/.test(sentence)
+    && !/(?:不要|别|不想|不愿|不必|不用|不|未|没)(?:再|先|要)?(?:停用|暂停|停止|放下|搁置)|(?:不要|别)(?:再)?不再/.test(sentence);
+  return /恢复|重新(?:采用|使用|启用)|再次采用|继续使用/.test(sentence)
+    && !/(?:不要|别|不想|不愿|不必|不用|不|未|没)(?:再|先|要)?(?:恢复|重新|再次|继续)|暂不|停用|暂停/.test(sentence);
+}
+
+export function validateUpdates(updates, { payload = {}, task = null, sources = [], stagePlan = '' } = {}) {
   const warnings = [];
   if (!plain(updates) || updates.version !== 1 || !REASONS.includes(updates.saveReason) || forbidden(updates)) return { updates: null, warnings: ['学习更新结构无效，未更新台账。'] };
   for (const key of Object.keys(updates)) if (!ROOT_KEYS.includes(key)) warnings.push('忽略未约定的更新字段：' + key);
@@ -104,7 +128,25 @@ export function validateUpdates(updates, { payload = {}, task = null, sources = 
   if (strings(updates.candidates)) result.candidates = [...new Set(updates.candidates)];
   for (const item of Array.isArray(updates.adoptedChanges) ? updates.adoptedChanges.slice(0, 10) : []) {
     const bound = plain(item) ? binding(item, payload) : null;
-    if (!bound || !['goal', 'method'].includes(item.kind) || !text(item.value) || !bound.quote.includes(item.value) || conditional(bound.sentence) || /不要|不采用|不同意|暂不|别改|不想改/.test(bound.sentence) || !/采用|就按|按这个|用这个|改为|改成|改学|改做|目标|主攻|决定|同意|接受|换成/.test(bound.sentence) || Object.keys(item).some(k => !['kind', 'quote', 'turnId', 'value', 'taskId'].includes(k)) || (item.taskId && item.taskId !== task?.taskId)) { warnings.push('一条采用或目标变更缺少明确、同任务的用户采用依据，保留为未采用。'); continue; }
+    if (!bound || !['goal', 'method'].includes(item.kind) || !text(item.value) || Object.keys(item).some(k => !['kind', 'quote', 'turnId', 'value', 'taskId', ...(item.kind === 'method' ? ['action', 'methodId'] : [])].includes(k)) || (item.taskId && item.taskId !== task?.taskId)) { warnings.push('一条采用或目标变更缺少明确、同任务的用户采用依据，保留为未采用。'); continue; }
+    const action = item.action ?? 'adopt';
+    if (item.kind === 'method' && ['pause', 'resume'].includes(action)) {
+      const methods = adoptedMethodBlocks(stagePlan).filter(block => block.data?.taskId === task?.taskId), existing = methods.find(block => block.id === item.methodId)?.data;
+      const named = bound.quote.includes(item.value), uniqueReference = methods.length === 1 && /这个做法|这个方法|这条方法|这项改法|它/.test(bound.quote);
+      let decisionText = bound.sentence;
+      if (named) {
+        const local = sentenceAround(bound.sentence, bound.sentence.indexOf(item.value), item.value.length, true);
+        const direct = methodDecisionIsExplicit(action, local);
+        const implicit = methods.filter(block => bound.sentence.includes(block.data.value)).length === 1 && /(?:^|[，,；;])\s*(?:我决定|请|先|暂时)?(?:停用|暂停|恢复)(?:它|这个做法|这条方法)?\s*(?:$|[，,；;])/.test(bound.sentence);
+        if (!direct && !implicit) decisionText = '';
+        else if (direct && !hypothetical(bound.sentence)) decisionText = local;
+      }
+      if (bound.turnId !== 'current' || !task?.taskId || !existing || existing.value !== item.value || (!named && !uniqueReference) || !methodDecisionIsExplicit(action, decisionText)) { warnings.push('方法暂停或恢复没有本轮明确原话及同任务的既有方法依据，保留原状态。'); continue; }
+      result.adoptedChanges.push({ kind: 'method', action, methodId: existing.methodId, value: existing.value, quote: item.quote, taskId: task.taskId });
+      continue;
+    }
+    if (action !== 'adopt' || !bound.quote.includes(item.value) || conditional(bound.sentence) || /不要|不(?:再|想|愿意|会)?采用|不再(?:用|使用)|未采用|没(?:有)?采用|不同意|暂不|别改|不想改|停用|暂停|撤回采用/.test(bound.sentence) || !/采用|就按|按这个|用这个|改为|改成|改学|改做|目标|主攻|决定|同意|接受|换成/.test(bound.sentence) || (item.kind === 'method' && (bound.turnId !== 'current' || /还没决定|尚未决定|(?:别人|有人|老师|朋友|你|AI)(?:说|建议)/.test(bound.sentence)))) { warnings.push('一条采用或目标变更缺少明确、同任务的用户采用依据，保留为未采用。'); continue; }
+    if (item.kind === 'method' && adoptedMethodBlocks(stagePlan).some(block => block.data?.taskId === task?.taskId && block.data?.value === item.value && block.data?.status === 'paused')) { warnings.push('该方法已经暂停，需按原方法编号明确恢复，未新建或重新启用。'); continue; }
     if (item.kind === 'goal' && /(?:缩短|缩成|分钟|小时|半小时|今天时间|时段)/.test(item.value)) { warnings.push('时间重排不作为目标版本变更。'); continue; }
     result.adoptedChanges.push({ kind: item.kind, quote: item.quote, value: item.value, ...(task?.taskId ? { taskId: task.taskId } : {}) });
   }
@@ -131,7 +173,7 @@ export function validateUpdates(updates, { payload = {}, task = null, sources = 
     for (const key of ['allowedHelp', 'observationPoints']) {
       if (task && Object.hasOwn(candidate, key) && JSON.stringify(candidate[key]) !== JSON.stringify(task[key])) {
         const values = Array.isArray(candidate[key]) ? candidate[key] : [candidate[key]];
-        const explicitlyAdopted = values.length > 0 && values.every(value => value && result.adoptedChanges.some(change => change.quote.includes(value)));
+        const explicitlyAdopted = values.length > 0 && values.every(value => value && result.adoptedChanges.some(change => change.action !== 'pause' && change.quote.includes(value)));
         if (!explicitlyAdopted) { delete candidate[key]; warnings.push('帮助条件或观察点变更未被用户明确采用，保留原值。'); }
       }
     }

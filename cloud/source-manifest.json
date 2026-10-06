@@ -1,13 +1,13 @@
 {
   "format": "xiaomo-learning-cloud-source-manifest",
   "version": 1,
-  "createdAtUtc": "2026-10-05T16:44:14.811635+00:00",
+  "createdAtUtc": "2026-10-06T15:30:29.719267+00:00",
   "sourceRoots": {
     "learning-system": {
       "absolutePathStoredInLocalSidecarOnly": true
     }
   },
-  "scope": "private-read-and-candidate-continuation-package",
+  "scope": "read-and-candidate-continuation-package",
   "databases": {
     "observatory": {
       "snapshot": "cloud-data/snapshots/素材观察室/data/observatory.sqlite3",
@@ -44,6 +44,11 @@
       }
     }
   },
+  "externalDependenciesNotPackaged": [
+    "navigation-room",
+    "knowledge-tree",
+    "film-workflow"
+  ],
   "files": [
     {
       "path": ".agents/skills/analyze-audiovisual-material/SKILL.md",
@@ -383,8 +388,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 566,
-      "sha256": "64cbfdf9cc00a3bf5267cfe8099106daab1a5b3ac58006682bbbe055bd48b9c0",
+      "bytes": 613,
+      "sha256": "902647387c6c936190470773f97ce8e8092615ddb94deb8c879084b07711f5f4",
       "category": "generated-cloud-entry",
       "source": null,
       "sourceSha256": null,
@@ -392,8 +397,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 1600,
-      "sha256": "bbe45e9a741920ff0e68f120b25a341b94a853527254efe07f3b3bdd4ab0c8b1",
+      "bytes": 1656,
+      "sha256": "a18f60b94b01bc928c17b9de5faf7c77513444d000449268f9fe243e5495dd07",
       "category": "generated-cloud-entry",
       "source": null,
       "sourceSha256": null,
@@ -401,8 +406,8 @@
     },
     {
       "path": "CLOUD-START.md",
-      "bytes": 924,
-      "sha256": "940368991cff32cd8f2d1aceeb162e1d7fa394ea08dadbcdfe1e15e23c66d0a5",
+      "bytes": 1169,
+      "sha256": "3cd80494565f685eaeaf8e98c313c2d5b52a2c76542ece7e64054f0d428e9697",
       "category": "generated-cloud-entry",
       "source": null,
       "sourceSha256": null,
@@ -417,7 +422,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
@@ -429,7 +434,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
@@ -441,7 +446,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
@@ -453,7 +458,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
@@ -465,7 +470,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "database-table-index"
     },
     {
@@ -477,7 +482,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
@@ -489,7 +494,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
@@ -501,7 +506,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
@@ -513,7 +518,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
@@ -525,7 +530,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
@@ -537,7 +542,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
@@ -549,7 +554,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
@@ -561,7 +566,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
@@ -573,7 +578,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
@@ -585,7 +590,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
@@ -597,7 +602,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
@@ -609,7 +614,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
@@ -621,7 +626,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "lossless-column-export-from-consistent-snapshot"
     },
     {
@@ -633,7 +638,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "column-labelled-record-rendering;no-research-inference"
     },
     {
@@ -825,7 +830,7 @@
         "rootAlias": "learning-system",
         "relativePath": "信息收集/data/opportunities.sqlite3"
       },
-      "sourceSha256": "daa8ae39210a10f6451e91e9c8ad63cbd7562d6ce50b157bd79c5cf8309066e6",
+      "sourceSha256": "66a7735f3c2585e3790f462fdc5d29453db30fa52cb628df40116ec9784b8c08",
       "transformation": "SQLite Connection.backup from mode=ro source"
     },
     {
@@ -841,21 +846,33 @@
       "transformation": "SQLite Connection.backup from mode=ro source"
     },
     {
+      "path": "cloud-data/ui/三系统工作台/data/workspace-state.json",
+      "bytes": 29678,
+      "sha256": "fcbd1e22044c7049a4494f1b2ce81b50e87423b7c9c29f7e6e61fb23557ea178",
+      "category": "workspace-state-snapshot",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "三系统工作台/data/workspace-state.json"
+      },
+      "sourceSha256": "fcbd1e22044c7049a4494f1b2ce81b50e87423b7c9c29f7e6e61fb23557ea178",
+      "transformation": "byte-identical-copy"
+    },
+    {
       "path": "cloud-data/ui/学习小岛/data/ui-state.json",
-      "bytes": 14629,
-      "sha256": "1dc2f0eb9e447d1c851641ec646d8c9d7cdac6219d5aa89e788b469783ecce5e",
+      "bytes": 15599,
+      "sha256": "201658b3d4aa36d840611c8e4244a65e89c7d3bb3204b037fdc834833a96cbb4",
       "category": "ui-state-snapshot",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "学习小岛/data/ui-state.json"
       },
-      "sourceSha256": "1dc2f0eb9e447d1c851641ec646d8c9d7cdac6219d5aa89e788b469783ecce5e",
+      "sourceSha256": "201658b3d4aa36d840611c8e4244a65e89c7d3bb3204b037fdc834833a96cbb4",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "cloud/README.md",
-      "bytes": 4173,
-      "sha256": "b737abe156e498ccd1561f1b2d8cc4d5b756fa2c2d8a5941f3c110a91c8805fc",
+      "bytes": 5066,
+      "sha256": "b49ea8b1ae53179c64f55bfc4a565c095d0dbd36ffb116d60e367f353f64b93a",
       "category": "generated-cloud-entry",
       "source": null,
       "sourceSha256": null,
@@ -881,6 +898,18 @@
       "source": null,
       "sourceSha256": null,
       "transformation": "generated"
+    },
+    {
+      "path": "navigation-connection.json",
+      "bytes": 104,
+      "sha256": "98c51a531daf69e8e7d9083660d96d3fe02dbbf70825de2a766373aa48d4630a",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "navigation-connection.json"
+      },
+      "sourceSha256": "98c51a531daf69e8e7d9083660d96d3fe02dbbf70825de2a766373aa48d4630a",
+      "transformation": "byte-identical-copy"
     },
     {
       "path": "web/.env.example",
@@ -944,14 +973,14 @@
     },
     {
       "path": "web/Start-LearningTerminal.ps1",
-      "bytes": 852,
-      "sha256": "efbc9da2ed045ae65bf84eb986622be7095c2e5fdc976c39a010992a2c251b59",
+      "bytes": 855,
+      "sha256": "469964981b863ddc05a4353a84e577591b32bc03249e3d304c86679f9e07d651",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/Start-LearningTerminal.ps1"
       },
-      "sourceSha256": "efbc9da2ed045ae65bf84eb986622be7095c2e5fdc976c39a010992a2c251b59",
+      "sourceSha256": "469964981b863ddc05a4353a84e577591b32bc03249e3d304c86679f9e07d651",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1028,74 +1057,74 @@
     },
     {
       "path": "web/content/store.mjs",
-      "bytes": 25893,
-      "sha256": "6486f542e2b40ba8ac1f18be493fe67bca455c0f62aedd87e56b8551f6c135f9",
+      "bytes": 26676,
+      "sha256": "96d349e1a1a6e5afeeef89483f8fdd728c3331ac1b428e732645f4b858dfda9b",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/content/store.mjs"
       },
-      "sourceSha256": "6486f542e2b40ba8ac1f18be493fe67bca455c0f62aedd87e56b8551f6c135f9",
+      "sourceSha256": "96d349e1a1a6e5afeeef89483f8fdd728c3331ac1b428e732645f4b858dfda9b",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/learning/cli.mjs",
-      "bytes": 6954,
-      "sha256": "eeaed38426c384d57e3a440477b864248ffc2e6705daf36b6500b0c7f9e33d55",
+      "bytes": 6985,
+      "sha256": "f1875bee602436b584eeca59d4412750e35be69443643e2eb7c2292684087f5d",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/learning/cli.mjs"
       },
-      "sourceSha256": "eeaed38426c384d57e3a440477b864248ffc2e6705daf36b6500b0c7f9e33d55",
+      "sourceSha256": "f1875bee602436b584eeca59d4412750e35be69443643e2eb7c2292684087f5d",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/learning/commit.mjs",
-      "bytes": 49564,
-      "sha256": "de8f6cbbc21ae5678948ac145d7bf554994dd49dc526a51bc27124209ca52c55",
+      "bytes": 50431,
+      "sha256": "f3079dbe903475e49181372c2b4ff2cb2472a741ec638c0c01471bbe2e2bbb42",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/learning/commit.mjs"
       },
-      "sourceSha256": "de8f6cbbc21ae5678948ac145d7bf554994dd49dc526a51bc27124209ca52c55",
+      "sourceSha256": "f3079dbe903475e49181372c2b4ff2cb2472a741ec638c0c01471bbe2e2bbb42",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/learning/content-sources.mjs",
-      "bytes": 2891,
-      "sha256": "382c3d774fe3264d88e5c4e9c4fffbdbd0ad268980dfea704d0bcaf90dd74d93",
+      "bytes": 2908,
+      "sha256": "182faadc52af4a18616b0672cf46a7ab36b0d3a8d841cb53cc1c4338e101874d",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/learning/content-sources.mjs"
       },
-      "sourceSha256": "382c3d774fe3264d88e5c4e9c4fffbdbd0ad268980dfea704d0bcaf90dd74d93",
+      "sourceSha256": "182faadc52af4a18616b0672cf46a7ab36b0d3a8d841cb53cc1c4338e101874d",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/learning/context.mjs",
-      "bytes": 23119,
-      "sha256": "7b1868fe9fc17bee454ef4234df8dad27a74568fd0d77b8e99ffc3a551fe2f3f",
+      "bytes": 24790,
+      "sha256": "e645eb7aa9438033f2441aee38c72ffaf07c3994e3407967a97f47f3eb910839",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/learning/context.mjs"
       },
-      "sourceSha256": "7b1868fe9fc17bee454ef4234df8dad27a74568fd0d77b8e99ffc3a551fe2f3f",
+      "sourceSha256": "e645eb7aa9438033f2441aee38c72ffaf07c3994e3407967a97f47f3eb910839",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/learning/coordinator.mjs",
-      "bytes": 17871,
-      "sha256": "b505844411d8651b43d4f31422cebf5c94b4f4de71eb88de397a4010e56f285c",
+      "bytes": 18073,
+      "sha256": "ff04e5ac32270785fbd30499dab87c9d751f20261907ee40e36fc777d12e3de2",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/learning/coordinator.mjs"
       },
-      "sourceSha256": "b505844411d8651b43d4f31422cebf5c94b4f4de71eb88de397a4010e56f285c",
+      "sourceSha256": "ff04e5ac32270785fbd30499dab87c9d751f20261907ee40e36fc777d12e3de2",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1112,14 +1141,14 @@
     },
     {
       "path": "web/learning/intake.mjs",
-      "bytes": 37780,
-      "sha256": "1827ad34dce6dce1b37f0864a08c84b6c4b565b7f42c20ee0a4e9cb6e24422fd",
+      "bytes": 37781,
+      "sha256": "43b2a716e54e160c0e6e5196edbd88d1508f1fec5f71a22f9603844dc4f07375",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/learning/intake.mjs"
       },
-      "sourceSha256": "1827ad34dce6dce1b37f0864a08c84b6c4b565b7f42c20ee0a4e9cb6e24422fd",
+      "sourceSha256": "43b2a716e54e160c0e6e5196edbd88d1508f1fec5f71a22f9603844dc4f07375",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1136,14 +1165,14 @@
     },
     {
       "path": "web/learning/protocol.mjs",
-      "bytes": 17330,
-      "sha256": "90cbf25a864e7664a6a943a129239fac78a99f1714d9fd323102c5ed3667fcb7",
+      "bytes": 21892,
+      "sha256": "54e4f53b961eaf9c586bd7a6fd155197f2b329a86d506654e32d426f4e1943cd",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/learning/protocol.mjs"
       },
-      "sourceSha256": "90cbf25a864e7664a6a943a129239fac78a99f1714d9fd323102c5ed3667fcb7",
+      "sourceSha256": "54e4f53b961eaf9c586bd7a6fd155197f2b329a86d506654e32d426f4e1943cd",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1172,38 +1201,14 @@
     },
     {
       "path": "web/learning/sources.mjs",
-      "bytes": 18554,
-      "sha256": "b3288ac7287e47160490b637dde1650112c66c6c534334f268132896ae92aa2e",
+      "bytes": 19772,
+      "sha256": "a46f323b3164ff1b9ebe1e36c0ff571e52e540506c63eaf1454a4d0844766b15",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/learning/sources.mjs"
       },
-      "sourceSha256": "b3288ac7287e47160490b637dde1650112c66c6c534334f268132896ae92aa2e",
-      "transformation": "byte-identical-copy"
-    },
-    {
-      "path": "web/navigation/.repair-backup-20261004-journey-document/navigation.test.mjs",
-      "bytes": 13504,
-      "sha256": "d637ecd64c62b0074f828aadac353ae9a390ff748820dc3ea36c5413b06ee603",
-      "category": "regression-source",
-      "source": {
-        "rootAlias": "learning-system",
-        "relativePath": "web/navigation/.repair-backup-20261004-journey-document/navigation.test.mjs"
-      },
-      "sourceSha256": "d637ecd64c62b0074f828aadac353ae9a390ff748820dc3ea36c5413b06ee603",
-      "transformation": "byte-identical-copy"
-    },
-    {
-      "path": "web/navigation/.repair-backup-20261004-journey-document/worker.py",
-      "bytes": 22729,
-      "sha256": "6dfcded66b5d86c33a4a4ad90b25df6e8b90a65e938cfb803b0c66568ecaad6e",
-      "category": "application-source-or-static-asset",
-      "source": {
-        "rootAlias": "learning-system",
-        "relativePath": "web/navigation/.repair-backup-20261004-journey-document/worker.py"
-      },
-      "sourceSha256": "6dfcded66b5d86c33a4a4ad90b25df6e8b90a65e938cfb803b0c66568ecaad6e",
+      "sourceSha256": "a46f323b3164ff1b9ebe1e36c0ff571e52e540506c63eaf1454a4d0844766b15",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1652,14 +1657,14 @@
     },
     {
       "path": "web/preview/public/scene.js",
-      "bytes": 19510,
-      "sha256": "4c30dae57081b4c861687ba8ea0e124119cb587828df1a3f6914378d9eb69c4c",
+      "bytes": 19540,
+      "sha256": "ef3de354711202a9710cdcb4d137644a8b878ff26c0ef039c123ba970ba7ac16",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/preview/public/scene.js"
       },
-      "sourceSha256": "4c30dae57081b4c861687ba8ea0e124119cb587828df1a3f6914378d9eb69c4c",
+      "sourceSha256": "ef3de354711202a9710cdcb4d137644a8b878ff26c0ef039c123ba970ba7ac16",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1672,6 +1677,18 @@
         "relativePath": "web/preview/public/style.css"
       },
       "sourceSha256": "d4075455a927b35f83f3f5a57d2cf1c771b1afd880f52597d3e1bcb56f0897a5",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/preview/scene.test.mjs",
+      "bytes": 4178,
+      "sha256": "9e4b32b597dc737a88f849758db1cf49592472cc6e9504a46a1c09efb48ea869",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/preview/scene.test.mjs"
+      },
+      "sourceSha256": "9e4b32b597dc737a88f849758db1cf49592472cc6e9504a46a1c09efb48ea869",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1760,38 +1777,38 @@
     },
     {
       "path": "web/public/learning/content/app.js",
-      "bytes": 33957,
-      "sha256": "ebdd11eb5ca679f5e3f09e6646c599e2b4ae39659a620781a95cb05d3ea8a05b",
+      "bytes": 39000,
+      "sha256": "882af789a0d5c4eccb7aa833b2791c4e2273c2b0ecdfddc3e1412859ccb51a17",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/public/learning/content/app.js"
       },
-      "sourceSha256": "ebdd11eb5ca679f5e3f09e6646c599e2b4ae39659a620781a95cb05d3ea8a05b",
+      "sourceSha256": "882af789a0d5c4eccb7aa833b2791c4e2273c2b0ecdfddc3e1412859ccb51a17",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/public/learning/content/index.html",
-      "bytes": 3256,
-      "sha256": "c55c21bd05bb325e887b9c516a2ac1f328531c6c39467ab0827b4191450bd557",
+      "bytes": 3370,
+      "sha256": "cec60ca028c1e116796d68c2c40db304b7097f4ea3f5665458708742fd553969",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/public/learning/content/index.html"
       },
-      "sourceSha256": "c55c21bd05bb325e887b9c516a2ac1f328531c6c39467ab0827b4191450bd557",
+      "sourceSha256": "cec60ca028c1e116796d68c2c40db304b7097f4ea3f5665458708742fd553969",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/public/learning/content/style.css",
-      "bytes": 10353,
-      "sha256": "d93a5afd333050b931a06ec2e5cd3804e4b210d2ae83e3aa2e5d3d77f5036ec3",
+      "bytes": 10499,
+      "sha256": "d8c4eaf4ebfb472e6b3acd0947c265d6f74951bf38a2a6d3a54d195857c2b7df",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/public/learning/content/style.css"
       },
-      "sourceSha256": "d93a5afd333050b931a06ec2e5cd3804e4b210d2ae83e3aa2e5d3d77f5036ec3",
+      "sourceSha256": "d8c4eaf4ebfb472e6b3acd0947c265d6f74951bf38a2a6d3a54d195857c2b7df",
       "transformation": "byte-identical-copy"
     },
     {
@@ -1940,14 +1957,14 @@
     },
     {
       "path": "web/public/learning/岛屿场景.js",
-      "bytes": 21015,
-      "sha256": "fbc14c1af125cd4664fc2bd0ce027fc188e7b9b512f1aaba3d3fec619300f2e0",
+      "bytes": 21201,
+      "sha256": "25d93c2029b2f05df71162473a0d78f9ffdc01ee6b8b68bc58fe8bdae39126cc",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/public/learning/岛屿场景.js"
       },
-      "sourceSha256": "fbc14c1af125cd4664fc2bd0ce027fc188e7b9b512f1aaba3d3fec619300f2e0",
+      "sourceSha256": "25d93c2029b2f05df71162473a0d78f9ffdc01ee6b8b68bc58fe8bdae39126cc",
       "transformation": "byte-identical-copy"
     },
     {
@@ -2216,26 +2233,50 @@
     },
     {
       "path": "web/public/terminal/build-terminal.py",
-      "bytes": 9552,
-      "sha256": "a50a1799284513dba86bd5dbf77bb87b84d32591ca9fc44f96cfc9586e2f8fc1",
+      "bytes": 10122,
+      "sha256": "c6c94636fcaa6b731d4aeecac58a607a0e50cb7416fddd92f80649fa1ebb9526",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/public/terminal/build-terminal.py"
       },
-      "sourceSha256": "a50a1799284513dba86bd5dbf77bb87b84d32591ca9fc44f96cfc9586e2f8fc1",
+      "sourceSha256": "c6c94636fcaa6b731d4aeecac58a607a0e50cb7416fddd92f80649fa1ebb9526",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/public/terminal/index.html",
-      "bytes": 39257,
-      "sha256": "d4401a8935548619157bd27f6fdd0ae96af062b39b68a49e71c114fa54973ab7",
+      "bytes": 41742,
+      "sha256": "25ac7cef3a6a450a0a762c659c19084e70519f5ce268c68f13a21df208f2056d",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/public/terminal/index.html"
       },
-      "sourceSha256": "d4401a8935548619157bd27f6fdd0ae96af062b39b68a49e71c114fa54973ab7",
+      "sourceSha256": "25ac7cef3a6a450a0a762c659c19084e70519f5ce268c68f13a21df208f2056d",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/sea-surface.css",
+      "bytes": 1511,
+      "sha256": "e0af754e4a54cbb278e5377117079758c9243e549a262571a398763264b0d3af",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/sea-surface.css"
+      },
+      "sourceSha256": "e0af754e4a54cbb278e5377117079758c9243e549a262571a398763264b0d3af",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/public/terminal/sea-surface.svg",
+      "bytes": 2894,
+      "sha256": "6767143f08fc09a18317d7d04d4df99c8dd79b4ab2c616cc4661982379c955a2",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/public/terminal/sea-surface.svg"
+      },
+      "sourceSha256": "6767143f08fc09a18317d7d04d4df99c8dd79b4ab2c616cc4661982379c955a2",
       "transformation": "byte-identical-copy"
     },
     {
@@ -2299,6 +2340,18 @@
       "transformation": "byte-identical-copy"
     },
     {
+      "path": "web/test/content-workspace-ui.test.mjs",
+      "bytes": 14049,
+      "sha256": "8a0381cc29b0043fe18db61caca8d78516d71111483afe9d83b4431f114ea996",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/test/content-workspace-ui.test.mjs"
+      },
+      "sourceSha256": "8a0381cc29b0043fe18db61caca8d78516d71111483afe9d83b4431f114ea996",
+      "transformation": "byte-identical-copy"
+    },
+    {
       "path": "web/test/context.test.mjs",
       "bytes": 6531,
       "sha256": "250c9466cb7d9ebb41ecbb624c8800d4d1fdcd1ac3dff1fd33ebfa53464f1115",
@@ -2324,14 +2377,14 @@
     },
     {
       "path": "web/test/learning-context.test.mjs",
-      "bytes": 20081,
-      "sha256": "81387c05f2cbdc24755f4fbf767a1084eb58d6de65d94acfeea8a95fa779f2c1",
+      "bytes": 22160,
+      "sha256": "b7877e2327423282371608926d3de65d36038f01f3540d9a2a1e6429a2f89cd8",
       "category": "regression-source",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/test/learning-context.test.mjs"
       },
-      "sourceSha256": "81387c05f2cbdc24755f4fbf767a1084eb58d6de65d94acfeea8a95fa779f2c1",
+      "sourceSha256": "b7877e2327423282371608926d3de65d36038f01f3540d9a2a1e6429a2f89cd8",
       "transformation": "byte-identical-copy"
     },
     {
@@ -2344,6 +2397,18 @@
         "relativePath": "web/test/learning-integration.test.mjs"
       },
       "sourceSha256": "ca677c45abe452685a129dc0be8d634ac8eb431fd2c878c03fb7297a78ba19f8",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/test/learning-method-lifecycle.test.mjs",
+      "bytes": 11342,
+      "sha256": "6b24262f1efd27e974b64d884d51f6493a5265c65a5cffa51b3580711e1cb3bd",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/test/learning-method-lifecycle.test.mjs"
+      },
+      "sourceSha256": "6b24262f1efd27e974b64d884d51f6493a5265c65a5cffa51b3580711e1cb3bd",
       "transformation": "byte-identical-copy"
     },
     {
@@ -2384,14 +2449,14 @@
     },
     {
       "path": "web/test/learning-sources.test.mjs",
-      "bytes": 11157,
-      "sha256": "ddf08464d727214854f4d4ad1920abb7e90da9d7169b93f2610c4c3f9a45333f",
+      "bytes": 13259,
+      "sha256": "b520e12d1b15867528075eb29c0ab936c1ecd22436a9713927c1e02c263e7235",
       "category": "regression-source",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/test/learning-sources.test.mjs"
       },
-      "sourceSha256": "ddf08464d727214854f4d4ad1920abb7e90da9d7169b93f2610c4c3f9a45333f",
+      "sourceSha256": "b520e12d1b15867528075eb29c0ab936c1ecd22436a9713927c1e02c263e7235",
       "transformation": "byte-identical-copy"
     },
     {
@@ -2408,14 +2473,14 @@
     },
     {
       "path": "web/test/natural-intake.test.mjs",
-      "bytes": 21243,
-      "sha256": "e72409a6b4532bbe2cc2cf4d35ca8f9a71d51f55a2bfddb30ede1f47b5b9b558",
+      "bytes": 23417,
+      "sha256": "06d25fcb40866b00b52d64d59239073bbaf6c24940ea7341dc5679722be2ee1e",
       "category": "regression-source",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/test/natural-intake.test.mjs"
       },
-      "sourceSha256": "e72409a6b4532bbe2cc2cf4d35ca8f9a71d51f55a2bfddb30ede1f47b5b9b558",
+      "sourceSha256": "06d25fcb40866b00b52d64d59239073bbaf6c24940ea7341dc5679722be2ee1e",
       "transformation": "byte-identical-copy"
     },
     {
@@ -2576,26 +2641,38 @@
     },
     {
       "path": "web/workspace/entities.mjs",
-      "bytes": 4933,
-      "sha256": "a190688b6ce2507bbb6d3c5f852ff3ae67a2552a8f7522b5647ceb10c9088f84",
+      "bytes": 6604,
+      "sha256": "39062bab5c948a29b87acf383bd30f919161bfb638e865f071bfec2ab349b660",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/workspace/entities.mjs"
       },
-      "sourceSha256": "a190688b6ce2507bbb6d3c5f852ff3ae67a2552a8f7522b5647ceb10c9088f84",
+      "sourceSha256": "39062bab5c948a29b87acf383bd30f919161bfb638e865f071bfec2ab349b660",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/workspace/entities.test.mjs",
+      "bytes": 11353,
+      "sha256": "71dfea46455aeb1046d91b7ebdc5288953dc27c7b44cd333070a05a8b20ad3fd",
+      "category": "regression-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/workspace/entities.test.mjs"
+      },
+      "sourceSha256": "71dfea46455aeb1046d91b7ebdc5288953dc27c7b44cd333070a05a8b20ad3fd",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/workspace/http.mjs",
-      "bytes": 8580,
-      "sha256": "466871a741b0df83a3a0799cca6888633bbbec4d837cc7b01dbd0de6c7d376a3",
+      "bytes": 8592,
+      "sha256": "379e8f81cde9a91f63ba16a5ca9ea431d89ceb4037f378ff3b73a608264c14a3",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/workspace/http.mjs"
       },
-      "sourceSha256": "466871a741b0df83a3a0799cca6888633bbbec4d837cc7b01dbd0de6c7d376a3",
+      "sourceSha256": "379e8f81cde9a91f63ba16a5ca9ea431d89ceb4037f378ff3b73a608264c14a3",
       "transformation": "byte-identical-copy"
     },
     {
@@ -2648,26 +2725,26 @@
     },
     {
       "path": "web/workspace/public/relations.js",
-      "bytes": 21545,
-      "sha256": "f40bc1544ec7c6acea7bf6a9c10b8edc83b0846f11138f1176232b11029b4414",
+      "bytes": 21709,
+      "sha256": "cab292f97d5a2b3d22e0ae8104ff46c13daf08ceafcc1b6a07094a38a78196d6",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/workspace/public/relations.js"
       },
-      "sourceSha256": "f40bc1544ec7c6acea7bf6a9c10b8edc83b0846f11138f1176232b11029b4414",
+      "sourceSha256": "cab292f97d5a2b3d22e0ae8104ff46c13daf08ceafcc1b6a07094a38a78196d6",
       "transformation": "byte-identical-copy"
     },
     {
       "path": "web/workspace/store.mjs",
-      "bytes": 26031,
-      "sha256": "725b509b44dd5a9baa8ed3a0100d629ccbf0a032b73cf06d9b89fe1c07506f7b",
+      "bytes": 26368,
+      "sha256": "95e071f0861a3d74ac52280b1671c58786a089041485fce1af684781da28fdeb",
       "category": "application-source-or-static-asset",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "web/workspace/store.mjs"
       },
-      "sourceSha256": "725b509b44dd5a9baa8ed3a0100d629ccbf0a032b73cf06d9b89fe1c07506f7b",
+      "sourceSha256": "95e071f0861a3d74ac52280b1671c58786a089041485fce1af684781da28fdeb",
       "transformation": "byte-identical-copy"
     },
     {
@@ -2680,6 +2757,186 @@
         "relativePath": "web/workspace/store.test.mjs"
       },
       "sourceSha256": "d9164e94574909ff8992cf6075275b368f763c9aba4842061d55a708bc1b999b",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/README.md",
+      "bytes": 1717,
+      "sha256": "8a19fd28e8bb4f04166ce628e7e8e272a9cd2e17624ecd1618a03ba8fcf083de",
+      "category": "retained-design-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/README.md"
+      },
+      "sourceSha256": "8a19fd28e8bb4f04166ce628e7e8e272a9cd2e17624ecd1618a03ba8fcf083de",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/home.png",
+      "bytes": 1836400,
+      "sha256": "537fa104870cd267b90781f89c5a7c269b2cd2d016804e6cbe28e47a9d40b63d",
+      "category": "retained-design-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/home.png"
+      },
+      "sourceSha256": "537fa104870cd267b90781f89c5a7c269b2cd2d016804e6cbe28e47a9d40b63d",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/home.svg",
+      "bytes": 3675,
+      "sha256": "1ef551e9173ae46b385be8cecb2d7dd1fc10de67d4f5189ccd0a3ecb4453c410",
+      "category": "retained-design-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/home.svg"
+      },
+      "sourceSha256": "1ef551e9173ae46b385be8cecb2d7dd1fc10de67d4f5189ccd0a3ecb4453c410",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/islands.css",
+      "bytes": 2577,
+      "sha256": "cc803bfb2e09345f43a9b88d034eb76c16698f5e58d156df6f6e163d17c80822",
+      "category": "retained-design-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/islands.css"
+      },
+      "sourceSha256": "cc803bfb2e09345f43a9b88d034eb76c16698f5e58d156df6f6e163d17c80822",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/ocean.svg",
+      "bytes": 2652,
+      "sha256": "6a02c17df5853c2c2cdcdcf6199fb11703ae4e19edd2f215293ffeb40f599e46",
+      "category": "retained-design-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/ocean.svg"
+      },
+      "sourceSha256": "6a02c17df5853c2c2cdcdcf6199fb11703ae4e19edd2f215293ffeb40f599e46",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/post.png",
+      "bytes": 1861446,
+      "sha256": "6aae9775909d5d5b32ce29f9bba954703dd570ad710451e9cf0b3204e6cf9388",
+      "category": "retained-design-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/post.png"
+      },
+      "sourceSha256": "6aae9775909d5d5b32ce29f9bba954703dd570ad710451e9cf0b3204e6cf9388",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/post.svg",
+      "bytes": 3731,
+      "sha256": "ecbce8f812bf83acbbb0a3f0d8fa23e327b4e84815b01975ba730ba8e538a4ad",
+      "category": "retained-design-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/post.svg"
+      },
+      "sourceSha256": "ecbce8f812bf83acbbb0a3f0d8fa23e327b4e84815b01975ba730ba8e538a4ad",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/ship.png",
+      "bytes": 1472637,
+      "sha256": "643284770d1fb04eedb9f2d91751e24d5840021c81d657125f3f21e60cbcf7d2",
+      "category": "retained-design-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/ship.png"
+      },
+      "sourceSha256": "643284770d1fb04eedb9f2d91751e24d5840021c81d657125f3f21e60cbcf7d2",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/story.png",
+      "bytes": 1930230,
+      "sha256": "2aa8dee8996d3d4081a8264d1923f360f7c9f84f6baad1e0298455484f4f262b",
+      "category": "retained-design-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/story.png"
+      },
+      "sourceSha256": "2aa8dee8996d3d4081a8264d1923f360f7c9f84f6baad1e0298455484f4f262b",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/story.svg",
+      "bytes": 3682,
+      "sha256": "db9b9da0b527b4911ff7b263a4f4359ac62019f59cd35d304ea7f548214ab93d",
+      "category": "retained-design-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/story.svg"
+      },
+      "sourceSha256": "db9b9da0b527b4911ff7b263a4f4359ac62019f59cd35d304ea7f548214ab93d",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/visual.png",
+      "bytes": 1717471,
+      "sha256": "72260965d85d0baba718d710ae0db350c3a9d9e0045b030ff18849cdf9ebafe8",
+      "category": "retained-design-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/visual.png"
+      },
+      "sourceSha256": "72260965d85d0baba718d710ae0db350c3a9d9e0045b030ff18849cdf9ebafe8",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/visual.svg",
+      "bytes": 3738,
+      "sha256": "c1c14df7336e36aed1adf70771ad60488cca3744ca34ef9c20a37278be6c6f05",
+      "category": "retained-design-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/assets/visual.svg"
+      },
+      "sourceSha256": "c1c14df7336e36aed1adf70771ad60488cca3744ca34ef9c20a37278be6c6f05",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/direction-approved.md",
+      "bytes": 2402,
+      "sha256": "0eb5b4680654056c761c6f7554ddac31744d8dd2749e31b848af6f0d1fc87dc7",
+      "category": "retained-design-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/direction-approved.md"
+      },
+      "sourceSha256": "0eb5b4680654056c761c6f7554ddac31744d8dd2749e31b848af6f0d1fc87dc7",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/implementation-spec.md",
+      "bytes": 1915,
+      "sha256": "fbad1272998e564b861dd830a0e1396e45d7fcb9b8c8b69779bc53473fcfee06",
+      "category": "retained-design-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/implementation-spec.md"
+      },
+      "sourceSha256": "fbad1272998e564b861dd830a0e1396e45d7fcb9b8c8b69779bc53473fcfee06",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/index.html",
+      "bytes": 2026873,
+      "sha256": "c93d679d8a6bdc4c8966f37d34e88587c558b0ea90ea2657bc6b162411bce0e3",
+      "category": "retained-design-source",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "web/设计提案/个人终端-四岛与领航船-v2/a-selected/index.html"
+      },
+      "sourceSha256": "c93d679d8a6bdc4c8966f37d34e88587c558b0ea90ea2657bc6b162411bce0e3",
       "transformation": "byte-identical-copy"
     },
     {
@@ -2848,6 +3105,162 @@
         "relativePath": "web/验证/V1_网页验收.md"
       },
       "sourceSha256": "0e61c9d84e32f6f9fc4aeec08704b58aa022b57c6de55dbe74d9fb1361e8bade",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "三系统工作台/README.md",
+      "bytes": 1617,
+      "sha256": "290b25db1371bad635e49c95c23db1497e4b5abe4cbb5aee4f679a3513937b87",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "三系统工作台/README.md"
+      },
+      "sourceSha256": "290b25db1371bad635e49c95c23db1497e4b5abe4cbb5aee4f679a3513937b87",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "三系统工作台/个人终端接入交付.md",
+      "bytes": 5635,
+      "sha256": "28e5bcaa865d4c93f3c2d2633fe0030749e425a1b5131bf361a2d4dd4fb38d30",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "三系统工作台/个人终端接入交付.md"
+      },
+      "sourceSha256": "28e5bcaa865d4c93f3c2d2633fe0030749e425a1b5131bf361a2d4dd4fb38d30",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "三系统工作台/个人终端接入说明.md",
+      "bytes": 9539,
+      "sha256": "e83377b82ef37203ac5a06692f6a18f7b651b5542d461e9595f1ddf9b6134600",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "三系统工作台/个人终端接入说明.md"
+      },
+      "sourceSha256": "e83377b82ef37203ac5a06692f6a18f7b651b5542d461e9595f1ddf9b6134600",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "三系统工作台/任务可用性验收目标-20261003.md",
+      "bytes": 5669,
+      "sha256": "009204f1ff1b6699d2de7f7ac6e5c11d65d5b9200c7a7cced0703a5566cbcf01",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "三系统工作台/任务可用性验收目标-20261003.md"
+      },
+      "sourceSha256": "009204f1ff1b6699d2de7f7ac6e5c11d65d5b9200c7a7cced0703a5566cbcf01",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "三系统工作台/四岛内容整合交付记录.md",
+      "bytes": 5111,
+      "sha256": "2d4b0b0b1b19266285b05b0696e529fa63a8e11edb7d0da1dcb2d8adcbd95272",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "三系统工作台/四岛内容整合交付记录.md"
+      },
+      "sourceSha256": "2d4b0b0b1b19266285b05b0696e529fa63a8e11edb7d0da1dcb2d8adcbd95272",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "三系统工作台/四系统备份与恢复.md",
+      "bytes": 5974,
+      "sha256": "4decae65545379a93c173bef084c5c16d0a0170b2a17ee95a701ce8e93d4c00f",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "三系统工作台/四系统备份与恢复.md"
+      },
+      "sourceSha256": "4decae65545379a93c173bef084c5c16d0a0170b2a17ee95a701ce8e93d4c00f",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "三系统工作台/日常体验交付.md",
+      "bytes": 5216,
+      "sha256": "93348d63c2097395dac104348e1b77ec8571381dd653d2dfbdebc1a583bb114a",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "三系统工作台/日常体验交付.md"
+      },
+      "sourceSha256": "93348d63c2097395dac104348e1b77ec8571381dd653d2dfbdebc1a583bb114a",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "三系统工作台/真实任务可用性交付-20261003.md",
+      "bytes": 5414,
+      "sha256": "de59f28e92853ef094c2c3356904b7cba87497dce4f410d8a15290540d7ab88e",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "三系统工作台/真实任务可用性交付-20261003.md"
+      },
+      "sourceSha256": "de59f28e92853ef094c2c3356904b7cba87497dce4f410d8a15290540d7ab88e",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "三系统工作台/自然学习记录交付记录.md",
+      "bytes": 5344,
+      "sha256": "57744602e2a0918983be9d30c63e63e4b9542d41e3c75990acee2509f70124f6",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "三系统工作台/自然学习记录交付记录.md"
+      },
+      "sourceSha256": "57744602e2a0918983be9d30c63e63e4b9542d41e3c75990acee2509f70124f6",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "三系统工作台/阶段收尾与领航学习接续交付.md",
+      "bytes": 5192,
+      "sha256": "d68e1b32856072ec5879fbeba56f48bfb99b7f8d301189b2aac59ef33c058600",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "三系统工作台/阶段收尾与领航学习接续交付.md"
+      },
+      "sourceSha256": "d68e1b32856072ec5879fbeba56f48bfb99b7f8d301189b2aac59ef33c058600",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "三系统工作台/领航减负交付记录.md",
+      "bytes": 4178,
+      "sha256": "b92802dadc1f249b68b136fcff7f169d3a3307bd8bfcb5fbb3cbb083ddc0e30b",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "三系统工作台/领航减负交付记录.md"
+      },
+      "sourceSha256": "b92802dadc1f249b68b136fcff7f169d3a3307bd8bfcb5fbb3cbb083ddc0e30b",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "三系统工作台/领航室接入交付.md",
+      "bytes": 3871,
+      "sha256": "9f6c8c021c11807cabe40868e89ffb7c93230bc931002a309ef9350e24224c5f",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "三系统工作台/领航室接入交付.md"
+      },
+      "sourceSha256": "9f6c8c021c11807cabe40868e89ffb7c93230bc931002a309ef9350e24224c5f",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "三系统工作台/领航室接入说明.md",
+      "bytes": 3446,
+      "sha256": "3d50621690e43e3da7a050ea993923fedfa9ecfe6a40e8a8cd655c7abf34145e",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "三系统工作台/领航室接入说明.md"
+      },
+      "sourceSha256": "3d50621690e43e3da7a050ea993923fedfa9ecfe6a40e8a8cd655c7abf34145e",
       "transformation": "byte-identical-copy"
     },
     {
@@ -4459,6 +4872,18 @@
       "transformation": "byte-identical-copy"
     },
     {
+      "path": "停止个人终端.cmd",
+      "bytes": 479,
+      "sha256": "05af6ee773d202d7e0b60a0121ed5f3f66ba6ae807bd4fc6222698edbca3e1e0",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "停止个人终端.cmd"
+      },
+      "sourceSha256": "05af6ee773d202d7e0b60a0121ed5f3f66ba6ae807bd4fc6222698edbca3e1e0",
+      "transformation": "byte-identical-copy"
+    },
+    {
       "path": "功能设定与缺口清单_v1.md",
       "bytes": 8368,
       "sha256": "6b40397eaa9c8aa8c8101cd84681880cb0a7a35949d76e608d3e748b7d7ef5be",
@@ -4483,15 +4908,27 @@
       "transformation": "byte-identical-copy"
     },
     {
+      "path": "启动个人终端.cmd",
+      "bytes": 479,
+      "sha256": "d3890eb98e7dc4740507adfc9b2a30e5450c532912fb2efd755b3876c6d01e2a",
+      "category": "application-source-or-static-asset",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "启动个人终端.cmd"
+      },
+      "sourceSha256": "d3890eb98e7dc4740507adfc9b2a30e5450c532912fb2efd755b3876c6d01e2a",
+      "transformation": "byte-identical-copy"
+    },
+    {
       "path": "启动说明.md",
-      "bytes": 1606,
-      "sha256": "077a8700668478a8745cdd76dddafba28e5977f10f5c92f24b60bb7fc6564b01",
+      "bytes": 1901,
+      "sha256": "443a86cbf335ca481b5acbb8f0758ea82331cb7c899d253ed53df23ec56403a2",
       "category": "source-document",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "启动说明.md"
       },
-      "sourceSha256": "077a8700668478a8745cdd76dddafba28e5977f10f5c92f24b60bb7fc6564b01",
+      "sourceSha256": "443a86cbf335ca481b5acbb8f0758ea82331cb7c899d253ed53df23ec56403a2",
       "transformation": "byte-identical-copy"
     },
     {
@@ -4543,15 +4980,87 @@
       "transformation": "byte-identical-copy"
     },
     {
+      "path": "建设方案/个人终端分阶段建设方案.md",
+      "bytes": 26330,
+      "sha256": "30590ec4ac1b763716d17aa16b4d9d86eeefee8a0579f93b9fbe4e196ee2f4dc",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "建设方案/个人终端分阶段建设方案.md"
+      },
+      "sourceSha256": "30590ec4ac1b763716d17aa16b4d9d86eeefee8a0579f93b9fbe4e196ee2f4dc",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "建设方案/四岛内容整合.md",
+      "bytes": 3222,
+      "sha256": "138a570937b4e271f41fa79b40d6f0bb50894eecc4b479ced4aad1a6a216123c",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "建设方案/四岛内容整合.md"
+      },
+      "sourceSha256": "138a570937b4e271f41fa79b40d6f0bb50894eecc4b479ced4aad1a6a216123c",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "建设方案/学习判断契约.md",
+      "bytes": 7672,
+      "sha256": "f48dede8a7d24be7378b13bd92106a61072ec4f891c82b0df7b5cd22e9c034fb",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "建设方案/学习判断契约.md"
+      },
+      "sourceSha256": "f48dede8a7d24be7378b13bd92106a61072ec4f891c82b0df7b5cd22e9c034fb",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "建设方案/学习模块深层优化.md",
+      "bytes": 10806,
+      "sha256": "811adc8ed96c63d4dc5d71652c64d37174a03e2ee6de6a1c79616595e4a0fe0e",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "建设方案/学习模块深层优化.md"
+      },
+      "sourceSha256": "811adc8ed96c63d4dc5d71652c64d37174a03e2ee6de6a1c79616595e4a0fe0e",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "建设方案/素材观察室深层优化.md",
+      "bytes": 17549,
+      "sha256": "fc75b52416a6560c5b1967cfebc917361ecccf9a0421d78134dce13bcbc2a789",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "建设方案/素材观察室深层优化.md"
+      },
+      "sourceSha256": "fc75b52416a6560c5b1967cfebc917361ecccf9a0421d78134dce13bcbc2a789",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "建设方案/自然学习记录方案.md",
+      "bytes": 4955,
+      "sha256": "80fd34575af32ec93a59c47d438e5c4608f389561b99e75ba3fd7230642047ab",
+      "category": "source-document",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "建设方案/自然学习记录方案.md"
+      },
+      "sourceSha256": "80fd34575af32ec93a59c47d438e5c4608f389561b99e75ba3fd7230642047ab",
+      "transformation": "byte-identical-copy"
+    },
+    {
       "path": "开始这里.md",
-      "bytes": 10815,
-      "sha256": "1ffdedb1550ceb42e8e713f1856ecf1ed84001dba8435513f1f1fd62908b6ae1",
+      "bytes": 12205,
+      "sha256": "dd36965faafa5bebfdd9ec29c6bc3c747dfe7c100e507360fab4e68a71bad1d7",
       "category": "source-document",
       "source": {
         "rootAlias": "learning-system",
         "relativePath": "开始这里.md"
       },
-      "sourceSha256": "1ffdedb1550ceb42e8e713f1856ecf1ed84001dba8435513f1f1fd62908b6ae1",
+      "sourceSha256": "dd36965faafa5bebfdd9ec29c6bc3c747dfe7c100e507360fab4e68a71bad1d7",
       "transformation": "byte-identical-copy"
     },
     {
@@ -5068,6 +5577,138 @@
         "relativePath": "验证/三系统整合/backup-test.py"
       },
       "sourceSha256": "d4aa8a4fb3d93062f11c73064315f35d793948580a285e904adcb223a0b409fb",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "验证/启动入口修复-20261006/project-changes.json",
+      "bytes": 432,
+      "sha256": "d1caf624fbd7812e17df8ac3f7d10da4ebcd9eeab0419397c19bac3e096761d1",
+      "category": "verification-receipt",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "验证/启动入口修复-20261006/project-changes.json"
+      },
+      "sourceSha256": "d1caf624fbd7812e17df8ac3f7d10da4ebcd9eeab0419397c19bac3e096761d1",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "验证/启动入口修复-20261006/verification.json",
+      "bytes": 807,
+      "sha256": "349a597de0e824888f4d3072bf06d0f87325b8bd7ce7b9ff955ca279605f8126",
+      "category": "verification-receipt",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "验证/启动入口修复-20261006/verification.json"
+      },
+      "sourceSha256": "349a597de0e824888f4d3072bf06d0f87325b8bd7ce7b9ff955ca279605f8126",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "验证/海面微调-20261006/build-verification.json",
+      "bytes": 220,
+      "sha256": "9118cc67673109fd01ed1df30ab36a6e3a37832c10890ad5859f97b56bd91dd3",
+      "category": "verification-receipt",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "验证/海面微调-20261006/build-verification.json"
+      },
+      "sourceSha256": "9118cc67673109fd01ed1df30ab36a6e3a37832c10890ad5859f97b56bd91dd3",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "验证/海面微调-20261006/enabled.json",
+      "bytes": 851,
+      "sha256": "e61b84524edc1f4970dd4ca36477ab37259854efe49070b3430422f22e318f02",
+      "category": "verification-receipt",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "验证/海面微调-20261006/enabled.json"
+      },
+      "sourceSha256": "e61b84524edc1f4970dd4ca36477ab37259854efe49070b3430422f22e318f02",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "验证/第三阶段/复习准备-20261006/enabled.json",
+      "bytes": 1948,
+      "sha256": "6108e960a8f4943b67c4ee7ece30e8c28c82a107e2d91215b78c605069368610",
+      "category": "verification-receipt",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "验证/第三阶段/复习准备-20261006/enabled.json"
+      },
+      "sourceSha256": "6108e960a8f4943b67c4ee7ece30e8c28c82a107e2d91215b78c605069368610",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "验证/第三阶段/复习准备-20261006/evidence.json",
+      "bytes": 11668,
+      "sha256": "72bda85304e7202ebfe5b2858f42d84ffce25cc93cd0ebf0e44112e510b818d1",
+      "category": "verification-receipt",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "验证/第三阶段/复习准备-20261006/evidence.json"
+      },
+      "sourceSha256": "72bda85304e7202ebfe5b2858f42d84ffce25cc93cd0ebf0e44112e510b818d1",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "验证/第三阶段/对象接续-20261006/browser-verification.json",
+      "bytes": 618,
+      "sha256": "22300d6a70bf99e8ee89b8977186c65a815f16a95caf8e4bb3c80765079cd9c4",
+      "category": "verification-receipt",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "验证/第三阶段/对象接续-20261006/browser-verification.json"
+      },
+      "sourceSha256": "22300d6a70bf99e8ee89b8977186c65a815f16a95caf8e4bb3c80765079cd9c4",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "验证/第三阶段/对象接续-20261006/enabled.json",
+      "bytes": 4984,
+      "sha256": "d36e1b53941a30a8bc0a8c6c48060cf8b5f7ed87e4e009c3b848477af63fb1fa",
+      "category": "verification-receipt",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "验证/第三阶段/对象接续-20261006/enabled.json"
+      },
+      "sourceSha256": "d36e1b53941a30a8bc0a8c6c48060cf8b5f7ed87e4e009c3b848477af63fb1fa",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "验证/第三阶段/对象接续-20261006/final-verification.json",
+      "bytes": 2083,
+      "sha256": "ee1a3287c183d2545a5974cffc1b7580586b4a30ffb56903c6c376be752ec575",
+      "category": "verification-receipt",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "验证/第三阶段/对象接续-20261006/final-verification.json"
+      },
+      "sourceSha256": "ee1a3287c183d2545a5974cffc1b7580586b4a30ffb56903c6c376be752ec575",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "验证/第三阶段/对象接续-20261006/method-lifecycle-review.json",
+      "bytes": 2580,
+      "sha256": "6669fd4d5fc2638902286c5e3c12479b3a4107fab625779a424ebc13a07833b8",
+      "category": "verification-receipt",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "验证/第三阶段/对象接续-20261006/method-lifecycle-review.json"
+      },
+      "sourceSha256": "6669fd4d5fc2638902286c5e3c12479b3a4107fab625779a424ebc13a07833b8",
+      "transformation": "byte-identical-copy"
+    },
+    {
+      "path": "验证/第三阶段/执行方案-20261006/本轮结果.json",
+      "bytes": 355,
+      "sha256": "35af99c0d4de6b74229ee7957307a76a30cb286beaa60bfcda8323f9423e8aba",
+      "category": "verification-receipt",
+      "source": {
+        "rootAlias": "learning-system",
+        "relativePath": "验证/第三阶段/执行方案-20261006/本轮结果.json"
+      },
+      "sourceSha256": "35af99c0d4de6b74229ee7957307a76a30cb286beaa60bfcda8323f9423e8aba",
       "transformation": "byte-identical-copy"
     },
     {

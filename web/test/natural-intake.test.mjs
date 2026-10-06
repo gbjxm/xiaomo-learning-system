@@ -78,6 +78,36 @@ test('verbatim numeric and Chinese chapter strings normalize without asking the 
   });
 });
 
+test('lesson reference and counts cannot justify a model-invented chapter; unknown or selected note identity remains usable', async t => {
+  for (const [message, chapter] of [
+    ['学习笔记：记下老白上次那一课的疑问。', 1],
+    ['学习笔记：看了三课，先记下我的疑问。', 3],
+    ['学习笔记：上了两节，先记下我的疑问。', 2],
+    ['学习笔记：第六/第七课有个疑问，记下。', 7],
+  ]) await t.test(message, async child => {
+    const f = await fixture(child), before = await businessCount(f);
+    const result = await f.intake.handle(payload(message, 'uncertain-chapter-001', { courseId: 'C002' }),
+      { runModel: async () => modelText({ kind: 'learning', title: '学习笔记', chapter }) });
+    assert.equal(result.body.saved, false); assert.equal(result.body.inputNeeded, true);
+    assert.deepEqual(await businessCount(f), before);
+  });
+  const f = await fixture(t);
+  const unknown = await f.intake.handle(payload('学习笔记：记下老白上次那一课的疑问。', 'unknown-chapter-001', { courseId: 'C002' }),
+    { runModel: async () => modelText({ kind: 'learning', title: '学习笔记' }) });
+  assert.equal(unknown.body.saved, true);
+  assert.equal((await f.repository.readNote(unknown.body.noteReceipt.noteId)).chapter, null);
+  const first = await f.intake.handle(payload(NOTE_MESSAGE), { runModel: async () => modelText(NOTE_CAPTURE) });
+  const noteId = first.body.noteReceipt.noteId;
+  const resumed = await f.intake.handle(payload('补充上次那一课的疑问：人物视线。', 'selected-chapter-001', { noteId }),
+    { runModel: async () => modelText({ kind: 'learning', chapter: 3 }) });
+  assert.equal(resumed.body.saved, true);
+  assert.equal((await f.repository.readNote(noteId)).chapter, 3);
+  const upperBound = await f.intake.handle(payload('学习笔记：第200课有个疑问，先记下。', 'chapter-bound-0200'),
+    { runModel: async () => modelText({ kind: 'learning', title: '学习笔记', chapter: 200 }) });
+  assert.equal(upperBound.body.saved, true);
+  assert.equal((await f.repository.readNote(upperBound.body.noteReceipt.noteId)).chapter, 200);
+});
+
 test('wrong classifier kinds become one clarification and never write business records', async t => {
   for (const [message, capture] of [[NOTE_MESSAGE, { kind: 'creation', title: '视线方向' }], [WATCH_MESSAGE, { kind: 'learning', title: '学习笔记' }], [CREATION_MESSAGE, { kind: 'watch', title: '小猫在雨中寻找回家的路' }]]) await t.test(capture.kind, async child => {
     const f = await fixture(child), before = await businessCount(f), result = await f.intake.handle(payload(message), { runModel: async () => modelText(capture) }); assert.equal(result.status, 200); assert.equal(result.body.inputNeeded, true); assert.equal(result.body.saveReceipt.status, 'needs_input'); assert.deepEqual(await businessCount(f), before);

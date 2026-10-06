@@ -1,0 +1,47 @@
+{
+  "verifiedAt": "2026-10-06T14:40:45.756070+00:00",
+  "publishedFiles": 22,
+  "publishedHashMismatches": [],
+  "regression": {
+    "tests": 187,
+    "pass": 187,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "testCommand": "node --test --test-concurrency=1 (15 selected test files; see final-regression.txt)",
+  "browserChecksPassed": 13,
+  "browserScope": "isolated; Edge; model disabled",
+  "formalExistingViewingRecords": 4,
+  "formalExistingViewingRecordsLocated": 4,
+  "personalFileInventoryAndBytesUnchanged": true,
+  "personalFiles": 6,
+  "formalTasks": 0,
+  "formalNotes": 0,
+  "formalEntries": 0,
+  "sourceEvidence": [
+    "combined-first-attempt.txt",
+    "final-regression.txt",
+    "browser-verification.json",
+    "formal-before.json",
+    "formal-after.json",
+    "enabled.json"
+  ],
+  "firstCombinedAttempt": "183/187 passed; 3 fixtures lacked copied learning contract; 1 concurrent-process CAS assertion failed without cause established. Copied current read-only contract/skills; isolated CAS rerun passed; full selected suite with file concurrency=1 passed 187/187. No product write-lock change made.",
+  "recovery": "Protected original files and exact before/after hashes are retained in protection/ and enabled.json; no business data was copied during activation.",
+  "realLearningOutcome": "not evaluated; no user review session or real feedback was fabricated",
+  "deferred": [
+    "First real review when naturally needed",
+    "Accurate C003 course version when needed",
+    "An additional cross-system business path only when requested"
+  ],
+  "temporaryCleanup": {
+    "status": "automatic_review_rejected_optional_recursive_cleanup; stopped",
+    "leftoverFixtures": [
+      "D:/PROGRA~3/UserTemp/23513/learning-method-lifecycle-ED8ywq",
+      "D:/PROGRA~3/UserTemp/23513/learning-method-lifecycle-JseYEF",
+      "D:/PROGRA~3/UserTemp/23513/learning-method-lifecycle-JPg5g5"
+    ],
+    "note": "Initial missing fixture dependency only; corrected fixtures now register cleanup before setup."
+  }
+}

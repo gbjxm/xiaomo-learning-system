@@ -33,7 +33,7 @@ export function withContentSources(store,{projectRoot,env,bridge}={}){
    if(!/^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$/.test(originalId))throw new ContentError('CONTENT_INVALID_INPUT','原灵感编号无效。');
    const [base,result]=await Promise.all([store.list({kind:'creation'}),navigation.call('detail',{id:originalId})]);
    if(result.entry?.type!=='idea')throw new ContentError('CONTENT_NOT_FOUND','这份记录不是原灵感条目。',404);
-   return {identity:base.identity,revision:base.revision,item:sourceItem(result.entry,{full:true}),warnings:[...(base.warnings??[]),...(result.warnings??[])]};
+   return {identity:base.identity,scope:base.scope,revision:base.revision,item:sourceItem(result.entry,{full:true}),warnings:[...(base.warnings??[]),...(result.warnings??[])]};
   },
   save:payload=>store.save(payload)
  };

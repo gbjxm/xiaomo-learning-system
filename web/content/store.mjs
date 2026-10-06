@@ -84,6 +84,12 @@ export class ContentStore {
     if(this.repository.root!==this.root||this.repository.scope!==scope)fail('CONTENT_IDENTITY_MISMATCH','学习来源与我的内容身份不同，拒绝混合读取。',409);
     this.identity='content:'+digest({root:this.root.toLowerCase(),scope,version:1});
   }
+  #withWorkspaceRef(item) {
+    const id = item.source?.kind === 'learning-note' ? 'note:' + item.noteId
+      : item.source?.kind === 'learning-task' ? 'task:' + item.taskId
+      : !item.readOnly && (CONTENT_ID.test(item.id) || WATCH_ID.test(item.id)) ? 'content:' + item.id : null;
+    return id ? {...item,workspaceRef:{module:'learning',kind:'learning',storeId:this.identity,id}} : item;
+  }
   async #native() {
     const documents=new Map(),items=new Map(),receipts=new Map(),hashes={};
     const addReceipt=(receipt,id)=>{if(!receipt||typeof receipt.submissionId!=='string'||!/^[A-Za-z0-9_-]{8,128}$/.test(receipt.submissionId)||!/^[a-f0-9]{64}$/.test(receipt.payloadHash??'')||receipt.itemId!==id||receipts.has(receipt.submissionId))fail('CONTENT_CORRUPT','保存回执结构损坏或重复，保留原件。',503);receipts.set(receipt.submissionId,receipt);};
@@ -108,8 +114,13 @@ export class ContentStore {
   }
   async #projections() {
     const items=[],warnings=[];let ui;
-    if(this.uiStateReader){try{ui=await this.uiStateReader();}catch(error){if(error.code!=='UI_STATE_MISSING')throw error;}}
-    else {const raw=await readLearningFile(this.root,'学习小岛/data/ui-state.json');if(raw!==null){try{ui=JSON.parse(raw);if(ui.schemaVersion!==1||typeof ui.storeId!=='string'||ui.projectRoot!==this.root||ui.scope!==this.scope||!ui.state)throw new Error();validateUIState(ui.state);}catch{fail('CONTENT_SOURCE_CORRUPT','旧界面记录无法可靠读取，保留原件，未显示为空。',503);}}}
+    try {
+      if(this.uiStateReader)ui=await this.uiStateReader();
+      else {const raw=await readLearningFile(this.root,'学习小岛/data/ui-state.json');if(raw!==null){try{ui=JSON.parse(raw);if(ui.schemaVersion!==1||typeof ui.storeId!=='string'||ui.projectRoot!==this.root||ui.scope!==this.scope||!ui.state)throw new Error();validateUIState(ui.state);}catch{fail('CONTENT_SOURCE_CORRUPT','旧界面记录无法可靠读取。',503);}}}
+    } catch(error) {
+      ui=null;
+      if(error.code!=='UI_STATE_MISSING')warnings.push({source:'ui',code:error.code??'CONTENT_SOURCE_UNAVAILABLE',message:'旧界面记录暂未读到；原件保留，正式学习、创作与观看记录仍可查看。'});
+    }
     const state=ui?.state??ui, island=value=>['story','visual','post'].includes(value)?value:'home';
     const make=(id,kind,title,body,domain,extra={})=>({id,kind,title,body,subtype:'source',date:null,domains:domain==='home'?[]:[domain],nextStep:'',links:[],createdAt:null,updatedAt:null,version:0,history:[],readOnly:true,...extra});
     for(const record of state?.islandState?.records??[]) {
@@ -121,7 +132,7 @@ export class ContentStore {
     for(const [domain,draft] of Object.entries(state?.lifeState?.watch??{}))if(draft&&(draft.title||draft.note)&&['home','story','visual','post'].includes(domain))items.push(make('legacy-watch:'+domain,'watch',draft.title||'尚未保存的看片想法',draft.note||'',domain,{watch:{status:'unknown',progress:''},source:{kind:'legacy-watch',label:'旧观看草稿（未登记观看事实）',path:'学习小岛/data/ui-state.json'},resumeUrl:'/learning/?island='+domain+'&place=watch&legacyContent=1'}));
     const learning=await this.repository.snapshot();warnings.push(...learning.warnings);
     const courseName=id=>(learning.courses??[]).find(course=>course.courseId===id)?.name??null;
-    for(const task of learning.tasks)items.push(make('learning-task:'+task.taskId,'learning',task.title,task.purpose,'home',{taskId:task.taskId,courseId:task.courseId??null,courseName:courseName(task.courseId),chapter:task.chapter??null,nextStep:task.nextStep,createdAt:null,updatedAt:task.updatedAt,source:{kind:'learning-task',label:'正式学习任务',path:'运行记录/学习记录'},resumeUrl:'/learning/?taskId='+encodeURIComponent(task.taskId)}));
+    for(const task of learning.tasks)items.push(make('learning-task:'+task.taskId,'learning',task.title,task.purpose,'home',{taskId:task.taskId,sourceRevision:learning.recordVersion,courseId:task.courseId??null,courseName:courseName(task.courseId),chapter:task.chapter??null,nextStep:task.nextStep,createdAt:null,updatedAt:task.updatedAt,source:{kind:'learning-task',label:'正式学习任务',path:'运行记录/学习记录'},resumeUrl:'/learning/?taskId='+encodeURIComponent(task.taskId)}));
     for(const artifact of Object.values(learning.artifactCatalog))items.push(make('learning-artifact:'+hashText(artifact.taskId+artifact.id).slice(0,32),'learning',artifact.artifact.title,artifact.artifact.text,'home',{taskId:artifact.taskId,artifact:artifact.artifact,source:{kind:'learning-artifact',label:'正式学习文字产物',path:artifact.activityFile},resumeUrl:'/learning/?taskId='+encodeURIComponent(artifact.taskId)}));
     for(const note of learning.notes??[])items.push(make('learning-note:'+note.noteId,'learning',note.title,note.body,'home',{noteId:note.noteId,aiText:note.aiText??'',aiTextCoverage:'full',courseId:note.courseId,courseName:courseName(note.courseId),chapter:note.chapter,date:note.occurredOn,updatedAt:note.updatedAt,version:note.version,history:note.history??[],source:{kind:'learning-note',label:'学习笔记',path:note.activityFile},resumeUrl:'/learning/?noteId='+encodeURIComponent(note.noteId)}));
     for(const entry of learning.entries??[])items.push(make('learning-entry:'+entry.id,'learning',entry.title||'以前的学习交流',entry.body,'home',{taskId:entry.taskId??null,aiText:entry.aiText??'',aiTextCoverage:entry.aiTextCoverage,courseId:entry.courseId??null,courseName:courseName(entry.courseId),chapter:entry.chapter??null,date:entry.occurredOn??null,updatedAt:entry.updatedAt,source:{kind:'learning-entry',label:'原学习交流记录',path:entry.activityFile},resumeUrl:entry.taskId?'/learning/?taskId='+encodeURIComponent(entry.taskId):null}));
@@ -132,9 +143,9 @@ export class ContentStore {
     if(!['all','creation','watch','learning'].includes(kind)||typeof q!=='string'||q.length>2000)fail('CONTENT_INVALID_INPUT','查找条件无效。');
     const native=await this.#native(),sources=await this.#projections(),query=q.toLocaleLowerCase();
     const items=[...native.items.values(),...sources.items].filter(item=>(kind==='all'||item.kind===kind)&&(!query||[item.title,item.body,item.aiText,item.courseName,item.nextStep,item.watch?.progress].filter(Boolean).join('\n').toLocaleLowerCase().includes(query))).sort((a,b)=>(b.updatedAt??'').localeCompare(a.updatedAt??'')||a.id.localeCompare(b.id));
-    return {identity:this.identity,revision:native.revision,items:items.map(({history,...item})=>item),warnings:sources.warnings};
+    return {identity:this.identity,scope:this.scope,revision:native.revision,items:items.map(({history,...item})=>this.#withWorkspaceRef(item)),warnings:sources.warnings};
   }
-  async detail(id) {if(!validId(id))fail('CONTENT_INVALID_INPUT','内容编号无效。');const native=await this.#native();let item=native.items.get(id),warnings=[];if(!item){const projection=await this.#projections();item=projection.items.find(value=>value.id===id);warnings=projection.warnings;}if(!item)fail('CONTENT_NOT_FOUND','未找到这份内容。',404);return {identity:this.identity,revision:native.revision,item,warnings};}
+  async detail(id) {if(!validId(id))fail('CONTENT_INVALID_INPUT','内容编号无效。');const native=await this.#native();let item=native.items.get(id),warnings=[];if(!item){const projection=await this.#projections();item=projection.items.find(value=>value.id===id);warnings=projection.warnings;}if(!item)fail('CONTENT_NOT_FOUND','未找到这份内容。',404);return {identity:this.identity,scope:this.scope,revision:native.revision,item:this.#withWorkspaceRef(item),warnings};}
   async #lock() {
     const dir=await safeLearningPath(this.root,LOCK_DIR);await fs.mkdir(dir,{recursive:true});await safeLearningPath(this.root,LOCK_DIR);
     const lock=await safeLearningPath(this.root,LOCK_DIR+'/.lock'),token=randomUUID(),ownerName='.owner_'+token+'.tmp',ownerFile=await safeLearningPath(this.root,LOCK_DIR+'/'+ownerName),owner=JSON.stringify({version:1,pid:process.pid,token,ownerName,createdAt:this.now().toISOString()}),deadline=Date.now()+2500;let handle,published=false;
@@ -157,7 +168,7 @@ export class ContentStore {
     const payloadHash=digest(payload),release=await this.#lock();
     try {
       const native=await this.#native(),prior=native.receipts.get(payload.submissionId);
-      if(prior){if(prior.payloadHash!==payloadHash)fail('CONTENT_SUBMISSION_CONFLICT','同一提交标识已用于不同内容，请保留原请求。',409);return {saved:true,duplicate:true,identity:this.identity,revision:native.revision,item:native.items.get(prior.itemId),receipt:prior};}
+      if(prior){if(prior.payloadHash!==payloadHash)fail('CONTENT_SUBMISSION_CONFLICT','同一提交标识已用于不同内容，请保留原请求。',409);return {saved:true,duplicate:true,identity:this.identity,scope:this.scope,revision:native.revision,item:this.#withWorkspaceRef(native.items.get(prior.itemId)),receipt:prior};}
       if(payload.expectedRevision!==native.revision)fail('CONTENT_REVISION_CONFLICT','另一处保存了新内容，请重读后核对本次草稿。',409,{currentRevision:native.revision});
       let id=input.id;if(!id)id=input.kind==='watch'?'W'+String(Math.max(0,...[...native.items.keys()].filter(value=>WATCH_ID.test(value)).map(value=>Number(value.slice(1))))+1).padStart(3,'0'):'content_'+randomUUID();
       if(input.kind==='watch'&&!WATCH_ID.test(id))fail('CONTENT_INVALID_INPUT','新观看请省略编号，由同一台账分配。');
@@ -174,7 +185,7 @@ export class ContentStore {
         const previousDoc=native.documents.get(id),doc={schemaVersion:1,identity:this.identity,item,history:[...(previousDoc?.history??[]),historyEntry(item,action,savedAt,input)],receipts:[...(previousDoc?.receipts??[]),receipt]};const relative=CREATIONS+'/'+id+'.json';await this.#atomic(relative,JSON.stringify(doc,null,2)+'\n',native.hashes[relative]??null);
       }
       const check=await this.#native();if(!check.receipts.has(payload.submissionId))fail('CONTENT_WRITE_UNVERIFIED','保存回执未能回读，请保留原提交标识。',500);
-      return {saved:true,duplicate:false,identity:this.identity,revision:check.revision,item:check.items.get(id),receipt};
+      return {saved:true,duplicate:false,identity:this.identity,scope:this.scope,revision:check.revision,item:this.#withWorkspaceRef(check.items.get(id)),receipt};
     }finally{await release();}
   }
 }

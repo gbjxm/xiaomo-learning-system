@@ -1,0 +1,26 @@
+{
+  "publishedAt": "2026-10-06T15:18:50.030152+00:00",
+  "files": [
+    {
+      "path": "web/public/terminal/index.html",
+      "sha256": "25ac7cef3a6a450a0a762c659c19084e70519f5ce268c68f13a21df208f2056d"
+    },
+    {
+      "path": "web/public/terminal/build-terminal.py",
+      "sha256": "c6c94636fcaa6b731d4aeecac58a607a0e50cb7416fddd92f80649fa1ebb9526"
+    },
+    {
+      "path": "web/public/terminal/sea-surface.svg",
+      "sha256": "6767143f08fc09a18317d7d04d4df99c8dd79b4ab2c616cc4661982379c955a2"
+    },
+    {
+      "path": "web/public/terminal/sea-surface.css",
+      "sha256": "e0af754e4a54cbb278e5377117079758c9243e549a262571a398763264b0d3af"
+    }
+  ],
+  "islandAssetsChanged": false,
+  "businessLogicChanged": false,
+  "layoutChanged": false,
+  "personalRecordsChanged": false,
+  "serviceRestartRequired": false
+}

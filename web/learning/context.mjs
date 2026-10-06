@@ -1,10 +1,11 @@
 import path from 'node:path';
 import { readFile, realpath, stat } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { LearningSourceReader } from './sources.mjs';
+import { LearningSourceReader, explicitCourseChapter } from './sources.mjs';
 import { ContentStore } from '../content/store.mjs';
 import { LEARNING_ROOT } from './records.mjs';
 import { readNavigationLearningContext, shouldUseNavigationLearningContext } from './navigation-context.mjs';
+import { adoptedMethodBlocks } from './protocol.mjs';
 
 const MAX_CONTEXT = 48000;
 const hash = value => createHash('sha256').update(value).digest('hex');
@@ -118,7 +119,7 @@ export async function buildLearningContext({ projectRoot, payload = {}, snapshot
   }
   let resumedCourse; let resumedChapter;
   if (currentTask && (!context.taskId || context.taskId === currentTask.taskId) && !context.sourceSelection && context.chapter == null
-    && !/第?[一二两三四五六七八九十零百\d]{1,5}\s*(?:课|节)/.test(message)) {
+    && !explicitCourseChapter(message).mentioned) {
     const references = (currentTask.evidenceRefs ?? []).map(ref => typeof ref === 'string' ? ref : ref?.id);
     const identities = [...new Set(references.filter(ref => typeof ref === 'string').map(ref => /^course:(C00[12]):(\d{1,3})(?::[a-f0-9]{12})?$/.exec(ref))
       .filter(Boolean).map(match => `${match[1]}:${Number(match[2])}`))];
@@ -194,9 +195,19 @@ export async function buildLearningContext({ projectRoot, payload = {}, snapshot
   const sourceCoverage = [];
   for (const source of sources) sections.push({ label: `实际读取的依据 ${source.id}`, content: `${JSON.stringify(sourceMetadata(source))}\n\n${source.content}`, source, essential: true });
   if (stage) {
-    const adopted = markdownSections(stage).filter(item => /已采用的改进/.test(item.title));
-    if (adopted.length) sections.push({ label: '仍有效的已采用改进', content: adopted.map(item => item.content).join('\n\n'), essential: true });
-    sections.push({ label: '阶段安排', content: bounded(stage, 4500, '阶段安排'), omitIfDuplicate: true });
+    const stageSections = markdownSections(stage), adopted = stageSections.filter(item => /已采用的改进/.test(item.title));
+    const adoptedText = adopted.map(item => item.content).join('\n\n'), methods = adoptedMethodBlocks(adoptedText);
+    const readable = block => `方法编号 methodId：${block.id}\n绑定任务 taskId：${block.data.taskId ?? '未绑定'}\n原方法 value：${block.data.value}\n状态 status：${block.data.status}\n` + block.full.replace(/<!-- learning-method:v1 [A-Za-z0-9+/=]+ -->/g, '');
+    const active = methods.filter(block => block.data?.status === 'active'), paused = methods.filter(block => block.data?.status === 'paused');
+    if (active.length) sections.push({ label: '当前采用的做法（仍须核对本次适用条件）', content: active.map(readable).join('\n\n'), essential: true });
+    if (paused.length) sections.push({ label: '已暂停的做法（保留理由供回看，不自动加入安排）', content: paused.map(readable).join('\n\n'), essential: true });
+    let legacy = adoptedText;
+    for (const block of methods.filter(block => block.data)) legacy = legacy.replace(block.full, '');
+    legacy = legacy.replace(/^## 已采用的改进\s*/m, '').trim();
+    if (legacy) sections.push({ label: '既有做法的未结构化说明（状态以原文为准）', content: legacy, essential: true });
+    if (adopted.length) sections.push({ label: '做法使用边界', content: '只按本次用户意图和条件选用相关做法。已暂停的做法保留理由供回看，未经本轮明确恢复不得重新加入安排或当作新建议再次提出；其他任务的做法不能自动套用。本次不适用只影响本次安排，不自动改变长期采用状态；普通解释、自由欣赏或明确不做练习时不追加练习。方法编号和任务编号是原记录身份，不改写或猜测。', essential: true });
+    const otherStage = stageSections.filter(item => !/已采用的改进/.test(item.title)).map(item => item.content).join('\n\n');
+    if (otherStage.trim()) sections.push({ label: '阶段安排', content: bounded(otherStage, 4500, '阶段安排') });
   }
   if (needsAssessment && ability) sections.push({ label: '能力依据', content: ability, essential: true });
   if (needsAssessment) for (const relative of evidencePaths(ability, currentTask?.evidenceRefs)) {
@@ -225,7 +236,6 @@ export async function buildLearningContext({ projectRoot, payload = {}, snapshot
   // Reserve room for coverage warnings. Whole source sections are included or omitted; never silently sliced.
   const budget = MAX_CONTEXT - 2500;
   for (const item of sections) {
-    if (item.omitIfDuplicate && included.some(other => other.label === '仍有效的已采用改进' && other.content === item.content)) continue;
     const block = `\n\n### ${item.label}\n${item.content}`;
     if (systemContext.length + block.length > budget) { omitted.push(item.label); warnings.push(`${item.label}超出本次上下文预算，未提供；不能声称已覆盖。`); continue; }
     systemContext += block; included.push(item);

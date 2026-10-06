@@ -71,7 +71,7 @@ export async function runLearningCLI(argv, { stdout = value => process.stdout.wr
     const task = await resolveLearningTask(repository, snapshot, payload);
     const parsed = raw.updates ? { reply: raw.reply, updates: raw.updates, structured: raw.structured !== false } : parseModelResponse(raw.reply ?? '', { requestId: payload.requestId });
     if (typeof parsed.reply !== 'string' || !parsed.reply.trim() || parsed.reply.length > 24000) throw new Error('提交需要完整的实际文字答复，不超过24000字符。');
-    const checked = validateUpdates(parsed.updates, { payload, task, sources: { sources: raw.sourceCoverage ?? [], courses: snapshot.courses } });
+    const checked = validateUpdates(parsed.updates, { payload, task, sources: { sources: raw.sourceCoverage ?? [], courses: snapshot.courses }, stagePlan: snapshot.stagePlan });
     const kind = learningSaveKind(payload, checked.updates);
     result = await committer.save({ payload, reply: parsed.reply, updates: checked.updates, structured: parsed.structured && !!checked.updates, contextSnapshot: raw.contextSnapshot ?? { recordVersion: snapshot.recordVersion, fileHashes: snapshot.fileHashes }, kind, task, sourceCoverage: raw.sourceCoverage ?? [] });
     result.warnings = [...new Set([...(result.warnings ?? []), ...(checked.warnings ?? [])])];

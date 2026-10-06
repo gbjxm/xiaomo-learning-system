@@ -40,7 +40,7 @@ export function normalizeRef(value) {
   object(value, ['module', 'kind', 'storeId', 'id'], ['module', 'kind', 'storeId', 'id'], '实体引用');
   if (!MODULES.includes(value.module) || !KINDS[value.module].includes(value.kind)) fail('WORKSPACE_INVALID_REF', '实体模块与类型不匹配。');
   text(value.storeId, '来源storeId', 256); text(value.id, '实体ID', 256);
-  if (value.kind === 'learning' && !/^(?:island:(?:home|story|visual|post)|(?:activity|record):[A-Za-z0-9_-]{1,180})$/.test(value.id)) fail('WORKSPACE_INVALID_REF', '学习引用须为已保存的岛屿、活动或记录ID。');
+  if (value.kind === 'learning' && !/^(?:island:(?:home|story|visual|post)|(?:activity|record):[A-Za-z0-9_-]{1,180}|note:note_[a-f0-9]{24}|task:[A-Za-z0-9_-]{8,128}|content:(?:content_[A-Za-z0-9_-]{8,100}|W\d{3,8}))$/.test(value.id)) fail('WORKSPACE_INVALID_REF', '学习引用须为已保存的区域、活动、笔记、任务或内容ID。');
   return { module: value.module, kind: value.kind, storeId: value.storeId, id: value.id };
 }
 function relationFor(a, b) {
@@ -62,6 +62,7 @@ function localURL(value, module) {
     if (seen.has(key)) fail('WORKSPACE_INVALID_STATE', '阅读URL查询字段重复。'); seen.add(key);
     const valid = key === 'space' ? parameter === 'daily'
       : ['focus', 'id'].includes(key) ? /^[A-Za-z0-9_:-]{1,256}$/.test(parameter)
+      : key === 'item' ? module === 'learning' && url.pathname === '/learning/content/' && /^(?:content_[A-Za-z0-9_-]{8,100}|W\d{3,8}|learning-note:note_[a-f0-9]{24}|learning-task:[A-Za-z0-9_-]{8,128})$/.test(parameter)
       : key === 'kind' ? Object.values(KINDS).flat().includes(parameter)
       : key === 'preview-place' ? ['courses', 'practice', 'watch'].includes(parameter) && module === 'learning'
       : key === 'preview-view' ? ['opportunities', 'works'].includes(parameter) && module === 'information' : false;

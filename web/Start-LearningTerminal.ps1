@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $terminalRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $envFile = Join-Path $terminalRoot '.env.local'
 $serverFile = Join-Path $terminalRoot 'server.mjs'

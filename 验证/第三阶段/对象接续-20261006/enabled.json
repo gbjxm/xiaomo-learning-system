@@ -1,0 +1,117 @@
+{
+  "publishedAt": "2026-10-06T14:40:10.363544+00:00",
+  "files": [
+    {
+      "path": "web/content/store.mjs",
+      "before": "6486f542e2b40ba8ac1f18be493fe67bca455c0f62aedd87e56b8551f6c135f9",
+      "after": "96d349e1a1a6e5afeeef89483f8fdd728c3331ac1b428e732645f4b858dfda9b"
+    },
+    {
+      "path": "web/learning/cli.mjs",
+      "before": "eeaed38426c384d57e3a440477b864248ffc2e6705daf36b6500b0c7f9e33d55",
+      "after": "f1875bee602436b584eeca59d4412750e35be69443643e2eb7c2292684087f5d"
+    },
+    {
+      "path": "web/learning/commit.mjs",
+      "before": "de8f6cbbc21ae5678948ac145d7bf554994dd49dc526a51bc27124209ca52c55",
+      "after": "f3079dbe903475e49181372c2b4ff2cb2472a741ec638c0c01471bbe2e2bbb42"
+    },
+    {
+      "path": "web/learning/content-sources.mjs",
+      "before": "382c3d774fe3264d88e5c4e9c4fffbdbd0ad268980dfea704d0bcaf90dd74d93",
+      "after": "182faadc52af4a18616b0672cf46a7ab36b0d3a8d841cb53cc1c4338e101874d"
+    },
+    {
+      "path": "web/learning/context.mjs",
+      "before": "b2e31ba96d03519a1b3dd0972f4897cb51383197945b0a4fe6b8aa571d38e659",
+      "after": "e645eb7aa9438033f2441aee38c72ffaf07c3994e3407967a97f47f3eb910839"
+    },
+    {
+      "path": "web/learning/coordinator.mjs",
+      "before": "b505844411d8651b43d4f31422cebf5c94b4f4de71eb88de397a4010e56f285c",
+      "after": "ff04e5ac32270785fbd30499dab87c9d751f20261907ee40e36fc777d12e3de2"
+    },
+    {
+      "path": "web/learning/protocol.mjs",
+      "before": "90cbf25a864e7664a6a943a129239fac78a99f1714d9fd323102c5ed3667fcb7",
+      "after": "54e4f53b961eaf9c586bd7a6fd155197f2b329a86d506654e32d426f4e1943cd"
+    },
+    {
+      "path": "web/preview/public/scene.js",
+      "before": "4c30dae57081b4c861687ba8ea0e124119cb587828df1a3f6914378d9eb69c4c",
+      "after": "ef3de354711202a9710cdcb4d137644a8b878ff26c0ef039c123ba970ba7ac16"
+    },
+    {
+      "path": "web/preview/scene.test.mjs",
+      "before": null,
+      "after": "9e4b32b597dc737a88f849758db1cf49592472cc6e9504a46a1c09efb48ea869"
+    },
+    {
+      "path": "web/public/learning/content/app.js",
+      "before": "ebdd11eb5ca679f5e3f09e6646c599e2b4ae39659a620781a95cb05d3ea8a05b",
+      "after": "882af789a0d5c4eccb7aa833b2791c4e2273c2b0ecdfddc3e1412859ccb51a17"
+    },
+    {
+      "path": "web/public/learning/content/index.html",
+      "before": "c55c21bd05bb325e887b9c516a2ac1f328531c6c39467ab0827b4191450bd557",
+      "after": "cec60ca028c1e116796d68c2c40db304b7097f4ea3f5665458708742fd553969"
+    },
+    {
+      "path": "web/public/learning/content/style.css",
+      "before": "d93a5afd333050b931a06ec2e5cd3804e4b210d2ae83e3aa2e5d3d77f5036ec3",
+      "after": "d8c4eaf4ebfb472e6b3acd0947c265d6f74951bf38a2a6d3a54d195857c2b7df"
+    },
+    {
+      "path": "web/public/learning/岛屿场景.js",
+      "before": "fbc14c1af125cd4664fc2bd0ce027fc188e7b9b512f1aaba3d3fec619300f2e0",
+      "after": "25d93c2029b2f05df71162473a0d78f9ffdc01ee6b8b68bc58fe8bdae39126cc"
+    },
+    {
+      "path": "web/test/content-workspace-ui.test.mjs",
+      "before": null,
+      "after": "8a0381cc29b0043fe18db61caca8d78516d71111483afe9d83b4431f114ea996"
+    },
+    {
+      "path": "web/test/learning-method-lifecycle.test.mjs",
+      "before": null,
+      "after": "6b24262f1efd27e974b64d884d51f6493a5265c65a5cffa51b3580711e1cb3bd"
+    },
+    {
+      "path": "web/workspace/entities.mjs",
+      "before": "a190688b6ce2507bbb6d3c5f852ff3ae67a2552a8f7522b5647ceb10c9088f84",
+      "after": "39062bab5c948a29b87acf383bd30f919161bfb638e865f071bfec2ab349b660"
+    },
+    {
+      "path": "web/workspace/entities.test.mjs",
+      "before": null,
+      "after": "71dfea46455aeb1046d91b7ebdc5288953dc27c7b44cd333070a05a8b20ad3fd"
+    },
+    {
+      "path": "web/workspace/http.mjs",
+      "before": "466871a741b0df83a3a0799cca6888633bbbec4d837cc7b01dbd0de6c7d376a3",
+      "after": "379e8f81cde9a91f63ba16a5ca9ea431d89ceb4037f378ff3b73a608264c14a3"
+    },
+    {
+      "path": "web/workspace/public/relations.js",
+      "before": "f40bc1544ec7c6acea7bf6a9c10b8edc83b0846f11138f1176232b11029b4414",
+      "after": "cab292f97d5a2b3d22e0ae8104ff46c13daf08ceafcc1b6a07094a38a78196d6"
+    },
+    {
+      "path": "web/workspace/store.mjs",
+      "before": "725b509b44dd5a9baa8ed3a0100d629ccbf0a032b73cf06d9b89fe1c07506f7b",
+      "after": "95e071f0861a3d74ac52280b1671c58786a089041485fce1af684781da28fdeb"
+    },
+    {
+      "path": "建设方案/个人终端分阶段建设方案.md",
+      "before": "5d4ac066fede2ed260680e2fc1ec5956d55e8a2eaee73d31db0476601c7e5b04",
+      "after": "89f54e25e4bbfc42deedc1edcca17d825e4ebe4c717482c9d03341ed15281758"
+    },
+    {
+      "path": "开始这里.md",
+      "before": "505432e5acc153f943ab7fa3514347de51067f537f9f19e0ba62c8c22f021996",
+      "after": "9432a55d1f4a873a881ffb48c203a651e8552e648c85fe5f1b0777a912e8c7d3"
+    }
+  ],
+  "personalDataCopied": false,
+  "serviceRestarted": false
+}

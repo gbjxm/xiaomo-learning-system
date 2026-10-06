@@ -1,0 +1,279 @@
+{
+  "date": "2026-10-06",
+  "implementation": "formal",
+  "purpose": "按需复习准备的只读技术核对；不是用户学习活动或复习效果验收",
+  "realModelCalled": false,
+  "personalRecordsUnchanged": true,
+  "tasks": 0,
+  "notes": 0,
+  "entries": 0,
+  "results": [
+    {
+      "id": "charlie-explicit",
+      "input": {
+        "message": "复习查理第二课，核对人物、事件和主题的关系。",
+        "courseId": "C001",
+        "chapter": 2
+      },
+      "expected": "located",
+      "pass": true,
+      "sources": [
+        {
+          "id": "course:C001:2:1ecf9c2eaa71",
+          "title": "查理老师的编剧课 - 第二课 故事的要素",
+          "path": "D:\\obsidian\\影视知识树\\个人影视知识树\\知识库\\学习区\\课程\\查理老师的编剧课\\02 - 第二课 故事的要素（P5-P6）.md",
+          "heading": "时间线笔记",
+          "lineStart": 45,
+          "lineEnd": 181,
+          "documentHash": "046430daf63c8850022455a21060d7f737643c9be93cbdc800a780d89e02b001",
+          "snapshot": "cd5d06c79bee25c8024b6a4aea0fe4755240bd8efe9684625dd5ea77cb295b35",
+          "scope": {
+            "version": 1,
+            "mode": "zones",
+            "role": "",
+            "expanded": false,
+            "include_paths": [
+              "知识库/学习区/课程/查理老师的编剧课/02 - 第二课 故事的要素（P5-P6）.md"
+            ],
+            "paths": [
+              "知识库/创作区",
+              "知识库/学习区/课程/查理老师的编剧课/02 - 第二课 故事的要素（P5-P6）.md"
+            ]
+          },
+          "coverage": "section",
+          "sourceKind": "course_note",
+          "limitations": [
+            "只读本地正式课文，不等于本次核验了外部原视频。",
+            "用户所学课程版本仍未核实；未据资料数量推断本人进度或掌握。",
+            "课文披露：两P正文复核，声画限制见来源说明"
+          ],
+          "characters": 5866
+        },
+        {
+          "id": "course:C001:2:fddd72ffafbd",
+          "title": "查理老师的编剧课 - 第二课 故事的要素",
+          "path": "D:\\obsidian\\影视知识树\\个人影视知识树\\知识库\\学习区\\课程\\查理老师的编剧课\\02 - 第二课 故事的要素（P5-P6）.md",
+          "heading": "方法转译入口：从开放灵感暂选前提",
+          "lineStart": 182,
+          "lineEnd": 189,
+          "documentHash": "046430daf63c8850022455a21060d7f737643c9be93cbdc800a780d89e02b001",
+          "snapshot": "cd5d06c79bee25c8024b6a4aea0fe4755240bd8efe9684625dd5ea77cb295b35",
+          "scope": {
+            "version": 1,
+            "mode": "zones",
+            "role": "",
+            "expanded": false,
+            "include_paths": [
+              "知识库/学习区/课程/查理老师的编剧课/02 - 第二课 故事的要素（P5-P6）.md"
+            ],
+            "paths": [
+              "知识库/创作区",
+              "知识库/学习区/课程/查理老师的编剧课/02 - 第二课 故事的要素（P5-P6）.md"
+            ]
+          },
+          "coverage": "section",
+          "sourceKind": "course_note",
+          "limitations": [
+            "只读本地正式课文，不等于本次核验了外部原视频。",
+            "用户所学课程版本仍未核实；未据资料数量推断本人进度或掌握。",
+            "课文披露：两P正文复核，声画限制见来源说明"
+          ],
+          "characters": 507
+        }
+      ],
+      "warnings": [
+        "这里读取的是现有正式课程资料候选；用户所学版本尚未核实，课文存在与课数不表示本人学习进度或掌握。"
+      ],
+      "capabilities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      }
+    },
+    {
+      "id": "laobai-explicit",
+      "input": {
+        "message": "复习老白第六课，核对本课原理与适用条件。",
+        "courseId": "C002",
+        "chapter": 6
+      },
+      "expected": "located",
+      "pass": true,
+      "sources": [
+        {
+          "id": "course:C002:6:af795861200c",
+          "title": "老白的分镜课 - 第六课 用画面推导机位",
+          "path": "D:\\obsidian\\影视知识树\\个人影视知识树\\知识库\\学习区\\课程\\老白的分镜课\\06 - 第六课 用画面推导机位（P7）.md",
+          "heading": "来源可靠性",
+          "lineStart": 39,
+          "lineEnd": 45,
+          "documentHash": "70e779f886416710047a27b50304d0a1c3f840c5dd9a073c345008d0074727e7",
+          "snapshot": "0add7e555786a55453f60a84cf67ce3a223ad0358d9ebe97628aee18feaa8ae4",
+          "scope": {
+            "version": 1,
+            "mode": "zones",
+            "role": "",
+            "expanded": false,
+            "include_paths": [
+              "知识库/学习区/课程/老白的分镜课/06 - 第六课 用画面推导机位（P7）.md"
+            ],
+            "paths": [
+              "知识库/创作区",
+              "知识库/学习区/课程/老白的分镜课/06 - 第六课 用画面推导机位（P7）.md"
+            ]
+          },
+          "coverage": "section",
+          "sourceKind": "course_note",
+          "limitations": [
+            "只读本地正式课文，不等于本次核验了外部原视频。",
+            "用户所学课程版本仍未核实；未据资料数量推断本人进度或掌握。",
+            "课文披露：课堂内容完整，图文复核；原声与连续效果未独立复核"
+          ],
+          "characters": 328
+        },
+        {
+          "id": "course:C002:6:74d869c40574",
+          "title": "老白的分镜课 - 第六课 用画面推导机位",
+          "path": "D:\\obsidian\\影视知识树\\个人影视知识树\\知识库\\学习区\\课程\\老白的分镜课\\06 - 第六课 用画面推导机位（P7）.md",
+          "heading": "核心观点",
+          "lineStart": 46,
+          "lineEnd": 51,
+          "documentHash": "70e779f886416710047a27b50304d0a1c3f840c5dd9a073c345008d0074727e7",
+          "snapshot": "0add7e555786a55453f60a84cf67ce3a223ad0358d9ebe97628aee18feaa8ae4",
+          "scope": {
+            "version": 1,
+            "mode": "zones",
+            "role": "",
+            "expanded": false,
+            "include_paths": [
+              "知识库/学习区/课程/老白的分镜课/06 - 第六课 用画面推导机位（P7）.md"
+            ],
+            "paths": [
+              "知识库/创作区",
+              "知识库/学习区/课程/老白的分镜课/06 - 第六课 用画面推导机位（P7）.md"
+            ]
+          },
+          "coverage": "section",
+          "sourceKind": "course_note",
+          "limitations": [
+            "只读本地正式课文，不等于本次核验了外部原视频。",
+            "用户所学课程版本仍未核实；未据资料数量推断本人进度或掌握。",
+            "课文披露：课堂内容完整，图文复核；原声与连续效果未独立复核"
+          ],
+          "characters": 195
+        },
+        {
+          "id": "course:C002:6:a8a506c40a54",
+          "title": "老白的分镜课 - 第六课 用画面推导机位",
+          "path": "D:\\obsidian\\影视知识树\\个人影视知识树\\知识库\\学习区\\课程\\老白的分镜课\\06 - 第六课 用画面推导机位（P7）.md",
+          "heading": "方法与案例",
+          "lineStart": 52,
+          "lineEnd": 110,
+          "documentHash": "70e779f886416710047a27b50304d0a1c3f840c5dd9a073c345008d0074727e7",
+          "snapshot": "0add7e555786a55453f60a84cf67ce3a223ad0358d9ebe97628aee18feaa8ae4",
+          "scope": {
+            "version": 1,
+            "mode": "zones",
+            "role": "",
+            "expanded": false,
+            "include_paths": [
+              "知识库/学习区/课程/老白的分镜课/06 - 第六课 用画面推导机位（P7）.md"
+            ],
+            "paths": [
+              "知识库/创作区",
+              "知识库/学习区/课程/老白的分镜课/06 - 第六课 用画面推导机位（P7）.md"
+            ]
+          },
+          "coverage": "section",
+          "sourceKind": "course_note",
+          "limitations": [
+            "只读本地正式课文，不等于本次核验了外部原视频。",
+            "用户所学课程版本仍未核实；未据资料数量推断本人进度或掌握。",
+            "课文披露：课堂内容完整，图文复核；原声与连续效果未独立复核"
+          ],
+          "characters": 2287
+        },
+        {
+          "id": "course:C002:6:1ecf9c2eaa71",
+          "title": "老白的分镜课 - 第六课 用画面推导机位",
+          "path": "D:\\obsidian\\影视知识树\\个人影视知识树\\知识库\\学习区\\课程\\老白的分镜课\\06 - 第六课 用画面推导机位（P7）.md",
+          "heading": "时间线笔记",
+          "lineStart": 131,
+          "lineEnd": 141,
+          "documentHash": "70e779f886416710047a27b50304d0a1c3f840c5dd9a073c345008d0074727e7",
+          "snapshot": "0add7e555786a55453f60a84cf67ce3a223ad0358d9ebe97628aee18feaa8ae4",
+          "scope": {
+            "version": 1,
+            "mode": "zones",
+            "role": "",
+            "expanded": false,
+            "include_paths": [
+              "知识库/学习区/课程/老白的分镜课/06 - 第六课 用画面推导机位（P7）.md"
+            ],
+            "paths": [
+              "知识库/创作区",
+              "知识库/学习区/课程/老白的分镜课/06 - 第六课 用画面推导机位（P7）.md"
+            ]
+          },
+          "coverage": "section",
+          "sourceKind": "course_note",
+          "limitations": [
+            "只读本地正式课文，不等于本次核验了外部原视频。",
+            "用户所学课程版本仍未核实；未据资料数量推断本人进度或掌握。",
+            "课文披露：课堂内容完整，图文复核；原声与连续效果未独立复核"
+          ],
+          "characters": 320
+        }
+      ],
+      "warnings": [
+        "这里读取的是现有正式课程资料候选；用户所学版本尚未核实，课文存在与课数不表示本人学习进度或掌握。"
+      ],
+      "capabilities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      }
+    },
+    {
+      "id": "laobai-uncertain",
+      "input": {
+        "message": "我想复习老白上次那一课。",
+        "courseId": "C002"
+      },
+      "expected": "needs_chapter",
+      "pass": true,
+      "sources": [],
+      "warnings": [
+        "这里读取的是现有正式课程资料候选；用户所学版本尚未核实，课文存在与课数不表示本人学习进度或掌握。",
+        "当前具体课次尚未确定；没有按历史模糊停点猜测下一课。"
+      ],
+      "capabilities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      }
+    },
+    {
+      "id": "editing-version-unbound",
+      "input": {
+        "message": "复习影视飓风的剪辑课。",
+        "courseId": "C003"
+      },
+      "expected": "needs_version",
+      "pass": true,
+      "sources": [],
+      "warnings": [
+        "影视飓风剪辑课的名称与版本尚未绑定正式正文；本次没有读取对应课程，不以其他剪辑笔记替代。"
+      ],
+      "capabilities": {
+        "text": true,
+        "image": false,
+        "audio": false,
+        "video": false
+      }
+    }
+  ]
+}

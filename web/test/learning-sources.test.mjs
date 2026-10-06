@@ -173,3 +173,40 @@ test('课程目录的符号链接越出学习分区时拒绝', async t => {
   const result = await reader.read({ message: '查理第2课' });
   assert.equal(result.sources.length, 0); assert.match(result.warnings.join('\n'), /越出已确认学习范围/);
 });
+
+test('指代和课程数量不是序数，未知停点不读取第一课或数量对应课文', async t => {
+  const { reader, calls } = await fixture(t);
+  for (const message of ['我想复习老白上次那一课。', '继续这一课', '复习前一课', '我看了三课', '今天上了两节']) {
+    const result = await reader.read({ courseId: 'C001', message });
+    assert.equal(result.sources.length, 0, message);
+    assert.match(result.warnings.join('\n'), /具体课次尚未确定/, message);
+  }
+  assert.equal(calls.length, 0, '不能用未知停点驱动知识工具读取');
+});
+
+test('多个明确课次或省略单位的课次范围保持未定，不默选第一或最后一课', async t => {
+  const { reader, calls } = await fixture(t);
+  for (const message of ['第六/第七课', '第六或第七课', '第二、三课', '第2-3课', '第二课和第三课', '先看第二课，之后是第三课']) {
+    const result = await reader.read({ courseId: 'C001', message });
+    assert.equal(result.sources.length, 0, message);
+    assert.match(result.warnings.join('\n'), /多个课次/, message);
+  }
+  assert.equal(calls.length, 0, '多课次未选定时不读取任意一课');
+});
+
+test('唯一明确第N课正常定位，结构化已选身份仍可消解文字中的多课次', async t => {
+  const { reader, filename } = await fixture(t);
+  for (const input of [
+    { message: '复习查理第二课' },
+    { message: '复习查理第2节' },
+    { message: '复习查理第 二 课' },
+    { message: '第二课的原理，再看看第二课的边界' },
+    { message: '第二/第三课', courseId: 'C001', chapter: 2 },
+    { message: '第二/第三课', selectedSource: 'course:C001:2' },
+    { message: '上次那一课', selectedSource: { courseId: 'C001', chapter: 2 } },
+  ]) {
+    const result = await reader.read({ courseId: 'C001', ...input });
+    assert.ok(result.sources.length > 0, JSON.stringify(input) + result.warnings.join('\n'));
+    assert.ok(result.sources.every(source => source.path === filename && source.id.startsWith('course:C001:2')));
+  }
+});

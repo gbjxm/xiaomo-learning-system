@@ -138,6 +138,38 @@ test('恢复来源不把旧课次套到新课程，也不跨task引用', async t
   }
 });
 
+test('上次那一课沿同task唯一可信课次恢复，课程数量不覆盖原课次', async t => {
+  const { root, snapshot } = await fixture(t);
+  snapshot.currentTask = { ...task, evidenceRefs: ['course:C002:6:aaaabbbbcccc', 'course:C002:6:ddddaaaabbbb'] };
+  for (const message of ['我想复习老白上次那一课。', '继续这一课', '看了三课，继续原来的问题', '上了两节，回到原来的问题']) {
+    const reader = sourceReader();
+    await buildLearningContext({ projectRoot: root, snapshot, payload: { mode: 'question', message }, sourceReader: reader });
+    assert.equal(reader.calls[0].courseId, 'C002', message);
+    assert.equal(reader.calls[0].chapter, 6, message);
+  }
+});
+
+test('未知或多课次停点不为复习指代造身份，明确新课次不被旧任务覆盖', async t => {
+  const { root, snapshot } = await fixture(t);
+  for (const references of [[], ['course:C002:6:aaaabbbbcccc', 'course:C002:7:ddddaaaabbbb']]) {
+    snapshot.currentTask = { ...task, evidenceRefs: references };
+    const reader = sourceReader();
+    const result = await buildLearningContext({ projectRoot: root, snapshot, payload: { mode: 'question', message: '复习上次那一课' }, sourceReader: reader });
+    assert.equal(reader.calls[0].chapter, undefined);
+    if (references.length) assert.match(result.warnings.join('\n'), /多个课次/);
+  }
+  snapshot.currentTask = { ...task, evidenceRefs: ['course:C002:6:aaaabbbbcccc'] };
+  for (const message of ['复习第七课', '第六/第七课', '第6或7课']) {
+    const reader = sourceReader();
+    await buildLearningContext({ projectRoot: root, snapshot, payload: { mode: 'question', message }, sourceReader: reader });
+    assert.equal(reader.calls[0].chapter, undefined, message);
+  }
+  const selectedReader = sourceReader();
+  await buildLearningContext({ projectRoot: root, snapshot,
+    payload: { mode: 'question', message: '第六/第七课', context: { courseId: 'C002', chapter: 7 } }, sourceReader: selectedReader });
+  assert.equal(selectedReader.calls[0].chapter, 7);
+});
+
 test('新会话按正式活动恢复同任务原文与帮助条件，并明确没有收到改稿', async t => {
   const { root, snapshot, files } = await fixture(t);
   const artifact = { kind: 'text', title: '旧稿片段', version: 'v01', text: '想参赛→借电脑上传→断网→投稿成功。\n这是尚未修改的原稿。',

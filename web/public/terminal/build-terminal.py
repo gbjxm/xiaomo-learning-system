@@ -19,6 +19,14 @@ html = html.replace('<title>小陌的个人终端 · A版视觉优化预览</tit
 html = html.replace('<body>', '<body data-terminal-home="true">')
 html = html.replace('href="assets/', 'href="/terminal/assets/')
 
+# Keep the sea-only enhancement when rebuilding from the approved layout.
+sea_surface = (ROOT / 'sea-surface.svg').read_text(encoding='utf-8').strip()
+html, sea_replacements = re.subn(r'<svg class="map-waves"[\s\S]*?</svg>', lambda _: sea_surface, html, count=1)
+assert sea_replacements == 1, 'The sea overview layer was not found.'
+html = html.replace('<link rel="stylesheet" href="/terminal/app.css">', '<link rel="stylesheet" href="/terminal/app.css"><link rel="stylesheet" href="/terminal/sea-surface.css">', 1)
+assert (ROOT / 'sea-surface.css').is_file()
+
+
 # The approved ship raster is identical to the image embedded in its old SVG.
 html = re.sub(r'<span class="ship-art">[\s\S]*?</span>', '<span class="ship-art"><img src="/terminal/assets/ship.png" alt="" width="1536" height="1024"></span>', html, count=1)
 

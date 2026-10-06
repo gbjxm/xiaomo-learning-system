@@ -59,6 +59,7 @@ export function learningSaveKind(payload, updates) {
   if (payload.mode === 'plan') return 'plan';
   if (payload.mode === 'progress') return 'progress';
   if (payload.mode === 'wrap') return 'wrap';
+  if (updates?.saveReason !== 'none' && updates?.adoptedChanges?.some(change => change.kind === 'method' && ['pause', 'resume'].includes(change.action))) return 'review';
   if (/^(?:如果|假如|假设|要是|例如|比如)/.test(payload.message.trim())) return null;
   if (/(?:帮我|给我|为我|请).{0,16}(?:安排|规划|制定计划)|你.{0,4}安排一下|今天.{0,40}怎么学/.test(payload.message)) return 'plan';
   if (/(?:^|[，,。！!；;\s])(?:我|已经|刚刚|刚)?(?:看完|学完|做完|练完).{0,30}(?:了|啦)(?:[，,。！!；;\s]|$)/.test(payload.message)) return 'progress';
@@ -164,7 +165,7 @@ export class LearningCoordinator {
       const messages = [{ role: 'system', content: rule }, ...payload.history, { role: 'user', content: payload.message }];
       const raw = await runModel(messages, { payload, task, context, snapshot });
       parsed = parseModelResponse(typeof raw === 'string' ? raw : raw?.reply ?? '', { requestId: payload.requestId });
-      const checked = validateUpdates(parsed.updates, { payload, task, sources: { sources: context.sources, courses: snapshot.courses } });
+      const checked = validateUpdates(parsed.updates, { payload, task, sources: { sources: context.sources, courses: snapshot.courses }, stagePlan: snapshot.stagePlan });
       parsed.updates = checked.updates;
       if (parsed.updates?.task && payload.context?.courseId) {
         if (parsed.updates.task.courseId && parsed.updates.task.courseId !== payload.context.courseId) parsed.warnings.push('模型提出了另一门课程，本次仍使用你明确选择的课程。');

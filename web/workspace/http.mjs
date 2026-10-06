@@ -17,7 +17,7 @@ export function decorateDaily(html,region,scope){if(!/<body\b[^>]*>/i.test(html)
 export function createWorkspaceHandler({projectRoot,env,uiStore,informationManager}){
  const scope=env.WORKSPACE_MODE??env.LEARNING_UI_MODE??'production',token=randomUUID();
  const store=new WorkspaceStore({projectRoot,scope,stateFile:env.WORKSPACE_STATE_PATH??DEFAULT_WORKSPACE_FILE});
- const catalog=createEntityCatalog({uiStore,env,informationManager,scope});
+ const catalog=createEntityCatalog({projectRoot,uiStore,env,informationManager,scope});
  return async(req,res,url)=>{
   const p=url.pathname;
   if(req.method==='GET'&&p.startsWith('/workspace/')){const name=p.slice(11);if(!allowed.has(name)&&!owned.has(name))return false;try{let content=await fs.readFile(path.join(owned.has(name)?path.join(source,'public'):preview,name),'utf8');if(name==='app.js')content=content.replaceAll("'/preview/api/summary'","'/api/workspace/summary'");res.writeHead(200,headers(name.endsWith('.css')?'text/css; charset=utf-8':'text/javascript; charset=utf-8'));res.end(content);}catch{json(res,404,{ok:false,error:{code:'WORKSPACE_ASSET_MISSING',message:'工作台资源尚未就绪。'}});}return true;}

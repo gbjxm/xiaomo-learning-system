@@ -1,0 +1,19 @@
+{
+  "searchOpenedExactNote": true,
+  "noteMaterialReturnSameId": true,
+  "originalAndAISeparate": true,
+  "linkSavedAndReadBack": true,
+  "recentExactRef": true,
+  "taskExactDetailAndResume": true,
+  "contentEditorClearsRelation": true,
+  "watchSameIdAfterReload": true,
+  "unlinkPreservesOriginal": true,
+  "noHorizontalOverflow1280": true,
+  "noteId": "note_20725bf1a762516203473b90",
+  "contentId": "content_246e5756-9758-4a62-87fa-83bf5aec4e34",
+  "scope": "isolated",
+  "realModelCalled": false,
+  "exploreSceneRestored": true,
+  "recentReopensExactNote": true,
+  "exploreNoOverflow1280": true
+}

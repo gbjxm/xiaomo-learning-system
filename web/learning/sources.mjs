@@ -12,19 +12,33 @@ const digest = text => createHash('sha256').update(text).digest('hex');
 const inside = (child, root) => { const relative = path.relative(root, child); return relative === '' || (!relative.startsWith(`..${path.sep}`) && relative !== '..' && !path.isAbsolute(relative)); };
 const samePath = (left, right) => path.relative(path.resolve(left), path.resolve(right)) === '';
 
-function chapterNumber(value) {
-  if (typeof value === 'number') return Number.isInteger(value) && value > 0 && value <= 100 ? value : null;
+function chapterNumber(value, maximum = 100) {
+  if (typeof value === 'number') return Number.isInteger(value) && value > 0 && value <= maximum ? value : null;
   if (typeof value !== 'string') return null;
   const token = value.trim().replace(/^第/, '').replace(/(?:课|节)$/, '');
-  if (/^\d{1,3}$/.test(token)) return chapterNumber(Number(token));
+  if (/^\d{1,3}$/.test(token)) return chapterNumber(Number(token), maximum);
   const digits = { 零: 0, 一: 1, 二: 2, 两: 2, 三: 3, 四: 4, 五: 5, 六: 6, 七: 7, 八: 8, 九: 9 };
-  if (Object.hasOwn(digits, token)) return chapterNumber(digits[token]);
+  if (Object.hasOwn(digits, token)) return chapterNumber(digits[token], maximum);
   if (/^[一二三四五六七八九]?十[一二三四五六七八九]?$/.test(token)) {
     const [tens, units] = token.split('十');
-    return chapterNumber((digits[tens] ?? 1) * 10 + (digits[units] ?? 0));
+    return chapterNumber((digits[tens] ?? 1) * 10 + (digits[units] ?? 0), maximum);
   }
   if (token === '一百') return 100;
   return null;
+}
+
+// Only an explicit ordinal identifies a lesson. References such as “那一课”
+// and counts such as “看了三课” leave the identity to a verified selection or
+// the same task's saved sources. Keep lists/ranges unresolved rather than
+// silently selecting one endpoint (including “第六/第七课”).
+export function explicitCourseChapter(message, maximum = 100) {
+  const number = '[一二两三四五六七八九十零百\\d]{1,5}';
+  const sequence = new RegExp(`第\\s*${number}(?:\\s*(?:课|节))?(?:\\s*(?:[/／、,，或和及至到—–~～-]|或者)\\s*(?:第\\s*)?${number}(?:\\s*(?:课|节))?)*\\s*(?:课|节)`, 'g');
+  const matches = [...String(message).matchAll(sequence)];
+  const values = [...new Set(matches.flatMap(match => [...match[0].matchAll(new RegExp(number, 'g'))]
+    .map(token => chapterNumber(token[0], maximum))))];
+  return { mentioned: matches.length > 0, ambiguous: values.length > 1,
+    chapter: values.length === 1 ? values[0] : null };
 }
 
 function locateCourse(message, courseId, chapter, selectedSource) {
@@ -41,8 +55,11 @@ function locateCourse(message, courseId, chapter, selectedSource) {
   const named = [...Object.keys(COURSES)].filter(id => message.includes(id === 'C001' ? '查理' : '老白'));
   if (named.length > 1 && !selection?.courseId && !courseId) return { error: '本次涉及多门课程，需先明确这次引用的课程与课次。' };
   const id = selection?.courseId ?? (named.length === 1 ? named[0] : message.includes('影视飓风') ? 'C003' : courseId);
-  const explicit = /第?([一二两三四五六七八九十零百\d]{1,5})\s*(?:课|节)/.exec(message);
-  const number = chapterNumber(selection?.chapter ?? chapter ?? explicit?.[1]);
+  const explicit = explicitCourseChapter(message);
+  if (selection?.chapter == null && chapter == null && explicit.ambiguous) {
+    return { error: '本次涉及多个课次，尚未确定要引用哪一课；请明确课次后再读取，没有自动选取其中一课。' };
+  }
+  const number = chapterNumber(selection?.chapter ?? chapter ?? explicit.chapter);
   return { id, chapter: number, heading: selection?.heading, sectionId: selection?.sectionId };
 }
 

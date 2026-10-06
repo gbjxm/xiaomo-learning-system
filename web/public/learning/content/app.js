@@ -6,7 +6,7 @@
   const island = Object.hasOwn(islandNames, query.get('island')) ? query.get('island') : 'home';
   const watchNames = { unknown: '进度未注明', watching: '正在看', watched: '已看完', partial: '看过一部分' };
   const kindNames = { creation: '创作与想法', watch: '观看记录', learning: '学习笔记' };
-  const state = { identity: null, token: null, revision: null, items: [], filter: ['creation', 'watch', 'learning'].includes(query.get('view')) ? query.get('view') : query.get('intent') === 'watch' ? 'watch' : 'all', search: '', selected: null, editor: null, workshop: null, detailSequence: 0, busy: false };
+  const state = { identity: null, scope: null, token: null, revision: null, items: [], filter: ['creation', 'watch', 'learning'].includes(query.get('view')) ? query.get('view') : query.get('intent') === 'watch' ? 'watch' : 'all', search: '', selected: null, editor: null, workshop: null, detailSequence: 0, busy: false };
   const clone = value => value == null ? value : JSON.parse(JSON.stringify(value));
   const uid = () => window.crypto?.randomUUID?.() || 'content-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2);
   const tabId = (() => { try { const key = 'xiaomo.personal-content.tab'; const saved = sessionStorage.getItem(key); if (saved) return saved; const fresh = uid(); sessionStorage.setItem(key, fresh); return fresh; } catch { return uid(); } })();
@@ -42,8 +42,67 @@
   }
   function acceptIdentity(result) {
     if (state.identity && result.identity !== state.identity) throw new Error('当前资料位置已经改变。输入已留在原资料的浏览器草稿中，请刷新页面后再继续。');
+    if (result.scope !== undefined) {
+      if (!['production', 'isolated'].includes(result.scope) || state.scope && result.scope !== state.scope) throw new Error('当前资料范围发生变化，请刷新页面后核对。');
+      state.scope = result.scope; document.body.dataset.spaceMode = result.scope;
+    }
     state.identity = result.identity; state.revision = result.revision;
   }
+  function clearWorkspaceContext() {
+    recentPending = null;
+    window.workspaceLastContext = null;
+    window.dispatchEvent(new CustomEvent('workspace:context', { detail: { ref: null, mount: null } }));
+  }
+  let recentPending = null, recentRunning = false, recentSaved = null;
+  const refKey = ref => JSON.stringify([ref?.module, ref?.kind, ref?.storeId, ref?.id]);
+  async function rememberWorkspaceRef(ref, status) {
+    const key = refKey(ref); if (key === recentSaved) return;
+    recentPending = { ref, status }; if (recentRunning) return;
+    recentRunning = true;
+    try {
+      while (recentPending) {
+        const target = recentPending; recentPending = null;
+        const isCurrent = () => refKey(window.workspaceLastContext?.ref) === refKey(target.ref);
+        try {
+          let firstIdentity = null;
+          for (let attempt = 0; attempt < 2 && isCurrent(); attempt++) {
+            const response = await fetch('/api/workspace/bootstrap', { cache: 'no-store' });
+            const body = await response.json(), snapshot = body.data;
+            if (!isCurrent()) break;
+            if (!response.ok || body.ok !== true || snapshot?.scope !== state.scope || snapshot.identity?.scope !== state.scope || !snapshot.identity?.storeId || !snapshot.token || !Number.isSafeInteger(snapshot.stateRevision) || !Array.isArray(snapshot.state?.recent)) throw new Error('最近停留的保存位置尚未核实。');
+            const identity = JSON.stringify(snapshot.identity);
+            if (firstIdentity && identity !== firstIdentity) throw new Error('最近停留的保存位置发生变化，请重新加载。');
+            firstIdentity = identity;
+            const next = { ...snapshot.state, recent: [target.ref, ...snapshot.state.recent.filter(value => refKey(value) !== refKey(target.ref))].slice(0, 20) };
+            if (refKey(snapshot.state.recent[0]) === refKey(target.ref)) { recentSaved = refKey(target.ref); break; }
+            const saved = await fetch('/api/workspace/state', { method: 'POST', cache: 'no-store', keepalive: true, headers: { 'Content-Type': 'application/json', 'X-Workspace-Token': snapshot.token }, body: JSON.stringify({ identity: snapshot.identity, expectedRevision: snapshot.stateRevision, state: next }) });
+            const result = await saved.json();
+            if (saved.status === 409 && attempt === 0) continue;
+            if (!saved.ok || result.ok !== true || JSON.stringify(result.data?.identity) !== firstIdentity || refKey(result.data?.state?.recent?.[0]) !== refKey(target.ref)) throw new Error(result.error?.message || '最近停留尚未确认保存。');
+            recentSaved = refKey(target.ref); break;
+          }
+        } catch (error) { if (isCurrent()) { target.status.textContent = '最近停留暂未保存：' + error.message + ' 这份内容仍可查看，可从当前链接再次打开。'; target.status.hidden = false; } }
+      }
+    } finally { recentRunning = false; }
+  }
+  function mountWorkspaceContext(item, panel) {
+    const ref = item.workspaceRef;
+    const expected = item.source?.kind === 'learning-note' && item.id === 'learning-note:' + item.noteId ? 'note:' + item.noteId
+      : item.source?.kind === 'learning-task' && item.id === 'learning-task:' + item.taskId ? 'task:' + item.taskId
+      : !item.readOnly && ['creation', 'watch'].includes(item.kind) ? 'content:' + item.id : null;
+    if (!expected || !['production', 'isolated'].includes(state.scope) || ref?.module !== 'learning' || ref.kind !== 'learning' || ref.storeId !== state.identity || ref.id !== expected) return;
+    const section = node('details', 'content-relations'); section.append(node('summary', '', '相关资料（可选）'));
+    const mount = node('div', 'workspace-context-mount'); section.append(mount); panel.append(section);
+    const status = node('p', 'helper'); status.hidden = true; status.setAttribute('role', 'status'); panel.append(status);
+    const detail = { ref: { module: ref.module, kind: ref.kind, storeId: ref.storeId, id: ref.id }, mount };
+    window.workspaceLastContext = detail;
+    window.dispatchEvent(new CustomEvent('workspace:context', { detail }));
+    void rememberWorkspaceRef(detail.ref, status);
+  }
+  window.addEventListener('workspace:context-request', () => {
+    const detail = window.workspaceLastContext;
+    if (detail?.mount?.isConnected) window.dispatchEvent(new CustomEvent('workspace:context', { detail }));
+  });
   function renderWarnings(warnings = []) {
     $('sourceWarnings').hidden = !warnings.length;
     $('sourceWarnings').querySelector('div').replaceChildren(...warnings.map(message => node('p', '', typeof message === 'string' ? message : message.message || '有一处原始记录暂时未读到。')));
@@ -90,7 +149,7 @@
       $('connectionState').textContent = '四岛共用同一份内容'; $('newContent').disabled = false;
       if (!state.editor && state.selected) await openItem(state.selected);
       return true;
-    } catch (error) { $('connectionState').textContent = '暂时没有连接到记录'; notice(error.message, true); return false; }
+    } catch (error) { clearWorkspaceContext(); $('connectionState').textContent = '暂时没有连接到记录'; notice(error.message, true); return false; }
     finally { $('reloadContent').disabled = false; }
   }
   function addLinks(container, links) {
@@ -116,6 +175,7 @@
     return artifact.note || '这份内容保留了工坊草稿，可以继续调整。';
   }
   function renderDetail(item) {
+    clearWorkspaceContext();
     destroyWorkshop(); state.editor = null;
     const panel = $('detailPanel'); panel.replaceChildren();
     const top = node('div', 'detail-topline'); top.append(node('span', '', kindNames[item.kind] || '原有记录'), node('span', '', item.readOnly ? '原处记录 · 只读' : '可以继续补充'));
@@ -159,15 +219,18 @@
       }
       panel.append(history);
     }
+    mountWorkspaceContext(item, panel);
   }
   async function openItem(id) {
     if (!leaveEditor()) return;
+    clearWorkspaceContext();
     const sequence = ++state.detailSequence;
     state.selected = id; renderList();
     $('detailPanel').replaceChildren(node('p', 'helper', '正在读取这份内容…'));
     try {
       const result = await request('items/' + encodeURIComponent(id));
       if (sequence !== state.detailSequence) return;
+      if (result.item?.id !== id) throw new Error('读取结果与所选内容不一致，请重新读取。');
       acceptIdentity(result); renderDetail(result.item); revealDetailOnSmallScreen();
       const url = new URL(location.href); url.searchParams.set('item', id); url.searchParams.delete('intent'); history.replaceState(null, '', url);
     } catch (error) { if (sequence === state.detailSequence) { $('detailPanel').replaceChildren(node('p', 'helper', error.message), button('重新读取', () => openItem(id))); } }
@@ -184,6 +247,7 @@
   }
   function openEditor(item = null, action = 'append', overrides = {}) {
     if (!leaveEditor()) return;
+    clearWorkspaceContext();
     ++state.detailSequence; state.selected = item?.id || null; renderList();
     const base = blankEditor(item, action, overrides);
     const draft = readDraft(base);

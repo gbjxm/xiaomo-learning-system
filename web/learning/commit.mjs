@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { randomUUID } from 'node:crypto';
 import { LearningRepository, LEARNING_ROOT, SUMMARY_FILES, assertLearningRoot, safeLearningPath, readLearningFile, validId, validNoteId, noteIdForRequest, entryIdForRequest, learningError, hashText, normalizeTask, encodeTaskMetadata, encodeSourceMetadata, encodeArtifactMetadata, encodeNoteMetadata, encodeEntryMetadata } from './records.mjs';
-import { validateUpdates } from './protocol.mjs';
+import { validateUpdates, adoptedMethodBlocks as methodBlocks } from './protocol.mjs';
 import { hasNoSaveIntent } from './save-intent.mjs';
 
 const JOURNAL_DIR = '运行记录/.学习提交';
@@ -44,19 +44,6 @@ function appendSection(markdown, heading, body) {
   return markdown.replace(expression, (_, prefix, existing) => prefix + existing.trimEnd() + '\n\n' + body + '\n\n');
 }
 function methodSection(markdown) { return /^## 已采用的改进\r?\n([\s\S]*?)(?=^## |$(?![\s\S]))/m.exec(markdown); }
-function methodBlocks(markdown) {
-  const section = methodSection(markdown); if (!section) return [];
-  const result = [];
-  for (const match of section[1].matchAll(/<!-- learning-method:start id=([a-f0-9]{64}) -->([\s\S]*?)<!-- learning-method:end id=\1 -->/g)) {
-    const encoded = match[2].match(/<!-- learning-method:v1 ([A-Za-z0-9+/=]+) -->/), block = { id: match[1], full: match[0], data: null };
-    try {
-      const data = JSON.parse(Buffer.from(encoded?.[1] ?? '', 'base64').toString('utf8'));
-      if (data.version === 1 && data.methodId === block.id && typeof data.value === 'string' && (data.taskId === null || validId(data.taskId))) block.data = data;
-    } catch {}
-    result.push(block);
-  }
-  return result;
-}
 function methodMetadata(data) { return '<!-- learning-method:v1 ' + Buffer.from(JSON.stringify(data), 'utf8').toString('base64') + ' -->'; }
 function setMethodBullet(block, label, value) {
   const line = '- ' + label + '：' + inline(value, 5000), expression = new RegExp('^- ' + label + '：[^\\r\\n]*', 'm');
@@ -76,16 +63,26 @@ function updateAdoptedMethods(markdown, { changes, task, previousTask, date, pay
   const currentTask = task ?? previousTask, taskId = currentTask?.taskId ?? null;
   const activity = '[' + date.date + ' 活动](学习记录/' + date.date + '.md)（请求 ' + payload.requestId + '）';
   for (const change of changes.filter(change => change.kind === 'method')) {
-    const methodId = hashText(JSON.stringify([taskId, change.value]));
+    const action = change.action ?? 'adopt';
+    const methodId = action === 'adopt' ? hashText(JSON.stringify([taskId, change.value])) : change.methodId;
     const existing = methodBlocks(result).find(block => block.id === methodId);
     if (existing && !existing.data) { warnings.push('已有采用方法块元数据不完整，保留原内容；本次采用原话已留活动。'); continue; }
-    if (existing) {
+    if (action === 'pause' || action === 'resume') {
+      if (!existing?.data || existing.data.taskId !== taskId || existing.data.value !== change.value) { warnings.push('原方法身份未核对，保留原状态；本次决定原话已留活动。'); continue; }
+      const paused = action === 'pause';
+      let updated = setMethodBullet(existing.full, '当前状态', paused ? '已暂停；未经本人明确恢复，不自动加入安排。' : '已恢复采用；是否适用于本次仍需核对条件，效果未知。');
+      updated = updated.replace(/^### (?:已采用|已暂停)做法 · /m, '### ' + (paused ? '已暂停' : '已采用') + '做法 · ');
+      updated = setMethodBullet(updated, paused ? '最近暂停依据' : '最近恢复依据', inline(change.quote) + '；' + activity);
+      const data = { ...existing.data, status: paused ? 'paused' : 'active', latestDecision: { action, quote: change.quote, date: date.iso, requestId: payload.requestId, activityFile: '运行记录/学习记录/' + date.date + '.md', goalRevision: currentTask?.goalRevision ?? null } };
+      updated = updated.replace(/<!-- learning-method:v1 [A-Za-z0-9+/=]+ -->/, () => methodMetadata(data));
+      result = replaceMethodBlock(result, existing, updated);
+    } else if (existing) {
       let updated = setMethodBullet(existing.full, '最近一次明确采用', inline(change.quote) + '；' + activity);
       const data = { ...existing.data, latestAdoptionDate: date.iso, latestAdoptionRequestId: payload.requestId };
       updated = updated.replace(/<!-- learning-method:v1 [A-Za-z0-9+/=]+ -->/, () => methodMetadata(data));
       result = replaceMethodBlock(result, existing, updated);
     } else {
-      const data = { version: 1, methodId, taskId, value: change.value, firstQuote: change.quote, firstDate: date.iso, firstActivity: '运行记录/学习记录/' + date.date + '.md', firstRequestId: payload.requestId, firstGoalRevision: currentTask?.goalRevision ?? null };
+      const data = { version: 1, methodId, taskId, value: change.value, status: 'active', firstQuote: change.quote, firstDate: date.iso, firstActivity: '运行记录/学习记录/' + date.date + '.md', firstRequestId: payload.requestId, firstGoalRevision: currentTask?.goalRevision ?? null };
       const block = '<!-- learning-method:start id=' + methodId + ' -->\n### 已采用做法 · ' + inline(change.value, 180) + '\n\n- 首次采用原话：' + inline(change.quote, 5000) + '\n- 首次采用依据：' + activity + '\n- 适用情境：' + (currentTask ? inline(currentTask.title + '；任务 ' + taskId + '，目标版本 ' + currentTask.goalRevision) : '未绑定具体任务，适用范围尚待实际交流说明') + '\n- 原观察点：' + inline(currentTask?.observationPoints?.join('；') || '尚未说明，不补造观察标准') + '\n- 初次帮助条件：' + inline(currentTask?.allowedHelp || '帮助程度未记录') + '\n- 当前状态：已采用，待尝试；实际使用情况及效果未知。\n- 使用与效果：方法效果与因果未知，不认证普遍有效。\n' + methodMetadata(data) + '\n<!-- learning-method:end id=' + methodId + ' -->';
       result = appendSection(result, '已采用的改进', block);
     }
@@ -281,7 +278,7 @@ export class LearningCommitter {
     const p = journal.payload, date = stamp(new Date(journal.createdAt)), relative = '运行记录/学习记录/' + date.date + '.md';
     const previous = suppliedTask?.taskId ? snapshot.tasks.find(task => task.taskId === suppliedTask.taskId) ?? suppliedTask : p.context?.taskId ? snapshot.currentTask : null;
     const coverage = Array.isArray(journal.sourceCoverage) ? journal.sourceCoverage : journal.sourceCoverage?.sources ?? journal.sourceCoverage?.items ?? [];
-    const validated = journal.structured ? validateUpdates(journal.updates, { payload: p, task: previous, sources: { sources: coverage, courses: snapshot.courses } }) : { updates: null, warnings: [] };
+    const validated = journal.structured ? validateUpdates(journal.updates, { payload: p, task: previous, sources: { sources: coverage, courses: snapshot.courses }, stagePlan: snapshot.stagePlan }) : { updates: null, warnings: [] };
     const u = validated.updates; journal.warnings.push(...validated.warnings);
     if (!u) journal.structured = false;
     const current = await readLearningFile(this.root, '运行记录/当前状态.md', { optional: false });
@@ -317,7 +314,7 @@ export class LearningCommitter {
     for (const fact of u?.facts ?? []) activity += '- 本人报告（' + fact.kind + (fact.courseId ? '，' + fact.courseId : '') + '；' + fact.turnId + '）：' + inline(fact.quote, 5000) + '\n';
     for (const observation of u?.observations ?? []) activity += '- AI 对当前文字的观察：' + inline(observation.text, 5000) + '；依据：' + observation.evidenceIds.join('、') + '；帮助条件：' + inline(observation.helpLevel) + '。不认证全部能力。\n';
     for (const candidate of u?.candidates ?? []) activity += '- 未采用候选：' + inline(candidate) + '\n';
-    for (const change of u?.adoptedChanges ?? []) activity += '- 用户明确采用（' + change.kind + '）：' + inline(change.value) + '；采用原话：' + inline(change.quote) + '\n';
+    for (const change of u?.adoptedChanges ?? []) activity += '- 用户明确' + (change.action === 'pause' ? '暂停' : change.action === 'resume' ? '恢复' : '采用') + '（' + change.kind + '）：' + inline(change.value) + '；决定原话：' + inline(change.quote) + (change.methodId ? '；方法编号：' + change.methodId : '') + '\n';
     if (nextTask) activity += '- 当前任务目标 v' + nextTask.goalRevision + '：' + inline(nextTask.purpose) + '\n- 停止处：' + inline(nextTask.stopPoint || '未说明') + '\n- 下次一步：' + inline(nextTask.nextStep || '下次按本人意图决定') + '\n' + encodeTaskMetadata(nextTask) + '\n';
     activity += encodeEntryMetadata({ version: 1, sourceRequestId: p.requestId, activityFile: relative, taskId: nextTask?.taskId ?? previous?.taskId ?? null, courseId: p.context?.courseId ?? nextTask?.courseId ?? previous?.courseId ?? null, chapter: p.context?.chapter ?? null, savedAt: date.iso }) + '\n' + encodeSourceMetadata(journal.sourceCoverage) + '\n<!-- learning-entry:end id=' + p.requestId + ' -->\n<!-- learning-entry:complete id=' + p.requestId + ' -->\n';
     const oldActivity = await readLearningFile(this.root, relative), targets = [{ relative, before: oldActivity, after: (oldActivity ?? '# 学习记录 · ' + date.date + '\n') + activity }];

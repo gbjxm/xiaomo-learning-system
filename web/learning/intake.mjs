@@ -5,6 +5,7 @@ import { ContentStore } from '../content/store.mjs';
 import { safeLearningPath, readLearningFile, hashText, validNoteId } from './records.mjs';
 import { requestFingerprint } from './commit.mjs';
 import { requestIntentText, hasNoSaveIntent } from './save-intent.mjs';
+import { explicitCourseChapter } from './sources.mjs';
 
 const JOURNALS = '运行记录/.自然记录';
 const fail = (code, message, status = 409) => { const error = new Error(message); error.code = code; error.status = status; throw error; };
@@ -198,7 +199,7 @@ export class NaturalRecordingCoordinator {
       if (captureChapter != null && context.chapter != null && captureChapter !== context.chapter) fail('INTAKE_UNSUPPORTED_CHAPTER', '原话课次和页面选择不同，这次是哪一课？');
       const chapter = context.chapter ?? captureChapter ?? selected?.chapter ?? null;
       if (chapter !== null && (!Number.isInteger(chapter) || chapter < 1 || chapter > 200)) fail('INTAKE_INVALID_CHAPTER', '这次是哪一课？不确定也可以留空。', 400);
-      if (captureChapter != null && !context.chapter && captureChapter !== selected?.chapter && !new RegExp('第?\\s*(?:' + captureChapter + '|' + chineseNumber(captureChapter) + ')\\s*(?:课|节)').test(message)) fail('INTAKE_UNSUPPORTED_CHAPTER', '这次的课次还不明确，要先保留未知吗？');
+      if (captureChapter != null && !context.chapter && captureChapter !== selected?.chapter && explicitCourseChapter(message, 200).chapter !== captureChapter) fail('INTAKE_UNSUPPORTED_CHAPTER', '这次的课次还不明确，要先保留未知吗？');
       if (target && !validNoteId(target)) fail('INTAKE_INVALID_TARGET', '要继续哪条学习笔记？请重新选择原条目。');
       if (action === 'correct' && !target) fail('INTAKE_MISSING_TARGET', '要更正哪一条原笔记？');
       const note = { ...(target ? { noteId: target } : {}), title, courseId, chapter, action };

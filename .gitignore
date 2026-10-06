@@ -20,6 +20,7 @@
 /素材观察室/data/*.sqlite3*
 /信息收集/data/*.sqlite3*
 /学习小岛/data/ui-state.json
+/三系统工作台/data/workspace-state.json
 # The immutable upload snapshots and derived reading exports are intentional.
 !/cloud-data/
 !/cloud-data/exports/

@@ -1,7 +1,8 @@
 'use strict';
 /* Cross-area references. Original module content and permissions stay separate. */
 (() => {
-  const mode=['production','isolated'].includes(document.body.dataset.spaceMode)?document.body.dataset.spaceMode:'readonly';
+  const currentMode=()=>['production','isolated'].includes(document.body.dataset.spaceMode)?document.body.dataset.spaceMode:'readonly';
+  let mode=currentMode();
   const API='/api/workspace';
   const kinds={learning:'学习',material:'素材',topic:'研究专题',opportunity:'机会',work:'作品'};
   const modules={learning:['learning'],observatory:['material','topic'],information:['opportunity','work']};
@@ -23,7 +24,7 @@
   function safeHref(value){
     if(typeof value!=='string')return null;
     const candidate=value.trim();if(!candidate||candidate.startsWith('//')||/[\\\u0000-\u001f\u007f]/.test(candidate))return null;
-    try{const url=new URL(candidate,location.href);return url.origin===location.origin&&['http:','https:'].includes(url.protocol)&&!url.username&&!url.password&&/^\/(learning|observatory|information)\/(?:index\.html)?$/.test(url.pathname)?url.pathname+url.search+url.hash:null;}catch{return null;}
+    try{const url=new URL(candidate,location.href);return url.origin===location.origin&&['http:','https:'].includes(url.protocol)&&!url.username&&!url.password&&/^\/(?:learning\/(?:content\/)?|observatory\/|information\/)(?:index\.html)?$/.test(url.pathname)?url.pathname+url.search+url.hash:null;}catch{return null;}
   }
   function storageKey(ref){return 'xiaomo.workspace.relations.v1:'+mode+':'+key(ref);}
   function recall(ref){try{return JSON.parse(sessionStorage.getItem(storageKey(ref))||'{}');}catch{return {};}}
@@ -196,6 +197,7 @@
   function setContext(detail){
     if(detail?.ref===null){controller?.dispose();controller=null;lastContext=null;return;}
     if(!detail?.ref||!valid(detail.ref)||!(detail.mount instanceof HTMLElement)||!detail.mount.isConnected)return;
+    const nextMode=currentMode();if(nextMode!==mode){controller?.dispose();controller=null;mode=nextMode;}
     lastContext=detail;
     if(controller&&same(controller.ref,detail.ref)){controller.adopt(detail.mount);return;}
     controller?.dispose();controller=new RelationPanel(detail.ref,detail.mount);

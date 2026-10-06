@@ -31,7 +31,7 @@
     const scenes = [];
     const art = {};
     try {
-      scenes.push(window.IslandScenes.mount(scratch, { island: 'home', memories: 0 }));
+      scenes.push(window.IslandScenes.mount(scratch, { island: 'home', memories: 0, artOnly: true }));
       for (const [name, place] of Object.entries({
         house: 'plan', shelf: 'courses', screen: 'watch', table: 'practice', board: 'traces', cat: 'cat'
       })) {
@@ -43,7 +43,7 @@
         art[name] = copy.outerHTML;
       }
       const visual = document.createElement('div');
-      scenes.push(window.IslandScenes.mount(visual, { island: 'visual', memories: 0 }));
+      scenes.push(window.IslandScenes.mount(visual, { island: 'visual', memories: 0, artOnly: true }));
       const workshop = visual.querySelector('[data-place="desk"] .scene-prop').cloneNode(true);
       workshop.setAttribute('class', 'scene-art');
       workshop.setAttribute('aria-hidden', 'true');
